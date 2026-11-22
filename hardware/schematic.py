@@ -58,7 +58,7 @@ def build(name,parts):
             lines.append(f'(label {q(n)} (at {ex} {ey} 0) {effects(.9,align)} (uuid "{uid(name+p.ref+pin+"label")}"))')
     lines.append(')')
     (ROOT/'hardware'/f'{name}.kicad_sch').write_text('\n'.join(lines)+'\n')
-    proj={'board':{'design_settings':{'rules':{'min_clearance':.15,'min_track_width':.2,'min_via_diameter':.6,'min_through_hole_diameter':.3,'min_hole_to_hole':.25}}},'meta':{'filename':name+'.kicad_pro','version':1}}
+    proj={'board':{'design_settings':{'rules':{'min_clearance':.15,'min_track_width':.2,'min_via_diameter':.6,'min_through_hole_diameter':.3,'min_hole_to_hole':.25}}},'net_settings':{'classes':[{'name':'Default','clearance':.15,'track_width':.32,'via_diameter':.6,'via_drill':.3,'microvia_diameter':.3,'microvia_drill':.1,'diff_pair_width':.2,'diff_pair_gap':.25,'diff_pair_via_gap':.25,'wire_width':6,'bus_width':12,'line_style':0,'pcb_color':'rgba(0, 0, 0, 0.000)','schematic_color':'rgba(0, 0, 0, 0.000)'}],'meta':{'version':3}},'meta':{'filename':name+'.kicad_pro','version':1}}
     (ROOT/'hardware'/f'{name}.kicad_pro').write_text(json.dumps(proj,indent=2)+'\n')
 
 if __name__=='__main__':
