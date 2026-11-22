@@ -7,12 +7,21 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          python-version: '3.12'
+          activate-environment: base
+          auto-activate-base: true
       - name: Install KiCad
         run: |
           sudo add-apt-repository --yes ppa:kicad/kicad-9.0-releases
           sudo apt-get update -qq
           sudo apt-get install --no-install-recommends -y kicad
           kicad-cli version
+      - name: Fill reference planes with KiCad
+        shell: bash -el {0}
+        run: |
+          PYTHONPATH=/usr/lib/python3/dist-packages conda run -n base python -c "import pcbnew; from pathlib import Path; [(lambda b,p: (pcbnew.ZONE_FILLER(b).Fill(b.Zones()), pcbnew.SaveBoard(str(p),b)))(pcbnew.LoadBoard(str(p)),p) for p in Path('hardware').glob('*.kicad_pcb')]"
       - name: Check and render
         run: |
           mkdir -p validation/native
@@ -20,8 +29,12 @@ jobs:
             mkdir -p validation/native/$board
             kicad-cli sch export netlist -o validation/native/$board/netlist.xml hardware/$board.kicad_sch
             kicad-cli sch export pdf -o validation/native/$board/schematic.pdf hardware/$board.kicad_sch
-            kicad-cli pcb drc --refill-zones -o validation/native/$board/drc.txt hardware/$board.kicad_pcb
+            kicad-cli sch erc --severity-error -o validation/native/$board/erc.txt hardware/$board.kicad_sch
+            kicad-cli pcb drc --schematic-parity -o validation/native/$board/drc.txt hardware/$board.kicad_pcb
             kicad-cli pcb export svg -o validation/native/$board/ hardware/$board.kicad_pcb
+            kicad-cli pcb export gerbers -l F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,F.SilkS,Edge.Cuts -o validation/native/$board/gerbers/ hardware/$board.kicad_pcb
+            kicad-cli pcb export drill -o validation/native/$board/gerbers/ hardware/$board.kicad_pcb
+            cp hardware/$board.kicad_pcb validation/native/$board/
           done
       - uses: actions/upload-artifact@v4
         if: always()
