@@ -15,6 +15,12 @@ The electronics budget includes both preamps and the dual bias tee; it excludes
 coax, mast, enclosure, tax, and shipping. The goal is below USD 100 per complete
 electronics set. No order has been placed.
 
+The requested prototype batch is **five antenna/preamp boards and five dual
+bias-tee boards**, giving five complete electronics sets, delivered to
+**Norway**. The electronics budget is therefore below USD 500 for the batch,
+excluding coax, mast, enclosure, tax, and shipping. Supplier quotations must
+separate those excluded costs and distinguish bare PCBs from populated boards.
+
 - `hardware/`: electrical source, editable KiCad boards/schematics, reproducible routing.
 - `simulation/`: ngspice deck, independent network calculation, 300 tolerance trials,
   HDF5 results and quantified limits.

@@ -1,0 +1,11 @@
+{
+  "destination_country": "Norway",
+  "complete_sets": 5,
+  "boards": {"preamp": 5, "dual_biastee": 5},
+  "electronics_ceiling_usd_per_set": 100,
+  "electronics_ceiling_usd_batch": 500,
+  "excluded_from_budget": ["coax", "mast", "enclosure", "tax", "shipping"],
+  "quote_bare_boards_and_assembly_separately": true,
+  "order_authorized": false,
+  "release_status": "prototype; native CAD checks and RF validation incomplete"
+}
