@@ -1,0 +1,182 @@
+"""Build editable KiCad PCB sources, routing and assembly workbooks.
+
+All signal routing is on F.Cu. B.Cu is permitted only for DC/low-frequency
+connections. In1.Cu is an uninterrupted RF reference except for anti-pads.
+Native KiCad DRC and schematic comparison are separate release gates.
+"""
+from pathlib import Path
+from collections import defaultdict
+import json, math, heapq, uuid
+import numpy as np
+from shapely.geometry import box, Point, LineString
+from shapely.ops import unary_union
+from openpyxl import Workbook
+from design import preamp,biastee
+
+ROOT=Path(__file__).resolve().parents[1]
+STEP=.2
+CLEAR=.2
+WIDTH=.32
+
+def pads(pkg):
+    # number, x, y, width, height, hole diameter (zero = SMT)
+    if pkg in ['0805','1008','1206','2512','SOD323','SMA_DIODE']:
+        pitch,w,h={'0805':(1.,1.2,1.4),'1008':(1.3,1.2,2.2),'1206':(1.5,1.6,1.8),'2512':(3.,2.,3.4),'SOD323':(1.15,1.,.9),'SMA_DIODE':(2.25,2.5,2.)}[pkg]
+        return [('1',-pitch,0,w,h,0),('2',pitch,0,w,h,0)]
+    if pkg=='SMA':return [('1',0,0,2.05,2.05,1.5)]+[('2',x,y,2.25,2.25,1.7) for x,y in [(2.54,2.54),(2.54,-2.54),(-2.54,-2.54),(-2.54,2.54)]]
+    if pkg=='ANT_M3':return [('1',0,-4,6,6,3.2),('2',0,4,6,6,3.2)]
+    if pkg=='TERM2':return [('1',-2.54,0,3,3,1.3),('2',2.54,0,3,3,1.3)]
+    if pkg=='CD542':return [(str(i+1),-2.54,y,2.54,1.65,0) for i,y in enumerate([-2.54,0,2.54])]+[(str(i+4),2.54,y,2.54,1.65,0) for i,y in enumerate([2.54,0,-2.54])]
+    if pkg=='SOT89':return [('1',-1.5,1.65,.9,1.3,0),('3',1.5,1.65,.9,1.3,0),('2',0,-.7375,1.733,3.125,0),('2',0,1.5625,.9,1.475,0)]
+    if pkg=='MSOP8EP':return [(str(i+1),-2.15,-.975+i*.65,1.45,.4,0) for i in range(4)]+[(str(i+5),2.15,.975-i*.65,1.45,.4,0) for i in range(4)]+[('9',0,0,1.68,1.88,0)]
+    raise ValueError(pkg)
+
+def physical(part):
+    # Positive board rotation follows KiCad's counter-clockwise convention.
+    a=math.radians(part.rotation);c,s=math.cos(a),math.sin(a)
+    out=[]
+    for n,x,y,w,h,drill in pads(part.package):
+        xx=part.x+c*x+s*y; yy=part.y-s*x+c*y
+        if part.rotation%180: w,h=h,w
+        g=Point(xx,yy).buffer(w/2,quad_segs=12) if drill else box(xx-w/2,yy-h/2,xx+w/2,yy+h/2)
+        out.append(dict(ref=part.ref,pin=n,x=xx,y=yy,w=w,h=h,drill=drill,net=part.nets[n],shape=g))
+    return out
+
+class Router:
+    def __init__(self,parts,size):
+        self.size=size;self.pads=[p for c in parts for p in physical(c)]
+        self.tracks=[];self.vias=[]
+        self.nx=int(size[0]/STEP)+1;self.ny=int(size[1]/STEP)+1
+        self.obstacles=[]
+        for p in self.pads:
+            self.obstacles.append((p['net'] or '__NC_'+p['ref']+p['pin'],p['shape'],[0,1] if p['drill'] else [0]))
+        for x,y in [(6,6),(6,size[1]-6),(size[0]-6,6),(size[0]-6,size[1]-6)]:
+            self.obstacles.append(('__HOLE',Point(x,y).buffer(1.8),[0,1]))
+    def raster(self,net,width=WIDTH):
+        a=np.zeros((2,self.nx,self.ny),dtype=bool)
+        a[:,:4,:]=True;a[:,-4:,:]=True;a[:,:,:4]=True;a[:,:,-4:]=True
+        for n,g,layers in self.obstacles:
+            if n==net:continue
+            g=g.buffer(CLEAR+width/2)
+            x0,y0,x1,y1=g.bounds
+            ix0=max(0,int(x0/STEP));ix1=min(self.nx-1,math.ceil(x1/STEP))
+            iy0=max(0,int(y0/STEP));iy1=min(self.ny-1,math.ceil(y1/STEP))
+            if ix0>ix1 or iy0>iy1:continue
+            import shapely
+            xx,yy=np.meshgrid(np.arange(ix0,ix1+1)*STEP,np.arange(iy0,iy1+1)*STEP,indexing='ij')
+            inside=shapely.contains_xy(g,xx,yy)
+            for layer in layers:a[layer,ix0:ix1+1,iy0:iy1+1]|=inside
+        return a
+    def connect(self,net,p,q,rf):
+        width=WIDTH if rf else .2
+        blocked=self.raster(net,width)
+        start=(0,round(p[0]/STEP),round(p[1]/STEP));end=(0,round(q[0]/STEP),round(q[1]/STEP))
+        if blocked[start] or blocked[end]:raise RuntimeError(('blocked pad',net,p,q))
+        def heuristic(t):return abs(t[1]-end[1])+abs(t[2]-end[2])+20*t[0]
+        heap=[(heuristic(start),0,start)];dist={start:0};prev={}
+        while heap:
+            _,d,u=heapq.heappop(heap)
+            if d!=dist[u]:continue
+            if u==end:break
+            layer,x,y=u
+            candidates=[((layer,x+dx,y+dy),1 if dx==0 or dy==0 else 1.4143) for dx,dy in [(1,0),(-1,0),(0,1),(0,-1),(1,1),(1,-1),(-1,1),(-1,-1)]]
+            if not rf:candidates.append(((1-layer,x,y),30))
+            for v,cost in candidates:
+                ll,xx,yy=v
+                if not (0<=xx<self.nx and 0<=yy<self.ny) or blocked[v]:continue
+                if ll!=layer:
+                    # A via needs a larger obstacle margin than a trace.
+                    if any(n!=net and g.distance(Point(x*STEP,y*STEP))<.5 for n,g,_ in self.obstacles):continue
+                nd=d+cost
+                if nd<dist.get(v,float('inf')):
+                    dist[v]=nd;prev[v]=u;heapq.heappush(heap,(nd+heuristic(v),nd,v))
+        else:raise RuntimeError(('unrouted',net,p,q))
+        route=[end]
+        while route[-1]!=start:route.append(prev[route[-1]])
+        route.reverse()
+        points=[(0,*p)]+[(l,x*STEP,y*STEP) for l,x,y in route]+[(0,*q)]
+        # Collapse collinear grid segments before emitting manufacturing geometry.
+        compressed=[points[0]]
+        for i in range(1,len(points)-1):
+            a,b,c=compressed[-1],points[i],points[i+1]
+            if a[0]==b[0]==c[0] and abs((b[1]-a[1])*(c[2]-b[2])-(b[2]-a[2])*(c[1]-b[1]))<1e-8:continue
+            compressed.append(b)
+        compressed.append(points[-1])
+        for a,b in zip(compressed,compressed[1:]):
+            if a[0]!=b[0]:
+                self.vias.append((net,a[1],a[2]));self.obstacles.append((net,Point(a[1],a[2]).buffer(.3),[0,1]))
+            elif math.dist(a[1:],b[1:])>1e-7:
+                self.tracks.append((net,a[0],a[1:],b[1:],width));self.obstacles.append((net,LineString([a[1:],b[1:]]).buffer(width/2),[a[0]]))
+    def run(self):
+        groups=defaultdict(list)
+        for p in self.pads:
+            if p['net'] and p['net']!='GND':groups[p['net']].append((p['x'],p['y']))
+        def rf(n):return not any(n.endswith('_'+s) for s in ['RAW','V12','V8','FB','NR','BIAS','DC']) and n not in ['VIN','VIN_FUSED','PROTECTED']
+        for n,points in sorted(groups.items(),key=lambda a:(not rf(a[0]),not a[0].endswith(('_FB','_NR')),-len(a[1]))):
+            tree=[points.pop(0)]
+            while points:
+                _,i,a,b=min((math.dist(a,b),i,a,b) for i,b in enumerate(points) for a in tree)
+                self.connect(n,a,b,rf(n));tree.append(points.pop(i))
+        # Local ground vias outside SMT pads; inner layers provide the return path.
+        for p in self.pads:
+            if p['net']!='GND' or p['drill']:continue
+            center=(p['x'],p['y'])
+            candidates=[center]+[(center[0]+dx,center[1]+dy) for dx,dy in [(0,1),(0,-1),(1,0),(-1,0),(0,1.5),(0,-1.5),(1.5,0),(-1.5,0)]]
+            for x,y in candidates:
+                if any(n!='GND' and g.distance(Point(x,y))<.51 for n,g,_ in self.obstacles):continue
+                if (x,y)!=center:
+                    self.tracks.append(('GND',0,center,(x,y),.2))
+                self.vias.append(('GND',x,y));break
+            else:raise RuntimeError(('ground via clearance',p['ref'],p['pin']))
+        return self
+
+def q(s):return json.dumps(str(s))
+def pcb(name,parts,size,r):
+    nets={'GND':1}
+    for p in parts:
+        for n in p.nets.values():
+            if n and n not in nets:nets[n]=len(nets)+1
+    lines=['(kicad_pcb (version 20221018) (generator pcbnew)', '(general (thickness 1.6))','(paper "A4")',
+           '(layers (0 "F.Cu" signal) (1 "In1.Cu" power) (2 "In2.Cu" power) (31 "B.Cu" signal) (32 "B.Adhes" user "B.Adhesive") (33 "F.Adhes" user "F.Adhesive") (34 "B.Paste" user) (35 "F.Paste" user) (36 "B.SilkS" user "B.Silkscreen") (37 "F.SilkS" user "F.Silkscreen") (38 "B.Mask" user) (39 "F.Mask" user) (44 "Edge.Cuts" user) (46 "B.CrtYd" user "B.Courtyard") (47 "F.CrtYd" user "F.Courtyard") (48 "B.Fab" user) (49 "F.Fab" user))',
+           '(setup (pad_to_mask_clearance 0.05))','(net 0 "")']
+    lines += [f'(net {i} {q(n)})' for n,i in nets.items()]
+    for p in parts:
+        lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","ANT_M3","TERM2"] else "smd"})')
+        lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))')
+        lines.append(f'(fp_text value {q(p.value)} (at 0 0) (layer "F.Fab") (effects (font (size 0.7 0.7) (thickness 0.1))))')
+        for pin,x,y,w,h,hole in pads(p.package):
+            n=p.nets[pin];net=f'(net {nets[n]} {q(n)})' if n else ''
+            typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
+            layers='"*.Cu" "*.Mask"' if hole else '"F.Cu" "F.Paste" "F.Mask"'
+            drill=f'(drill {hole})' if hole else ''
+            lines.append(f'(pad {q(pin)} {typ} {shape} (at {x} {y} {p.rotation}) (size {w} {h}) {drill} (layers {layers}) {net})')
+        lines.append(')')
+    for i,(x,y) in enumerate([(6,6),(6,size[1]-6),(size[0]-6,6),(size[0]-6,size[1]-6)]):
+        lines.append(f'(footprint "metantenna:MountingHole" (layer "F.Cu") (at {x} {y}) (fp_text reference "H{i+1}" (at 0 -3) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask")))')
+    for n,l,a,b,width in r.tracks:
+        lines.append(f'(segment (start {a[0]:.4f} {a[1]:.4f}) (end {b[0]:.4f} {b[1]:.4f}) (width {width}) (layer "{["F.Cu","B.Cu"][l]}") (net {nets[n]}))')
+    for n,x,y in r.vias:lines.append(f'(via (at {x:.4f} {y:.4f}) (size 0.6) (drill 0.3) (layers "F.Cu" "B.Cu") (net {nets[n]}))')
+    w,h=size
+    for a,b in [((0,0),(w,0)),((w,0),(w,h)),((w,h),(0,h)),((0,h),(0,0))]:
+        lines.append(f'(gr_line (start {a[0]} {a[1]}) (end {b[0]} {b[1]}) (stroke (width 0.05) (type default)) (layer "Edge.Cuts"))')
+    for layer in ['In1.Cu','In2.Cu','B.Cu']:
+        lines.append(f'(zone (net 1) (net_name "GND") (layer "{layer}") (hatch edge 0.5) (connect_pads (clearance 0.25)) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts (xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}))))')
+    lines.append(')')
+    (ROOT/'hardware'/f'{name}.kicad_pcb').write_text('\n'.join(lines)+'\n')
+    dump={'size_mm':size,'parts':[dict(ref=p.ref,value=p.value,package=p.package,nets=p.nets,x=p.x,y=p.y,rotation=p.rotation,side=p.side,mpn=p.mpn,note=p.note) for p in parts], 'pads':[{k:v for k,v in p.items() if k!='shape'} for p in r.pads],'tracks':r.tracks,'vias':r.vias}
+    (ROOT/'hardware'/f'{name}_layout.json').write_text(json.dumps(dump,indent=2)+'\n')
+    wb=Workbook();s=wb.active;s.title='BOM';s.append(['Designator','Value','Footprint','Quantity','Manufacturer Part','Assembly notes'])
+    for p in parts:s.append([p.ref,p.value,p.package,1,p.mpn,p.note])
+    s=wb.create_sheet('Placement');s.append(['Designator','Mid X (mm)','Mid Y (mm)','Layer','Rotation'])
+    for p in parts:s.append([p.ref,p.x,-p.y,'Top' if p.side=='F' else 'Bottom',p.rotation])
+    for sheet in wb:
+        sheet.freeze_panes='A2'
+        for col in sheet.columns:sheet.column_dimensions[col[0].column_letter].width=min(70,max(12,max(len(str(c.value or '')) for c in col)+2))
+    wb.save(ROOT/'manufacturing'/f'{name}_assembly.xlsx')
+
+def main():
+    for name,fn in [('preamp',preamp),('biastee',biastee)]:
+        parts,size=fn();r=Router(parts,size).run();pcb(name,parts,size,r)
+        print(name,len(parts),'parts;',len(r.tracks),'segments;',len(r.vias),'vias',flush=True)
+
+if __name__=='__main__':main()

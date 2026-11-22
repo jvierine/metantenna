@@ -1,0 +1,8 @@
+{
+  "board": "biastee",
+  "native_KiCad_DRC": "not yet run",
+  "geometric_minimum_copper_clearance_mm": 0.1828,
+  "minimum_required_mm": 0.15,
+  "issues": [],
+  "non_ground_nets_checked": 9
+}

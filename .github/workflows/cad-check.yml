@@ -1,0 +1,30 @@
+name: Native KiCad checks
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  cad:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install KiCad
+        run: |
+          sudo add-apt-repository --yes ppa:kicad/kicad-9.0-releases
+          sudo apt-get update -qq
+          sudo apt-get install --no-install-recommends -y kicad
+          kicad-cli version
+      - name: Check and render
+        run: |
+          mkdir -p validation/native
+          for board in preamp biastee; do
+            mkdir -p validation/native/$board
+            kicad-cli sch export netlist -o validation/native/$board/netlist.xml hardware/$board.kicad_sch
+            kicad-cli sch export pdf -o validation/native/$board/schematic.pdf hardware/$board.kicad_sch
+            kicad-cli pcb drc --refill-zones -o validation/native/$board/drc.txt hardware/$board.kicad_pcb
+            kicad-cli pcb export svg -o validation/native/$board/ hardware/$board.kicad_pcb
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-cad-checks
+          path: validation/native

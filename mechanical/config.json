@@ -1,0 +1,13 @@
+{
+  "pipe_od_mm": 50.0,
+  "pipe_diametral_clearance_mm": 0.6,
+  "wall_mm": 3.0,
+  "base_width_mm": 130.0,
+  "base_depth_mm": 124.0,
+  "pcb_width_mm": 96.0,
+  "pcb_depth_mm": 96.0,
+  "pcb_bottom_z_mm": 15.0,
+  "pipe_center_x_mm": -23.0,
+  "sma_centers_mm": [[42.0,-22.0],[42.0,18.0]],
+  "pcb_hole_centers_mm": [[-42.0,-42.0],[-42.0,42.0],[42.0,-42.0],[42.0,42.0]]
+}

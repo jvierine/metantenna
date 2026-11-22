@@ -1,0 +1,7012 @@
+{
+  "size_mm": [
+    96,
+    96
+  ],
+  "parts": [
+    {
+      "ref": "J101",
+      "value": "X dipole",
+      "package": "ANT_M3",
+      "nets": {
+        "1": "X_ANT_N",
+        "2": "X_ANT_P"
+      },
+      "x": 5,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "M3 brass stud / ring terminals",
+      "note": "Balanced feed; pin 2 is positive reference; no DC supply here"
+    },
+    {
+      "ref": "T101",
+      "value": "ADT1-1+",
+      "package": "CD542",
+      "nets": {
+        "1": "X_ANT_N",
+        "2": "",
+        "3": "X_ANT_P",
+        "4": "X_RF_IN",
+        "5": "",
+        "6": "GND"
+      },
+      "x": 14,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "ADT1-1+",
+      "note": ""
+    },
+    {
+      "ref": "R101",
+      "value": "1M",
+      "package": "0805",
+      "nets": {
+        "1": "X_ANT_P",
+        "2": "GND"
+      },
+      "x": 7,
+      "y": 18,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "RC0805FR-071ML",
+      "note": ""
+    },
+    {
+      "ref": "R102",
+      "value": "1M",
+      "package": "0805",
+      "nets": {
+        "1": "X_ANT_N",
+        "2": "GND"
+      },
+      "x": 7,
+      "y": 34,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "RC0805FR-071ML",
+      "note": ""
+    },
+    {
+      "ref": "C101",
+      "value": "180p",
+      "package": "0805",
+      "nets": {
+        "1": "X_RF_IN",
+        "2": "X_HP"
+      },
+      "x": 22,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C181F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "L101",
+      "value": "220n",
+      "package": "0805",
+      "nets": {
+        "1": "X_HP",
+        "2": "GND"
+      },
+      "x": 26,
+      "y": 29,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "0805HP-221XGRC",
+      "note": "2% RF inductor; do not substitute power inductor"
+    },
+    {
+      "ref": "C102",
+      "value": "180p",
+      "package": "0805",
+      "nets": {
+        "1": "X_HP",
+        "2": "X_LP1"
+      },
+      "x": 30,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C181F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "C103",
+      "value": "18p",
+      "package": "0805",
+      "nets": {
+        "1": "X_LP1",
+        "2": "GND"
+      },
+      "x": 33,
+      "y": 29,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "C0805C180F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "L102",
+      "value": "56n",
+      "package": "0805",
+      "nets": {
+        "1": "X_LP1",
+        "2": "X_LP2"
+      },
+      "x": 38,
+      "y": 25,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "0805HP-56NXGRC",
+      "note": ""
+    },
+    {
+      "ref": "C104",
+      "value": "56p",
+      "package": "0805",
+      "nets": {
+        "1": "X_LP1",
+        "2": "X_LP2"
+      },
+      "x": 38,
+      "y": 28,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C560F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "C105",
+      "value": "51p",
+      "package": "0805",
+      "nets": {
+        "1": "X_LP2",
+        "2": "GND"
+      },
+      "x": 43,
+      "y": 29,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "C0805C510F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "L103",
+      "value": "68n",
+      "package": "0805",
+      "nets": {
+        "1": "X_LP2",
+        "2": "X_AMP_IN"
+      },
+      "x": 48,
+      "y": 25,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "0805HP-68NXGRC",
+      "note": ""
+    },
+    {
+      "ref": "C106",
+      "value": "36p",
+      "package": "0805",
+      "nets": {
+        "1": "X_LP2",
+        "2": "X_AMP_IN"
+      },
+      "x": 48,
+      "y": 28,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C360F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "C107",
+      "value": "15p",
+      "package": "0805",
+      "nets": {
+        "1": "X_AMP_IN",
+        "2": "GND"
+      },
+      "x": 53,
+      "y": 29,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "C0805C150F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "D101",
+      "value": "DNP BAT15-03W",
+      "package": "SOD323",
+      "nets": {
+        "1": "X_AMP_IN",
+        "2": "GND"
+      },
+      "x": 55,
+      "y": 22,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "BAT15-03W",
+      "note": "DNP; optional input clamp, not lightning protection"
+    },
+    {
+      "ref": "D102",
+      "value": "DNP BAT15-03W",
+      "package": "SOD323",
+      "nets": {
+        "1": "GND",
+        "2": "X_AMP_IN"
+      },
+      "x": 58,
+      "y": 22,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "BAT15-03W",
+      "note": "DNP; optional input clamp"
+    },
+    {
+      "ref": "U101",
+      "value": "GALI-74+",
+      "package": "SOT89",
+      "nets": {
+        "1": "X_AMP_IN",
+        "2": "GND",
+        "3": "X_AMP_OUT"
+      },
+      "x": 61,
+      "y": 24.35,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "GALI-74+",
+      "note": ""
+    },
+    {
+      "ref": "C108",
+      "value": "1n",
+      "package": "0805",
+      "nets": {
+        "1": "X_AMP_OUT",
+        "2": "X_PAD_IN"
+      },
+      "x": 66,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C102J5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "R103",
+      "value": "294",
+      "package": "0805",
+      "nets": {
+        "1": "X_PAD_IN",
+        "2": "GND"
+      },
+      "x": 70,
+      "y": 29,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-07294RL",
+      "note": ""
+    },
+    {
+      "ref": "R104",
+      "value": "18",
+      "package": "0805",
+      "nets": {
+        "1": "X_PAD_IN",
+        "2": "X_PAD_OUT"
+      },
+      "x": 74,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "RC0805FR-0718RL",
+      "note": ""
+    },
+    {
+      "ref": "R105",
+      "value": "294",
+      "package": "0805",
+      "nets": {
+        "1": "X_PAD_OUT",
+        "2": "GND"
+      },
+      "x": 78,
+      "y": 29,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-07294RL",
+      "note": ""
+    },
+    {
+      "ref": "C109",
+      "value": "1n",
+      "package": "0805",
+      "nets": {
+        "1": "X_PAD_OUT",
+        "2": "X_COAX"
+      },
+      "x": 83,
+      "y": 26,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C102J5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "J102",
+      "value": "X RF +12V",
+      "package": "SMA",
+      "nets": {
+        "1": "X_COAX",
+        "2": "GND"
+      },
+      "x": 90,
+      "y": 26,
+      "rotation": 0,
+      "side": "B",
+      "mpn": "132134",
+      "note": "SMA female, standard polarity; assemble on underside"
+    },
+    {
+      "ref": "L104",
+      "value": "1u",
+      "package": "1008",
+      "nets": {
+        "1": "X_COAX",
+        "2": "X_RAW"
+      },
+      "x": 90,
+      "y": 34,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "1008CS-102XJRC",
+      "note": ""
+    },
+    {
+      "ref": "D103",
+      "value": "SS14",
+      "package": "SMA_DIODE",
+      "nets": {
+        "1": "X_V12",
+        "2": "X_RAW"
+      },
+      "x": 84,
+      "y": 39,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "SS14",
+      "note": ""
+    },
+    {
+      "ref": "D104",
+      "value": "SMAJ15A",
+      "package": "SMA_DIODE",
+      "nets": {
+        "1": "X_V12",
+        "2": "GND"
+      },
+      "x": 90,
+      "y": 43,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "SMAJ15A",
+      "note": ""
+    },
+    {
+      "ref": "C110",
+      "value": "10u 25V",
+      "package": "1206",
+      "nets": {
+        "1": "X_V12",
+        "2": "GND"
+      },
+      "x": 79,
+      "y": 43,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM31CR61E106KA12L",
+      "note": ""
+    },
+    {
+      "ref": "C111",
+      "value": "100n 50V",
+      "package": "0805",
+      "nets": {
+        "1": "X_V12",
+        "2": "GND"
+      },
+      "x": 75,
+      "y": 43,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM21BR71H104KA01L",
+      "note": ""
+    },
+    {
+      "ref": "U102",
+      "value": "TPS7A4901DGNR",
+      "package": "MSOP8EP",
+      "nets": {
+        "1": "X_V8",
+        "2": "X_FB",
+        "3": "",
+        "4": "GND",
+        "5": "X_V12",
+        "6": "X_NR",
+        "7": "",
+        "8": "X_V12",
+        "9": "GND"
+      },
+      "x": 68,
+      "y": 43,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "TPS7A4901DGNR",
+      "note": ""
+    },
+    {
+      "ref": "R106",
+      "value": "57.6k",
+      "package": "0805",
+      "nets": {
+        "1": "X_V8",
+        "2": "X_FB"
+      },
+      "x": 61,
+      "y": 42,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-0757K6L",
+      "note": ""
+    },
+    {
+      "ref": "R107",
+      "value": "10k",
+      "package": "0805",
+      "nets": {
+        "1": "X_FB",
+        "2": "GND"
+      },
+      "x": 61,
+      "y": 46,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-0710KL",
+      "note": ""
+    },
+    {
+      "ref": "C112",
+      "value": "10u 25V",
+      "package": "1206",
+      "nets": {
+        "1": "X_V8",
+        "2": "GND"
+      },
+      "x": 57,
+      "y": 43,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM31CR61E106KA12L",
+      "note": ""
+    },
+    {
+      "ref": "C113",
+      "value": "10n 50V",
+      "package": "0805",
+      "nets": {
+        "1": "X_NR",
+        "2": "GND"
+      },
+      "x": 73,
+      "y": 47,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM21BR71H103KA01L",
+      "note": ""
+    },
+    {
+      "ref": "C114",
+      "value": "100n 50V",
+      "package": "0805",
+      "nets": {
+        "1": "X_V8",
+        "2": "GND"
+      },
+      "x": 55,
+      "y": 38,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM21BR71H104KA01L",
+      "note": ""
+    },
+    {
+      "ref": "R108",
+      "value": "41.2 1W",
+      "package": "2512",
+      "nets": {
+        "1": "X_V8",
+        "2": "X_BIAS"
+      },
+      "x": 61,
+      "y": 36,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "CRCW251241R2FKEG",
+      "note": "1 W; about 0.26 W normal dissipation"
+    },
+    {
+      "ref": "L105",
+      "value": "1u",
+      "package": "1008",
+      "nets": {
+        "1": "X_BIAS",
+        "2": "X_AMP_OUT"
+      },
+      "x": 64,
+      "y": 31,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "1008CS-102XJRC",
+      "note": ""
+    },
+    {
+      "ref": "J201",
+      "value": "Y dipole",
+      "package": "ANT_M3",
+      "nets": {
+        "1": "Y_ANT_N",
+        "2": "Y_ANT_P"
+      },
+      "x": 5,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "M3 brass stud / ring terminals",
+      "note": "Balanced feed; pin 2 is positive reference; no DC supply here"
+    },
+    {
+      "ref": "T201",
+      "value": "ADT1-1+",
+      "package": "CD542",
+      "nets": {
+        "1": "Y_ANT_N",
+        "2": "",
+        "3": "Y_ANT_P",
+        "4": "Y_RF_IN",
+        "5": "",
+        "6": "GND"
+      },
+      "x": 14,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "ADT1-1+",
+      "note": ""
+    },
+    {
+      "ref": "R201",
+      "value": "1M",
+      "package": "0805",
+      "nets": {
+        "1": "Y_ANT_P",
+        "2": "GND"
+      },
+      "x": 7,
+      "y": 58,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "RC0805FR-071ML",
+      "note": ""
+    },
+    {
+      "ref": "R202",
+      "value": "1M",
+      "package": "0805",
+      "nets": {
+        "1": "Y_ANT_N",
+        "2": "GND"
+      },
+      "x": 7,
+      "y": 74,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "RC0805FR-071ML",
+      "note": ""
+    },
+    {
+      "ref": "C201",
+      "value": "180p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_RF_IN",
+        "2": "Y_HP"
+      },
+      "x": 22,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C181F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "L201",
+      "value": "220n",
+      "package": "0805",
+      "nets": {
+        "1": "Y_HP",
+        "2": "GND"
+      },
+      "x": 26,
+      "y": 69,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "0805HP-221XGRC",
+      "note": "2% RF inductor; do not substitute power inductor"
+    },
+    {
+      "ref": "C202",
+      "value": "180p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_HP",
+        "2": "Y_LP1"
+      },
+      "x": 30,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C181F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "C203",
+      "value": "18p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_LP1",
+        "2": "GND"
+      },
+      "x": 33,
+      "y": 69,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "C0805C180F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "L202",
+      "value": "56n",
+      "package": "0805",
+      "nets": {
+        "1": "Y_LP1",
+        "2": "Y_LP2"
+      },
+      "x": 38,
+      "y": 65,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "0805HP-56NXGRC",
+      "note": ""
+    },
+    {
+      "ref": "C204",
+      "value": "56p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_LP1",
+        "2": "Y_LP2"
+      },
+      "x": 38,
+      "y": 68,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C560F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "C205",
+      "value": "51p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_LP2",
+        "2": "GND"
+      },
+      "x": 43,
+      "y": 69,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "C0805C510F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "L203",
+      "value": "68n",
+      "package": "0805",
+      "nets": {
+        "1": "Y_LP2",
+        "2": "Y_AMP_IN"
+      },
+      "x": 48,
+      "y": 65,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "0805HP-68NXGRC",
+      "note": ""
+    },
+    {
+      "ref": "C206",
+      "value": "36p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_LP2",
+        "2": "Y_AMP_IN"
+      },
+      "x": 48,
+      "y": 68,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C360F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "C207",
+      "value": "15p",
+      "package": "0805",
+      "nets": {
+        "1": "Y_AMP_IN",
+        "2": "GND"
+      },
+      "x": 53,
+      "y": 69,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "C0805C150F5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "D201",
+      "value": "DNP BAT15-03W",
+      "package": "SOD323",
+      "nets": {
+        "1": "Y_AMP_IN",
+        "2": "GND"
+      },
+      "x": 55,
+      "y": 62,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "BAT15-03W",
+      "note": "DNP; optional input clamp, not lightning protection"
+    },
+    {
+      "ref": "D202",
+      "value": "DNP BAT15-03W",
+      "package": "SOD323",
+      "nets": {
+        "1": "GND",
+        "2": "Y_AMP_IN"
+      },
+      "x": 58,
+      "y": 62,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "BAT15-03W",
+      "note": "DNP; optional input clamp"
+    },
+    {
+      "ref": "U201",
+      "value": "GALI-74+",
+      "package": "SOT89",
+      "nets": {
+        "1": "Y_AMP_IN",
+        "2": "GND",
+        "3": "Y_AMP_OUT"
+      },
+      "x": 61,
+      "y": 64.35,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "GALI-74+",
+      "note": ""
+    },
+    {
+      "ref": "C208",
+      "value": "1n",
+      "package": "0805",
+      "nets": {
+        "1": "Y_AMP_OUT",
+        "2": "Y_PAD_IN"
+      },
+      "x": 66,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C102J5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "R203",
+      "value": "294",
+      "package": "0805",
+      "nets": {
+        "1": "Y_PAD_IN",
+        "2": "GND"
+      },
+      "x": 70,
+      "y": 69,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-07294RL",
+      "note": ""
+    },
+    {
+      "ref": "R204",
+      "value": "18",
+      "package": "0805",
+      "nets": {
+        "1": "Y_PAD_IN",
+        "2": "Y_PAD_OUT"
+      },
+      "x": 74,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "RC0805FR-0718RL",
+      "note": ""
+    },
+    {
+      "ref": "R205",
+      "value": "294",
+      "package": "0805",
+      "nets": {
+        "1": "Y_PAD_OUT",
+        "2": "GND"
+      },
+      "x": 78,
+      "y": 69,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-07294RL",
+      "note": ""
+    },
+    {
+      "ref": "C209",
+      "value": "1n",
+      "package": "0805",
+      "nets": {
+        "1": "Y_PAD_OUT",
+        "2": "Y_COAX"
+      },
+      "x": 83,
+      "y": 66,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "C0805C102J5GACTU",
+      "note": ""
+    },
+    {
+      "ref": "J202",
+      "value": "Y RF +12V",
+      "package": "SMA",
+      "nets": {
+        "1": "Y_COAX",
+        "2": "GND"
+      },
+      "x": 90,
+      "y": 66,
+      "rotation": 0,
+      "side": "B",
+      "mpn": "132134",
+      "note": "SMA female, standard polarity; assemble on underside"
+    },
+    {
+      "ref": "L204",
+      "value": "1u",
+      "package": "1008",
+      "nets": {
+        "1": "Y_COAX",
+        "2": "Y_RAW"
+      },
+      "x": 90,
+      "y": 74,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "1008CS-102XJRC",
+      "note": ""
+    },
+    {
+      "ref": "D203",
+      "value": "SS14",
+      "package": "SMA_DIODE",
+      "nets": {
+        "1": "Y_V12",
+        "2": "Y_RAW"
+      },
+      "x": 84,
+      "y": 79,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "SS14",
+      "note": ""
+    },
+    {
+      "ref": "D204",
+      "value": "SMAJ15A",
+      "package": "SMA_DIODE",
+      "nets": {
+        "1": "Y_V12",
+        "2": "GND"
+      },
+      "x": 90,
+      "y": 83,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "SMAJ15A",
+      "note": ""
+    },
+    {
+      "ref": "C210",
+      "value": "10u 25V",
+      "package": "1206",
+      "nets": {
+        "1": "Y_V12",
+        "2": "GND"
+      },
+      "x": 79,
+      "y": 83,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM31CR61E106KA12L",
+      "note": ""
+    },
+    {
+      "ref": "C211",
+      "value": "100n 50V",
+      "package": "0805",
+      "nets": {
+        "1": "Y_V12",
+        "2": "GND"
+      },
+      "x": 75,
+      "y": 83,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM21BR71H104KA01L",
+      "note": ""
+    },
+    {
+      "ref": "U202",
+      "value": "TPS7A4901DGNR",
+      "package": "MSOP8EP",
+      "nets": {
+        "1": "Y_V8",
+        "2": "Y_FB",
+        "3": "",
+        "4": "GND",
+        "5": "Y_V12",
+        "6": "Y_NR",
+        "7": "",
+        "8": "Y_V12",
+        "9": "GND"
+      },
+      "x": 68,
+      "y": 83,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "TPS7A4901DGNR",
+      "note": ""
+    },
+    {
+      "ref": "R206",
+      "value": "57.6k",
+      "package": "0805",
+      "nets": {
+        "1": "Y_V8",
+        "2": "Y_FB"
+      },
+      "x": 61,
+      "y": 82,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-0757K6L",
+      "note": ""
+    },
+    {
+      "ref": "R207",
+      "value": "10k",
+      "package": "0805",
+      "nets": {
+        "1": "Y_FB",
+        "2": "GND"
+      },
+      "x": 61,
+      "y": 86,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "RC0805FR-0710KL",
+      "note": ""
+    },
+    {
+      "ref": "C212",
+      "value": "10u 25V",
+      "package": "1206",
+      "nets": {
+        "1": "Y_V8",
+        "2": "GND"
+      },
+      "x": 57,
+      "y": 83,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM31CR61E106KA12L",
+      "note": ""
+    },
+    {
+      "ref": "C213",
+      "value": "10n 50V",
+      "package": "0805",
+      "nets": {
+        "1": "Y_NR",
+        "2": "GND"
+      },
+      "x": 73,
+      "y": 87,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM21BR71H103KA01L",
+      "note": ""
+    },
+    {
+      "ref": "C214",
+      "value": "100n 50V",
+      "package": "0805",
+      "nets": {
+        "1": "Y_V8",
+        "2": "GND"
+      },
+      "x": 55,
+      "y": 78,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "GRM21BR71H104KA01L",
+      "note": ""
+    },
+    {
+      "ref": "R208",
+      "value": "41.2 1W",
+      "package": "2512",
+      "nets": {
+        "1": "Y_V8",
+        "2": "Y_BIAS"
+      },
+      "x": 61,
+      "y": 76,
+      "rotation": 0,
+      "side": "F",
+      "mpn": "CRCW251241R2FKEG",
+      "note": "1 W; about 0.26 W normal dissipation"
+    },
+    {
+      "ref": "L205",
+      "value": "1u",
+      "package": "1008",
+      "nets": {
+        "1": "Y_BIAS",
+        "2": "Y_AMP_OUT"
+      },
+      "x": 64,
+      "y": 71,
+      "rotation": 90,
+      "side": "F",
+      "mpn": "1008CS-102XJRC",
+      "note": ""
+    }
+  ],
+  "pads": [
+    {
+      "ref": "J101",
+      "pin": "1",
+      "x": 5.0,
+      "y": 22.0,
+      "w": 6,
+      "h": 6,
+      "drill": 3.2,
+      "net": "X_ANT_N"
+    },
+    {
+      "ref": "J101",
+      "pin": "2",
+      "x": 5.0,
+      "y": 30.0,
+      "w": 6,
+      "h": 6,
+      "drill": 3.2,
+      "net": "X_ANT_P"
+    },
+    {
+      "ref": "T101",
+      "pin": "1",
+      "x": 11.46,
+      "y": 23.46,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "X_ANT_N"
+    },
+    {
+      "ref": "T101",
+      "pin": "2",
+      "x": 11.46,
+      "y": 26.0,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "T101",
+      "pin": "3",
+      "x": 11.46,
+      "y": 28.54,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "X_ANT_P"
+    },
+    {
+      "ref": "T101",
+      "pin": "4",
+      "x": 16.54,
+      "y": 28.54,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "X_RF_IN"
+    },
+    {
+      "ref": "T101",
+      "pin": "5",
+      "x": 16.54,
+      "y": 26.0,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "T101",
+      "pin": "6",
+      "x": 16.54,
+      "y": 23.46,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R101",
+      "pin": "1",
+      "x": 6.0,
+      "y": 18.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_ANT_P"
+    },
+    {
+      "ref": "R101",
+      "pin": "2",
+      "x": 8.0,
+      "y": 18.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R102",
+      "pin": "1",
+      "x": 6.0,
+      "y": 34.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_ANT_N"
+    },
+    {
+      "ref": "R102",
+      "pin": "2",
+      "x": 8.0,
+      "y": 34.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C101",
+      "pin": "1",
+      "x": 21.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_RF_IN"
+    },
+    {
+      "ref": "C101",
+      "pin": "2",
+      "x": 23.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_HP"
+    },
+    {
+      "ref": "L101",
+      "pin": "1",
+      "x": 26.0,
+      "y": 30.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_HP"
+    },
+    {
+      "ref": "L101",
+      "pin": "2",
+      "x": 26.0,
+      "y": 28.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C102",
+      "pin": "1",
+      "x": 29.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_HP"
+    },
+    {
+      "ref": "C102",
+      "pin": "2",
+      "x": 31.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP1"
+    },
+    {
+      "ref": "C103",
+      "pin": "1",
+      "x": 33.0,
+      "y": 30.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_LP1"
+    },
+    {
+      "ref": "C103",
+      "pin": "2",
+      "x": 33.0,
+      "y": 28.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "L102",
+      "pin": "1",
+      "x": 37.0,
+      "y": 25.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP1"
+    },
+    {
+      "ref": "L102",
+      "pin": "2",
+      "x": 39.0,
+      "y": 25.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP2"
+    },
+    {
+      "ref": "C104",
+      "pin": "1",
+      "x": 37.0,
+      "y": 28.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP1"
+    },
+    {
+      "ref": "C104",
+      "pin": "2",
+      "x": 39.0,
+      "y": 28.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP2"
+    },
+    {
+      "ref": "C105",
+      "pin": "1",
+      "x": 43.0,
+      "y": 30.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_LP2"
+    },
+    {
+      "ref": "C105",
+      "pin": "2",
+      "x": 43.0,
+      "y": 28.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "L103",
+      "pin": "1",
+      "x": 47.0,
+      "y": 25.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP2"
+    },
+    {
+      "ref": "L103",
+      "pin": "2",
+      "x": 49.0,
+      "y": 25.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_AMP_IN"
+    },
+    {
+      "ref": "C106",
+      "pin": "1",
+      "x": 47.0,
+      "y": 28.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_LP2"
+    },
+    {
+      "ref": "C106",
+      "pin": "2",
+      "x": 49.0,
+      "y": 28.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_AMP_IN"
+    },
+    {
+      "ref": "C107",
+      "pin": "1",
+      "x": 53.0,
+      "y": 30.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_AMP_IN"
+    },
+    {
+      "ref": "C107",
+      "pin": "2",
+      "x": 53.0,
+      "y": 28.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "D101",
+      "pin": "1",
+      "x": 55.0,
+      "y": 23.15,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "X_AMP_IN"
+    },
+    {
+      "ref": "D101",
+      "pin": "2",
+      "x": 55.0,
+      "y": 20.85,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "D102",
+      "pin": "1",
+      "x": 58.0,
+      "y": 23.15,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "D102",
+      "pin": "2",
+      "x": 58.0,
+      "y": 20.85,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "X_AMP_IN"
+    },
+    {
+      "ref": "U101",
+      "pin": "1",
+      "x": 59.5,
+      "y": 26.0,
+      "w": 0.9,
+      "h": 1.3,
+      "drill": 0,
+      "net": "X_AMP_IN"
+    },
+    {
+      "ref": "U101",
+      "pin": "3",
+      "x": 62.5,
+      "y": 26.0,
+      "w": 0.9,
+      "h": 1.3,
+      "drill": 0,
+      "net": "X_AMP_OUT"
+    },
+    {
+      "ref": "U101",
+      "pin": "2",
+      "x": 61.0,
+      "y": 23.6125,
+      "w": 1.733,
+      "h": 3.125,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "U101",
+      "pin": "2",
+      "x": 61.0,
+      "y": 25.9125,
+      "w": 0.9,
+      "h": 1.475,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C108",
+      "pin": "1",
+      "x": 65.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_AMP_OUT"
+    },
+    {
+      "ref": "C108",
+      "pin": "2",
+      "x": 67.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_PAD_IN"
+    },
+    {
+      "ref": "R103",
+      "pin": "1",
+      "x": 70.0,
+      "y": 30.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_PAD_IN"
+    },
+    {
+      "ref": "R103",
+      "pin": "2",
+      "x": 70.0,
+      "y": 28.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R104",
+      "pin": "1",
+      "x": 73.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_PAD_IN"
+    },
+    {
+      "ref": "R104",
+      "pin": "2",
+      "x": 75.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_PAD_OUT"
+    },
+    {
+      "ref": "R105",
+      "pin": "1",
+      "x": 78.0,
+      "y": 30.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_PAD_OUT"
+    },
+    {
+      "ref": "R105",
+      "pin": "2",
+      "x": 78.0,
+      "y": 28.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C109",
+      "pin": "1",
+      "x": 82.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_PAD_OUT"
+    },
+    {
+      "ref": "C109",
+      "pin": "2",
+      "x": 84.0,
+      "y": 26.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "X_COAX"
+    },
+    {
+      "ref": "J102",
+      "pin": "1",
+      "x": 90.0,
+      "y": 26.0,
+      "w": 2.05,
+      "h": 2.05,
+      "drill": 1.5,
+      "net": "X_COAX"
+    },
+    {
+      "ref": "J102",
+      "pin": "2",
+      "x": 92.54,
+      "y": 28.54,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "J102",
+      "pin": "2",
+      "x": 92.54,
+      "y": 23.46,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "J102",
+      "pin": "2",
+      "x": 87.46,
+      "y": 23.46,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "J102",
+      "pin": "2",
+      "x": 87.46,
+      "y": 28.54,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "L104",
+      "pin": "1",
+      "x": 90.0,
+      "y": 35.3,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_COAX"
+    },
+    {
+      "ref": "L104",
+      "pin": "2",
+      "x": 90.0,
+      "y": 32.7,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_RAW"
+    },
+    {
+      "ref": "D103",
+      "pin": "1",
+      "x": 81.75,
+      "y": 39.0,
+      "w": 2.5,
+      "h": 2.0,
+      "drill": 0,
+      "net": "X_V12"
+    },
+    {
+      "ref": "D103",
+      "pin": "2",
+      "x": 86.25,
+      "y": 39.0,
+      "w": 2.5,
+      "h": 2.0,
+      "drill": 0,
+      "net": "X_RAW"
+    },
+    {
+      "ref": "D104",
+      "pin": "1",
+      "x": 90.0,
+      "y": 45.25,
+      "w": 2.0,
+      "h": 2.5,
+      "drill": 0,
+      "net": "X_V12"
+    },
+    {
+      "ref": "D104",
+      "pin": "2",
+      "x": 90.0,
+      "y": 40.75,
+      "w": 2.0,
+      "h": 2.5,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C110",
+      "pin": "1",
+      "x": 79.0,
+      "y": 44.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "X_V12"
+    },
+    {
+      "ref": "C110",
+      "pin": "2",
+      "x": 79.0,
+      "y": 41.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C111",
+      "pin": "1",
+      "x": 75.0,
+      "y": 44.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_V12"
+    },
+    {
+      "ref": "C111",
+      "pin": "2",
+      "x": 75.0,
+      "y": 42.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "U102",
+      "pin": "1",
+      "x": 65.85,
+      "y": 42.025,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "X_V8"
+    },
+    {
+      "ref": "U102",
+      "pin": "2",
+      "x": 65.85,
+      "y": 42.675,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "X_FB"
+    },
+    {
+      "ref": "U102",
+      "pin": "3",
+      "x": 65.85,
+      "y": 43.325,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "U102",
+      "pin": "4",
+      "x": 65.85,
+      "y": 43.975,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "U102",
+      "pin": "5",
+      "x": 70.15,
+      "y": 43.975,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "X_V12"
+    },
+    {
+      "ref": "U102",
+      "pin": "6",
+      "x": 70.15,
+      "y": 43.325,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "X_NR"
+    },
+    {
+      "ref": "U102",
+      "pin": "7",
+      "x": 70.15,
+      "y": 42.675,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "U102",
+      "pin": "8",
+      "x": 70.15,
+      "y": 42.025,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "X_V12"
+    },
+    {
+      "ref": "U102",
+      "pin": "9",
+      "x": 68.0,
+      "y": 43.0,
+      "w": 1.68,
+      "h": 1.88,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R106",
+      "pin": "1",
+      "x": 61.0,
+      "y": 43.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_V8"
+    },
+    {
+      "ref": "R106",
+      "pin": "2",
+      "x": 61.0,
+      "y": 41.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_FB"
+    },
+    {
+      "ref": "R107",
+      "pin": "1",
+      "x": 61.0,
+      "y": 47.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_FB"
+    },
+    {
+      "ref": "R107",
+      "pin": "2",
+      "x": 61.0,
+      "y": 45.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C112",
+      "pin": "1",
+      "x": 57.0,
+      "y": 44.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "X_V8"
+    },
+    {
+      "ref": "C112",
+      "pin": "2",
+      "x": 57.0,
+      "y": 41.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C113",
+      "pin": "1",
+      "x": 73.0,
+      "y": 48.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_NR"
+    },
+    {
+      "ref": "C113",
+      "pin": "2",
+      "x": 73.0,
+      "y": 46.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C114",
+      "pin": "1",
+      "x": 55.0,
+      "y": 39.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_V8"
+    },
+    {
+      "ref": "C114",
+      "pin": "2",
+      "x": 55.0,
+      "y": 37.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R108",
+      "pin": "1",
+      "x": 58.0,
+      "y": 36.0,
+      "w": 2.0,
+      "h": 3.4,
+      "drill": 0,
+      "net": "X_V8"
+    },
+    {
+      "ref": "R108",
+      "pin": "2",
+      "x": 64.0,
+      "y": 36.0,
+      "w": 2.0,
+      "h": 3.4,
+      "drill": 0,
+      "net": "X_BIAS"
+    },
+    {
+      "ref": "L105",
+      "pin": "1",
+      "x": 64.0,
+      "y": 32.3,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_BIAS"
+    },
+    {
+      "ref": "L105",
+      "pin": "2",
+      "x": 64.0,
+      "y": 29.7,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "X_AMP_OUT"
+    },
+    {
+      "ref": "J201",
+      "pin": "1",
+      "x": 5.0,
+      "y": 62.0,
+      "w": 6,
+      "h": 6,
+      "drill": 3.2,
+      "net": "Y_ANT_N"
+    },
+    {
+      "ref": "J201",
+      "pin": "2",
+      "x": 5.0,
+      "y": 70.0,
+      "w": 6,
+      "h": 6,
+      "drill": 3.2,
+      "net": "Y_ANT_P"
+    },
+    {
+      "ref": "T201",
+      "pin": "1",
+      "x": 11.46,
+      "y": 63.46,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "Y_ANT_N"
+    },
+    {
+      "ref": "T201",
+      "pin": "2",
+      "x": 11.46,
+      "y": 66.0,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "T201",
+      "pin": "3",
+      "x": 11.46,
+      "y": 68.54,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "Y_ANT_P"
+    },
+    {
+      "ref": "T201",
+      "pin": "4",
+      "x": 16.54,
+      "y": 68.54,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "Y_RF_IN"
+    },
+    {
+      "ref": "T201",
+      "pin": "5",
+      "x": 16.54,
+      "y": 66.0,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "T201",
+      "pin": "6",
+      "x": 16.54,
+      "y": 63.46,
+      "w": 2.54,
+      "h": 1.65,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R201",
+      "pin": "1",
+      "x": 6.0,
+      "y": 58.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_ANT_P"
+    },
+    {
+      "ref": "R201",
+      "pin": "2",
+      "x": 8.0,
+      "y": 58.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R202",
+      "pin": "1",
+      "x": 6.0,
+      "y": 74.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_ANT_N"
+    },
+    {
+      "ref": "R202",
+      "pin": "2",
+      "x": 8.0,
+      "y": 74.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C201",
+      "pin": "1",
+      "x": 21.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_RF_IN"
+    },
+    {
+      "ref": "C201",
+      "pin": "2",
+      "x": 23.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_HP"
+    },
+    {
+      "ref": "L201",
+      "pin": "1",
+      "x": 26.0,
+      "y": 70.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_HP"
+    },
+    {
+      "ref": "L201",
+      "pin": "2",
+      "x": 26.0,
+      "y": 68.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C202",
+      "pin": "1",
+      "x": 29.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_HP"
+    },
+    {
+      "ref": "C202",
+      "pin": "2",
+      "x": 31.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP1"
+    },
+    {
+      "ref": "C203",
+      "pin": "1",
+      "x": 33.0,
+      "y": 70.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_LP1"
+    },
+    {
+      "ref": "C203",
+      "pin": "2",
+      "x": 33.0,
+      "y": 68.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "L202",
+      "pin": "1",
+      "x": 37.0,
+      "y": 65.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP1"
+    },
+    {
+      "ref": "L202",
+      "pin": "2",
+      "x": 39.0,
+      "y": 65.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP2"
+    },
+    {
+      "ref": "C204",
+      "pin": "1",
+      "x": 37.0,
+      "y": 68.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP1"
+    },
+    {
+      "ref": "C204",
+      "pin": "2",
+      "x": 39.0,
+      "y": 68.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP2"
+    },
+    {
+      "ref": "C205",
+      "pin": "1",
+      "x": 43.0,
+      "y": 70.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_LP2"
+    },
+    {
+      "ref": "C205",
+      "pin": "2",
+      "x": 43.0,
+      "y": 68.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "L203",
+      "pin": "1",
+      "x": 47.0,
+      "y": 65.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP2"
+    },
+    {
+      "ref": "L203",
+      "pin": "2",
+      "x": 49.0,
+      "y": 65.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_AMP_IN"
+    },
+    {
+      "ref": "C206",
+      "pin": "1",
+      "x": 47.0,
+      "y": 68.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_LP2"
+    },
+    {
+      "ref": "C206",
+      "pin": "2",
+      "x": 49.0,
+      "y": 68.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_AMP_IN"
+    },
+    {
+      "ref": "C207",
+      "pin": "1",
+      "x": 53.0,
+      "y": 70.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_AMP_IN"
+    },
+    {
+      "ref": "C207",
+      "pin": "2",
+      "x": 53.0,
+      "y": 68.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "D201",
+      "pin": "1",
+      "x": 55.0,
+      "y": 63.15,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "Y_AMP_IN"
+    },
+    {
+      "ref": "D201",
+      "pin": "2",
+      "x": 55.0,
+      "y": 60.85,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "D202",
+      "pin": "1",
+      "x": 58.0,
+      "y": 63.15,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "D202",
+      "pin": "2",
+      "x": 58.0,
+      "y": 60.85,
+      "w": 0.9,
+      "h": 1.0,
+      "drill": 0,
+      "net": "Y_AMP_IN"
+    },
+    {
+      "ref": "U201",
+      "pin": "1",
+      "x": 59.5,
+      "y": 66.0,
+      "w": 0.9,
+      "h": 1.3,
+      "drill": 0,
+      "net": "Y_AMP_IN"
+    },
+    {
+      "ref": "U201",
+      "pin": "3",
+      "x": 62.5,
+      "y": 66.0,
+      "w": 0.9,
+      "h": 1.3,
+      "drill": 0,
+      "net": "Y_AMP_OUT"
+    },
+    {
+      "ref": "U201",
+      "pin": "2",
+      "x": 61.0,
+      "y": 63.6125,
+      "w": 1.733,
+      "h": 3.125,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "U201",
+      "pin": "2",
+      "x": 61.0,
+      "y": 65.9125,
+      "w": 0.9,
+      "h": 1.475,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C208",
+      "pin": "1",
+      "x": 65.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_AMP_OUT"
+    },
+    {
+      "ref": "C208",
+      "pin": "2",
+      "x": 67.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_PAD_IN"
+    },
+    {
+      "ref": "R203",
+      "pin": "1",
+      "x": 70.0,
+      "y": 70.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_PAD_IN"
+    },
+    {
+      "ref": "R203",
+      "pin": "2",
+      "x": 70.0,
+      "y": 68.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R204",
+      "pin": "1",
+      "x": 73.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_PAD_IN"
+    },
+    {
+      "ref": "R204",
+      "pin": "2",
+      "x": 75.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_PAD_OUT"
+    },
+    {
+      "ref": "R205",
+      "pin": "1",
+      "x": 78.0,
+      "y": 70.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_PAD_OUT"
+    },
+    {
+      "ref": "R205",
+      "pin": "2",
+      "x": 78.0,
+      "y": 68.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C209",
+      "pin": "1",
+      "x": 82.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_PAD_OUT"
+    },
+    {
+      "ref": "C209",
+      "pin": "2",
+      "x": 84.0,
+      "y": 66.0,
+      "w": 1.2,
+      "h": 1.4,
+      "drill": 0,
+      "net": "Y_COAX"
+    },
+    {
+      "ref": "J202",
+      "pin": "1",
+      "x": 90.0,
+      "y": 66.0,
+      "w": 2.05,
+      "h": 2.05,
+      "drill": 1.5,
+      "net": "Y_COAX"
+    },
+    {
+      "ref": "J202",
+      "pin": "2",
+      "x": 92.54,
+      "y": 68.54,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "J202",
+      "pin": "2",
+      "x": 92.54,
+      "y": 63.46,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "J202",
+      "pin": "2",
+      "x": 87.46,
+      "y": 63.46,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "J202",
+      "pin": "2",
+      "x": 87.46,
+      "y": 68.54,
+      "w": 2.25,
+      "h": 2.25,
+      "drill": 1.7,
+      "net": "GND"
+    },
+    {
+      "ref": "L204",
+      "pin": "1",
+      "x": 90.0,
+      "y": 75.3,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_COAX"
+    },
+    {
+      "ref": "L204",
+      "pin": "2",
+      "x": 90.0,
+      "y": 72.7,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_RAW"
+    },
+    {
+      "ref": "D203",
+      "pin": "1",
+      "x": 81.75,
+      "y": 79.0,
+      "w": 2.5,
+      "h": 2.0,
+      "drill": 0,
+      "net": "Y_V12"
+    },
+    {
+      "ref": "D203",
+      "pin": "2",
+      "x": 86.25,
+      "y": 79.0,
+      "w": 2.5,
+      "h": 2.0,
+      "drill": 0,
+      "net": "Y_RAW"
+    },
+    {
+      "ref": "D204",
+      "pin": "1",
+      "x": 90.0,
+      "y": 85.25,
+      "w": 2.0,
+      "h": 2.5,
+      "drill": 0,
+      "net": "Y_V12"
+    },
+    {
+      "ref": "D204",
+      "pin": "2",
+      "x": 90.0,
+      "y": 80.75,
+      "w": 2.0,
+      "h": 2.5,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C210",
+      "pin": "1",
+      "x": 79.0,
+      "y": 84.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "Y_V12"
+    },
+    {
+      "ref": "C210",
+      "pin": "2",
+      "x": 79.0,
+      "y": 81.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C211",
+      "pin": "1",
+      "x": 75.0,
+      "y": 84.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_V12"
+    },
+    {
+      "ref": "C211",
+      "pin": "2",
+      "x": 75.0,
+      "y": 82.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "U202",
+      "pin": "1",
+      "x": 65.85,
+      "y": 82.025,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "Y_V8"
+    },
+    {
+      "ref": "U202",
+      "pin": "2",
+      "x": 65.85,
+      "y": 82.675,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "Y_FB"
+    },
+    {
+      "ref": "U202",
+      "pin": "3",
+      "x": 65.85,
+      "y": 83.325,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "U202",
+      "pin": "4",
+      "x": 65.85,
+      "y": 83.975,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "U202",
+      "pin": "5",
+      "x": 70.15,
+      "y": 83.975,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "Y_V12"
+    },
+    {
+      "ref": "U202",
+      "pin": "6",
+      "x": 70.15,
+      "y": 83.325,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "Y_NR"
+    },
+    {
+      "ref": "U202",
+      "pin": "7",
+      "x": 70.15,
+      "y": 82.675,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": ""
+    },
+    {
+      "ref": "U202",
+      "pin": "8",
+      "x": 70.15,
+      "y": 82.025,
+      "w": 1.45,
+      "h": 0.4,
+      "drill": 0,
+      "net": "Y_V12"
+    },
+    {
+      "ref": "U202",
+      "pin": "9",
+      "x": 68.0,
+      "y": 83.0,
+      "w": 1.68,
+      "h": 1.88,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R206",
+      "pin": "1",
+      "x": 61.0,
+      "y": 83.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_V8"
+    },
+    {
+      "ref": "R206",
+      "pin": "2",
+      "x": 61.0,
+      "y": 81.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_FB"
+    },
+    {
+      "ref": "R207",
+      "pin": "1",
+      "x": 61.0,
+      "y": 87.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_FB"
+    },
+    {
+      "ref": "R207",
+      "pin": "2",
+      "x": 61.0,
+      "y": 85.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C212",
+      "pin": "1",
+      "x": 57.0,
+      "y": 84.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "Y_V8"
+    },
+    {
+      "ref": "C212",
+      "pin": "2",
+      "x": 57.0,
+      "y": 81.5,
+      "w": 1.8,
+      "h": 1.6,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C213",
+      "pin": "1",
+      "x": 73.0,
+      "y": 88.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_NR"
+    },
+    {
+      "ref": "C213",
+      "pin": "2",
+      "x": 73.0,
+      "y": 86.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "C214",
+      "pin": "1",
+      "x": 55.0,
+      "y": 79.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_V8"
+    },
+    {
+      "ref": "C214",
+      "pin": "2",
+      "x": 55.0,
+      "y": 77.0,
+      "w": 1.4,
+      "h": 1.2,
+      "drill": 0,
+      "net": "GND"
+    },
+    {
+      "ref": "R208",
+      "pin": "1",
+      "x": 58.0,
+      "y": 76.0,
+      "w": 2.0,
+      "h": 3.4,
+      "drill": 0,
+      "net": "Y_V8"
+    },
+    {
+      "ref": "R208",
+      "pin": "2",
+      "x": 64.0,
+      "y": 76.0,
+      "w": 2.0,
+      "h": 3.4,
+      "drill": 0,
+      "net": "Y_BIAS"
+    },
+    {
+      "ref": "L205",
+      "pin": "1",
+      "x": 64.0,
+      "y": 72.3,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_BIAS"
+    },
+    {
+      "ref": "L205",
+      "pin": "2",
+      "x": 64.0,
+      "y": 69.7,
+      "w": 2.2,
+      "h": 1.2,
+      "drill": 0,
+      "net": "Y_AMP_OUT"
+    }
+  ],
+  "tracks": [
+    [
+      "X_AMP_IN",
+      0,
+      [
+        49.0,
+        25.0
+      ],
+      [
+        49.0,
+        28.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        49.0,
+        28.0
+      ],
+      [
+        51.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        51.0,
+        30.0
+      ],
+      [
+        53.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        49.0,
+        25.0
+      ],
+      [
+        50.800000000000004,
+        23.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        50.800000000000004,
+        23.200000000000003
+      ],
+      [
+        55.0,
+        23.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        55.0,
+        23.200000000000003
+      ],
+      [
+        55.0,
+        23.15
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        55.0,
+        23.15
+      ],
+      [
+        55.0,
+        23.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        55.0,
+        23.200000000000003
+      ],
+      [
+        57.400000000000006,
+        20.8
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        57.400000000000006,
+        20.8
+      ],
+      [
+        58.0,
+        20.8
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        58.0,
+        20.8
+      ],
+      [
+        58.0,
+        20.85
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        55.0,
+        23.15
+      ],
+      [
+        55.0,
+        23.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        55.0,
+        23.200000000000003
+      ],
+      [
+        57.800000000000004,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_IN",
+      0,
+      [
+        57.800000000000004,
+        26.0
+      ],
+      [
+        59.5,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        49.0,
+        65.0
+      ],
+      [
+        49.0,
+        68.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        49.0,
+        68.0
+      ],
+      [
+        51.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        51.0,
+        70.0
+      ],
+      [
+        53.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        49.0,
+        65.0
+      ],
+      [
+        50.800000000000004,
+        63.2
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        50.800000000000004,
+        63.2
+      ],
+      [
+        55.0,
+        63.2
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        55.0,
+        63.2
+      ],
+      [
+        55.0,
+        63.15
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        55.0,
+        63.15
+      ],
+      [
+        55.0,
+        63.2
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        55.0,
+        63.2
+      ],
+      [
+        57.400000000000006,
+        60.800000000000004
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        57.400000000000006,
+        60.800000000000004
+      ],
+      [
+        58.0,
+        60.800000000000004
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        58.0,
+        60.800000000000004
+      ],
+      [
+        58.0,
+        60.85
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        55.0,
+        63.15
+      ],
+      [
+        55.0,
+        63.2
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        55.0,
+        63.2
+      ],
+      [
+        57.800000000000004,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_IN",
+      0,
+      [
+        57.800000000000004,
+        66.0
+      ],
+      [
+        59.5,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP2",
+      0,
+      [
+        39.0,
+        25.0
+      ],
+      [
+        39.0,
+        28.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP2",
+      0,
+      [
+        39.0,
+        28.0
+      ],
+      [
+        41.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP2",
+      0,
+      [
+        41.0,
+        30.0
+      ],
+      [
+        43.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP2",
+      0,
+      [
+        43.0,
+        30.0
+      ],
+      [
+        45.0,
+        28.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP2",
+      0,
+      [
+        45.0,
+        28.0
+      ],
+      [
+        47.0,
+        28.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP2",
+      0,
+      [
+        47.0,
+        28.0
+      ],
+      [
+        47.0,
+        25.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP2",
+      0,
+      [
+        39.0,
+        65.0
+      ],
+      [
+        39.0,
+        68.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP2",
+      0,
+      [
+        39.0,
+        68.0
+      ],
+      [
+        41.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP2",
+      0,
+      [
+        41.0,
+        70.0
+      ],
+      [
+        43.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP2",
+      0,
+      [
+        43.0,
+        70.0
+      ],
+      [
+        45.0,
+        68.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP2",
+      0,
+      [
+        45.0,
+        68.0
+      ],
+      [
+        47.0,
+        68.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP2",
+      0,
+      [
+        47.0,
+        68.0
+      ],
+      [
+        47.0,
+        65.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        31.0,
+        26.0
+      ],
+      [
+        31.8,
+        26.8
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        31.8,
+        26.8
+      ],
+      [
+        31.8,
+        28.6
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        31.8,
+        28.6
+      ],
+      [
+        33.0,
+        29.8
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        33.0,
+        29.8
+      ],
+      [
+        33.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        33.0,
+        30.0
+      ],
+      [
+        35.0,
+        28.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        35.0,
+        28.0
+      ],
+      [
+        37.0,
+        28.0
+      ],
+      0.32
+    ],
+    [
+      "X_LP1",
+      0,
+      [
+        37.0,
+        28.0
+      ],
+      [
+        37.0,
+        25.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        31.0,
+        66.0
+      ],
+      [
+        31.8,
+        66.8
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        31.8,
+        66.8
+      ],
+      [
+        31.8,
+        68.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        31.8,
+        68.60000000000001
+      ],
+      [
+        33.0,
+        69.8
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        33.0,
+        69.8
+      ],
+      [
+        33.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        33.0,
+        70.0
+      ],
+      [
+        35.0,
+        68.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        35.0,
+        68.0
+      ],
+      [
+        37.0,
+        68.0
+      ],
+      0.32
+    ],
+    [
+      "Y_LP1",
+      0,
+      [
+        37.0,
+        68.0
+      ],
+      [
+        37.0,
+        65.0
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        5.0,
+        22.0
+      ],
+      [
+        6.4,
+        23.400000000000002
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        6.4,
+        23.400000000000002
+      ],
+      [
+        11.4,
+        23.400000000000002
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        11.4,
+        23.400000000000002
+      ],
+      [
+        11.46,
+        23.46
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        11.46,
+        23.46
+      ],
+      [
+        11.4,
+        23.400000000000002
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        11.4,
+        23.400000000000002
+      ],
+      [
+        8.4,
+        26.400000000000002
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        8.4,
+        26.400000000000002
+      ],
+      [
+        8.4,
+        31.0
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        8.4,
+        31.0
+      ],
+      [
+        8.200000000000001,
+        31.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        8.200000000000001,
+        31.200000000000003
+      ],
+      [
+        8.200000000000001,
+        31.400000000000002
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        8.200000000000001,
+        31.400000000000002
+      ],
+      [
+        8.0,
+        31.6
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        8.0,
+        31.6
+      ],
+      [
+        8.0,
+        31.8
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        8.0,
+        31.8
+      ],
+      [
+        6.0,
+        33.800000000000004
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_N",
+      0,
+      [
+        6.0,
+        33.800000000000004
+      ],
+      [
+        6.0,
+        34.0
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        5.0,
+        30.0
+      ],
+      [
+        5.0,
+        34.800000000000004
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        5.0,
+        34.800000000000004
+      ],
+      [
+        5.4,
+        35.2
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        5.4,
+        35.2
+      ],
+      [
+        8.6,
+        35.2
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        8.6,
+        35.2
+      ],
+      [
+        11.4,
+        32.4
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        11.4,
+        32.4
+      ],
+      [
+        11.4,
+        28.6
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        11.4,
+        28.6
+      ],
+      [
+        11.46,
+        28.54
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        11.46,
+        28.54
+      ],
+      [
+        12.8,
+        27.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        12.8,
+        27.200000000000003
+      ],
+      [
+        13.0,
+        27.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        13.0,
+        27.200000000000003
+      ],
+      [
+        13.200000000000001,
+        27.0
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        13.200000000000001,
+        27.0
+      ],
+      [
+        13.200000000000001,
+        22.400000000000002
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        13.200000000000001,
+        22.400000000000002
+      ],
+      [
+        10.0,
+        19.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        10.0,
+        19.200000000000003
+      ],
+      [
+        7.4,
+        19.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        7.4,
+        19.200000000000003
+      ],
+      [
+        6.2,
+        18.0
+      ],
+      0.32
+    ],
+    [
+      "X_ANT_P",
+      0,
+      [
+        6.2,
+        18.0
+      ],
+      [
+        6.0,
+        18.0
+      ],
+      0.32
+    ],
+    [
+      "X_HP",
+      0,
+      [
+        23.0,
+        26.0
+      ],
+      [
+        24.8,
+        27.8
+      ],
+      0.32
+    ],
+    [
+      "X_HP",
+      0,
+      [
+        24.8,
+        27.8
+      ],
+      [
+        24.8,
+        28.6
+      ],
+      0.32
+    ],
+    [
+      "X_HP",
+      0,
+      [
+        24.8,
+        28.6
+      ],
+      [
+        26.0,
+        29.8
+      ],
+      0.32
+    ],
+    [
+      "X_HP",
+      0,
+      [
+        26.0,
+        29.8
+      ],
+      [
+        26.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_HP",
+      0,
+      [
+        26.0,
+        30.0
+      ],
+      [
+        29.0,
+        27.0
+      ],
+      0.32
+    ],
+    [
+      "X_HP",
+      0,
+      [
+        29.0,
+        27.0
+      ],
+      [
+        29.0,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_OUT",
+      0,
+      [
+        62.5,
+        26.0
+      ],
+      [
+        65.0,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_OUT",
+      0,
+      [
+        65.0,
+        26.0
+      ],
+      [
+        64.0,
+        27.0
+      ],
+      0.32
+    ],
+    [
+      "X_AMP_OUT",
+      0,
+      [
+        64.0,
+        27.0
+      ],
+      [
+        64.0,
+        29.7
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_IN",
+      0,
+      [
+        67.0,
+        26.0
+      ],
+      [
+        68.8,
+        27.8
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_IN",
+      0,
+      [
+        68.8,
+        27.8
+      ],
+      [
+        68.8,
+        28.6
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_IN",
+      0,
+      [
+        68.8,
+        28.6
+      ],
+      [
+        70.0,
+        29.8
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_IN",
+      0,
+      [
+        70.0,
+        29.8
+      ],
+      [
+        70.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_IN",
+      0,
+      [
+        70.0,
+        30.0
+      ],
+      [
+        73.0,
+        27.0
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_IN",
+      0,
+      [
+        73.0,
+        27.0
+      ],
+      [
+        73.0,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_OUT",
+      0,
+      [
+        75.0,
+        26.0
+      ],
+      [
+        76.80000000000001,
+        27.8
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_OUT",
+      0,
+      [
+        76.80000000000001,
+        27.8
+      ],
+      [
+        76.80000000000001,
+        28.6
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_OUT",
+      0,
+      [
+        76.80000000000001,
+        28.6
+      ],
+      [
+        78.0,
+        29.8
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_OUT",
+      0,
+      [
+        78.0,
+        29.8
+      ],
+      [
+        78.0,
+        30.0
+      ],
+      0.32
+    ],
+    [
+      "X_PAD_OUT",
+      0,
+      [
+        78.0,
+        30.0
+      ],
+      [
+        82.0,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        84.0,
+        26.0
+      ],
+      [
+        90.0,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        90.0,
+        26.0
+      ],
+      [
+        90.0,
+        27.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        90.0,
+        27.200000000000003
+      ],
+      [
+        89.60000000000001,
+        27.6
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        89.60000000000001,
+        27.6
+      ],
+      [
+        89.60000000000001,
+        29.0
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        89.60000000000001,
+        29.0
+      ],
+      [
+        89.4,
+        29.200000000000003
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        89.4,
+        29.200000000000003
+      ],
+      [
+        89.4,
+        31.0
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        89.4,
+        31.0
+      ],
+      [
+        88.4,
+        32.0
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        88.4,
+        32.0
+      ],
+      [
+        88.4,
+        33.4
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        88.4,
+        33.4
+      ],
+      [
+        90.0,
+        35.0
+      ],
+      0.32
+    ],
+    [
+      "X_COAX",
+      0,
+      [
+        90.0,
+        35.0
+      ],
+      [
+        90.0,
+        35.3
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        5.0,
+        62.0
+      ],
+      [
+        6.4,
+        63.400000000000006
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        6.4,
+        63.400000000000006
+      ],
+      [
+        11.4,
+        63.400000000000006
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        11.4,
+        63.400000000000006
+      ],
+      [
+        11.46,
+        63.46
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        11.46,
+        63.46
+      ],
+      [
+        11.4,
+        63.400000000000006
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        11.4,
+        63.400000000000006
+      ],
+      [
+        8.4,
+        66.4
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        8.4,
+        66.4
+      ],
+      [
+        8.4,
+        71.0
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        8.4,
+        71.0
+      ],
+      [
+        8.200000000000001,
+        71.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        8.200000000000001,
+        71.2
+      ],
+      [
+        8.200000000000001,
+        71.4
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        8.200000000000001,
+        71.4
+      ],
+      [
+        8.0,
+        71.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        8.0,
+        71.60000000000001
+      ],
+      [
+        8.0,
+        71.8
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        8.0,
+        71.8
+      ],
+      [
+        6.0,
+        73.8
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_N",
+      0,
+      [
+        6.0,
+        73.8
+      ],
+      [
+        6.0,
+        74.0
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        5.0,
+        70.0
+      ],
+      [
+        5.0,
+        74.8
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        5.0,
+        74.8
+      ],
+      [
+        5.4,
+        75.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        5.4,
+        75.2
+      ],
+      [
+        8.6,
+        75.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        8.6,
+        75.2
+      ],
+      [
+        11.4,
+        72.4
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        11.4,
+        72.4
+      ],
+      [
+        11.4,
+        68.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        11.4,
+        68.60000000000001
+      ],
+      [
+        11.46,
+        68.54
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        11.46,
+        68.54
+      ],
+      [
+        12.8,
+        67.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        12.8,
+        67.2
+      ],
+      [
+        13.0,
+        67.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        13.0,
+        67.2
+      ],
+      [
+        13.200000000000001,
+        67.0
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        13.200000000000001,
+        67.0
+      ],
+      [
+        13.200000000000001,
+        62.400000000000006
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        13.200000000000001,
+        62.400000000000006
+      ],
+      [
+        10.0,
+        59.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        10.0,
+        59.2
+      ],
+      [
+        7.4,
+        59.2
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        7.4,
+        59.2
+      ],
+      [
+        6.2,
+        58.0
+      ],
+      0.32
+    ],
+    [
+      "Y_ANT_P",
+      0,
+      [
+        6.2,
+        58.0
+      ],
+      [
+        6.0,
+        58.0
+      ],
+      0.32
+    ],
+    [
+      "Y_HP",
+      0,
+      [
+        23.0,
+        66.0
+      ],
+      [
+        24.8,
+        67.8
+      ],
+      0.32
+    ],
+    [
+      "Y_HP",
+      0,
+      [
+        24.8,
+        67.8
+      ],
+      [
+        24.8,
+        68.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_HP",
+      0,
+      [
+        24.8,
+        68.60000000000001
+      ],
+      [
+        26.0,
+        69.8
+      ],
+      0.32
+    ],
+    [
+      "Y_HP",
+      0,
+      [
+        26.0,
+        69.8
+      ],
+      [
+        26.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_HP",
+      0,
+      [
+        26.0,
+        70.0
+      ],
+      [
+        29.0,
+        67.0
+      ],
+      0.32
+    ],
+    [
+      "Y_HP",
+      0,
+      [
+        29.0,
+        67.0
+      ],
+      [
+        29.0,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_OUT",
+      0,
+      [
+        62.5,
+        66.0
+      ],
+      [
+        65.0,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_OUT",
+      0,
+      [
+        65.0,
+        66.0
+      ],
+      [
+        64.0,
+        67.0
+      ],
+      0.32
+    ],
+    [
+      "Y_AMP_OUT",
+      0,
+      [
+        64.0,
+        67.0
+      ],
+      [
+        64.0,
+        69.7
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_IN",
+      0,
+      [
+        67.0,
+        66.0
+      ],
+      [
+        68.8,
+        67.8
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_IN",
+      0,
+      [
+        68.8,
+        67.8
+      ],
+      [
+        68.8,
+        68.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_IN",
+      0,
+      [
+        68.8,
+        68.60000000000001
+      ],
+      [
+        70.0,
+        69.8
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_IN",
+      0,
+      [
+        70.0,
+        69.8
+      ],
+      [
+        70.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_IN",
+      0,
+      [
+        70.0,
+        70.0
+      ],
+      [
+        73.0,
+        67.0
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_IN",
+      0,
+      [
+        73.0,
+        67.0
+      ],
+      [
+        73.0,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_OUT",
+      0,
+      [
+        75.0,
+        66.0
+      ],
+      [
+        76.80000000000001,
+        67.8
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_OUT",
+      0,
+      [
+        76.80000000000001,
+        67.8
+      ],
+      [
+        76.80000000000001,
+        68.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_OUT",
+      0,
+      [
+        76.80000000000001,
+        68.60000000000001
+      ],
+      [
+        78.0,
+        69.8
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_OUT",
+      0,
+      [
+        78.0,
+        69.8
+      ],
+      [
+        78.0,
+        70.0
+      ],
+      0.32
+    ],
+    [
+      "Y_PAD_OUT",
+      0,
+      [
+        78.0,
+        70.0
+      ],
+      [
+        82.0,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        84.0,
+        66.0
+      ],
+      [
+        90.0,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        90.0,
+        66.0
+      ],
+      [
+        90.0,
+        67.2
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        90.0,
+        67.2
+      ],
+      [
+        89.60000000000001,
+        67.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        89.60000000000001,
+        67.60000000000001
+      ],
+      [
+        89.60000000000001,
+        69.0
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        89.60000000000001,
+        69.0
+      ],
+      [
+        89.4,
+        69.2
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        89.4,
+        69.2
+      ],
+      [
+        89.4,
+        71.0
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        89.4,
+        71.0
+      ],
+      [
+        88.4,
+        72.0
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        88.4,
+        72.0
+      ],
+      [
+        88.4,
+        73.4
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        88.4,
+        73.4
+      ],
+      [
+        90.0,
+        75.0
+      ],
+      0.32
+    ],
+    [
+      "Y_COAX",
+      0,
+      [
+        90.0,
+        75.0
+      ],
+      [
+        90.0,
+        75.3
+      ],
+      0.32
+    ],
+    [
+      "X_RF_IN",
+      0,
+      [
+        16.54,
+        28.54
+      ],
+      [
+        16.6,
+        28.6
+      ],
+      0.32
+    ],
+    [
+      "X_RF_IN",
+      0,
+      [
+        16.6,
+        28.6
+      ],
+      [
+        19.200000000000003,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "X_RF_IN",
+      0,
+      [
+        19.200000000000003,
+        26.0
+      ],
+      [
+        21.0,
+        26.0
+      ],
+      0.32
+    ],
+    [
+      "Y_RF_IN",
+      0,
+      [
+        16.54,
+        68.54
+      ],
+      [
+        16.6,
+        68.60000000000001
+      ],
+      0.32
+    ],
+    [
+      "Y_RF_IN",
+      0,
+      [
+        16.6,
+        68.60000000000001
+      ],
+      [
+        19.200000000000003,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "Y_RF_IN",
+      0,
+      [
+        19.200000000000003,
+        66.0
+      ],
+      [
+        21.0,
+        66.0
+      ],
+      0.32
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        65.85,
+        42.675
+      ],
+      [
+        65.8,
+        42.6
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        65.8,
+        42.6
+      ],
+      [
+        65.0,
+        42.6
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        65.0,
+        42.6
+      ],
+      [
+        63.400000000000006,
+        41.0
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        63.400000000000006,
+        41.0
+      ],
+      [
+        61.0,
+        41.0
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        61.0,
+        41.0
+      ],
+      [
+        61.0,
+        41.2
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        61.0,
+        41.2
+      ],
+      [
+        60.0,
+        42.2
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        60.0,
+        42.2
+      ],
+      [
+        60.0,
+        45.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        60.0,
+        45.800000000000004
+      ],
+      [
+        61.0,
+        46.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_FB",
+      0,
+      [
+        61.0,
+        46.800000000000004
+      ],
+      [
+        61.0,
+        47.0
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        65.85,
+        82.675
+      ],
+      [
+        65.8,
+        82.60000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        65.8,
+        82.60000000000001
+      ],
+      [
+        65.0,
+        82.60000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        65.0,
+        82.60000000000001
+      ],
+      [
+        63.400000000000006,
+        81.0
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        63.400000000000006,
+        81.0
+      ],
+      [
+        61.0,
+        81.0
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        61.0,
+        81.0
+      ],
+      [
+        61.0,
+        81.2
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        61.0,
+        81.2
+      ],
+      [
+        60.0,
+        82.2
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        60.0,
+        82.2
+      ],
+      [
+        60.0,
+        85.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        60.0,
+        85.80000000000001
+      ],
+      [
+        61.0,
+        86.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_FB",
+      0,
+      [
+        61.0,
+        86.80000000000001
+      ],
+      [
+        61.0,
+        87.0
+      ],
+      0.2
+    ],
+    [
+      "X_NR",
+      0,
+      [
+        70.15,
+        43.325
+      ],
+      [
+        70.2,
+        43.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_NR",
+      0,
+      [
+        70.2,
+        43.400000000000006
+      ],
+      [
+        71.0,
+        43.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_NR",
+      0,
+      [
+        71.0,
+        43.400000000000006
+      ],
+      [
+        72.0,
+        44.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_NR",
+      0,
+      [
+        72.0,
+        44.400000000000006
+      ],
+      [
+        72.0,
+        46.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_NR",
+      0,
+      [
+        72.0,
+        46.800000000000004
+      ],
+      [
+        73.0,
+        47.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_NR",
+      0,
+      [
+        73.0,
+        47.800000000000004
+      ],
+      [
+        73.0,
+        48.0
+      ],
+      0.2
+    ],
+    [
+      "Y_NR",
+      0,
+      [
+        70.15,
+        83.325
+      ],
+      [
+        70.2,
+        83.4
+      ],
+      0.2
+    ],
+    [
+      "Y_NR",
+      0,
+      [
+        70.2,
+        83.4
+      ],
+      [
+        71.0,
+        83.4
+      ],
+      0.2
+    ],
+    [
+      "Y_NR",
+      0,
+      [
+        71.0,
+        83.4
+      ],
+      [
+        72.0,
+        84.4
+      ],
+      0.2
+    ],
+    [
+      "Y_NR",
+      0,
+      [
+        72.0,
+        84.4
+      ],
+      [
+        72.0,
+        86.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_NR",
+      0,
+      [
+        72.0,
+        86.80000000000001
+      ],
+      [
+        73.0,
+        87.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_NR",
+      0,
+      [
+        73.0,
+        87.80000000000001
+      ],
+      [
+        73.0,
+        88.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        81.75,
+        39.0
+      ],
+      [
+        81.80000000000001,
+        39.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        81.80000000000001,
+        39.0
+      ],
+      [
+        80.2,
+        40.6
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        80.2,
+        40.6
+      ],
+      [
+        80.2,
+        42.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        80.2,
+        42.400000000000006
+      ],
+      [
+        79.0,
+        43.6
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        79.0,
+        43.6
+      ],
+      [
+        79.0,
+        44.5
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        79.0,
+        44.5
+      ],
+      [
+        79.0,
+        44.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        79.0,
+        44.400000000000006
+      ],
+      [
+        78.60000000000001,
+        44.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        78.60000000000001,
+        44.0
+      ],
+      [
+        75.0,
+        44.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        75.0,
+        44.0
+      ],
+      [
+        74.0,
+        45.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        74.0,
+        45.0
+      ],
+      [
+        74.0,
+        48.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        74.0,
+        48.800000000000004
+      ],
+      [
+        73.8,
+        49.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        73.8,
+        49.0
+      ],
+      [
+        72.2,
+        49.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        72.2,
+        49.0
+      ],
+      [
+        70.2,
+        47.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        70.2,
+        47.0
+      ],
+      [
+        70.2,
+        44.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        70.2,
+        44.0
+      ],
+      [
+        70.15,
+        43.975
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        70.15,
+        43.975
+      ],
+      [
+        70.2,
+        44.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        70.2,
+        44.0
+      ],
+      [
+        70.2,
+        44.2
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      1,
+      [
+        70.2,
+        44.2
+      ],
+      [
+        70.2,
+        41.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        70.2,
+        41.800000000000004
+      ],
+      [
+        70.2,
+        42.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        70.2,
+        42.0
+      ],
+      [
+        70.15,
+        42.025
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        81.75,
+        39.0
+      ],
+      [
+        81.80000000000001,
+        39.0
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        81.80000000000001,
+        39.0
+      ],
+      [
+        88.0,
+        45.2
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        88.0,
+        45.2
+      ],
+      [
+        90.0,
+        45.2
+      ],
+      0.2
+    ],
+    [
+      "X_V12",
+      0,
+      [
+        90.0,
+        45.2
+      ],
+      [
+        90.0,
+        45.25
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        81.75,
+        79.0
+      ],
+      [
+        81.80000000000001,
+        79.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        81.80000000000001,
+        79.0
+      ],
+      [
+        80.2,
+        80.60000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        80.2,
+        80.60000000000001
+      ],
+      [
+        80.2,
+        82.4
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        80.2,
+        82.4
+      ],
+      [
+        79.0,
+        83.60000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        79.0,
+        83.60000000000001
+      ],
+      [
+        79.0,
+        84.5
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        79.0,
+        84.5
+      ],
+      [
+        79.0,
+        84.4
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        79.0,
+        84.4
+      ],
+      [
+        78.60000000000001,
+        84.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        78.60000000000001,
+        84.0
+      ],
+      [
+        75.0,
+        84.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        75.0,
+        84.0
+      ],
+      [
+        74.0,
+        85.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        74.0,
+        85.0
+      ],
+      [
+        74.0,
+        88.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        74.0,
+        88.80000000000001
+      ],
+      [
+        73.8,
+        89.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        73.8,
+        89.0
+      ],
+      [
+        72.2,
+        89.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        72.2,
+        89.0
+      ],
+      [
+        70.2,
+        87.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        70.2,
+        87.0
+      ],
+      [
+        70.2,
+        84.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        70.2,
+        84.0
+      ],
+      [
+        70.15,
+        83.975
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        70.15,
+        83.975
+      ],
+      [
+        70.2,
+        84.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        70.2,
+        84.0
+      ],
+      [
+        70.2,
+        84.2
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      1,
+      [
+        70.2,
+        84.2
+      ],
+      [
+        70.2,
+        81.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        70.2,
+        81.80000000000001
+      ],
+      [
+        70.2,
+        82.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        70.2,
+        82.0
+      ],
+      [
+        70.15,
+        82.025
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        81.75,
+        79.0
+      ],
+      [
+        81.80000000000001,
+        79.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        81.80000000000001,
+        79.0
+      ],
+      [
+        88.0,
+        85.2
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        88.0,
+        85.2
+      ],
+      [
+        90.0,
+        85.2
+      ],
+      0.2
+    ],
+    [
+      "Y_V12",
+      0,
+      [
+        90.0,
+        85.2
+      ],
+      [
+        90.0,
+        85.25
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        65.85,
+        42.025
+      ],
+      [
+        65.8,
+        42.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        65.8,
+        42.0
+      ],
+      [
+        65.60000000000001,
+        42.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        65.60000000000001,
+        42.0
+      ],
+      [
+        65.4,
+        41.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      1,
+      [
+        65.4,
+        41.800000000000004
+      ],
+      [
+        64.2,
+        43.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      1,
+      [
+        64.2,
+        43.0
+      ],
+      [
+        61.0,
+        43.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        61.0,
+        43.0
+      ],
+      [
+        61.0,
+        43.2
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        61.0,
+        43.2
+      ],
+      [
+        62.0,
+        44.2
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        62.0,
+        44.2
+      ],
+      [
+        62.0,
+        47.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        62.0,
+        47.800000000000004
+      ],
+      [
+        61.800000000000004,
+        48.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        61.800000000000004,
+        48.0
+      ],
+      [
+        60.2,
+        48.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        60.2,
+        48.0
+      ],
+      [
+        57.0,
+        44.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        57.0,
+        44.800000000000004
+      ],
+      [
+        57.0,
+        44.5
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        57.0,
+        44.5
+      ],
+      [
+        57.0,
+        44.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        57.0,
+        44.400000000000006
+      ],
+      [
+        55.0,
+        42.400000000000006
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        55.0,
+        42.400000000000006
+      ],
+      [
+        55.0,
+        39.0
+      ],
+      0.2
+    ],
+    [
+      "X_V8",
+      0,
+      [
+        55.0,
+        39.0
+      ],
+      [
+        58.0,
+        36.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        65.85,
+        82.025
+      ],
+      [
+        65.8,
+        82.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        65.8,
+        82.0
+      ],
+      [
+        65.60000000000001,
+        82.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        65.60000000000001,
+        82.0
+      ],
+      [
+        65.4,
+        81.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      1,
+      [
+        65.4,
+        81.80000000000001
+      ],
+      [
+        64.2,
+        83.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      1,
+      [
+        64.2,
+        83.0
+      ],
+      [
+        61.0,
+        83.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        61.0,
+        83.0
+      ],
+      [
+        61.0,
+        83.2
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        61.0,
+        83.2
+      ],
+      [
+        62.0,
+        84.2
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        62.0,
+        84.2
+      ],
+      [
+        62.0,
+        87.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        62.0,
+        87.80000000000001
+      ],
+      [
+        61.800000000000004,
+        88.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        61.800000000000004,
+        88.0
+      ],
+      [
+        60.2,
+        88.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        60.2,
+        88.0
+      ],
+      [
+        57.0,
+        84.80000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        57.0,
+        84.80000000000001
+      ],
+      [
+        57.0,
+        84.5
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        57.0,
+        84.5
+      ],
+      [
+        57.0,
+        84.4
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        57.0,
+        84.4
+      ],
+      [
+        55.0,
+        82.4
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        55.0,
+        82.4
+      ],
+      [
+        55.0,
+        79.0
+      ],
+      0.2
+    ],
+    [
+      "Y_V8",
+      0,
+      [
+        55.0,
+        79.0
+      ],
+      [
+        58.0,
+        76.0
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        90.0,
+        32.7
+      ],
+      [
+        90.0,
+        32.800000000000004
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        90.0,
+        32.800000000000004
+      ],
+      [
+        91.2,
+        34.0
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        91.2,
+        34.0
+      ],
+      [
+        91.2,
+        34.4
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        91.2,
+        34.4
+      ],
+      [
+        91.4,
+        34.6
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        91.4,
+        34.6
+      ],
+      [
+        91.4,
+        36.0
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        91.4,
+        36.0
+      ],
+      [
+        88.4,
+        39.0
+      ],
+      0.2
+    ],
+    [
+      "X_RAW",
+      0,
+      [
+        88.4,
+        39.0
+      ],
+      [
+        86.25,
+        39.0
+      ],
+      0.2
+    ],
+    [
+      "X_BIAS",
+      0,
+      [
+        64.0,
+        36.0
+      ],
+      [
+        64.0,
+        32.3
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        90.0,
+        72.7
+      ],
+      [
+        90.0,
+        72.8
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        90.0,
+        72.8
+      ],
+      [
+        91.2,
+        74.0
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        91.2,
+        74.0
+      ],
+      [
+        91.2,
+        74.4
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        91.2,
+        74.4
+      ],
+      [
+        91.4,
+        74.60000000000001
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        91.4,
+        74.60000000000001
+      ],
+      [
+        91.4,
+        76.0
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        91.4,
+        76.0
+      ],
+      [
+        88.4,
+        79.0
+      ],
+      0.2
+    ],
+    [
+      "Y_RAW",
+      0,
+      [
+        88.4,
+        79.0
+      ],
+      [
+        86.25,
+        79.0
+      ],
+      0.2
+    ],
+    [
+      "Y_BIAS",
+      0,
+      [
+        64.0,
+        76.0
+      ],
+      [
+        64.0,
+        72.3
+      ],
+      0.2
+    ],
+    [
+      "GND",
+      0,
+      [
+        65.85,
+        43.975
+      ],
+      [
+        65.85,
+        44.975
+      ],
+      0.2
+    ],
+    [
+      "GND",
+      0,
+      [
+        65.85,
+        83.975
+      ],
+      [
+        65.85,
+        84.975
+      ],
+      0.2
+    ]
+  ],
+  "vias": [
+    [
+      "X_V12",
+      70.2,
+      44.2
+    ],
+    [
+      "X_V12",
+      70.2,
+      41.800000000000004
+    ],
+    [
+      "Y_V12",
+      70.2,
+      84.2
+    ],
+    [
+      "Y_V12",
+      70.2,
+      81.80000000000001
+    ],
+    [
+      "X_V8",
+      65.4,
+      41.800000000000004
+    ],
+    [
+      "X_V8",
+      61.0,
+      43.0
+    ],
+    [
+      "Y_V8",
+      65.4,
+      81.80000000000001
+    ],
+    [
+      "Y_V8",
+      61.0,
+      83.0
+    ],
+    [
+      "GND",
+      16.54,
+      23.46
+    ],
+    [
+      "GND",
+      8.0,
+      18.0
+    ],
+    [
+      "GND",
+      8.0,
+      34.0
+    ],
+    [
+      "GND",
+      26.0,
+      28.0
+    ],
+    [
+      "GND",
+      33.0,
+      28.0
+    ],
+    [
+      "GND",
+      43.0,
+      28.0
+    ],
+    [
+      "GND",
+      53.0,
+      28.0
+    ],
+    [
+      "GND",
+      55.0,
+      20.85
+    ],
+    [
+      "GND",
+      58.0,
+      23.15
+    ],
+    [
+      "GND",
+      61.0,
+      23.6125
+    ],
+    [
+      "GND",
+      61.0,
+      25.9125
+    ],
+    [
+      "GND",
+      70.0,
+      28.0
+    ],
+    [
+      "GND",
+      78.0,
+      28.0
+    ],
+    [
+      "GND",
+      90.0,
+      40.75
+    ],
+    [
+      "GND",
+      79.0,
+      41.5
+    ],
+    [
+      "GND",
+      75.0,
+      42.0
+    ],
+    [
+      "GND",
+      65.85,
+      44.975
+    ],
+    [
+      "GND",
+      68.0,
+      43.0
+    ],
+    [
+      "GND",
+      61.0,
+      45.0
+    ],
+    [
+      "GND",
+      57.0,
+      41.5
+    ],
+    [
+      "GND",
+      73.0,
+      46.0
+    ],
+    [
+      "GND",
+      55.0,
+      37.0
+    ],
+    [
+      "GND",
+      16.54,
+      63.46
+    ],
+    [
+      "GND",
+      8.0,
+      58.0
+    ],
+    [
+      "GND",
+      8.0,
+      74.0
+    ],
+    [
+      "GND",
+      26.0,
+      68.0
+    ],
+    [
+      "GND",
+      33.0,
+      68.0
+    ],
+    [
+      "GND",
+      43.0,
+      68.0
+    ],
+    [
+      "GND",
+      53.0,
+      68.0
+    ],
+    [
+      "GND",
+      55.0,
+      60.85
+    ],
+    [
+      "GND",
+      58.0,
+      63.15
+    ],
+    [
+      "GND",
+      61.0,
+      63.6125
+    ],
+    [
+      "GND",
+      61.0,
+      65.9125
+    ],
+    [
+      "GND",
+      70.0,
+      68.0
+    ],
+    [
+      "GND",
+      78.0,
+      68.0
+    ],
+    [
+      "GND",
+      90.0,
+      80.75
+    ],
+    [
+      "GND",
+      79.0,
+      81.5
+    ],
+    [
+      "GND",
+      75.0,
+      82.0
+    ],
+    [
+      "GND",
+      65.85,
+      84.975
+    ],
+    [
+      "GND",
+      68.0,
+      83.0
+    ],
+    [
+      "GND",
+      61.0,
+      85.0
+    ],
+    [
+      "GND",
+      57.0,
+      81.5
+    ],
+    [
+      "GND",
+      73.0,
+      86.0
+    ],
+    [
+      "GND",
+      55.0,
+      77.0
+    ]
+  ]
+}

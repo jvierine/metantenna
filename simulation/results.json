@@ -1,0 +1,25 @@
+{
+  "status": "PASSIVE SIMULATION ONLY; prototype, not field-qualified",
+  "ngspice_version": [
+    "** ngspice-47 : Circuit level simulation program",
+    "** Compiled with KLU Direct Linear Solver"
+  ],
+  "nominal_insertion_loss_30_70_dB_max": 0.35582899195155093,
+  "nominal_FM_rejection_dB_min": 27.69444846426746,
+  "monte_carlo_trials": 300,
+  "monte_carlo_passband_loss_dB_worst": 0.4131357196196437,
+  "monte_carlo_FM_rejection_dB_worst": 24.938885137749644,
+  "one_bias_tee_loss_dB_max": 0.035983585055754747,
+  "spot_filter_gain_dB": {
+    "30": -0.35582899195155093,
+    "32.55": -0.2646584011485639,
+    "36.2": -0.20533918021862752,
+    "49.92": -0.17878907783346018,
+    "53.5": -0.18076585063840825,
+    "70": -0.33643233316593135,
+    "88": -30.85997477707859,
+    "98": -35.09472744145397,
+    "108": -27.69444846426746
+  },
+  "limits": "No measured antenna impedance, vendor MMIC model, PCB EM coupling, humidity or thermal qualification. Monte Carlo is not exhaustive worst-case analysis."
+}

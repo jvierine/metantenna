@@ -1,0 +1,88 @@
+"""Electrical source of truth for both prototype boards.
+
+Pin numbering follows manufacturer datasheets. Never derive connectivity from
+visual proximity. Empty pin nets are intentionally not connected.
+"""
+from dataclasses import dataclass, asdict
+from pathlib import Path
+import json
+
+@dataclass
+class Part:
+    ref:str; value:str; package:str; nets:dict; x:float; y:float
+    rotation:int=0; mpn:str=''; note:str=''; side:str='F'
+
+def preamp():
+    p=[]
+    def add(ref,value,pkg,nets,x,y,rot=0,mpn='',note='',side='F'):
+        p.append(Part(ref,value,pkg,{str(k):v for k,v in nets.items()},x,y,rot,mpn,note,side))
+    for j,y in enumerate([26,66]):
+        n=100*(j+1); s='XY'[j]
+        def net(a): return s+'_'+a if a!='GND' else 'GND'
+        def two(prefix,k,val,pkg,a,b,x,yy,rot=0,mpn='',note=''):
+            add(f'{prefix}{n+k}',val,pkg,{1:net(a),2:net(b)},x,yy,rot,mpn,note)
+        add(f'J{n+1}',f'{s} dipole','ANT_M3',{1:net('ANT_N'),2:net('ANT_P')},5,y,mpn='M3 brass stud / ring terminals',note='Balanced feed; pin 2 is positive reference; no DC supply here')
+        add(f'T{n+1}','ADT1-1+','CD542',{1:net('ANT_N'),2:'',3:net('ANT_P'),4:net('RF_IN'),5:'',6:'GND'},14,y,mpn='ADT1-1+')
+        two('R',1,'1M','0805','ANT_P','GND',7,y-8,mpn='RC0805FR-071ML')
+        two('R',2,'1M','0805','ANT_N','GND',7,y+8,mpn='RC0805FR-071ML')
+        two('C',1,'180p','0805','RF_IN','HP',22,y,mpn='C0805C181F5GACTU')
+        two('L',1,'220n','0805','HP','GND',26,y+3,90,'0805HP-221XGRC','2% RF inductor; do not substitute power inductor')
+        two('C',2,'180p','0805','HP','LP1',30,y,mpn='C0805C181F5GACTU')
+        two('C',3,'18p','0805','LP1','GND',33,y+3,90,'C0805C180F5GACTU')
+        two('L',2,'56n','0805','LP1','LP2',38,y-1,mpn='0805HP-56NXGRC')
+        two('C',4,'56p','0805','LP1','LP2',38,y+2,mpn='C0805C560F5GACTU')
+        two('C',5,'51p','0805','LP2','GND',43,y+3,90,'C0805C510F5GACTU')
+        two('L',3,'68n','0805','LP2','AMP_IN',48,y-1,mpn='0805HP-68NXGRC')
+        two('C',6,'36p','0805','LP2','AMP_IN',48,y+2,mpn='C0805C360F5GACTU')
+        two('C',7,'15p','0805','AMP_IN','GND',53,y+3,90,'C0805C150F5GACTU')
+        # Optional low-capacitance anti-parallel input clamps; bench compare IMD
+        # with/without populated diodes before selecting the production option.
+        two('D',1,'DNP BAT15-03W','SOD323','AMP_IN','GND',55,y-4,90,'BAT15-03W','DNP; optional input clamp, not lightning protection')
+        two('D',2,'DNP BAT15-03W','SOD323','GND','AMP_IN',58,y-4,90,'BAT15-03W','DNP; optional input clamp')
+        add(f'U{n+1}','GALI-74+','SOT89',{1:net('AMP_IN'),2:'GND',3:net('AMP_OUT')},61,y-1.65,mpn='GALI-74+')
+        two('C',8,'1n','0805','AMP_OUT','PAD_IN',66,y,mpn='C0805C102J5GACTU')
+        two('R',3,'294','0805','PAD_IN','GND',70,y+3,90,'RC0805FR-07294RL')
+        two('R',4,'18','0805','PAD_IN','PAD_OUT',74,y,mpn='RC0805FR-0718RL')
+        two('R',5,'294','0805','PAD_OUT','GND',78,y+3,90,'RC0805FR-07294RL')
+        two('C',9,'1n','0805','PAD_OUT','COAX',83,y,mpn='C0805C102J5GACTU')
+        add(f'J{n+2}',s+' RF +12V','SMA',{1:net('COAX'),2:'GND'},90,y,mpn='132134',side='B',note='SMA female, standard polarity; assemble on underside')
+        two('L',4,'1u','1008','COAX','RAW',90,y+8,90,'1008CS-102XJRC')
+        # Cathode pin 1 towards protected supply; anode pin 2 towards coax.
+        two('D',3,'SS14','SMA_DIODE','V12','RAW',84,y+13,mpn='SS14')
+        two('D',4,'SMAJ15A','SMA_DIODE','V12','GND',90,y+17,90,'SMAJ15A')
+        two('C',10,'10u 25V','1206','V12','GND',79,y+17,90,'GRM31CR61E106KA12L')
+        two('C',11,'100n 50V','0805','V12','GND',75,y+17,90,'GRM21BR71H104KA01L')
+        add(f'U{n+2}','TPS7A4901DGNR','MSOP8EP',{1:net('V8'),2:net('FB'),3:'',4:'GND',5:net('V12'),6:net('NR'),7:'',8:net('V12'),9:'GND'},68,y+17,mpn='TPS7A4901DGNR')
+        two('R',6,'57.6k','0805','V8','FB',61,y+16,90,'RC0805FR-0757K6L')
+        two('R',7,'10k','0805','FB','GND',61,y+20,90,'RC0805FR-0710KL')
+        two('C',12,'10u 25V','1206','V8','GND',57,y+17,90,'GRM31CR61E106KA12L')
+        two('C',13,'10n 50V','0805','NR','GND',73,y+21,90,'GRM21BR71H103KA01L')
+        two('C',14,'100n 50V','0805','V8','GND',55,y+12,90,'GRM21BR71H104KA01L')
+        two('R',8,'41.2 1W','2512','V8','BIAS',61,y+10,mpn='CRCW251241R2FKEG',note='1 W; about 0.26 W normal dissipation')
+        two('L',5,'1u','1008','BIAS','AMP_OUT',64,y+5,90,'1008CS-102XJRC')
+    return p,(96,96)
+
+def biastee():
+    p=[]
+    def add(ref,value,pkg,nets,x,y,rot=0,mpn='',note=''):
+        p.append(Part(ref,value,pkg,{str(k):v for k,v in nets.items()},x,y,rot,mpn,note))
+    add('J1','12 V input','TERM2',{1:'VIN',2:'GND'},40,8,mpn='1729128',note='Phoenix 2-way 5.08 mm terminal block; + pin 1')
+    add('F1','500mA PTC','1206',{1:'VIN',2:'VIN_FUSED'},40,14,mpn='1206L050/24YR')
+    add('D1','SS14','SMA_DIODE',{1:'PROTECTED',2:'VIN_FUSED'},30,12,mpn='SS14')
+    add('D2','SMAJ15A','SMA_DIODE',{1:'PROTECTED',2:'GND'},23,12,90,'SMAJ15A')
+    add('C1','10u 25V','1206',{1:'PROTECTED',2:'GND'},18,12,90,'GRM31CR61E106KA12L')
+    for j,y in enumerate([27,50]):
+        n=10*(j+1);s='XY'[j]
+        add(f'J{n}',s+' ANT +DC','SMA',{1:s+'_COAX',2:'GND'},10,y,mpn='132134')
+        add(f'J{n+1}',s+' RX DC BLOCK','SMA',{1:s+'_RX',2:'GND'},65,y,mpn='132134')
+        add(f'C{n}','1n','0805',{1:s+'_COAX',2:s+'_RX'},40,y,mpn='C0805C102J5GACTU')
+        add(f'L{n}','1u','1008',{1:s+'_COAX',2:s+'_DC'},20,y-6,90,'1008CS-102XJRC')
+        add(f'C{n+1}','100n 50V','0805',{1:s+'_DC',2:'GND'},26,y-9,90,'GRM21BR71H104KA01L')
+        add(f'F{n}','200mA PTC','1206',{1:'PROTECTED',2:s+'_DC'},34,y-9,mpn='1206L020/24YR',note='200mA hold at 20C; current-limited 12V supply required')
+    return p,(76,64)
+
+if __name__=='__main__':
+    root=Path(__file__).resolve().parent
+    for name,fn in [('preamp',preamp),('biastee',biastee)]:
+        p,size=fn()
+        (root/(name+'.json')).write_text(json.dumps({'board_mm':size,'parts':[asdict(a) for a in p]},indent=2)+'\n')
