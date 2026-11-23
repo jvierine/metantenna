@@ -46,6 +46,7 @@ conda run -n base python simulation/validate.py
 conda run -n base python hardware/build.py
 conda run -n base python hardware/schematic.py
 conda run -n base python hardware/check_layout.py
+conda run -n base python hardware/check_feeds.py
 conda run -n base python hardware/export_fab.py
 conda run -n base python mechanical/build_enclosure.py
 conda run -n base python simulation/prepare_plot.py
@@ -63,3 +64,13 @@ X terminals are at (5,48) and (91,48) mm; Y terminals are at (48,5)
 and (48,91) mm. All are 43 mm from the board centre. The four arms therefore
 start symmetrically on opposite board edges. Provide mechanical strain relief
 in the housing. Only X coax carries supply DC; the Y coax is RF only.
+
+The input transformers are near the centre at (48,32) and (32,48) mm.
+Each polarization has mirror-symmetric arm-to-primary conductor lengths:
+46.50 mm for each X arm, and 52.94 mm for each Y arm including its layer-change
+via. X runs on the top copper; Y runs on the bottom copper and changes layer
+beside its transformer. The two internal ground planes separate their crossing.
+RF filters and amplifiers occupy the upper and lower portions of the board.
+The drawing shows top traces in red and bottom traces in blue; it omits planes
+for clarity. This arrangement reduces the previous close parallel routing;
+actual cross-polarization isolation and input matching remain unmeasured.

@@ -107,10 +107,36 @@ class Router:
                 self.vias.append((net,a[1],a[2]));self.obstacles.append((net,Point(a[1],a[2]).buffer(.3),[0,1]))
             elif math.dist(a[1:],b[1:])>1e-7:
                 self.tracks.append((net,a[0],a[1:],b[1:],width));self.obstacles.append((net,LineString([a[1:],b[1:]]).buffer(width/2),[a[0]]))
+    def antenna_feeds(self):
+        """Explicit mirror-symmetric arm routes; Y crosses X on B.Cu.
+
+        Two internal ground planes separate the crossing. Y changes layer
+        adjacent to its transformer primary, outside the solder pads.
+        """
+        if not any(p['net']=='X_ANT_N' for p in self.pads):return set()
+        def route(net,layer,points):
+            for a,b in zip(points,points[1:]):
+                self.tracks.append((net,layer,a,b,WIDTH))
+                self.obstacles.append((net,LineString([a,b]).buffer(WIDTH/2),[layer]))
+        for net,points,pad in [
+            ('X_ANT_N',[(5,48),(8,48),(20,36),(45,36),(45.46,34.54)],(45.46,34.54)),
+            ('X_ANT_P',[(91,48),(88,48),(76,36),(51,36),(50.54,34.54)],(50.54,34.54))]:
+            route(net,0,points)
+            route(net,0,[pad,(pad[0],39)])
+        for net,points,yy in [
+            ('Y_ANT_N',[(48,5),(27.2,25.8),(27.2,45.46)],45.46),
+            ('Y_ANT_P',[(48,91),(27.2,70.2),(27.2,50.54)],50.54)]:
+            route(net,1,points)
+            self.vias.append((net,27.2,yy))
+            self.obstacles.append((net,Point(27.2,yy).buffer(.3),[0,1]))
+            route(net,0,[(26.5,yy),(29.46,yy)])
+        return {'X_ANT_N','X_ANT_P','Y_ANT_N','Y_ANT_P'}
+
     def run(self):
+        completed=self.antenna_feeds()
         groups=defaultdict(list)
         for p in self.pads:
-            if p['net'] and p['net']!='GND':groups[p['net']].append((p['x'],p['y']))
+            if p['net'] and p['net']!='GND' and p['net'] not in completed:groups[p['net']].append((p['x'],p['y']))
         def rf(n):return not any(n.endswith('_'+s) for s in ['RAW','V12','V8','FB','NR','BIAS','DC']) and n not in ['VIN','VIN_FUSED','PROTECTED','V12']
         for n,points in sorted(groups.items(),key=lambda a:(not rf(a[0]),not a[0].endswith(('_FB','_NR')),-len(a[1]))):
             tree=[points.pop(0)]

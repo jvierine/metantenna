@@ -1,0 +1,10 @@
+{
+  "arm_to_primary_conductor_length_mm": {
+    "X_ANT_N": 46.50131419792933,
+    "X_ANT_P": 46.50131419792933,
+    "Y_ANT_N": 52.935642097360386,
+    "Y_ANT_P": 52.935642097360386
+  },
+  "within_pair_mismatch_limit_mm": 0.01,
+  "measured_RF_isolation_dB": null
+}
