@@ -26,7 +26,10 @@ For each board:
    and dimensions: **96 × 96 mm preamp; 76 × 64 mm indoor board**.
 
 `Hand_assembly.xlsx` lists the SMA and power connectors to procure and solder
-separately. The preamp SMA bodies go on the **underside**, pointing down; the
+separately. For a quote with factory-installed connectors, use the paired
+`BOM_full_assembly.xlsx` and `CPL_full_assembly.xlsx` instead; that option needs
+JLC confirmation of through-hole assembly and the underside SMA operation.
+Do not mix a full-assembly BOM with an SMT-only CPL. The preamp SMA bodies go on the **underside**, pointing down; the
 indoor connectors go on top. Standard female SMA, not RP-SMA. Antenna copper
 arms solder directly to X±/Y±; they need no RF connectors.
 

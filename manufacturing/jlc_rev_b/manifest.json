@@ -1,0 +1,32 @@
+{
+  "source_commit": "2f3cbd4",
+  "native_CAD": "KiCad 9.0.9 via GitHub Actions",
+  "boards": {
+    "preamp": {
+      "native_issues": [],
+      "dimensions_mm": [
+        96,
+        96
+      ],
+      "quantity": 5,
+      "electrical_DRC_ERC_and_parity": "pass",
+      "assembly_sides": "Top SMT; connectors hand soldered",
+      "SMT_parts_per_board": 61,
+      "hand_assembled_parts_per_board": 2
+    },
+    "biastee": {
+      "native_issues": [],
+      "dimensions_mm": [
+        76,
+        64
+      ],
+      "quantity": 5,
+      "electrical_DRC_ERC_and_parity": "pass",
+      "assembly_sides": "Top SMT; connectors hand soldered",
+      "SMT_parts_per_board": 9,
+      "hand_assembled_parts_per_board": 5
+    }
+  },
+  "order_status": "Prototype package prepared; JLC part matching, placement/rotation preview and CAM acceptance remain required before payment.",
+  "model_limits": "Linear behavioral MMIC; no PCB EM or measured RF qualification."
+}

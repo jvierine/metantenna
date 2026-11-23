@@ -16,6 +16,9 @@ include separate BOM/CPL files and hand-installed connector lists. Exact part
 matching, placement preview and manufacturer CAM acceptance remain required
 before payment; this is not measured RF qualification.
 
+[Download the complete Rev B JLCPCB package](manufacturing/metantenna_rev_b_jlc_package.zip)
+— five preamp boards and five bias-tee boards.
+
 ## Deployment
 
 ![Dimensioned antenna deployment and wiring](docs/antenna_deployment.png)

@@ -35,12 +35,15 @@ def main():
   with zipfile.ZipFile(dest/'Gerbers.zip','w',zipfile.ZIP_DEFLATED) as z:
    for p in sorted((src/'gerbers').iterdir()):
     if p.suffix.lower() in ['.gtl','.gbl','.g1','.g2','.gts','.gbs','.gtp','.gbp','.gto','.gbo','.gm1','.drl']:z.write(p,p.name)
-  for p in ['drc.txt','erc.txt','schematic.pdf','assembly.svg']:shutil.copy2(src/p,dest/p)
-  groups=defaultdict(list);cpl=[];manual=[];dnp=[]
+  for p in ['drc.txt','erc.txt','schematic.pdf']:shutil.copy2(src/p,dest/p)
+  shutil.copy2(R/'docs'/f'{name}_assembly.pdf',dest/'Assembly.pdf')
+  groups=defaultdict(list);cpl=[];manual=[];dnp=[];allgroups=defaultdict(list);allcpl=[]
   for p in parts:
    if p.package=='ANT_M3':continue
    if p.value.startswith('DNP'):
     dnp.append([p.ref,p.value,p.mpn,'DO NOT POPULATE']);continue
+   allgroups[(p.value,p.package,p.mpn)].append(p.ref)
+   allcpl.append([p.ref,p.x,-p.y,p.rotation,'Top' if p.side=='F' else 'Bottom'])
    if p.package in ['SMA','TERM2']:
     manual.append([p.ref,p.value,p.package,p.mpn,p.side,'Hand solder after SMT; see assembly drawing']);continue
    assert p.mpn,(p.ref,'missing MPN')
@@ -49,6 +52,8 @@ def main():
   bom=[[v,','.join(refs),pkg,mpn,'',len(refs)] for (v,pkg,mpn),refs in sorted(groups.items())]
   book(dest/'BOM.xlsx',['Comment','Designator','Footprint','Manufacturer Part Number','LCSC Part Number','Quantity'],bom)
   book(dest/'CPL.xlsx',['Designator','Mid X','Mid Y','Rotation','Layer'],cpl)
+  book(dest/'BOM_full_assembly.xlsx',['Comment','Designator','Footprint','Manufacturer Part Number','LCSC Part Number','Quantity'],[[v,','.join(refs),pkg,mpn,'',len(refs)] for (v,pkg,mpn),refs in sorted(allgroups.items())])
+  book(dest/'CPL_full_assembly.xlsx',['Designator','Mid X','Mid Y','Rotation','Layer'],allcpl)
   book(dest/'Hand_assembly.xlsx',['Designator','Comment','Footprint','Manufacturer Part Number','Side','Instructions'],manual)
   book(dest/'Do_not_populate.xlsx',['Designator','Comment','Manufacturer Part Number','Instructions'],dnp)
   status[name]['SMT_parts_per_board']=len(cpl);status[name]['hand_assembled_parts_per_board']=len(manual)
