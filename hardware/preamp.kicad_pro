@@ -438,13 +438,65 @@
         "uuid": "c2d8c535-d988-5bb5-8d2b-a6982d176ba2"
       }
     ],
-    "used_designators": "TR1,TR102,U1,U103,L1-9,C1-14,C115-128,R1,R209-216",
+    "used_designators": "X_ANT_N1,J1,J103,X_ANT_P1,H1,#PWR1-47,TR1,TR102-103,U1,U103-106,U203,L1-9,L106-114,D105-110,C1-14,C114-142,C215-219,R1,R108-123,R208-216",
     "variants": []
   },
   "sheets": [
     [
       "c2d8c535-d988-5bb5-8d2b-a6982d176ba2",
       "preamp"
+    ],
+    [
+      "189b4700-2cd7-4e29-8387-4d7f77366acd",
+      "X BalUn Matching"
+    ],
+    [
+      "6bb9fd91-9448-4cba-a197-c67b638028bb",
+      "X Chebyshev High Pass"
+    ],
+    [
+      "bf140217-286c-4de0-a5a2-777384784787",
+      "X Elliptic Low Pass"
+    ],
+    [
+      "a4104739-868b-4e79-b6d5-a197767bdcc7",
+      "X LNA"
+    ],
+    [
+      "d77a7e7b-60bd-4e4e-8ba2-171379e13577",
+      "X Attenuator"
+    ],
+    [
+      "fdf013f1-0901-4a97-8486-d8468b9670b7",
+      "X Raw Bias Tee"
+    ],
+    [
+      "dd50c544-03c9-4692-908f-7f343acf27b9",
+      "X DC Supply"
+    ],
+    [
+      "8d0eb92c-6c16-4c03-91ed-c5c82fa8cd27",
+      "Y BalUn Matching"
+    ],
+    [
+      "86265028-2e45-4f5e-888b-1f811ffb48dd",
+      "Y Chebyshev High Pass"
+    ],
+    [
+      "3b730cb7-77ee-45e4-98c7-28d47f114aa3",
+      "Y Elliptic Low Pass"
+    ],
+    [
+      "3aae691b-9afc-4549-8355-1ad03378fdf5",
+      "Y LNA"
+    ],
+    [
+      "50932909-2b0a-441f-887b-680f7581adb2",
+      "Y Attenuator"
+    ],
+    [
+      "4b845612-3495-4919-ada0-b67cb9718b8b",
+      "Y DC Supply"
     ]
   ],
   "text_variables": {},
