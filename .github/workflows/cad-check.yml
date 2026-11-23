@@ -31,7 +31,7 @@ jobs:
             kicad-cli sch export pdf -o validation/native/$board/schematic.pdf hardware/$board.kicad_sch
             kicad-cli sch erc --severity-error -o validation/native/$board/erc.txt hardware/$board.kicad_sch
             kicad-cli pcb drc --schematic-parity -o validation/native/$board/drc.txt hardware/$board.kicad_pcb
-            kicad-cli pcb export svg -l F.Cu,F.SilkS,Edge.Cuts -o validation/native/$board/ hardware/$board.kicad_pcb
+            kicad-cli pcb export svg -l F.Cu,F.SilkS,Edge.Cuts -o validation/native/$board/board.svg hardware/$board.kicad_pcb
             kicad-cli pcb export gerbers -l F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,F.SilkS,Edge.Cuts -o validation/native/$board/gerbers/ hardware/$board.kicad_pcb
             kicad-cli pcb export drill -o validation/native/$board/gerbers/ hardware/$board.kicad_pcb
             cp hardware/$board.kicad_pcb validation/native/$board/

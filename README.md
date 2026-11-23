@@ -2,7 +2,8 @@
 
 Engineering prototype for meteor-radar reception, centered on SIMONe's
 32.55 MHz operation. Two independent 50-ohm SMA outputs carry X and Y signals
-and receive 12 V DC through a dual indoor bias tee. Circular polarization can
+with 12 V DC supplied only through the X coax via an indoor bias tee.
+The X supply powers both amplifier channels; Y is DC blocked. Circular polarization can
 be formed digitally from calibrated coherent receiver channels.
 
 **Development status:** passive-filter SPICE and geometric routing checks pass.
@@ -11,12 +12,12 @@ review are in progress. This is not a field-qualified design or a production
 release. Do not infer amplifier, antenna, or weather qualification from the
 passive-filter simulations.
 
-The electronics budget includes both preamps and the dual bias tee; it excludes
+The electronics budget includes both preamps and the X bias tee; it excludes
 coax, mast, enclosure, tax, and shipping. The goal is below USD 100 per complete
 electronics set. No order has been placed.
 
-The requested prototype batch is **five antenna/preamp boards and five dual
-bias-tee boards**, giving five complete electronics sets, delivered to
+The requested prototype batch is **five antenna/preamp boards and five bias-tee/pass-through
+boards**, giving five complete electronics sets, delivered to
 **Norway**. The electronics budget is therefore below USD 500 for the batch,
 excluding coax, mast, enclosure, tax, and shipping. Supplier quotations must
 separate those excluded costs and distinguish bare PCBs from populated boards.
@@ -54,3 +55,11 @@ cargo run --release --manifest-path tools/plot/Cargo.toml
 The synthesis optimizer is `simulation/design_filter.py`; ordinary rebuilds
 use the already-selected component values. Simulation results are HDF5,
 assembly tables are XLSX, and no scientific CSV products are written.
+
+## Antenna connections
+
+Solder the four copper antenna arms directly into the plated wire holes.
+X terminals are at (5,48) and (91,48) mm; Y terminals are at (48,5)
+and (48,91) mm. All are 43 mm from the board centre. The four arms therefore
+start symmetrically on opposite board edges. Provide mechanical strain relief
+in the housing. Only X coax carries supply DC; the Y coax is RF only.

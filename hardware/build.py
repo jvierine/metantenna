@@ -24,7 +24,7 @@ def pads(pkg):
         pitch,w,h={'0805':(1.,1.2,1.4),'1008':(1.3,1.2,2.2),'1206':(1.5,1.6,1.8),'2512':(3.,2.,3.4),'SOD323':(1.15,1.,.9),'SMA_DIODE':(2.25,2.5,2.)}[pkg]
         return [('1',-pitch,0,w,h,0),('2',pitch,0,w,h,0)]
     if pkg=='SMA':return [('1',0,0,2.05,2.05,1.5)]+[('2',x,y,2.25,2.25,1.7) for x,y in [(2.54,2.54),(2.54,-2.54),(-2.54,-2.54),(-2.54,2.54)]]
-    if pkg=='ANT_M3':return [('1',0,-4,6,6,3.2),('2',0,4,6,6,3.2)]
+    if pkg=='ANT_M3':return [('1',0,-43,4,4,1.5),('2',0,43,4,4,1.5)]
     if pkg=='TERM2':return [('1',-2.54,0,3,3,1.3),('2',2.54,0,3,3,1.3)]
     if pkg=='CD542':return [(str(i+1),-2.54,y,2.54,1.65,0) for i,y in enumerate([-2.54,0,2.54])]+[(str(i+4),2.54,y,2.54,1.65,0) for i,y in enumerate([2.54,0,-2.54])]
     if pkg=='SOT89':return [('1',-1.5,1.65,.9,1.3,0),('3',1.5,1.65,.9,1.3,0),('2',0,-.7375,1.733,3.125,0),('2',0,1.5625,.9,1.475,0)]
@@ -111,7 +111,7 @@ class Router:
         groups=defaultdict(list)
         for p in self.pads:
             if p['net'] and p['net']!='GND':groups[p['net']].append((p['x'],p['y']))
-        def rf(n):return not any(n.endswith('_'+s) for s in ['RAW','V12','V8','FB','NR','BIAS','DC']) and n not in ['VIN','VIN_FUSED','PROTECTED']
+        def rf(n):return not any(n.endswith('_'+s) for s in ['RAW','V12','V8','FB','NR','BIAS','DC']) and n not in ['VIN','VIN_FUSED','PROTECTED','V12']
         for n,points in sorted(groups.items(),key=lambda a:(not rf(a[0]),not a[0].endswith(('_FB','_NR')),-len(a[1]))):
             tree=[points.pop(0)]
             while points:

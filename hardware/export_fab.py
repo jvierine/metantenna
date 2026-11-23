@@ -59,8 +59,11 @@ def svg(name,a):
         if p['drill']:s.append(f'<circle cx="{p["x"]}" cy="{p["y"]}" r="{p["w"]/2}" fill="#d7b45a"/><circle cx="{p["x"]}" cy="{p["y"]}" r="{p["drill"]/2}" fill="white"/>')
         else:s.append(f'<rect x="{p["x"]-p["w"]/2}" y="{p["y"]-p["h"]/2}" width="{p["w"]}" height="{p["h"]}" fill="#d7b45a"/>')
     for n,x,y in a['vias']:s.append(f'<circle cx="{x}" cy="{y}" r=".3" fill="#c7a75a"/><circle cx="{x}" cy="{y}" r=".15" fill="white"/>')
-    for p in a['parts']:s.append(f'<text x="{p["x"]}" y="{p["y"]-3.4}" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">{p["ref"]}</text>')
+    for p in [p for p in a['parts'] if p['package']!='ANT_M3']:s.append(f'<text x="{p["x"]}" y="{p["y"]-3.4}" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">{p["ref"]}</text>')
     for x,y in [(6,6),(6,h-6),(w-6,6),(w-6,h-6)]:s.append(f'<circle cx="{x}" cy="{y}" r="1.6" fill="white" stroke="#444" stroke-width=".1"/>')
+    labels = [(48,3,'Y−'),(48,95,'Y+'),(5,45,'X−'),(91,45,'X+'),(83,20,'X RF + 12 V'),(83,60,'Y RF only')] if name=='preamp' else [(10,20,'X antenna + DC'),(65,20,'X receiver'),(10,57,'Y antenna'),(65,57,'Y receiver'),(40,4,'12 V input')]
+    for x,y,label in labels:
+        s.append(f'<text x="{x}" y="{y}" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">{label}</text>')
     s.append('</svg>');(ROOT/'docs'/f'{name}_layout.svg').write_text('\n'.join(s))
 
 def main():

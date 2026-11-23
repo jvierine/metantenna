@@ -10,17 +10,8 @@
 <path d="M 20.0 22.3 L 20.0 22.400000000000002" stroke="#b52a32" stroke-width="0.32"/>
 <path d="M 20.0 22.400000000000002 L 24.6 27.0" stroke="#b52a32" stroke-width="0.32"/>
 <path d="M 24.6 27.0 L 39.0 27.0" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 10.0 50.0 L 11.0 49.0" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 11.0 49.0 L 11.0 47.0" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 11.0 47.0 L 11.200000000000001 46.800000000000004" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 11.200000000000001 46.800000000000004 L 11.200000000000001 46.6" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 11.200000000000001 46.6 L 12.600000000000001 45.2" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 12.600000000000001 45.2 L 20.0 45.2" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 20.0 45.2 L 20.0 45.3" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 20.0 45.3 L 20.0 45.2" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 20.0 45.2 L 24.8 50.0" stroke="#b52a32" stroke-width="0.32"/>
-<path d="M 24.8 50.0 L 39.0 50.0" stroke="#b52a32" stroke-width="0.32"/>
 <path d="M 65.0 27.0 L 41.0 27.0" stroke="#b52a32" stroke-width="0.32"/>
+<path d="M 10.0 50.0 L 39.0 50.0" stroke="#b52a32" stroke-width="0.32"/>
 <path d="M 65.0 50.0 L 41.0 50.0" stroke="#b52a32" stroke-width="0.32"/>
 <path d="M 27.75 12.0 L 27.8 12.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 27.8 12.0 L 25.6 14.200000000000001" stroke="#b52a32" stroke-width="0.2"/>
@@ -34,30 +25,14 @@
 <path d="M 27.8 12.0 L 32.4 16.6" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 32.4 16.6 L 32.4 18.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 32.4 18.0 L 32.5 18.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 32.5 18.0 L 32.4 18.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 32.4 18.0 L 33.6 19.200000000000003" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 33.6 19.200000000000003 L 33.6 19.8" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 33.6 19.8 L 40.0 26.200000000000003" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 40.0 26.200000000000003 L 40.0 27.8" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 40.0 27.8 L 32.4 35.4" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 32.4 35.4 L 32.4 41.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 32.4 41.0 L 32.5 41.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 20.0 19.7 L 20.0 19.6" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 20.0 19.6 L 20.6 19.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 20.6 19.0 L 26.0 19.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 26.0 19.0 L 26.200000000000003 18.8" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 26.200000000000003 18.8 L 26.400000000000002 18.8" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 26.400000000000002 18.8 L 27.200000000000003 18.0" stroke="#3065ab" stroke-width="0.2"/>
-<path d="M 27.200000000000003 18.0 L 35.6 18.0" stroke="#3065ab" stroke-width="0.2"/>
-<path d="M 35.6 18.0 L 35.5 18.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 20.0 42.7 L 20.0 42.800000000000004" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 20.0 42.800000000000004 L 20.8 42.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 20.8 42.0 L 26.0 42.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 26.0 42.0 L 31.400000000000002 42.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 31.400000000000002 42.0 L 31.6 42.2" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 31.6 42.2 L 33.4 42.2" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 33.4 42.2 L 34.6 41.0" stroke="#b52a32" stroke-width="0.2"/>
-<path d="M 34.6 41.0 L 35.5 41.0" stroke="#b52a32" stroke-width="0.2"/>
+<path d="M 26.0 19.0 L 31.400000000000002 19.0" stroke="#b52a32" stroke-width="0.2"/>
+<path d="M 31.400000000000002 19.0 L 31.6 19.200000000000003" stroke="#b52a32" stroke-width="0.2"/>
+<path d="M 31.6 19.200000000000003 L 33.4 19.200000000000003" stroke="#b52a32" stroke-width="0.2"/>
+<path d="M 33.4 19.200000000000003 L 34.6 18.0" stroke="#b52a32" stroke-width="0.2"/>
+<path d="M 34.6 18.0 L 35.5 18.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 37.46 8.0 L 37.4 8.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 37.4 8.0 L 38.400000000000006 9.0" stroke="#b52a32" stroke-width="0.2"/>
 <path d="M 38.400000000000006 9.0 L 38.400000000000006 14.0" stroke="#b52a32" stroke-width="0.2"/>
@@ -107,18 +82,9 @@
 <circle cx="62.46" cy="52.54" r="1.125" fill="#d7b45a"/><circle cx="62.46" cy="52.54" r="0.85" fill="white"/>
 <rect x="38.4" y="49.3" width="1.2" height="1.4" fill="#d7b45a"/>
 <rect x="40.4" y="49.3" width="1.2" height="1.4" fill="#d7b45a"/>
-<rect x="18.9" y="44.699999999999996" width="2.2" height="1.2" fill="#d7b45a"/>
-<rect x="18.9" y="42.1" width="2.2" height="1.2" fill="#d7b45a"/>
-<rect x="25.3" y="41.4" width="1.4" height="1.2" fill="#d7b45a"/>
-<rect x="25.3" y="39.4" width="1.4" height="1.2" fill="#d7b45a"/>
-<rect x="31.7" y="40.1" width="1.6" height="1.8" fill="#d7b45a"/>
-<rect x="34.7" y="40.1" width="1.6" height="1.8" fill="#d7b45a"/>
-<circle cx="26.400000000000002" cy="18.8" r=".3" fill="#c7a75a"/><circle cx="26.400000000000002" cy="18.8" r=".15" fill="white"/>
-<circle cx="35.6" cy="18.0" r=".3" fill="#c7a75a"/><circle cx="35.6" cy="18.0" r=".15" fill="white"/>
 <circle cx="23.0" cy="9.75" r=".3" fill="#c7a75a"/><circle cx="23.0" cy="9.75" r=".15" fill="white"/>
 <circle cx="18.0" cy="10.5" r=".3" fill="#c7a75a"/><circle cx="18.0" cy="10.5" r=".15" fill="white"/>
 <circle cx="26.0" cy="17.0" r=".3" fill="#c7a75a"/><circle cx="26.0" cy="17.0" r=".15" fill="white"/>
-<circle cx="26.0" cy="40.0" r=".3" fill="#c7a75a"/><circle cx="26.0" cy="40.0" r=".15" fill="white"/>
 <text x="40" y="4.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">J1</text>
 <text x="40" y="10.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">F1</text>
 <text x="30" y="8.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">D1</text>
@@ -133,11 +99,13 @@
 <text x="10" y="46.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">J20</text>
 <text x="65" y="46.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">J21</text>
 <text x="40" y="46.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">C20</text>
-<text x="20" y="40.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">L20</text>
-<text x="26" y="37.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">C21</text>
-<text x="34" y="37.6" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">F20</text>
 <circle cx="6" cy="6" r="1.6" fill="white" stroke="#444" stroke-width=".1"/>
 <circle cx="6" cy="58" r="1.6" fill="white" stroke="#444" stroke-width=".1"/>
 <circle cx="70" cy="6" r="1.6" fill="white" stroke="#444" stroke-width=".1"/>
 <circle cx="70" cy="58" r="1.6" fill="white" stroke="#444" stroke-width=".1"/>
+<text x="10" y="20" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">X antenna + DC</text>
+<text x="65" y="20" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">X receiver</text>
+<text x="10" y="57" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">Y antenna</text>
+<text x="65" y="57" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">Y receiver</text>
+<text x="40" y="4" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">12 V input</text>
 </svg>
