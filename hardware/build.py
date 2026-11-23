@@ -251,7 +251,7 @@ def pcb(name,parts,size,r):
         lines.append(')')
     for i,(x,y) in enumerate([(6,6),(6,size[1]-6),(size[0]-6,6),(size[0]-6,size[1]-6)]):
         lines.append(f'(footprint "metantenna:MountingHole" (layer "F.Cu") (at {x} {y}) (attr board_only exclude_from_pos_files exclude_from_bom) (fp_text reference "H{i+1}" (at 0 -3) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask")))')
-    labels=([(20,6,'METANTENNA B0'),(83,21,'X RF+12V'),(83,61,'Y RF ONLY'),(5,44.5,'X-'),(91,44.5,'X+'),(48,9,'Y-'),(48,87,'Y+')] if name=='preamp' else [(40,60,'METANTENNA B0'),(17,32,'X ANT+DC'),(62,32,'X RX'),(17,55,'Y ANT'),(62,55,'Y RX'),(37.46,4,'+12V'),(44,4,'GND')])
+    labels=([(20,6,'METANTENNA B0'),(83,21,'X RF+12V'),(83,61,'Y RF ONLY'),(5,44.5,'X-'),(91,52,'X+'),(48,9,'Y-'),(48,87,'Y+')] if name=='preamp' else [(40,60,'METANTENNA B0'),(17,32,'X ANT+DC'),(62,32,'X RX'),(17,55,'Y ANT'),(62,55,'Y RX'),(37.46,4,'+12V'),(44,4,'GND')])
     for x,y,label in labels:
         lines.append(f'(gr_text {q(label)} (at {x} {y}) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))')
     for n,l,a,b,width in r.tracks:

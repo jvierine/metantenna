@@ -507,7 +507,7 @@
 (gr_text "X RF+12V" (at 83 21) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
 (gr_text "Y RF ONLY" (at 83 61) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
 (gr_text "X-" (at 5 44.5) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
-(gr_text "X+" (at 91 44.5) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
+(gr_text "X+" (at 91 52) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
 (gr_text "Y-" (at 48 9) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
 (gr_text "Y+" (at 48 87) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))
 (segment (start 5.0000 48.0000) (end 8.0000 48.0000) (width 0.32) (layer "F.Cu") (net 2))
