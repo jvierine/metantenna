@@ -1,0 +1,26 @@
+{
+  "source": "Linekey CLF series datasheet, 202Y typical common-mode graph; JLC C2941480",
+  "data_type": "Approximate hand-read graph points, not raw measurements; allow digitization uncertainty.",
+  "model": "Two series parallel-RLC branches plus0.21ohm fixture DC resistance. Nonunique magnitude fit; not vendor model.",
+  "branches": [
+    {
+      "L_H": 0.001089773471746352,
+      "R_ohm": 7906.567777748195,
+      "C_F": 6.284769388613092e-12
+    },
+    {
+      "L_H": 9.999999999999494e-05,
+      "R_ohm": 1359.8980461130884,
+      "C_F": 1.852968307485736e-12
+    }
+  ],
+  "max_relative_graph_fit_error": 0.08806120556406682,
+  "inferred_common_mode_L_H": 0.001189773471746347,
+  "not_determined": [
+    "leakage inductance",
+    "inter-winding capacitance",
+    "differential S-parameters",
+    "phase uniquely",
+    "nonlinear behavior"
+  ]
+}

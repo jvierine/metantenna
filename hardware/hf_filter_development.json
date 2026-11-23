@@ -1,0 +1,55 @@
+{
+  "status": "development only; not a fabrication release",
+  "target_band_MHz": [
+    0.1,
+    30
+  ],
+  "LF_chokes": [
+    {
+      "ref": "CM_HF_X",
+      "mpn": "CLF9060-202Y",
+      "JLC": "C2941480"
+    },
+    {
+      "ref": "CM_HF_Y",
+      "mpn": "CLF9060-202Y",
+      "JLC": "C2941480"
+    }
+  ],
+  "datasheet": {
+    "source": "https://jlcpcb.com/partdetail/Linekey-CLF9060202Y/C2941480",
+    "sha256": "d9353c5e1d7ddfe66aad39433ef5fe6685e102801beea2d7d667630186d6f8ca",
+    "windings": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "package_mm": [
+      9.2,
+      6,
+      5
+    ],
+    "land_dimensions_mm": {
+      "pad_size": [
+        2,
+        1.2
+      ],
+      "horizontal_outer_span": 9.5,
+      "vertical_pitch": 2.54
+    },
+    "missing_parameters": [
+      "leakage inductance",
+      "differential S parameters",
+      "interwinding capacitance",
+      "nonlinear distortion under common-mode excitation"
+    ]
+  },
+  "assembly": "Factory-installed SMD; no custom winding or customer soldering",
+  "release_gate": "Obtain differential device data or bench S-parameters, then validate full 0.1-30MHz chain; current sensitivity sweep has failing cases.",
+  "low_pass_MHz": 30
+}

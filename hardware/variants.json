@@ -12,12 +12,18 @@
   "HF": {
     "band_MHz": [
       0.1,
-      50
+      30
     ],
     "status": "architecture only; no HF schematic or PCB release",
     "input": "balanced high-impedance voltage buffer",
     "high_pass_MHz": 0.1,
-    "low_pass_MHz": 50,
-    "coax_common_mode_choke": "LF-capable JLC-sourceable network still to be qualified; do not substitute the VHF board"
+    "low_pass_MHz": 30,
+    "coax_common_mode_choke": {
+      "LF_stage": "CLF9060-202Y",
+      "JLC": "C2941480",
+      "quantity_per_polarization": 1,
+      "upper_band_stage": "ACM4520-901-2P-T000",
+      "status": "Selected for 0.1-30MHz development; differential data still needed. See simulation/hf_choke/results.json."
+    }
   }
 }

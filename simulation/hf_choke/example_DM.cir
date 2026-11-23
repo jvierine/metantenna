@@ -1,0 +1,33 @@
+CLF9060-202Y sensitivity screening
+V1 src 0 AC 1
+Rs src ip 50
+Vn inn 0 0
+Rload op on 50
+RdcP ip ap .42
+RdcN inn an .42
+Lp0 ap midp 0.0010898279631445093
+Ln0 an midn 0.0010898279631445093
+K0 Lp0 Ln0 0.9999
+RlossP0 ap midp 15813.13555549639
+RlossN0 an midn 15813.13555549639
+CselfP0 ap midp 3.142384694306546e-12
+CselfN0 an midn 3.142384694306546e-12
+Lp1 midp op 0.00010000500025000744
+Ln1 midn on 0.00010000500025000744
+K1 Lp1 Ln1 0.9999
+RlossP1 midp op 2719.796092226177
+RlossN1 midn on 2719.796092226177
+CselfP1 midp op 9.26484153742868e-13
+CselfN1 midn on 9.26484153742868e-13
+Cinter ap an 5e-12
+Riso op on 1g
+.control
+set wr_singlescale
+set wr_vecnames
+ac dec 90 100k 50meg
+let transfer=2*(v(op)-v(on))
+let reflection=2*v(ip)-1
+wrdata response.txt transfer reflection
+quit
+.endc
+.end

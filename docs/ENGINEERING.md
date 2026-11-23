@@ -242,3 +242,38 @@ still require bench tests. This choke is not a low-frequency HF solution.
 
 The X RF-port choke adds a further 0.12 ohm maximum loop resistance
 (two 0.06 ohm windings); the full added filter resistance is 0.29 ohm.
+
+
+## HF CLF9060-202Y development selection and SPICE screening
+
+The HF usable-band target is now 0.1–30 MHz, with nominal 100 kHz high-pass
+and 30 MHz low-pass targets. The Linekey CLF9060-202Y (JLC C2941480) is
+selected for low-frequency development on each polarization. This is not an
+HF PCB fabrication release. Its manufacturer data give 2 mH +/-50%, 0.42 ohm
+maximum DCR, 0.6 A, and >=3 kohm common-mode impedance over 1–5 MHz. The
+manufacturer measuring fixture connects the two windings in parallel.
+
+Approximate manually read points from the 202Y magnitude graph are stored in
+HDF5. Two series parallel-RLC branches fit those points with <=8.9% relative
+error. This is a passive, nonunique magnitude-only model, not a vendor model.
+Its common-mode low-frequency equivalent inductance is about 1.19 mH, within
+the listed +/-50% range. A paired-winding SPICE implementation reproduces the
+fit. Pin pairs are 1–4 and 2–3; body and land dimensions are retained in the HF
+development definition. The source PDF hash identifies the datasheet used.
+
+Ngspice screening covers 180 assumption combinations of inductance, coupling,
+self-capacitance scaling and inter-winding capacitance, with 50-ohm DM and CM
+fixtures. All screened networks retain >=3 kohm CM impedance in the specified
+1–5 MHz interval. The common-mode curve cannot determine coupling/leakage:
+for the fitted branch model and assumed 5 pF inter-winding capacitance,
+k=0.99999,0.9999,0.999 give about0.07,0.80,14.24 dB loss at30MHz. An ideal
+k=1 run conceals the RF loss. Counts of cases passing arbitrary screening
+limits are not probabilities, tolerances, or manufacturing yield estimates.
+The model says nothing about magnetic nonlinearities or amplifier IP3.
+
+The 0.42 ohm per-winding resistance assumption adds0.84 ohm to the X DC loop
+(0.16 V at191mA as a reference example, not the unspecified HF amplifier's
+actual current). The full HF power budget and DC-return isolation still need
+the final amplifier circuit. Vendor differential data or bench S-parameters
+are required to qualify wanted-signal transmission; common-mode magnitude
+alone cannot establish that the stage works across0.1–30MHz.

@@ -124,8 +124,8 @@ Vendor-model screening predicts **0.44 dB maximum nominal choke loss** across
 measured insertion loss, interference rejection or linearity qualification.
 The same choke gives negligible suppression at 100 kHz: the **HF variant
 needs a separately qualified low-frequency solution** and is not yet a
-released board. Its target remains 0.1–50 MHz, high-impedance balanced input,
-100 kHz high-pass and 50 MHz low-pass. [Variant definitions](hardware/variants.json).
+released board. Its target is now 0.1–30 MHz, high-impedance balanced input,
+100 kHz high-pass and 30 MHz low-pass. [Variant definitions](hardware/variants.json).
 
 
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
@@ -144,6 +144,23 @@ a batch; the connector illustration is a dimensional envelope.
 
 ![Indoor bias tee with horizontal connectors](docs/biastee_case_exploded.png)
 
+
+## HF variant — 0.1–30 MHz development
+
+The HF definition now selects **Linekey CLF9060-202Y (JLC C2941480)**,
+one per polarization, with a **100 kHz high-pass and 30 MHz low-pass target**.
+The full HF amplifier schematic and PCB are still under development.
+
+![HF choke SPICE screening and approximate datasheet common-mode curve](docs/hf_choke_screening.png)
+
+The SPICE common-mode model follows approximate points from the manufacturer's
+202Y graph to within 9%. The graph does not determine wanted-signal loss:
+**k is an assumed magnetic coupling coefficient**, not a published device value.
+For the fitted common-mode model, the examples give about **0.07, 0.8 and
+14 dB loss at 30 MHz** for k = 0.99999, 0.9999 and 0.999, respectively.
+These are sensitivity cases, not device-performance predictions or yield
+estimates. Differential vendor data or measured S-parameters are needed before
+releasing this RF stage. [SPICE circuits and HDF5 results](simulation/hf_choke/).
 
 ## Complete signal chain and arm lengths
 
