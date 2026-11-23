@@ -101,6 +101,15 @@ bottom copper; ground planes are hidden in this view.
 
 **Indoor board — 76 × 64 mm.** X injects bias power; Y is an RF-only pass-through.
 
+**Schematic review pending; JLC order on hold.** Proposed input filtering puts
+both 12 V and its return through a common-mode choke before joining RF ground,
+with differential supply filtering to reduce power-supply RFI entering the coax.
+Component selection and performance are still to be reviewed with Nico.
+
+![Proposed bias-tee common-mode and differential supply filtering](docs/biastee_filter_review.png)
+
+The PCB drawing below shows the **current board, without this proposed filter**.
+
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
 
 **Indoor bias tee: horizontal side-entry SMA jacks.** J10/J20 face left
