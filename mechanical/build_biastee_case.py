@@ -14,7 +14,8 @@ R=Path(__file__).resolve().parents[1]
 M=m.Manifold
 PCB_Z=7.0
 AXIS_Z=PCB_Z+1.6+6.35
-# 2 mm sidewalls, clear of the board edge; round holes allow print tolerance.
+# 2 mm sidewalls. Open-top U-slots admit the soldered connector barrels.
+# Lid tongues close the slots after the populated PCB has been lowered in.
 X0,X1=-3.0,79.0
 Y0,Y1=-3.0,67.0
 
@@ -28,6 +29,7 @@ def parts():
         if p['package']=='SMA_RA':
             assert p['mpn']=='132203'
             base-=horizontal_hole(3.4,100,-10,p['y'],AXIS_Z)
+            base-=box(100,7.2,30,38,p['y'],AXIS_Z)
     # M3 PCB screws; 4 mm underside clearance for the 3.94 mm pins.
     for x in [6,70]:
         for y in [6,58]:
@@ -41,6 +43,13 @@ def parts():
     # Rear 12 V cable opening. Fit a grommet and secure the cable internally.
     base-=M.cylinder(10,3.2,circular_segments=48).rotate((90,0,0)).translate((40,2,12))
     lid=box(94,70,2.5,38,32,24)
+    # Captive tongues form the upper halves of the side openings. Leave 0.2 mm
+    # clearance per side so the lid slides in without forcing the printed base.
+    for x in [-2,78]:
+        for y in [27,50]:
+            tongue=box(1.6,6.8,24-AXIS_Z,x,y,AXIS_Z)
+            tongue-=horizontal_hole(3.4,100,-10,y,AXIS_Z)
+            lid+=tongue
     for x in [-5,81]:
         for y in [3,61]:lid-=cyl(1.7,5,x,y,23)
     return {'biastee_base':base,'biastee_lid':lid}
@@ -55,7 +64,27 @@ def main():
     pcb=box(76,64,1.6,38,32,PCB_Z)
     assert (solids['biastee_base'] ^ pcb).volume()<1e-6
     assert AXIS_Z-5.1>3 and AXIS_Z+5.1<24
-    stats={}
+    # Check the complete insertion sweep, not just the final resting position.
+    # Nuts/washers are fitted externally AFTER insertion; no cable is attached.
+    sweep=box(76,64,41.6,38,32,PCB_Z)
+    board=json.loads((R/'hardware/biastee_layout.json').read_text())
+    for p in board['parts']:
+        if p['package']=='SMA_RA':
+            direction=-1 if p['rotation']==0 else 1
+            x,y=p['x'],p['y']
+            sweep+=box(8,8,50.44,x,y,PCB_Z+1.6)
+            start=x-16.5 if direction<0 else x+4
+            sweep+=horizontal_hole(3.175,12.5,start,y,AXIS_Z)
+            sweep+=box(12.5,6.35,40,start+6.25,y,AXIS_Z)
+        else:
+            w,d,h=(10,8,10) if p['package']=='TERM2' else (3,2,1.5)
+            sweep+=box(w,d,h+40,p['x'],p['y'],PCB_Z+1.6)
+    interference=(sweep ^ solids['biastee_base']).volume()
+    assert interference<1e-6,('assembled-board insertion blocked',interference)
+    assert (solids['biastee_lid'] ^ solids['biastee_base']).volume()<1e-6
+    stats={'assembly_check':{'vertical_insertion_sweep_mm':40,
+                            'interference_mm3':interference,
+                            'sequence':'Remove nuts; lower populated PCB into U-slots; screw PCB down; fit lid; fit external washers and nuts.'}}
     for name,s in solids.items():
         t=mesh(s)
         assert s.status()==m.Error.NoError and t.is_watertight and t.is_volume

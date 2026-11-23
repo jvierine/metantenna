@@ -34,7 +34,9 @@ indoor connectors are **Amphenol 132203 right-angle bulkhead jacks on top**.
 J10/J20 point left toward the antenna cables; J11/J21 point right toward
 the receiver cables. They exit the printed case sidewalls, not its lid.
 Use the new biastee_base.stl and biastee_lid.stl; 2 mm panels accommodate
-the connector maximum 2.4 mm panel thickness. Fit the board loosely, align
+the connector maximum 2.4 mm panel thickness. The open-top U-slots accept the assembled board: remove connector nuts and
+washers, lower the PCB vertically, secure it, fit the lid and then the nuts.
+The lid tongues close the slots. Fit the board loosely, align
 the four side jacks, and use thin spacer washers if needed between the jack
 shoulder and case. Do not bend the PCB by tightening a nut across a gap. Standard female SMA, not RP-SMA. Antenna copper
 arms solder directly to X±/Y±; they need no RF connectors.

@@ -1,4 +1,9 @@
 {
+  "assembly_check": {
+    "vertical_insertion_sweep_mm": 40,
+    "interference_mm3": 1.6436504934880247e-15,
+    "sequence": "Remove nuts; lower populated PCB into U-slots; screw PCB down; fit lid; fit external washers and nuts."
+  },
   "biastee_base": {
     "watertight": true,
     "connected_solids": 1,
@@ -14,7 +19,7 @@
         24.0
       ]
     ],
-    "volume_cm3": 31.78
+    "volume_cm3": 31.41
   },
   "biastee_lid": {
     "watertight": true,
@@ -23,7 +28,7 @@
       [
         -9.0,
         -3.0,
-        24.0
+        14.949999809265137
       ],
       [
         85.0,
@@ -31,6 +36,6 @@
         26.5
       ]
     ],
-    "volume_cm3": 16.36
+    "volume_cm3": 16.64
   }
 }
