@@ -71,7 +71,7 @@ def main():
  for vs,loop,vf,ampv,t,rtol,vtol in itertools.product([10.8,11.76,12,13.2],[0,2,3,5,10],[.25,.6],[4.3,4.8,5.3],[-20,25,60],[.99,1.01],[.98,1.02]):
   current=(v8*vtol-(ampv-.0031*(t-25)))/(41.2*rtol+1.8)
   total=2*current+.001
-  vin=vs-2*vf-total*(loop+6)
+  vin=vs-2*vf-total*(loop+6+.03+.14)
   corners.append([vs,loop,vf,ampv,t,current,vin,vin-v8*vtol-.4,current**2*41.2*rtol,max(0,vin-v8*vtol)*current])
  corners=np.array(corners);assert corners[:,5].max()<.12
  # Full required 50m installation: 12 V nominal ±10%, loop <=5 ohm,
@@ -83,7 +83,7 @@ def main():
  'frequency_MHz':[1,400], 'X_gain_50ohm_30_55_dB':[float(gx[band].min()),float(gx[band].max())],
  'Y_gain_50ohm_30_55_dB':[float(gy[band].min()),float(gy[band].max())],
  'X_Y_gain_difference_dB_max':float(max(abs(gx[band]-gy[band]))),
- 'dc_corners':len(corners),'head_input_current_mA_max':float(corners[:,5].max()*2000+1),
+ 'added_filter_DC_resistance_ohm_max':.17,'dc_corners':len(corners),'head_input_current_mA_max':float(corners[:,5].max()*2000+1),
  'regulator_headroom_after_0p4V_margin_V_min':float(corners[approved,7].min()),
  'bias_resistor_dissipation_W_max':float(corners[:,8].max()),
  'LDO_dissipation_W_max':float(corners[:,9].max()),

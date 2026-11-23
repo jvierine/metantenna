@@ -13,13 +13,14 @@
     17.302956519121967
   ],
   "X_Y_gain_difference_dB_max": 0.029224332961366173,
+  "added_filter_DC_resistance_ohm_max": 0.17,
   "dc_corners": 1440,
   "head_input_current_mA_max": 190.78908612754762,
-  "regulator_headroom_after_0p4V_margin_V_min": 0.21002942485207254,
+  "regulator_headroom_after_0p4V_margin_V_min": 0.1775952802103905,
   "bias_resistor_dissipation_W_max": 0.36729489188228337,
-  "LDO_dissipation_W_max": 0.32622328249927474,
+  "LDO_dissipation_W_max": 0.32361639372876333,
   "installation_requirement": "50m coax DC loop resistance <=3 ohm; regulated 12V -2%/+10%; ambient -20..60C. Cable RF loss assumed 5dB at50MHz, sqrt(f).",
-  "off_spec_supply_or_cable_dropout_corners": 244,
+  "off_spec_supply_or_cable_dropout_corners": 252,
   "active_model_limits": "25.1dB gain and2.7dB NF extrapolated from100MHz typicals. IP3/P1dB budget only, not nonlinear simulation. No transistor or mismatch noise parameters; no loop stability, oscillation or X/Y coupling certification.",
   "antenna_cases": {
     "arms_1p0m": {

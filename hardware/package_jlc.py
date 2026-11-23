@@ -29,7 +29,7 @@ def main():
   dangerous=issues
   if dangerous or not re.search(r'Found 0 unconnected pads',report):raise RuntimeError((name,'native DRC or parity not clean',dangerous))
   if 'Errors 0' not in erc:raise RuntimeError((name,'ERC not clean'))
-  status[name]={'native_issues':issues,'dimensions_mm':size,'quantity':5,'electrical_DRC_ERC_and_parity':'pass','assembly_sides':'Top SMT; connectors hand soldered'}
+  status[name]={'native_issues':issues,'dimensions_mm':size,'quantity':5,'electrical_DRC_ERC_and_parity':'pass','assembly_sides':'Full factory assembly, including through-hole connectors and bottom-side preamp SMA'}
   assert any('NPTH' in p.name for p in (src/'gerbers').glob('*.drl')), 'Need separate native NPTH drill file'
   assert any('PTH' in p.name and 'NPTH' not in p.name for p in (src/'gerbers').glob('*.drl')), 'Need separate native PTH drill file'
   with zipfile.ZipFile(dest/'Gerbers.zip','w',zipfile.ZIP_DEFLATED) as z:
@@ -45,7 +45,7 @@ def main():
    allgroups[(p.value,p.package,p.mpn)].append(p.ref)
    allcpl.append([p.ref,p.x,-p.y,p.rotation,'Top' if p.side=='F' else 'Bottom'])
    if p.package in ['SMA','SMA_RA','TERM2']:
-    manual.append([p.ref,p.value,p.package,p.mpn,p.side,'Hand solder after SMT; see assembly drawing']);continue
+    manual.append([p.ref,p.value,p.package,p.mpn,p.side,'Factory install after SMT; see assembly drawing']);continue
    assert p.mpn,(p.ref,'missing MPN')
    groups[(p.value,p.package,p.mpn)].append(p.ref)
    cpl.append([p.ref,p.x,-p.y,p.rotation,'Top' if p.side=='F' else 'Bottom'])
@@ -54,9 +54,15 @@ def main():
   book(dest/'CPL.xlsx',['Designator','Mid X','Mid Y','Rotation','Layer'],cpl)
   book(dest/'BOM_full_assembly.xlsx',['Comment','Designator','Footprint','Manufacturer Part Number','LCSC Part Number','Quantity'],[[v,','.join(refs),pkg,mpn,'',len(refs)] for (v,pkg,mpn),refs in sorted(allgroups.items())])
   book(dest/'CPL_full_assembly.xlsx',['Designator','Mid X','Mid Y','Rotation','Layer'],allcpl)
-  book(dest/'Hand_assembly.xlsx',['Designator','Comment','Footprint','Manufacturer Part Number','Side','Instructions'],manual)
+  book(dest/'Connector_assembly.xlsx',['Designator','Comment','Footprint','Manufacturer Part Number','Side','Instructions'],manual)
   book(dest/'Do_not_populate.xlsx',['Designator','Comment','Manufacturer Part Number','Instructions'],dnp)
-  status[name]['SMT_parts_per_board']=len(cpl);status[name]['hand_assembled_parts_per_board']=len(manual)
+  # Full assembly is the order default: the user will not solder connectors.
+  shutil.copy2(dest/'BOM.xlsx',dest/'BOM_SMT_only.xlsx')
+  shutil.copy2(dest/'CPL.xlsx',dest/'CPL_SMT_only.xlsx')
+  shutil.copy2(dest/'BOM_full_assembly.xlsx',dest/'BOM.xlsx')
+  shutil.copy2(dest/'CPL_full_assembly.xlsx',dest/'CPL.xlsx')
+  (dest/'Hand_assembly.xlsx').unlink(missing_ok=True)
+  status[name]['SMT_parts_per_board']=len(cpl);status[name]['factory_connector_parts_per_board']=len(manual)
  # A release manifest binds the checked source, native reports and actual archives.
  shutil.copy2(R/'manufacturing/JLC_ORDER.md',out/'ORDER_INSTRUCTIONS.md')
  shutil.copy2(R/'simulation/END_TO_END.md',out/'SIMULATION_SUMMARY.md')

@@ -67,9 +67,18 @@ def biastee():
     p=[]
     def add(ref,value,pkg,nets,x,y,rot=0,mpn='',note=''):
         p.append(Part(ref,value,pkg,{str(k):v for k,v in nets.items()},x,y,rot,mpn,note))
-    add('J1','12 V input','TERM2',{1:'VIN',2:'GND'},40,8,mpn='1729128',note='Phoenix 2-way 5.08 mm terminal block; + pin 1')
+    add('J1','12 V input','TERM2',{1:'VIN',2:'SUPPLY_RETURN'},40,8,mpn='1729128',note='Phoenix 2-way 5.08 mm terminal block; + pin 1')
     add('F1','500mA PTC','1206',{1:'VIN',2:'VIN_FUSED'},40,14,mpn='1206L050/24YR')
-    add('D1','SS14','SMA_DIODE',{1:'PROTECTED',2:'VIN_FUSED'},30,12,mpn='SS14')
+    # TDK pins 1->4 and 2->3 are coupled windings; BOTH input wires pass
+    # through CM1. Input return must not touch RF ground before pin 3.
+    add('CM1','700R CM @100MHz','ACM7060',{1:'VIN_FUSED',2:'SUPPLY_RETURN',3:'GND',4:'CM_POS'},50,10,mpn='ACM7060-701-2PL-TL01',note='TDK 4A, 15mohm max per winding; LCSC C78246; 1-4 positive, 2-3 return')
+    add('D1','SS14','SMA_DIODE',{1:'PROTECTED',2:'CM_POS'},60,10,mpn='SS14')
+    add('FB1','600R @100MHz','0805',{1:'PROTECTED',2:'FILTERED'},60,17,mpn='BLM21PG601SN1D',note='Murata 1.4A, DCR <=0.14ohm; power-path bead, not RF signal path')
+    add('C2','1n','0805',{1:'FILTERED',2:'GND'},50,20,90,mpn='C0805C102J5GACTU')
+    add('C3','100n 50V','0805',{1:'FILTERED',2:'GND'},55,20,90,mpn='GRM21BR71H104KA01L')
+    # RC shunt damps low-frequency resonances without a series DC voltage drop.
+    add('R1','1R','0805',{1:'FILTERED',2:'DAMP'},65,17,90,mpn='RC0805FR-071RL')
+    add('C4','10u 25V','1206',{1:'DAMP',2:'GND'},65,22,90,mpn='GRM31CR61E106KA12L')
     add('D2','SMAJ15A','SMA_DIODE',{1:'PROTECTED',2:'GND'},23,12,90,'SMAJ15A')
     add('C1','10u 25V','1206',{1:'PROTECTED',2:'GND'},18,12,90,'GRM31CR61E106KA12L')
     for j,y in enumerate([27,50]):
@@ -80,7 +89,7 @@ def biastee():
         if j==0:
             add(f'L{n}','1u','1008',{1:s+'_COAX',2:s+'_DC'},20,y-6,90,'1008CS-102XJRC')
             add(f'C{n+1}','100n 50V','0805',{1:s+'_DC',2:'GND'},26,y-9,90,'GRM21BR71H104KA01L')
-            add(f'F{n}','500mA PTC','1206',{1:'PROTECTED',2:s+'_DC'},34,y-9,mpn='1206L050/24YR',note='500mA hold at 20C; supplies both channels; current-limited 12V supply required; verify ambient derating')
+            add(f'F{n}','500mA PTC','1206',{1:'FILTERED',2:s+'_DC'},34,y-9,mpn='1206L050/24YR',note='500mA hold at 20C; supplies both channels; current-limited 12V supply required; verify ambient derating')
     return p,(76,64)
 
 if __name__=='__main__':

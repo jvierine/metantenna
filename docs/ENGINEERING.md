@@ -186,3 +186,28 @@ DRC/library/parity warnings have been resolved. Read the actual reports.
 
 - [PyGDSM implementation and references](https://github.com/telegraphic/pygdsm)
 - [GSM2016 sky-model paper](https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.3486Z/abstract)
+
+## Bias-tee input filter
+
+CM1 is TDK ACM7060-701-2PL-TL01 (LCSC C78246), two windings 1–4 and
+2–3, 700 ohm typical common-mode impedance at 100 MHz, 4 A rating and
+15 milliohm maximum per line at 20 C. The unfiltered supply return is a
+separate net and has no plane connection until CM1 pin 3. The four ground
+pours omit x=34…50 mm, y=0…14 mm under the dirty input pair; RF reference
+planes remain continuous under both coax signal paths.
+
+FB1 is Murata BLM21PG601SN1D (600 ohm at 100 MHz, 1.4 A, 0.14 ohm max).
+C1 is the upstream bulk bypass. C2/C3 provide downstream 1 nF / 100 nF
+bypassing, and R1/C4 form a 1 ohm / 10 uF series shunt for damping. R1 is
+not in the DC supply path. Existing C11 remains local to the bias feed.
+The choke and bead add 0.17 ohm maximum at 20 C to the DC loop.
+
+References: [TDK dimensions, pins and ratings](https://product.tdk.com/system/files/dam/doc/product/emc/emc/cmf_cmc/catalog/cmf_commercial_power_acm7060_en.pdf),
+[Murata ferrite ratings](https://www.murata.com/-/media/webrenewal/tool/library/common-pdf/static-model/component-list-fb-s-2602.ashx?cvid=20260515010000000000&la=en-sg).
+
+The differential SPICE screening uses approximate lumped ferrite/leakage
+models, capacitor ESL/ESR and reduced effective bulk capacitance (3 uF).
+It checks source resistance and inductance sensitivity, not PCB radiated
+coupling or common-mode insertion loss. Its very small RF transfers must
+not be advertised as physical shielding or rejection specifications.
+A supply-to-coax injection measurement and stability check are required.

@@ -25,15 +25,15 @@ inferred from an ideal matched stage.
 - 1,440 DC corners cover supply, coax loop resistance, diode drop, bias-resistor
   tolerance, regulator voltage, MMIC operating voltage and -20…60 °C ambient.
 - Inside the specified installation envelope (regulated 12 V, minimum 11.76 V,
-  coax loop resistance ≤3 Ω): minimum regulator input headroom is **0.61 V**,
-  i.e. **0.21 V remaining after an assumed 0.40 V dropout allowance**.
+  coax loop resistance ≤3 Ω): minimum regulator input headroom is **0.58 V**,
+  i.e. **0.18 V remaining after an assumed 0.40 V dropout allowance**.
 - Maximum predicted total head current **191 mA**, bias resistor dissipation
-  **0.367 W per channel**, regulator dissipation **0.326 W per channel**.
+  **0.367 W per channel**, regulator dissipation **0.324 W per channel**.
   Use the 1 W bias resistors. Both indoor PTCs are now 500 mA nominal hold parts;
   hot-environment hold-current derating still applies.
 
 The sweep deliberately includes off-spec weak supplies and resistive cables;
-244 of those corners fail the 0.4 V headroom allowance. They are not concealed
+252 of those corners fail the 0.4 V headroom allowance. They are not concealed
 as passing operating conditions. Measure the actual X cable DC loop resistance
 before installation. Regulator thermal rise depends on board assembly and air
 flow; the electrical dissipation calculation is not a thermal qualification.
@@ -56,3 +56,8 @@ products first if geometry, location, circuit loss or receiver assumptions chang
 Active-device IP3/P1dB remain datasheet-based budgets; no nonlinear simulation
 or blocking/recovery qualification is claimed. PCB cross-coupling, common-mode
 coax currents and oscillation/stability require further modelling or measurement.
+
+The added common-mode choke and bead contribute at most 0.17 ohm at 20 C
+to the DC loop, included in the corner calculation. The RF cascade still
+uses the bypassed-supply approximation; it does not predict conducted-RFI
+suppression or noise improvement from this new filter.

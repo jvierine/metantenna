@@ -13,6 +13,7 @@ def effects(size=1.0,extra=''):return f'(effects (font (size {size} {size})) {ex
 def line(a,b):return f'(polyline (pts (xy {a[0]} {a[1]}) (xy {b[0]} {b[1]})) (stroke (width 0.2) (type default)) (fill (type none)))'
 
 def pins(p):
+    if p.package=='ACM7060':return [('1',-7.62,2.54,0),('2',-7.62,-2.54,0),('3',7.62,-2.54,180),('4',7.62,2.54,180)]
     if len(p.nets)==2:return [('1',-5.08,0,0),('2',5.08,0,180)]
     if p.package=='SOT89':return [('1',-7.62,0,0),('3',7.62,0,180),('2',0,-7.62,90)]
     if p.package=='CD542':return [('1',-7.62,2.54,0),('3',-7.62,-2.54,0),('4',7.62,-2.54,180),('6',7.62,2.54,180),('2',-2.54,-7.62,90),('5',2.54,-7.62,90)]

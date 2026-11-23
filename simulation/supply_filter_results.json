@@ -1,0 +1,63 @@
+{
+  "topology": "pass",
+  "input_return_copper_island": "pass",
+  "cases": [
+    {
+      "source_ohm": 0.1,
+      "inductance_scale": 0.3,
+      "rail_peak_dB": -0.04542613044398152,
+      "coax_transfer_30_55_dB_max": -108.62580156892832
+    },
+    {
+      "source_ohm": 0.1,
+      "inductance_scale": 1,
+      "rail_peak_dB": 0.03803495237327406,
+      "coax_transfer_30_55_dB_max": -128.61136417855633
+    },
+    {
+      "source_ohm": 0.1,
+      "inductance_scale": 3,
+      "rail_peak_dB": 1.9891156875598637,
+      "coax_transfer_30_55_dB_max": -143.49260429649553
+    },
+    {
+      "source_ohm": 1,
+      "inductance_scale": 0.3,
+      "rail_peak_dB": -0.20271118323304263,
+      "coax_transfer_30_55_dB_max": -108.68334125210728
+    },
+    {
+      "source_ohm": 1,
+      "inductance_scale": 1,
+      "rail_peak_dB": -0.20190882567022156,
+      "coax_transfer_30_55_dB_max": -128.6156963987188
+    },
+    {
+      "source_ohm": 1,
+      "inductance_scale": 3,
+      "rail_peak_dB": -0.1996164222328431,
+      "coax_transfer_30_55_dB_max": -143.4930923387795
+    },
+    {
+      "source_ohm": 50,
+      "inductance_scale": 0.3,
+      "rail_peak_dB": -8.875212847693883,
+      "coax_transfer_30_55_dB_max": -122.59140783155678
+    },
+    {
+      "source_ohm": 50,
+      "inductance_scale": 1,
+      "rail_peak_dB": -8.874859718864858,
+      "coax_transfer_30_55_dB_max": -133.67237084222023
+    },
+    {
+      "source_ohm": 50,
+      "inductance_scale": 3,
+      "rail_peak_dB": -8.873850850658766,
+      "coax_transfer_30_55_dB_max": -144.4564386194583
+    }
+  ],
+  "DC_drop_at_0p191A_V_max_20C": 0.032470000000000006,
+  "added_dissipation_W_max_20C": 0.0062017700000000005,
+  "common_mode_suppression": "Requires bench measurement; no quantitative claim from this model."
+}

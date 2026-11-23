@@ -21,7 +21,7 @@ the fabrication files are prototype files. No manufacturing order has been place
 
 **Rev B prototype manufacturing:** native KiCad electrical/clearance and
 schematic-parity checks pass. The [JLCPCB package and order instructions](manufacturing/JLC_ORDER.md)
-include separate BOM/CPL files and hand-installed connector lists. Exact part
+include full-assembly BOM/CPL files, including all SMA and power connectors. Exact part
 matching, placement preview and manufacturer CAM acceptance remain required
 before payment; this is not measured RF qualification.
 
@@ -110,14 +110,15 @@ bottom copper; ground planes are hidden in this view.
 
 **Indoor board — 76 × 64 mm.** X injects bias power; Y is an RF-only pass-through.
 
-**Schematic review pending; JLC order on hold.** Proposed input filtering puts
-both 12 V and its return through a common-mode choke before joining RF ground,
-with differential supply filtering to reduce power-supply RFI entering the coax.
-Component selection and performance are still to be reviewed with Nico.
+The 12 V input now has **CM1, a TDK two-line common-mode choke**, followed
+by **FB1 and differential bypass capacitors**. Both input wires pass through
+CM1 before the supply return joins RF ground. A series-RC shunt damps the
+supply filter without adding a resistor in the DC feed. Ground copper is
+removed beneath the unfiltered input pair; the RF paths retain their reference.
+This targets conducted supply RFI; it does not establish a lower measured
+antenna noise temperature. Bench suppression and stability tests remain needed.
 
-![Proposed bias-tee common-mode and differential supply filtering](docs/biastee_filter_review.png)
-
-The PCB drawing below shows the **current board, without this proposed filter**.
+![Bias-tee common-mode and differential supply filtering](docs/biastee_filter_review.png)
 
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
 

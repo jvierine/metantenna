@@ -96,6 +96,7 @@ def main():
         mount=[(6,6,3.2),(6,h-6,3.2),(w-6,6,3.2),(w-6,h-6,3.2)]
         holes=[(p['x'],p['y'],p['drill']) for p in a['pads'] if p['drill']]+[(x,y,.3) for _,x,y in a['vias']]
         bounds=box(.5,.5,w-.5,h-.5)
+        if name=="biastee":bounds-=box(34,0,50,14) # Keep dirty input pair off RF planes
         for layer,label in [(0,'F_Cu'),(1,'B_Cu')]:
             shapes=[g for n,g,ll,_ in items if layer in ll]
             if layer in [0,1]:

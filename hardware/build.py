@@ -25,6 +25,7 @@ def pads(pkg):
         return [('1',-pitch,0,w,h,0),('2',pitch,0,w,h,0)]
     if pkg in ['SMA','SMA_RA']:return [('1',0,0,2.05,2.05,1.5)]+[('2',x,y,2.25,2.25,1.7) for x,y in [(2.54,2.54),(2.54,-2.54),(-2.54,-2.54),(-2.54,2.54)]]
     if pkg=='ANT_M3':return [('1',0,-43,4,4,1.5),('2',0,43,4,4,1.5)]
+    if pkg=='ACM7060':return [('1',-3.375,-2,2.25,1.5,0),('2',-3.375,2,2.25,1.5,0),('3',3.375,2,2.25,1.5,0),('4',3.375,-2,2.25,1.5,0)]
     if pkg=='TERM2':return [('1',-2.54,0,3,3,1.3),('2',2.54,0,3,3,1.3)]
     if pkg=='CD542':return [(str(i+1),-2.54,y,2.54,1.65,0) for i,y in enumerate([-2.54,0,2.54])]+[(str(i+4),2.54,y,2.54,1.65,0) for i,y in enumerate([2.54,0,-2.54])]
     if pkg=='SOT89':return [('1',-1.5,1.65,.9,1.3,0),('3',1.5,1.65,.9,1.3,0),('2',0,-.7375,1.733,3.125,0),('2',0,1.5625,.9,1.475,0)]
@@ -193,6 +194,7 @@ class Router:
             points += [(x,y) for x in np.arange(23,90,5) for y in [24,58,72]]
             points += [(27.7,y) for y in [44,46.9,49.1,52]]
         for x,y in points:
+            if w==76 and 33<x<51 and y<15:continue # Unfiltered supply island
             point=Point(x,y)
             if any(not a['drill'] and a['shape'].distance(point)<.4 for a in self.pads):continue
             if any(a['drill'] and math.dist((x,y),(a['x'],a['y']))<a['drill']/2+.15+.25 for a in self.pads):continue
@@ -262,7 +264,10 @@ def pcb(name,parts,size,r):
         lines.append(f'(gr_line (start {a[0]} {a[1]}) (end {b[0]} {b[1]}) (stroke (width 0.05) (type default)) (layer "Edge.Cuts"))')
     for layer in ['F.Cu','In1.Cu','In2.Cu','B.Cu']:
         clearance=.5 if layer in ['F.Cu','B.Cu'] else .25
-        lines.append(f'(zone (net 1) (net_name "/GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts (xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}))))')
+        # No reference-plane copper under the dirty supply pair; the RF
+        # ground is continuous everywhere below y=14, including both RF paths.
+        pts=(f'(xy 0.5 0.5) (xy 34 0.5) (xy 34 14) (xy 50 14) (xy 50 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5})' if name=='biastee' else f'(xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5})')
+        lines.append(f'(zone (net 1) (net_name "/GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts {pts})))')
     lines.append(')')
     lib=ROOT/'hardware/metantenna.pretty';lib.mkdir(exist_ok=True)
     for pkg in {p.package for p in parts}|{'MountingHole'}:
