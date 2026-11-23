@@ -1,5 +1,5 @@
 {
-  "source_commit": "2f3cbd4",
+  "source_commit": "c08ad1a2e9cc1330adcce3602f283acc47aa1c4a",
   "native_CAD": "KiCad 9.0.9 via GitHub Actions",
   "boards": {
     "preamp": {

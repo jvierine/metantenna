@@ -50,8 +50,13 @@ def mesh(s):
     return trimesh.Trimesh(np.asarray(q.vert_properties)[:,:3],np.asarray(q.tri_verts),process=True)
 
 def main():
+    solids=parts()
+    # Check the PCB solid against the case and the washer envelope against lid/floor.
+    pcb=box(76,64,1.6,38,32,PCB_Z)
+    assert (solids['biastee_base'] ^ pcb).volume()<1e-6
+    assert AXIS_Z-5.1>3 and AXIS_Z+5.1<24
     stats={}
-    for name,s in parts().items():
+    for name,s in solids.items():
         t=mesh(s)
         assert s.status()==m.Error.NoError and t.is_watertight and t.is_volume
         assert len(t.split())==1,name
