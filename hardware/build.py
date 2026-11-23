@@ -241,12 +241,19 @@ def pcb(name,parts,size,r):
         for pin,x,y,w,h,hole in pads(p.package):
             n=p.nets[pin] or nc[(p.ref,pin)];net=f'(net {nets[n]} {q(native_name(n))})'
             typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
-            layers='"*.Cu" "*.Mask"' if hole else '"F.Cu" "F.Paste" "F.Mask"'
+            layers='"*.Cu" "*.Mask"' if hole else ('"F.Cu" "F.Mask"' if p.package=='MSOP8EP' and pin=='9' else '"F.Cu" "F.Paste" "F.Mask"')
             drill=f'(drill {hole})' if hole else ''
             lines.append(f'(pad {q(pin)} {typ} {shape} (at {x} {y} {p.rotation}) (size {w} {h}) {drill} (layers {layers}) {net})')
+        if p.package=='MSOP8EP':
+            for dx in [-.42,.42]:
+                for dy in [-.47,.47]:
+                    lines.append(f'(pad "" smd rect (at {dx} {dy}) (size .68 .76) (layers "F.Paste"))')
         lines.append(')')
     for i,(x,y) in enumerate([(6,6),(6,size[1]-6),(size[0]-6,6),(size[0]-6,size[1]-6)]):
         lines.append(f'(footprint "metantenna:MountingHole" (layer "F.Cu") (at {x} {y}) (attr board_only exclude_from_pos_files exclude_from_bom) (fp_text reference "H{i+1}" (at 0 -3) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask")))')
+    labels=([(20,6,'METANTENNA B0'),(83,21,'X RF+12V'),(83,61,'Y RF ONLY'),(5,44.5,'X-'),(91,44.5,'X+'),(48,9,'Y-'),(48,87,'Y+')] if name=='preamp' else [(40,60,'METANTENNA B0'),(17,32,'X ANT+DC'),(62,32,'X RX'),(17,55,'Y ANT'),(62,55,'Y RX'),(37.46,4,'+12V'),(44,4,'GND')])
+    for x,y,label in labels:
+        lines.append(f'(gr_text {q(label)} (at {x} {y}) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))')
     for n,l,a,b,width in r.tracks:
         lines.append(f'(segment (start {a[0]:.4f} {a[1]:.4f}) (end {b[0]:.4f} {b[1]:.4f}) (width {width}) (layer "{["F.Cu","B.Cu"][l]}") (net {nets[n]}))')
     for n,x,y in r.vias:lines.append(f'(via (at {x:.4f} {y:.4f}) (size 0.6) (drill 0.3) (layers "F.Cu" "B.Cu") (net {nets[n]}))')
@@ -265,9 +272,12 @@ def pcb(name,parts,size,r):
         else:
             for pin,x,y,ww,hh,hole in pads(pkg):
                 typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
-                layers='"*.Cu" "*.Mask"' if hole else '"F.Cu" "F.Paste" "F.Mask"'
+                layers='"*.Cu" "*.Mask"' if hole else ('"F.Cu" "F.Mask"' if pkg=='MSOP8EP' and pin=='9' else '"F.Cu" "F.Paste" "F.Mask"')
                 drill=f'(drill {hole})' if hole else ''
                 fp.append(f'(pad "{pin}" {typ} {shape} (at {x} {y}) (size {ww} {hh}) {drill} (layers {layers}))')
+        if pkg=='MSOP8EP':
+            for dx in [-.42,.42]:
+                for dy in [-.47,.47]:fp.append(f'(pad "" smd rect (at {dx} {dy}) (size .68 .76) (layers "F.Paste"))')
         (lib/f'{pkg}.kicad_mod').write_text('\n'.join(fp)+')\n')
     (ROOT/'hardware/fp-lib-table').write_text('(fp_lib_table (lib (name "metantenna") (type "KiCad") (uri "${KIPRJMOD}/metantenna.pretty") (options "") (descr "Metantenna custom lands")))\n')
     (ROOT/'hardware'/f'{name}.kicad_pcb').write_text('\n'.join(lines)+'\n')
