@@ -1,0 +1,36 @@
+{
+  "biastee_base": {
+    "watertight": true,
+    "connected_solids": 1,
+    "bounds_mm": [
+      [
+        -8.0,
+        -3.0,
+        0.0
+      ],
+      [
+        84.0,
+        67.0,
+        24.0
+      ]
+    ],
+    "volume_cm3": 31.78
+  },
+  "biastee_lid": {
+    "watertight": true,
+    "connected_solids": 1,
+    "bounds_mm": [
+      [
+        -9.0,
+        -3.0,
+        24.0
+      ],
+      [
+        85.0,
+        67.0,
+        26.5
+      ]
+    ],
+    "volume_cm3": 16.36
+  }
+}

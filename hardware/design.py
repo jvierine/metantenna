@@ -74,8 +74,8 @@ def biastee():
     add('C1','10u 25V','1206',{1:'PROTECTED',2:'GND'},18,12,90,'GRM31CR61E106KA12L')
     for j,y in enumerate([27,50]):
         n=10*(j+1);s='XY'[j]
-        add(f'J{n}',s+(' ANT +DC' if j==0 else ' ANT RF only'),'SMA',{1:s+'_COAX',2:'GND'},10,y,mpn='132134')
-        add(f'J{n+1}',s+' RX DC BLOCK','SMA',{1:s+'_RX',2:'GND'},65,y,mpn='132134')
+        add(f'J{n}',s+(' ANT +DC' if j==0 else ' ANT RF only'),'SMA_RA',{1:s+'_COAX',2:'GND'},5,y,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit')
+        add(f'J{n+1}',s+' RX DC BLOCK','SMA_RA',{1:s+'_RX',2:'GND'},71,y,180,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward right board edge; horizontal sidewall exit')
         add(f'C{n}','1n','0805',{1:s+'_COAX',2:s+'_RX'},40,y,mpn='C0805C102J5GACTU')
         if j==0:
             add(f'L{n}','1u','1008',{1:s+'_COAX',2:s+'_DC'},20,y-6,90,'1008CS-102XJRC')

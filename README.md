@@ -103,6 +103,18 @@ bottom copper; ground planes are hidden in this view.
 
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
 
+**Indoor bias tee: horizontal side-entry SMA jacks.** J10/J20 face left
+(antenna); J11/J21 face right (receiver). These are right-angle bulkhead
+Amphenol 132203 jacks, not the outdoor head’s downward-facing 132134 jacks.
+The indoor case has four side holes, 2 mm walls at the jacks, space for
+retaining nuts, a rear 12 V cable entry, and a screw-on lid. Print
+[biastee_base.stl](mechanical/stl/biastee_base.stl) and
+[biastee_lid.stl](mechanical/stl/biastee_lid.stl). Fit-test a print before ordering
+a batch; the connector illustration is a dimensional envelope.
+
+![Indoor bias tee with horizontal connectors](docs/biastee_case_exploded.png)
+
+
 ## Complete signal chain and arm lengths
 
 ![Antenna-to-receiver gain and sky-inclusive system noise](docs/end_to_end_comparison.png)

@@ -23,7 +23,7 @@ def pads(pkg):
     if pkg in ['0805','1008','1206','2512','SOD323','SMA_DIODE']:
         pitch,w,h={'0805':(1.,1.2,1.4),'1008':(1.3,1.2,2.2),'1206':(1.5,1.6,1.8),'2512':(3.,2.,3.4),'SOD323':(1.15,1.,.9),'SMA_DIODE':(2.25,2.5,2.)}[pkg]
         return [('1',-pitch,0,w,h,0),('2',pitch,0,w,h,0)]
-    if pkg=='SMA':return [('1',0,0,2.05,2.05,1.5)]+[('2',x,y,2.25,2.25,1.7) for x,y in [(2.54,2.54),(2.54,-2.54),(-2.54,-2.54),(-2.54,2.54)]]
+    if pkg in ['SMA','SMA_RA']:return [('1',0,0,2.05,2.05,1.5)]+[('2',x,y,2.25,2.25,1.7) for x,y in [(2.54,2.54),(2.54,-2.54),(-2.54,-2.54),(-2.54,2.54)]]
     if pkg=='ANT_M3':return [('1',0,-43,4,4,1.5),('2',0,43,4,4,1.5)]
     if pkg=='TERM2':return [('1',-2.54,0,3,3,1.3),('2',2.54,0,3,3,1.3)]
     if pkg=='CD542':return [(str(i+1),-2.54,y,2.54,1.65,0) for i,y in enumerate([-2.54,0,2.54])]+[(str(i+4),2.54,y,2.54,1.65,0) for i,y in enumerate([2.54,0,-2.54])]
@@ -235,7 +235,7 @@ def pcb(name,parts,size,r):
     native_name=lambda n:n if n.startswith('unconnected-') else '/'+n
     lines += [f'(net {i} {q(native_name(n))})' for n,i in nets.items()]
     for p in parts:
-        lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","ANT_M3","TERM2"] else "smd"}{" dnp" if p.value.startswith("DNP") else ""})')
+        lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","SMA_RA","ANT_M3","TERM2"] else "smd"}{" dnp" if p.value.startswith("DNP") else ""})')
         lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))))')
         lines.append(f'(fp_text value {q(p.value)} (at 0 0) (layer "F.Fab") (effects (font (size 0.7 0.7) (thickness 0.1))))')
         for pin,x,y,w,h,hole in pads(p.package):
@@ -267,7 +267,7 @@ def pcb(name,parts,size,r):
     lib=ROOT/'hardware/metantenna.pretty';lib.mkdir(exist_ok=True)
     for pkg in {p.package for p in parts}|{'MountingHole'}:
         fp=[f'(footprint "{pkg}" (version 20221018) (generator pcbnew) (layer "F.Cu")']
-        fp.append('(attr '+('board_only exclude_from_pos_files exclude_from_bom' if pkg=='MountingHole' else ('through_hole' if pkg in ['SMA','ANT_M3','TERM2'] else 'smd'))+')')
+        fp.append('(attr '+('board_only exclude_from_pos_files exclude_from_bom' if pkg=='MountingHole' else ('through_hole' if pkg in ['SMA','SMA_RA','ANT_M3','TERM2'] else 'smd'))+')')
         if pkg=='MountingHole':fp.append('(pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask"))')
         else:
             for pin,x,y,ww,hh,hole in pads(pkg):

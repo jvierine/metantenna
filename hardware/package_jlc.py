@@ -44,7 +44,7 @@ def main():
     dnp.append([p.ref,p.value,p.mpn,'DO NOT POPULATE']);continue
    allgroups[(p.value,p.package,p.mpn)].append(p.ref)
    allcpl.append([p.ref,p.x,-p.y,p.rotation,'Top' if p.side=='F' else 'Bottom'])
-   if p.package in ['SMA','TERM2']:
+   if p.package in ['SMA','SMA_RA','TERM2']:
     manual.append([p.ref,p.value,p.package,p.mpn,p.side,'Hand solder after SMT; see assembly drawing']);continue
    assert p.mpn,(p.ref,'missing MPN')
    groups[(p.value,p.package,p.mpn)].append(p.ref)
@@ -60,7 +60,7 @@ def main():
  # A release manifest binds the checked source, native reports and actual archives.
  shutil.copy2(R/'manufacturing/JLC_ORDER.md',out/'ORDER_INSTRUCTIONS.md')
  shutil.copy2(R/'simulation/END_TO_END.md',out/'SIMULATION_SUMMARY.md')
- for p in ['end_to_end_comparison.pdf','preamp_rev_b_annotated.png','wire_exit_plan.png']:
+ for p in ['end_to_end_comparison.pdf','preamp_rev_b_annotated.png','wire_exit_plan.png','biastee_case_exploded.png']:
   shutil.copy2(R/'docs'/p,out/p)
  manifest={'source_commit':a.commit,'native_CAD':'KiCad 9.0.9 via GitHub Actions','boards':status,
  'order_status':'Prototype package prepared; JLC part matching, placement/rotation preview and CAM acceptance remain required before payment.',
