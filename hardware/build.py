@@ -171,6 +171,7 @@ class Router:
             for ox,oy in offsets:
                 x,y=center[0]+ox,center[1]+oy;point=Point(x,y)
                 if any(not a['drill'] and a['shape'].distance(point)<.4 for a in self.pads):continue
+                if any(a['drill'] and math.dist((x,y),(a['x'],a['y']))<a['drill']/2+.15+.25 for a in self.pads):continue
                 if any(n!='GND' and g.distance(point)<.51 for n,g,_ in self.obstacles):continue
                 stub=LineString([center,(x,y)]).buffer(width/2)
                 if any(n!='GND' and 0 in ll and g.distance(stub)<.15 for n,g,ll in self.obstacles):continue
@@ -194,6 +195,7 @@ class Router:
         for x,y in points:
             point=Point(x,y)
             if any(not a['drill'] and a['shape'].distance(point)<.4 for a in self.pads):continue
+            if any(a['drill'] and math.dist((x,y),(a['x'],a['y']))<a['drill']/2+.15+.25 for a in self.pads):continue
             if any(n!='GND' and g.distance(point)<.51 for n,g,_ in self.obstacles):continue
             if any(math.dist((x,y),(xx,yy))<.7 for _,xx,yy in self.vias):continue
             self.vias.append(('GND',float(x),float(y)))
@@ -223,20 +225,28 @@ def pcb(name,parts,size,r):
     lines=['(kicad_pcb (version 20221018) (generator pcbnew)', '(general (thickness 1.6))','(paper "A4")',
            '(layers (0 "F.Cu" signal) (1 "In1.Cu" power) (2 "In2.Cu" power) (31 "B.Cu" signal) (32 "B.Adhes" user "B.Adhesive") (33 "F.Adhes" user "F.Adhesive") (34 "B.Paste" user) (35 "F.Paste" user) (36 "B.SilkS" user "B.Silkscreen") (37 "F.SilkS" user "F.Silkscreen") (38 "B.Mask" user) (39 "F.Mask" user) (44 "Edge.Cuts" user) (46 "B.CrtYd" user "B.Courtyard") (47 "F.CrtYd" user "F.Courtyard") (48 "B.Fab" user) (49 "F.Fab" user))',
            '(setup (pad_to_mask_clearance 0.05))','(net 0 "")']
-    lines += [f'(net {i} {q(n)})' for n,i in nets.items()]
+    nc={}
+    for p in parts:
+        for pin,n in p.nets.items():
+            if not n:
+                label={'3':'NC-','7':'DNC-'}.get(pin,'') if p.package=='MSOP8EP' else ''
+                nn=f'unconnected-({p.ref}-{label}Pad{pin})'
+                nc[(p.ref,pin)]=nn;nets[nn]=len(nets)+1
+    native_name=lambda n:n if n.startswith('unconnected-') else '/'+n
+    lines += [f'(net {i} {q(native_name(n))})' for n,i in nets.items()]
     for p in parts:
         lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","ANT_M3","TERM2"] else "smd"})')
-        lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))')
+        lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))))')
         lines.append(f'(fp_text value {q(p.value)} (at 0 0) (layer "F.Fab") (effects (font (size 0.7 0.7) (thickness 0.1))))')
         for pin,x,y,w,h,hole in pads(p.package):
-            n=p.nets[pin];net=f'(net {nets[n]} {q(n)})' if n else ''
+            n=p.nets[pin] or nc[(p.ref,pin)];net=f'(net {nets[n]} {q(native_name(n))})'
             typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
             layers='"*.Cu" "*.Mask"' if hole else '"F.Cu" "F.Paste" "F.Mask"'
             drill=f'(drill {hole})' if hole else ''
             lines.append(f'(pad {q(pin)} {typ} {shape} (at {x} {y} {p.rotation}) (size {w} {h}) {drill} (layers {layers}) {net})')
         lines.append(')')
     for i,(x,y) in enumerate([(6,6),(6,size[1]-6),(size[0]-6,6),(size[0]-6,size[1]-6)]):
-        lines.append(f'(footprint "metantenna:MountingHole" (layer "F.Cu") (at {x} {y}) (fp_text reference "H{i+1}" (at 0 -3) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask")))')
+        lines.append(f'(footprint "metantenna:MountingHole" (layer "F.Cu") (at {x} {y}) (attr board_only exclude_from_pos_files exclude_from_bom) (fp_text reference "H{i+1}" (at 0 -3) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask")))')
     for n,l,a,b,width in r.tracks:
         lines.append(f'(segment (start {a[0]:.4f} {a[1]:.4f}) (end {b[0]:.4f} {b[1]:.4f}) (width {width}) (layer "{["F.Cu","B.Cu"][l]}") (net {nets[n]}))')
     for n,x,y in r.vias:lines.append(f'(via (at {x:.4f} {y:.4f}) (size 0.6) (drill 0.3) (layers "F.Cu" "B.Cu") (net {nets[n]}))')
@@ -245,8 +255,20 @@ def pcb(name,parts,size,r):
         lines.append(f'(gr_line (start {a[0]} {a[1]}) (end {b[0]} {b[1]}) (stroke (width 0.05) (type default)) (layer "Edge.Cuts"))')
     for layer in ['F.Cu','In1.Cu','In2.Cu','B.Cu']:
         clearance=.5 if layer in ['F.Cu','B.Cu'] else .25
-        lines.append(f'(zone (net 1) (net_name "GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts (xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}))))')
+        lines.append(f'(zone (net 1) (net_name "/GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts (xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}))))')
     lines.append(')')
+    lib=ROOT/'hardware/metantenna.pretty';lib.mkdir(exist_ok=True)
+    for pkg in {p.package for p in parts}|{'MountingHole'}:
+        fp=[f'(footprint "{pkg}" (version 20221018) (generator pcbnew) (layer "F.Cu")']
+        if pkg=='MountingHole':fp.append('(pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask"))')
+        else:
+            for pin,x,y,ww,hh,hole in pads(pkg):
+                typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
+                layers='"*.Cu" "*.Mask"' if hole else '"F.Cu" "F.Paste" "F.Mask"'
+                drill=f'(drill {hole})' if hole else ''
+                fp.append(f'(pad "{pin}" {typ} {shape} (at {x} {y}) (size {ww} {hh}) {drill} (layers {layers}))')
+        (lib/f'{pkg}.kicad_mod').write_text('\n'.join(fp)+')\n')
+    (ROOT/'hardware/fp-lib-table').write_text('(fp_lib_table (lib (name "metantenna") (type "KiCad") (uri "${KIPRJMOD}/metantenna.pretty") (options "") (descr "Metantenna custom lands")))\n')
     (ROOT/'hardware'/f'{name}.kicad_pcb').write_text('\n'.join(lines)+'\n')
     dump={'size_mm':size,'parts':[dict(ref=p.ref,value=p.value,package=p.package,nets=p.nets,x=p.x,y=p.y,rotation=p.rotation,side=p.side,mpn=p.mpn,note=p.note) for p in parts], 'pads':[{k:v for k,v in p.items() if k!='shape'} for p in r.pads],'tracks':r.tracks,'vias':r.vias}
     (ROOT/'hardware'/f'{name}_layout.json').write_text(json.dumps(dump,indent=2)+'\n')
