@@ -64,6 +64,7 @@ def svg(name,a):
     occupied += [LineString([p,q]).buffer(ww/2+.25) for n,l,p,q,ww in a['tracks']]
     if name=='preamp':
         occupied += [box(74,17,94,22),box(74,57,94,62)]
+    if name=='biastee':occupied += [box(54,31.5,75,35)]
     for p in [p for p in a['parts'] if p['package']!='ANT_M3']:
         tw=len(p['ref'])*.8;pos=None
         for radius in [3.4,4.5,6,8,10,12]:
@@ -80,10 +81,10 @@ def svg(name,a):
             s.append(f'<path d="M {p["x"]} {p["y"]} L {x} {y-.5}" stroke="#8b9d98" stroke-width=".12" fill="none"/>')
         s.append(f'<text x="{x}" y="{y}" text-anchor="middle" font-family="sans-serif" font-size="1.25" fill="#182c25">{p["ref"]}</text>')
     for p in a['pads']:
-        if p['pin']=='1' and p['ref'].startswith(('U','T','D')):
+        if p['pin']=='1' and p['ref'].startswith(('U','T','D','CM')):
             s.append(f'<text x="{p["x"]}" y="{p["y"]+.25}" text-anchor="middle" font-family="sans-serif" font-size=".65" font-weight="bold" fill="#482f00">1</text>')
     for x,y in [(6,6),(6,h-6),(w-6,6),(w-6,h-6)]:s.append(f'<circle cx="{x}" cy="{y}" r="1.6" fill="white" stroke="#444" stroke-width=".1"/>')
-    labels = [(48,3,'Y−'),(48,95,'Y+'),(5,45,'X−'),(91,45,'X+'),(83,20,'X RF + 12 V'),(83,60,'Y RF only')] if name=='preamp' else [(10,20,'X antenna + DC'),(65,20,'X receiver'),(10,57,'Y antenna'),(65,57,'Y receiver'),(40,4,'12 V input')]
+    labels = [(48,3,'Y−'),(48,95,'Y+'),(5,45,'X−'),(91,45,'X+'),(83,20,'X RF + 12 V'),(83,60,'Y RF only')] if name=='preamp' else [(10,20,'X antenna + DC'),(65,34,'X receiver'),(10,57,'Y antenna'),(65,57,'Y receiver'),(40,4,'12 V input')]
     for x,y,label in labels:
         s.append(f'<text x="{x}" y="{y}" text-anchor="middle" font-family="sans-serif" font-size="1.8" font-weight="bold" fill="#182c25">{label}</text>')
     s.append('</svg>');(ROOT/'docs'/f'{name}_layout.svg').write_text('\n'.join(s))
@@ -96,17 +97,27 @@ def main():
         mount=[(6,6,3.2),(6,h-6,3.2),(w-6,6,3.2),(w-6,h-6,3.2)]
         holes=[(p['x'],p['y'],p['drill']) for p in a['pads'] if p['drill']]+[(x,y,.3) for _,x,y in a['vias']]
         bounds=box(.5,.5,w-.5,h-.5)
-        if name=="biastee":bounds-=box(34,0,50,14) # Keep dirty input pair off RF planes
+        islands=[]
+        if name=='biastee':
+            bounds-=box(34,0,50,14)
+            for prefix,y in [('X',27),('Y',50)]:
+                bounds-=box(0,y-8,15.5,y+8)
+                islands.append((prefix+'_ANT_RETURN',box(.5,y-7,12.4,y+7)))
         for layer,label in [(0,'F_Cu'),(1,'B_Cu')]:
             shapes=[g for n,g,ll,_ in items if layer in ll]
             if layer in [0,1]:
-                cuts=[g.buffer(.5) for n,g,ll,_ in items if layer in ll and n!='GND']+[Point(x,y).buffer(d/2+.25) for x,y,d in mount]
-                shapes.append(bounds-unary_union(cuts))
+                for net,area in [('GND',bounds)]+islands:
+                    cuts=[g.buffer(.5) for n,g,ll,_ in items if layer in ll and n!=net]+[Point(x,y).buffer(d/2+.25) for x,y,d in mount]
+                    shapes.append(area-unary_union(cuts))
             gerber(out/f'{name}-{label}.gbr',shapes,label)
         for label in ['In1_Cu','In2_Cu']:
             cuts=[Point(p['x'],p['y']).buffer(p['w']/2+.25,quad_segs=24) for p in a['pads'] if p['drill'] and p['net']!='GND']
             cuts += [Point(x,y).buffer(.55,quad_segs=24) for n,x,y in a['vias'] if n!='GND']+[Point(x,y).buffer(d/2+.25) for x,y,d in mount]
-            gerber(out/f'{name}-{label}.gbr',[bounds-unary_union(cuts)],label)
+            shapes=[bounds-unary_union(cuts)]
+            for net,area in islands:
+                icuts=[Point(p['x'],p['y']).buffer(p['w']/2+.25,quad_segs=24) for p in a['pads'] if p['drill'] and p['net']!=net]+[Point(x,y).buffer(.55) for n,x,y in a['vias'] if n!=net]+[Point(x,y).buffer(d/2+.25) for x,y,d in mount]
+                shapes.append(area-unary_union(icuts))
+            gerber(out/f'{name}-{label}.gbr',shapes,label)
         masks=[]
         for layer,label in [(0,'F_Mask'),(1,'B_Mask')]:
             shapes=[g.buffer(.05,join_style=2) for n,g,ll,ref in items if layer in ll and not ref.startswith(('track','via'))]

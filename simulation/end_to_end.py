@@ -46,6 +46,8 @@ def main():
   subprocess.run(['ngspice','-b','reverse.cir'],cwd=pp,capture_output=True,check=True)
   a=np.loadtxt(pp/'response.txt',skiprows=1);s12=a[:,1]+1j*a[:,2];s22=a[:,3]+1j*a[:,4]
  assert np.max(abs(s21-s12))<1e-6
+ keep=f<=100
+ f=f[keep];s11=s11[keep];s21=s21[keep];s12=s12[keep];s22=s22[keep]
  w=2*np.pi*f*1e6
  cap=lambda c: .03+1j*w*.5e-9+1/(1j*w*c)
  choke=1/(1/(1.8+1j*w*1e-6)+1j*w*.5e-12)
@@ -58,7 +60,13 @@ def main():
  balun=matched(np.full(len(f),10**(-.5/20)))
  pre=abcd(s11,s21,s12,s22)
  cableloss=5*np.sqrt(f/50);cable=matched(10**(-cableloss/20)*np.exp(-1j*w*50/(.66*299792458)))
- indoorX=shunt(1/choke)@series(cap(1e-9));indoorY=series(cap(1e-9))
+ with h5py.File(R/'simulation/rf_chokes.h5') as cm:
+  cf=cm['frequency_Hz'][:]/1e6
+  def interp(key):
+   z=cm[key][:];return np.interp(f,cf,z.real)+1j*np.interp(f,cf,z.imag)
+  cmatrix=abcd(interp('s11'),interp('s21'),interp('s12'),interp('s22'))
+ indoorX=cmatrix@shunt(1/choke)@series(cap(1e-9))
+ indoorY=cmatrix@series(2*cap(1e-9)) # C20 centre and C21 shield DC blocks
  headX=balun@pre@amp@out@shunt(1/choke);headY=balun@pre@amp@out
  chainX=headX@cable@indoorX;chainY=headY@cable@indoorY
  band=(f>=30)&(f<=55)
@@ -71,7 +79,7 @@ def main():
  for vs,loop,vf,ampv,t,rtol,vtol in itertools.product([10.8,11.76,12,13.2],[0,2,3,5,10],[.25,.6],[4.3,4.8,5.3],[-20,25,60],[.99,1.01],[.98,1.02]):
   current=(v8*vtol-(ampv-.0031*(t-25)))/(41.2*rtol+1.8)
   total=2*current+.001
-  vin=vs-2*vf-total*(loop+6+.03+.14)
+  vin=vs-2*vf-total*(loop+6+.03+.14+.12)
   corners.append([vs,loop,vf,ampv,t,current,vin,vin-v8*vtol-.4,current**2*41.2*rtol,max(0,vin-v8*vtol)*current])
  corners=np.array(corners);assert corners[:,5].max()<.12
  # Full required 50m installation: 12 V nominal ±10%, loop <=5 ohm,
@@ -80,10 +88,10 @@ def main():
  assert corners[approved,7].min()>0
  assert corners[:,8].max()<.5 # Half the nominal 1 W bias resistor rating.
  summary={'model':'Linear end-to-end behavioral amplifier, passive SPICE, NEC2 antenna and PyGDSM sky; not measured or PCB EM qualified',
- 'frequency_MHz':[1,400], 'X_gain_50ohm_30_55_dB':[float(gx[band].min()),float(gx[band].max())],
+ 'frequency_MHz':[1,100], 'X_gain_50ohm_30_55_dB':[float(gx[band].min()),float(gx[band].max())],
  'Y_gain_50ohm_30_55_dB':[float(gy[band].min()),float(gy[band].max())],
  'X_Y_gain_difference_dB_max':float(max(abs(gx[band]-gy[band]))),
- 'added_filter_DC_resistance_ohm_max':.17,'dc_corners':len(corners),'head_input_current_mA_max':float(corners[:,5].max()*2000+1),
+ 'added_filter_DC_resistance_ohm_max':.29,'dc_corners':len(corners),'head_input_current_mA_max':float(corners[:,5].max()*2000+1),
  'regulator_headroom_after_0p4V_margin_V_min':float(corners[approved,7].min()),
  'bias_resistor_dissipation_W_max':float(corners[:,8].max()),
  'LDO_dissipation_W_max':float(corners[:,9].max()),

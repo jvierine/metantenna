@@ -109,7 +109,24 @@ removed beneath the unfiltered input pair; the RF paths retain their reference.
 This targets conducted supply RFI; it does not establish a lower measured
 antenna noise temperature. Bench suppression and stability tests remain needed.
 
+Both antenna-facing SMA ports now also have **TDK ACM4520 common-mode
+chokes** (JLC C41519, listed around $1 each). Each carries the centre conductor
+and shield return through paired windings. Separate shield islands prevent a
+PCB-ground bypass. C21 blocks the Y shield's parallel DC return, keeping the
+X supply current balanced through its choke. These are factory-mounted SMD
+parts; no wound coax harness, extra box or customer soldering is required.
+The retained right-angle SMA jacks are also catalogued by JLC (C6784103).
+
 ![Bias-tee common-mode and differential supply filtering](docs/biastee_filter_review.png)
+
+Vendor-model screening predicts **0.44 dB maximum nominal choke loss** across
+30–55 MHz; coupling/parasitic sensitivity cases stay below 1 dB. This is not
+measured insertion loss, interference rejection or linearity qualification.
+The same choke gives negligible suppression at 100 kHz: the **HF variant
+needs a separately qualified low-frequency solution** and is not yet a
+released board. Its target remains 0.1–50 MHz, high-impedance balanced input,
+100 kHz high-pass and 50 MHz low-pass. [Variant definitions](hardware/variants.json).
+
 
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
 
@@ -135,7 +152,7 @@ a batch; the connector illustration is a dimensional envelope.
 The 1, 1.5 and 2 m arm comparisons use the same **2 m mast and 25° downward
 slope**. Gain includes the preamp, bias tee and 50 m cable; noise includes PyGDSM
 sky. The amplifier is a linear behavioral model, not a transistor-level simulation.
-For a matched 50 Ω source, modelled cable-inclusive gain is **15.9–17.3 dB**.
+For a matched 50 Ω source, modelled cable-inclusive gain is **15.4–17.1 dB**.
 Use regulated **12 V (minimum 11.76 V)** and coax with **≤3 Ω DC loop resistance**.
 [Calculation details and limits](simulation/END_TO_END.md).
 

@@ -1,0 +1,23 @@
+{
+  "VHF": {
+    "band_MHz": [
+      30,
+      55
+    ],
+    "status": "engineering prototype; bench qualification outstanding",
+    "input": "50 ohm transformer / band-pass / MMIC",
+    "coax_common_mode_choke": "ACM4520-901-2P-T000",
+    "Y_shield_DC_block": "1nF C0G"
+  },
+  "HF": {
+    "band_MHz": [
+      0.1,
+      50
+    ],
+    "status": "architecture only; no HF schematic or PCB release",
+    "input": "balanced high-impedance voltage buffer",
+    "high_pass_MHz": 0.1,
+    "low_pass_MHz": 50,
+    "coax_common_mode_choke": "LF-capable JLC-sourceable network still to be qualified; do not substitute the VHF board"
+  }
+}

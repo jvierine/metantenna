@@ -9,6 +9,7 @@ from collections import defaultdict
 from openpyxl import Workbook
 from design import preamp,biastee
 R=Path(__file__).resolve().parents[1]
+LCSC={'ACM4520-901-2P-T000':'C41519','ACM7060-701-2PL-TL01':'C78246','BLM21PG601SN1D':'C41556732','132203':'C6784103'}
 
 def book(path,headers,rows):
  w=Workbook();s=w.active;s.title='Data';s.append(headers)
@@ -49,10 +50,10 @@ def main():
    assert p.mpn,(p.ref,'missing MPN')
    groups[(p.value,p.package,p.mpn)].append(p.ref)
    cpl.append([p.ref,p.x,-p.y,p.rotation,'Top' if p.side=='F' else 'Bottom'])
-  bom=[[v,','.join(refs),pkg,mpn,'',len(refs)] for (v,pkg,mpn),refs in sorted(groups.items())]
+  bom=[[v,','.join(refs),pkg,mpn,LCSC.get(mpn,''),len(refs)] for (v,pkg,mpn),refs in sorted(groups.items())]
   book(dest/'BOM.xlsx',['Comment','Designator','Footprint','Manufacturer Part Number','LCSC Part Number','Quantity'],bom)
   book(dest/'CPL.xlsx',['Designator','Mid X','Mid Y','Rotation','Layer'],cpl)
-  book(dest/'BOM_full_assembly.xlsx',['Comment','Designator','Footprint','Manufacturer Part Number','LCSC Part Number','Quantity'],[[v,','.join(refs),pkg,mpn,'',len(refs)] for (v,pkg,mpn),refs in sorted(allgroups.items())])
+  book(dest/'BOM_full_assembly.xlsx',['Comment','Designator','Footprint','Manufacturer Part Number','LCSC Part Number','Quantity'],[[v,','.join(refs),pkg,mpn,LCSC.get(mpn,''),len(refs)] for (v,pkg,mpn),refs in sorted(allgroups.items())])
   book(dest/'CPL_full_assembly.xlsx',['Designator','Mid X','Mid Y','Rotation','Layer'],allcpl)
   book(dest/'Connector_assembly.xlsx',['Designator','Comment','Footprint','Manufacturer Part Number','Side','Instructions'],manual)
   book(dest/'Do_not_populate.xlsx',['Designator','Comment','Manufacturer Part Number','Instructions'],dnp)
@@ -68,7 +69,7 @@ def main():
  shutil.copy2(R/'simulation/END_TO_END.md',out/'SIMULATION_SUMMARY.md')
  for p in ['end_to_end_comparison.pdf','preamp_rev_b_annotated.png','wire_exit_plan.png','biastee_case_exploded.png']:
   shutil.copy2(R/'docs'/p,out/p)
- manifest={'source_commit':a.commit,'native_CAD':'KiCad 9.0.9 via GitHub Actions','boards':status,
+ manifest={'source_commit':a.commit,'native_CAD':('KiCad '+(a.native/'version.txt').read_text().strip()+' local CLI' if (a.native/'version.txt').exists() else 'KiCad 9.0.9 via GitHub Actions'),'boards':status,
  'order_status':'Prototype package prepared; JLC part matching, placement/rotation preview and CAM acceptance remain required before payment.',
  'model_limits':'Linear behavioral MMIC; no PCB EM or measured RF qualification.'}
  (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')

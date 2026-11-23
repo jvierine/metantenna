@@ -77,7 +77,7 @@ def main():
             sweep+=horizontal_hole(3.175,12.5,start,y,AXIS_Z)
             sweep+=box(12.5,6.35,40,start+6.25,y,AXIS_Z)
         else:
-            w,d,h=(10,8,10) if p['package']=='TERM2' else (7,6,3.5) if p['package']=='ACM7060' else (3,2,1.5)
+            w,d,h=(10,8,10) if p['package']=='TERM2' else (7,6,3.5) if p['package']=='ACM7060' else (4.7,4.5,2) if p['package']=='ACM4520' else (3,2,1.5)
             sweep+=box(w,d,h+40,p['x'],p['y'],PCB_Z+1.6)
     interference=(sweep ^ solids['biastee_base']).volume()
     assert interference<1e-6,('assembled-board insertion blocked',interference)
@@ -114,7 +114,7 @@ def render():
                 nut=horizontal_hole(4.6,1.6,-4.6 if direction<0 else 79,y,AXIS_Z)-horizontal_hole(3.2,3,-5 if direction<0 else 78.5,y,AXIS_Z)
                 solids[p['ref']+'_nut']=nut
             else:
-                w,d,h=(10,8,10) if p['package']=='TERM2' else (7,6,3.5) if p['package']=='ACM7060' else (3,2,1.5)
+                w,d,h=(10,8,10) if p['package']=='TERM2' else (7,6,3.5) if p['package']=='ACM7060' else (4.7,4.5,2) if p['package']=='ACM4520' else (3,2,1.5)
                 solids[p['ref']]=box(w,d,h,p['x'],p['y'],PCB_Z+1.6)
         plot=pv.Plotter(off_screen=True,window_size=(1400,1000));plot.set_background('white')
         for name,s in solids.items():

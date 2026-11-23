@@ -83,9 +83,12 @@ def biastee():
     add('C1','10u 25V','1206',{1:'PROTECTED',2:'GND'},18,12,90,'GRM31CR61E106KA12L')
     for j,y in enumerate([27,50]):
         n=10*(j+1);s='XY'[j]
-        add(f'J{n}',s+(' ANT +DC' if j==0 else ' ANT RF only'),'SMA_RA',{1:s+'_COAX',2:'GND'},5,y,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit')
+        add(f'J{n}',s+(' ANT +DC' if j==0 else ' ANT RF only'),'SMA_RA',{1:s+'_ANT_CENTER',2:s+'_ANT_RETURN'},5,y,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit')
+        add(f'CM{n}','900R CM @100MHz','ACM4520',{1:s+'_ANT_CENTER',2:s+'_ANT_RETURN',3:('GND' if j==0 else 'Y_RETURN_BLOCKED'),4:s+'_COAX'},14,y,mpn='ACM4520-901-2P-T000',note='TDK LCSC C41519; signal and shield return through paired windings; do not bridge antenna ground island')
         add(f'J{n+1}',s+' RX DC BLOCK','SMA_RA',{1:s+'_RX',2:'GND'},71,y,180,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward right board edge; horizontal sidewall exit')
         add(f'C{n}','1n','0805',{1:s+'_COAX',2:s+'_RX'},40,y,mpn='C0805C102J5GACTU')
+        if j==1:
+            add('C21','1n','0805',{1:'Y_RETURN_BLOCKED',2:'GND'},19,55,90,mpn='C0805C102J5GACTU',note='VHF shield DC block: prevents Y cable carrying DC supply return and unbalancing CM10/CM20; do not bypass')
         if j==0:
             add(f'L{n}','1u','1008',{1:s+'_COAX',2:s+'_DC'},20,y-6,90,'1008CS-102XJRC')
             add(f'C{n+1}','100n 50V','0805',{1:s+'_DC',2:'GND'},26,y-9,90,'GRM21BR71H104KA01L')

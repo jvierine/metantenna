@@ -211,3 +211,34 @@ It checks source resistance and inductance sensitivity, not PCB radiated
 coupling or common-mode insertion loss. Its very small RF transfers must
 not be advertised as physical shielding or rejection specifications.
 A supply-to-coax injection measurement and stability check are required.
+
+
+## Factory-mounted coax common-mode barriers
+
+CM10 and CM20 are TDK ACM4520-901-2P-T000, JLC C41519. The catalogue
+lists about $1.07 each at unit quantity; this is a component indication,
+not an assembled quote. SMA 132203 is JLC C6784103. All are included in
+the full-assembly BOM/CPL. No wound harness or added bulkhead is used.
+
+On each port, pins 1–4 carry the centre conductor and pins 2–3 the shield
+return. Antenna-facing shields have separate four-layer copper islands;
+no metal enclosure plate, mounting strap or ground pour may bridge them to
+indoor ground. C21 is a 1 nF C0G series DC block in the Y shield return.
+Without it, the shared antenna-head ground would split the supply return
+between X and Y and unbalance the chokes. This PCB is not a protective-earth
+or lightning-current path.
+
+The screening model uses TDK's published ACM4520 equivalent circuit, with
+coupling decreased to 0.99 and outer parasitics increased 50% as sensitivity
+cases. Nominal 30–55 MHz loss is <=0.443 dB; tested cases <=0.958 dB.
+Those cases are not manufacturing tolerances or a guarantee. Common-mode
+fixture attenuation depends on source/load impedances and is not an antenna
+site rejection specification. PCB parasitic bypass and nonlinear behavior
+still require bench tests. This choke is not a low-frequency HF solution.
+
+[TDK ratings and land pattern](https://product.tdk.com/system/files/dam/doc/product/emc/emc/cmf_cmc/catalog/cmf_commercial_power_acm4520_en.pdf),
+[TDK equivalent circuit](https://product.tdk.com/system/files/dam/technicalsupport/tvcl/pdf/cmf_commercial_power_acm4520_ecm.pdf),
+[JLC component](https://jlcpcb.com/partdetail/TDK-ACM4520_901_2Pt000/C41519).
+
+The X RF-port choke adds a further 0.12 ohm maximum loop resistance
+(two 0.06 ohm windings); the full added filter resistance is 0.29 ohm.

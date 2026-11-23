@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "coupling": 1,
+      "parasitic_scale": 1,
+      "VHF_loss_dB_max": 0.4425048032760527,
+      "VHF_return_loss_dB_min": 20.139376546427545,
+      "VHF_CM_fixture_attenuation_dB_min": 16.986154123994357,
+      "CM_fixture_attenuation_100kHz_dB": 0.005704590418029965
+    },
+    {
+      "coupling": 0.995,
+      "parasitic_scale": 1,
+      "VHF_loss_dB_max": 0.5015057005058248,
+      "VHF_return_loss_dB_min": 16.418547432088957,
+      "VHF_CM_fixture_attenuation_dB_min": 16.968139918729808,
+      "CM_fixture_attenuation_100kHz_dB": 0.005691784638256295
+    },
+    {
+      "coupling": 0.99,
+      "parasitic_scale": 1,
+      "VHF_loss_dB_max": 0.5913672664779354,
+      "VHF_return_loss_dB_min": 13.754270558508985,
+      "VHF_CM_fixture_attenuation_dB_min": 16.95006591123372,
+      "CM_fixture_attenuation_100kHz_dB": 0.005679020442067054
+    },
+    {
+      "coupling": 0.99,
+      "parasitic_scale": 1.5,
+      "VHF_loss_dB_max": 0.9576770957423802,
+      "VHF_return_loss_dB_min": 13.074030828552814,
+      "VHF_CM_fixture_attenuation_dB_min": 16.97221442269203,
+      "CM_fixture_attenuation_100kHz_dB": 0.005692675240987063
+    }
+  ],
+  "VHF_screening": "pass",
+  "HF_100kHz_suppression": "insufficient; requires a separately qualified LF choke stage for the HF variant"
+}

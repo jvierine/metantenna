@@ -14,8 +14,8 @@ For each board:
    Excel is intentional. Coordinates are millimetres in the native Gerber frame:
    X right, Y up; the board extends into negative Y. Do not independently shift
    or mirror either file. DNP parts are excluded; all connectors are included.
-3. Match the **exact manufacturer part numbers**. The LCSC column is blank
-   until JLC confirms its matches. Do not approve automatic substitutes for
+3. Match the **exact manufacturer part numbers**. The LCSC column is supplied for verified catalog matches; blank entries
+   still require exact matching. Catalog stock is not assembly acceptance. Do not approve automatic substitutes for
    transformers, MMICs, LDOs or RF inductors. Coilcraft Q/SRF and C0G capacitors
    matter. If a part is unavailable, use JLC sourcing/consignment or stop for a
    component review; a footprint-compatible substitute is not automatically RF-equivalent.

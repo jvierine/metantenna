@@ -20,6 +20,9 @@ a=json.loads((R/'hardware/biastee_layout.json').read_text())
 for n,layer,start,end,width in a['tracks']:
  if n=='SUPPLY_RETURN':
   assert all(34+width/2<x<50-width/2 and .5+width/2<y<14-width/2 for x,y in [start,end])
+assert p['CM10'].nets['2']=='X_ANT_RETURN' and p['CM10'].nets['3']=='GND'
+assert p['CM20'].nets['3']=='Y_RETURN_BLOCKED'
+assert [(x.ref,k) for x in p.values() for k,n in x.nets.items() if n=='Y_RETURN_BLOCKED']==[('CM20','3'),('C21','1')]
 reports=[];curves=[]
 for source_r in [.1,1,50]:
  for scale in [.3,1,3]:

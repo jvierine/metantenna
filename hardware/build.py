@@ -25,6 +25,7 @@ def pads(pkg):
         return [('1',-pitch,0,w,h,0),('2',pitch,0,w,h,0)]
     if pkg in ['SMA','SMA_RA']:return [('1',0,0,2.05,2.05,1.5)]+[('2',x,y,2.25,2.25,1.7) for x,y in [(2.54,2.54),(2.54,-2.54),(-2.54,-2.54),(-2.54,2.54)]]
     if pkg=='ANT_M3':return [('1',0,-43,4,4,1.5),('2',0,43,4,4,1.5)]
+    if pkg=='ACM4520':return [('1',-2.375,-1,1.25,.95,0),('2',-2.375,1,1.25,.95,0),('3',2.375,1,1.25,.95,0),('4',2.375,-1,1.25,.95,0)]
     if pkg=='ACM7060':return [('1',-3.375,-2,2.25,1.5,0),('2',-3.375,2,2.25,1.5,0),('3',3.375,2,2.25,1.5,0),('4',3.375,-2,2.25,1.5,0)]
     if pkg=='TERM2':return [('1',-2.54,0,3,3,1.3),('2',2.54,0,3,3,1.3)]
     if pkg=='CD542':return [(str(i+1),-2.54,y,2.54,1.65,0) for i,y in enumerate([-2.54,0,2.54])]+[(str(i+4),2.54,y,2.54,1.65,0) for i,y in enumerate([2.54,0,-2.54])]
@@ -194,7 +195,7 @@ class Router:
             points += [(x,y) for x in np.arange(23,90,5) for y in [24,58,72]]
             points += [(27.7,y) for y in [44,46.9,49.1,52]]
         for x,y in points:
-            if w==76 and 33<x<51 and y<15:continue # Unfiltered supply island
+            if w==76 and ((33<x<51 and y<15) or (x<17 and (18<y<36 or 41<y<59))):continue # Unfiltered supply island
             point=Point(x,y)
             if any(not a['drill'] and a['shape'].distance(point)<.4 for a in self.pads):continue
             if any(a['drill'] and math.dist((x,y),(a['x'],a['y']))<a['drill']/2+.15+.25 for a in self.pads):continue
@@ -240,6 +241,7 @@ def pcb(name,parts,size,r):
         lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","SMA_RA","ANT_M3","TERM2"] else "smd"}{" dnp" if p.value.startswith("DNP") else ""})')
         lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))))')
         lines.append(f'(fp_text value {q(p.value)} (at 0 0) (layer "F.Fab") (effects (font (size 0.7 0.7) (thickness 0.1))))')
+        lines.append(f'(property "MPN" {q(p.mpn)} (at 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))')
         for pin,x,y,w,h,hole in pads(p.package):
             n=p.nets[pin] or nc[(p.ref,pin)];net=f'(net {nets[n]} {q(native_name(n))})'
             typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
@@ -253,7 +255,7 @@ def pcb(name,parts,size,r):
         lines.append(')')
     for i,(x,y) in enumerate([(6,6),(6,size[1]-6),(size[0]-6,6),(size[0]-6,size[1]-6)]):
         lines.append(f'(footprint "metantenna:MountingHole" (layer "F.Cu") (at {x} {y}) (attr board_only exclude_from_pos_files exclude_from_bom) (fp_text reference "H{i+1}" (at 0 -3) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask")))')
-    labels=([(20,6,'METANTENNA B0'),(83,21,'X RF+12V'),(83,61,'Y RF ONLY'),(5,44.5,'X-'),(91,52,'X+'),(48,9,'Y-'),(48,87,'Y+')] if name=='preamp' else [(40,60,'METANTENNA B0'),(17,32,'X ANT+DC'),(62,32,'X RX'),(17,55,'Y ANT'),(62,55,'Y RX'),(37.46,4,'+12V'),(44,4,'GND')])
+    labels=([(20,6,'METANTENNA B0'),(83,21,'X RF+12V'),(83,61,'Y RF ONLY'),(5,44.5,'X-'),(91,52,'X+'),(48,9,'Y-'),(48,87,'Y+')] if name=='preamp' else [(40,60,'METANTENNA B0'),(17,32,'X ANT+DC'),(62,32,'X RX'),(17,59,'Y ANT'),(62,55,'Y RX'),(37.46,4,'+12V'),(44,4,'GND')])
     for x,y,label in labels:
         lines.append(f'(gr_text {q(label)} (at {x} {y}) (layer "F.SilkS") (effects (font (size .8 .8) (thickness .12))))')
     for n,l,a,b,width in r.tracks:
@@ -266,8 +268,15 @@ def pcb(name,parts,size,r):
         clearance=.5 if layer in ['F.Cu','B.Cu'] else .25
         # No reference-plane copper under the dirty supply pair; the RF
         # ground is continuous everywhere below y=14, including both RF paths.
-        pts=(f'(xy 0.5 0.5) (xy 34 0.5) (xy 34 14) (xy 50 14) (xy 50 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5})' if name=='biastee' else f'(xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5})')
+        pts=(f'(xy 0.5 0.5) (xy 34 0.5) (xy 34 14) (xy 50 14) (xy 50 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}) (xy 0.5 58) (xy 15.5 58) (xy 15.5 42) (xy 0.5 42) (xy 0.5 35) (xy 15.5 35) (xy 15.5 19) (xy 0.5 19)' if name=='biastee' else f'(xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5})')
         lines.append(f'(zone (net 1) (net_name "/GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts {pts})))')
+    if name=='biastee':
+        # Antenna-facing SMA shields have separate islands on all four layers.
+        # The only intentional connection to indoor ground is the CMC winding.
+        for prefix,y in [('X',27),('Y',50)]:
+            n=prefix+'_ANT_RETURN'
+            for layer in ['F.Cu','In1.Cu','In2.Cu','B.Cu']:
+                lines.append(f'(zone (net {nets[n]}) (net_name "/{n}") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance .5)) (min_thickness .25) (fill yes (thermal_gap .25) (thermal_bridge_width .3)) (polygon (pts (xy .5 {y-7}) (xy 12.4 {y-7}) (xy 12.4 {y+7}) (xy .5 {y+7}))))')
     lines.append(')')
     lib=ROOT/'hardware/metantenna.pretty';lib.mkdir(exist_ok=True)
     for pkg in {p.package for p in parts}|{'MountingHole'}:

@@ -16,24 +16,24 @@ inferred from an ideal matched stage.
 
 ## Results
 
-- Matched 50 Ω source to receiver: X **15.92–17.28 dB**, Y **15.93–17.30 dB**,
+- Matched 50 Ω source to receiver: X **15.45–17.10 dB**, Y **15.52–17.16 dB**,
   across 30–55 MHz including the 50 m cable.
-- Modelled X/Y gain difference: **≤0.030 dB**. This is only the difference in
+- Modelled X/Y gain difference: **≤0.098 dB**. This is only the difference in
   modelled bias-tee loading, not a prediction of real polarization calibration.
 - Passive preselector: nominal FM rejection **≥45.3 dB**; worst of 300 simultaneous
   tolerance trials **42.5 dB**. These are passive lumped-circuit results.
 - 1,440 DC corners cover supply, coax loop resistance, diode drop, bias-resistor
   tolerance, regulator voltage, MMIC operating voltage and -20…60 °C ambient.
 - Inside the specified installation envelope (regulated 12 V, minimum 11.76 V,
-  coax loop resistance ≤3 Ω): minimum regulator input headroom is **0.58 V**,
-  i.e. **0.18 V remaining after an assumed 0.40 V dropout allowance**.
+  coax loop resistance ≤3 Ω): minimum regulator input headroom is **0.55 V**,
+  i.e. **0.15 V remaining after an assumed 0.40 V dropout allowance**.
 - Maximum predicted total head current **191 mA**, bias resistor dissipation
   **0.367 W per channel**, regulator dissipation **0.324 W per channel**.
   Use the 1 W bias resistors. Both indoor PTCs are now 500 mA nominal hold parts;
   hot-environment hold-current derating still applies.
 
 The sweep deliberately includes off-spec weak supplies and resistive cables;
-252 of those corners fail the 0.4 V headroom allowance. They are not concealed
+256 of those corners fail the 0.4 V headroom allowance. They are not concealed
 as passing operating conditions. Measure the actual X cable DC loop resistance
 before installation. Regulator thermal rise depends on board assembly and air
 flow; the electrical dissipation calculation is not a thermal qualification.
@@ -57,7 +57,11 @@ Active-device IP3/P1dB remain datasheet-based budgets; no nonlinear simulation
 or blocking/recovery qualification is claimed. PCB cross-coupling, common-mode
 coax currents and oscillation/stability require further modelling or measurement.
 
-The added common-mode choke and bead contribute at most 0.17 ohm at 20 C
+The added supply filter and X-port choke windings contribute at most 0.29 ohm at 20 C
 to the DC loop, included in the corner calculation. The RF cascade still
 uses the bypassed-supply approximation; it does not predict conducted-RFI
 suppression or noise improvement from this new filter.
+
+The VHF coax common-mode chokes now enter the cascade through the TDK
+equivalent-circuit model. Y includes both C20 and the C21 shield DC block.
+The cascade is restricted to 1–100 MHz; published band results are 30–55 MHz.
