@@ -10,12 +10,12 @@ For each board:
    1 oz outer copper, 0.5 oz inner copper, green mask, lead-free ENIG**.
    No impedance-control surcharge, via filling or via-in-pad process is specified.
    L1 is top RF/local connections; L2 and L3 are GND; L4 carries antenna/DC connections.
-2. Choose **top-side SMT assembly** and upload `BOM.xlsx` and `CPL.xlsx`.
+2. Choose **full factory assembly including all SMA and power connectors** and upload `BOM.xlsx` and `CPL.xlsx`.
    Excel is intentional. Coordinates are millimetres in the native Gerber frame:
    X right, Y up; the board extends into negative Y. Do not independently shift
-   or mirror either file. DNP parts and hand-installed connectors are excluded.
-3. Match the **exact manufacturer part numbers**. The LCSC column is blank
-   until JLC confirms its matches. Do not approve automatic substitutes for
+   or mirror either file. DNP parts are excluded; all connectors are included.
+3. Match the **exact manufacturer part numbers**. The LCSC column is supplied for verified catalog matches; blank entries
+   still require exact matching. Catalog stock is not assembly acceptance. Do not approve automatic substitutes for
    transformers, MMICs, LDOs or RF inductors. Coilcraft Q/SRF and C0G capacitors
    matter. If a part is unavailable, use JLC sourcing/consignment or stop for a
    component review; a footprint-compatible substitute is not automatically RF-equivalent.
@@ -25,11 +25,13 @@ For each board:
 5. Check the four copper layers, solder-mask openings, plated/NPTH drills,
    and dimensions: **96 × 96 mm preamp; 76 × 64 mm indoor board**.
 
-`Hand_assembly.xlsx` lists the SMA and power connectors to procure and solder
-separately. For a quote with factory-installed connectors, use the paired
-`BOM_full_assembly.xlsx` and `CPL_full_assembly.xlsx` instead; that option needs
-JLC confirmation of through-hole assembly and the underside SMA operation.
-Do not mix a full-assembly BOM with an SMT-only CPL. The preamp SMA bodies go on the **underside**, pointing down; the
+`BOM.xlsx` and `CPL.xlsx` now default to **full assembly**. The duplicate
+`*_full_assembly.xlsx` files contain the same parts; `*_SMT_only.xlsx` is only
+an alternative quotation aid, not the requested order. `Connector_assembly.xlsx`
+identifies factory-installed connectors. Do not proceed with a quotation that
+leaves connectors for the customer to solder. The assembler must confirm
+through-hole installation, including the bottom-side preamp SMA operation.
+The preamp SMA bodies go on the **underside**, pointing down; the
 indoor connectors are **Amphenol 132203 right-angle bulkhead jacks on top**.
 J10/J20 point left toward the antenna cables; J11/J21 point right toward
 the receiver cables. They exit the printed case sidewalls, not its lid.

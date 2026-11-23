@@ -1,6 +1,6 @@
 {
-  "source_commit": "c08ad1a2e9cc1330adcce3602f283acc47aa1c4a",
-  "native_CAD": "KiCad 9.0.9 via GitHub Actions",
+  "source_commit": "bc7f715d4b84bbbcd9b8f7b344472db39117f4c1",
+  "native_CAD": "KiCad 10.0.8 local CLI",
   "boards": {
     "preamp": {
       "native_issues": [],
@@ -10,9 +10,9 @@
       ],
       "quantity": 5,
       "electrical_DRC_ERC_and_parity": "pass",
-      "assembly_sides": "Top SMT; connectors hand soldered",
+      "assembly_sides": "Full factory assembly, including through-hole connectors and bottom-side preamp SMA",
       "SMT_parts_per_board": 61,
-      "hand_assembled_parts_per_board": 2
+      "factory_connector_parts_per_board": 2
     },
     "biastee": {
       "native_issues": [],
@@ -22,9 +22,9 @@
       ],
       "quantity": 5,
       "electrical_DRC_ERC_and_parity": "pass",
-      "assembly_sides": "Top SMT; connectors hand soldered",
-      "SMT_parts_per_board": 9,
-      "hand_assembled_parts_per_board": 5
+      "assembly_sides": "Full factory assembly, including through-hole connectors and bottom-side preamp SMA",
+      "SMT_parts_per_board": 18,
+      "factory_connector_parts_per_board": 5
     }
   },
   "order_status": "Prototype package prepared; JLC part matching, placement/rotation preview and CAM acceptance remain required before payment.",
