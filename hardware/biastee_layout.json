@@ -156,7 +156,7 @@
     },
     {
       "ref": "F10",
-      "value": "300mA PTC",
+      "value": "500mA PTC",
       "package": "1206",
       "nets": {
         "1": "PROTECTED",
@@ -166,8 +166,8 @@
       "y": 18,
       "rotation": 0,
       "side": "F",
-      "mpn": "1206L030/24YR",
-      "note": "300mA hold at 20C; supplies both channels; current-limited 12V supply required"
+      "mpn": "1206L050/24YR",
+      "note": "500mA hold at 20C; supplies both channels; current-limited 12V supply required; verify ambient derating"
     },
     {
       "ref": "J20",

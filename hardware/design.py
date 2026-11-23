@@ -80,7 +80,7 @@ def biastee():
         if j==0:
             add(f'L{n}','1u','1008',{1:s+'_COAX',2:s+'_DC'},20,y-6,90,'1008CS-102XJRC')
             add(f'C{n+1}','100n 50V','0805',{1:s+'_DC',2:'GND'},26,y-9,90,'GRM21BR71H104KA01L')
-            add(f'F{n}','300mA PTC','1206',{1:'PROTECTED',2:s+'_DC'},34,y-9,mpn='1206L030/24YR',note='300mA hold at 20C; supplies both channels; current-limited 12V supply required')
+            add(f'F{n}','500mA PTC','1206',{1:'PROTECTED',2:s+'_DC'},34,y-9,mpn='1206L050/24YR',note='500mA hold at 20C; supplies both channels; current-limited 12V supply required; verify ambient derating')
     return p,(76,64)
 
 if __name__=='__main__':

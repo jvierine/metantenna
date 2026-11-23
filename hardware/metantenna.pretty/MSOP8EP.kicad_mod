@@ -1,4 +1,5 @@
 (footprint "MSOP8EP" (version 20221018) (generator pcbnew) (layer "F.Cu")
+(attr smd)
 (pad "1" smd rect (at -2.15 -0.975) (size 1.45 0.4)  (layers "F.Cu" "F.Paste" "F.Mask"))
 (pad "2" smd rect (at -2.15 -0.32499999999999996) (size 1.45 0.4)  (layers "F.Cu" "F.Paste" "F.Mask"))
 (pad "3" smd rect (at -2.15 0.32500000000000007) (size 1.45 0.4)  (layers "F.Cu" "F.Paste" "F.Mask"))

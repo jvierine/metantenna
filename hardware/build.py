@@ -235,7 +235,7 @@ def pcb(name,parts,size,r):
     native_name=lambda n:n if n.startswith('unconnected-') else '/'+n
     lines += [f'(net {i} {q(native_name(n))})' for n,i in nets.items()]
     for p in parts:
-        lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","ANT_M3","TERM2"] else "smd"})')
+        lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","ANT_M3","TERM2"] else "smd"}{" dnp" if p.value.startswith("DNP") else ""})')
         lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))))')
         lines.append(f'(fp_text value {q(p.value)} (at 0 0) (layer "F.Fab") (effects (font (size 0.7 0.7) (thickness 0.1))))')
         for pin,x,y,w,h,hole in pads(p.package):
@@ -260,6 +260,7 @@ def pcb(name,parts,size,r):
     lib=ROOT/'hardware/metantenna.pretty';lib.mkdir(exist_ok=True)
     for pkg in {p.package for p in parts}|{'MountingHole'}:
         fp=[f'(footprint "{pkg}" (version 20221018) (generator pcbnew) (layer "F.Cu")']
+        fp.append('(attr '+('board_only exclude_from_pos_files exclude_from_bom' if pkg=='MountingHole' else ('through_hole' if pkg in ['SMA','ANT_M3','TERM2'] else 'smd'))+')')
         if pkg=='MountingHole':fp.append('(pad "" np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers "*.Cu" "*.Mask"))')
         else:
             for pin,x,y,ww,hh,hole in pads(pkg):
