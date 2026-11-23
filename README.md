@@ -1,76 +1,113 @@
-# Metantenna — 30–70 MHz X/Y receive antenna
+# Metantenna — X/Y meteor-radar receive antenna
 
-Engineering prototype for meteor-radar reception, centered on SIMONe's
-32.55 MHz operation. Two independent 50-ohm SMA outputs carry X and Y signals
-with 12 V DC supplied only through the X coax via an indoor bias tee.
-The X supply powers both amplifier channels; Y is DC blocked. Circular polarization can
-be formed digitally from calibrated coherent receiver channels.
+**TL;DR:** two independent linear-polarization channels, four soldered copper
+antenna arms, and two 50 Ω SMA outputs. **Only X carries 12 V DC**, powering both
+preamps. The current filter targets **30–55 MHz**, with stronger FM suppression.
+The modeled SIMONe 32.55 MHz deployment uses **2.15 m arms,
+25° downward slope and a 2 m plastic mast**.
 
-**Development status:** passive-filter SPICE and geometric routing checks pass.
-Native KiCad checking, component availability/pricing, and complete mechanical
-review are in progress. This is not a field-qualified design or a production
-release. Do not infer amplifier, antenna, or weather qualification from the
-passive-filter simulations.
+**Engineering prototype:** simulated results and datasheet-based budgets are
+shown below. Complete-system RF, weather and installation tests are outstanding;
+the fabrication files are prototype files. No manufacturing order has been placed.
 
-The electronics budget includes both preamps and the X bias tee; it excludes
-coax, mast, enclosure, tax, and shipping. The goal is below USD 100 per complete
-electronics set. No order has been placed.
+## Deployment
 
-The requested prototype batch is **five antenna/preamp boards and five bias-tee/pass-through
-boards**, giving five complete electronics sets, delivered to
-**Norway**. The electronics budget is therefore below USD 500 for the batch,
-excluding coax, mast, enclosure, tax, and shipping. Supplier quotations must
-separate those excluded costs and distinguish bare PCBs from populated boards.
+![Dimensioned antenna deployment and wiring](docs/antenna_deployment.png)
 
-- `hardware/`: electrical source, editable KiCad boards/schematics, reproducible routing.
-- `simulation/`: ngspice deck, independent network calculation, 300 tolerance trials,
-  HDF5 results and quantified limits.
-- `mechanical/`: parametric Python/Manifold CAD and checked printable STL parts.
-- `manufacturing/`: prototype Gerbers, drills and assembly workbooks.
-- `docs/`: drawings and assembly/test instructions.
+Four equal bare copper arms attach directly to symmetric PCB solder pads.
+Use housing strain relief and nylon support ropes. The modeled wire diameter
+is 2 mm; the selected geometry has approximately 1.09 m tip clearance and a
+3.98 m footprint across each dipole. X and Y are orthogonal linear feeds;
+circular polarization can be formed with calibrated coherent receiver channels.
+[Download the deployment PDF](docs/antenna_deployment.pdf).
 
-The architecture is inspired by a crossed-dipole active antenna head, but is
-**not a copy of LOFAR's high-input-impedance differential LNA**. This revision
-uses an isolated 1:1 feed transformer and matched MMIC channels; antenna
-impedance and element dimensions must be validated separately. Broadband
-electronics alone do not establish broadband antenna efficiency or pattern.
+**The original 1 m arms / 45° / 1 m mast arrangement is poorly matched at
+32.55 MHz:** about 26 dB loss into this 50 Ω input. It would require a different
+input design for good sensitivity at that frequency. Longer arms improve the
+32.55 MHz match, but do not make antenna gain flat across the entire band.
 
-## Reproduce the work
+## Expected performance at 32.55 MHz
 
-Use base conda Python with numpy, scipy, h5py, shapely, manifold3d, trimesh,
-Pillow and openpyxl, plus ngspice. Plotting uses the sibling checkout
-`../rustplotlib` and Rust; no Matplotlib is used by the project.
+Values below refer to the longer-arm candidate and one linear polarization.
+They are predictions, not measured production specifications.
 
-```sh
-conda run -n base python simulation/validate.py
-conda run -n base python hardware/build.py
-conda run -n base python hardware/schematic.py
-conda run -n base python hardware/check_layout.py
-conda run -n base python hardware/check_feeds.py
-conda run -n base python hardware/export_fab.py
-conda run -n base python mechanical/build_enclosure.py
-conda run -n base python simulation/prepare_plot.py
-cargo run --release --manifest-path tools/plot/Cargo.toml
-```
+| Quantity | Expected value | Basis |
+|---|---:|---|
+| Realized antenna gain toward zenith | **5.0 dBi** | NEC2, including 50 Ω mismatch |
+| Antenna impedance | **61 − j7 Ω** | NEC2 |
+| Antenna-head electronic power gain | **21.2 dB** | Filter model + amplifier budget; before coax |
+| System noise temperature, median | **10.0 kK** | PyGDSM sky + ground + receiver |
+| System noise over a sidereal day | **8.2–13.1 kK** | Same model, representative German latitude |
+| Receiver contribution, antenna-referred | **384 K** | Includes assumed 50 m coax and receiver |
+| Output IP3 / input IP3 | **+35 / +13.8 dBm** | Typical-device extrapolation |
+| Output / input 1 dB compression | **+16.2 / -5.0 dBm** | Typical-device extrapolation |
+| Two-tone SFDR in 100 kHz | **82 dB** | Estimated against the modeled sky + receiver noise |
+| DC supply | **12 V, about 0.16 A total** | Both channels, via X coax only |
 
-The synthesis optimizer is `simulation/design_filter.py`; ordinary rebuilds
-use the already-selected component values. Simulation results are HDF5,
-assembly tables are XLSX, and no scientific CSV products are written.
+IP3 and compression are estimates from [GALI-74+ manufacturer typical values
+at 100 MHz](https://www.minicircuits.com/pdfs/GALI-74.pdf), extrapolated to this
+band. Balun linearity, pulse recovery, blockers and the following receiver may
+limit the installed system. The passive wire antenna itself has no amplifier IP3.
 
-## Antenna connections
+## Band response and FM rejection
 
-Solder the four copper antenna arms directly into the plated wire holes.
-X terminals are at (5,48) and (91,48) mm; Y terminals are at (48,5)
-and (48,91) mm. All are 43 mm from the board centre. The four arms therefore
-start symmetrically on opposite board edges. Provide mechanical strain relief
-in the housing. Only X coax carries supply DC; the Y coax is RF only.
+![Filter, antenna gain, signal transfer and system noise](docs/antenna_system_response.png)
 
-The input transformers are near the centre at (48,32) and (32,48) mm.
-Each polarization has mirror-symmetric arm-to-primary conductor lengths:
-46.50 mm for each X arm, and 52.94 mm for each Y arm including its layer-change
-via. X runs on the top copper; Y runs on the bottom copper and changes layer
-beside its transformer. The two internal ground planes separate their crossing.
-RF filters and amplifiers occupy the upper and lower portions of the board.
-The drawing shows top traces in red and bottom traces in blue; it omits planes
-for clarity. This arrangement reduces the previous close parallel routing;
-actual cross-polarization isolation and input matching remain unmeasured.
+The filter plot covers **DC–150 MHz**. DC is blocked and lies below the plotted
+−80 dB floor. Nominal loss across 30–55 MHz is at most
+**0.38 dB**. The weakest FM rejection
+anywhere in 88–108 MHz is **45.3 dB nominally**,
+and **42.5 dB in the worst of 300 component-tolerance trials**.
+These results assume the component-loss model; PCB coupling has not been extracted.
+A conservative inductor-Q scenario gives about 1.14 dB passband loss.
+[Filter detail and tolerance curves](docs/filter_response.png).
+
+## Sky and system noise
+
+![PyGDSM sky and receiver noise budget](docs/sky_noise_budget.png)
+
+Sky noise uses **PyGDSM GSM2016**, integrated with the NEC antenna pattern,
+including the CMB. The example latitude is **54.12° N** with X east–west.
+The frequency curves use sidereal-day medians; the time curves are at 32.55 MHz.
+The sky contribution is shown separately, alongside the receiver and ground/loss
+terms. Solar activity, interference, terrain and nearby structures are excluded.
+The noise model uses a first-order 50 Ω mismatch approximation.
+
+## Antenna gain pattern
+
+![Elevation-plane antenna patterns at 32.55 MHz](docs/antenna_patterns.png)
+
+Left: the requested 1 m-arm geometry. Right: the longer-arm candidate.
+Both show X-port realized gain at **32.55 MHz**, along and across the X dipole
+plane. Ground is included. The candidate's predicted zenith
+gain ranges roughly 4–6 dBi across the soil scenarios tested.
+
+## Boards
+
+**Antenna head — 96 × 96 mm.** Copper arms solder to the four large edge pads.
+SMA connectors are only for X/Y coax. Red traces are top copper, blue traces
+bottom copper; ground planes are hidden in this view.
+
+![Antenna preamp PCB](docs/preamp_layout.png)
+
+**Indoor board — 76 × 64 mm.** X injects bias power; Y is an RF-only pass-through.
+
+![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
+
+## Housing and files
+
+![Exploded printed enclosure and pipe mounting](docs/enclosure_exploded.png)
+
+The printable housing uses a rain hood, ventilated overlap, downward-facing
+connectors and a split Ø50 mm pipe clamp. The rendering uses a dummy unpopulated
+PCB. Wire exits, strain relief and weather performance still need physical checks.
+
+- [Editable KiCad boards and schematics](hardware/)
+- [Prototype Gerbers, drills and assembly workbooks](manufacturing/)
+- [Printable STL files and parametric housing](mechanical/)
+- [Engineering assumptions, checks, references and reproduction](docs/ENGINEERING.md)
+- [Antenna model and HDF5 results](simulation/antenna/)
+
+The electronics budget target remains **$70–100 per complete set** for the
+five-set prototype batch, including the bias tee and excluding coax, mast,
+enclosure, tax and shipping. This is a budget estimate, not a supplier quote.

@@ -12,7 +12,7 @@ from design_filter import response
 ROOT=Path(__file__).resolve().parents[1]
 SIM=ROOT/'simulation'
 
-def netlist(v, parasitic=True):
+def netlist(v, parasitic=True, inductor_q=70):
     ch,lh,c1,l2,c2,c3,l4,c4,c5=v
     lines=['Metantenna 50-ohm preselector; source voltage 2 V gives unity matched S21',
            'Vsrc src 0 AC 2','Rsrc src a 50','Rload out 0 50']
@@ -21,7 +21,7 @@ def netlist(v, parasitic=True):
         lines.extend([f'R{name} {a} {name}r 0.03',f'L{name} {name}r {name}l {0.5 if parasitic else 0.0001}n',f'C{name} {name}l {b} {p}p'])
     def ind(name,a,b,n):
         name='l'+name
-        lines.extend([f'R{name} {a} {name}r {2*np.pi*50e6*n*1e-9/70}',f'L{name} {name}r {b} {n}n'])
+        lines.extend([f'R{name} {a} {name}r {2*np.pi*50e6*n*1e-9/inductor_q}',f'L{name} {name}r {b} {n}n'])
         if parasitic: lines.append(f'C{name}par {a} {b} 0.1p')
     cap('hp1','a','b',ch); ind('hp','b','0',lh); cap('hp2','b','c',ch)
     cap('lp1','c','0',c1); ind('lp2','c','d',l2); cap('lp2','c','d',c2)
@@ -31,9 +31,9 @@ def netlist(v, parasitic=True):
     lines.extend(['.control','set wr_singlescale','set wr_vecnames','ac lin 3991 1Meg 400Meg','let transfer = v(out)','let reflection = v(a)-1','wrdata response.txt real(transfer) imag(transfer) real(reflection) imag(reflection)','quit','.endc','.end'])
     return '\n'.join(lines)+'\n'
 
-def run_spice(v,parasitic=True):
+def run_spice(v,parasitic=True,inductor_q=70):
     with tempfile.TemporaryDirectory(prefix='metantenna-spice-') as td:
-        p=Path(td); (p/'filter.cir').write_text(netlist(v,parasitic))
+        p=Path(td); (p/'filter.cir').write_text(netlist(v,parasitic,inductor_q))
         r=subprocess.run(['ngspice','-b','filter.cir'],cwd=p,capture_output=True,text=True,check=True)
         a=np.loadtxt(p/'response.txt',skiprows=1)
         return a[:,0]/1e6,a[:,1]+1j*a[:,2],a[:,3]+1j*a[:,4],r.stdout+r.stderr
@@ -55,30 +55,37 @@ def main():
         _,ss,_,_=run_spice(v*(1+rng.uniform(-1,1,len(v))*tol))
         curves.append(20*np.log10(abs(ss)))
     curves=np.array(curves); db=20*np.log10(abs(s))
-    band=(f>=30)&(f<=70); fm=(f>=88)&(f<=108)
+    band=(f>=30)&(f<=55); fm=(f>=88)&(f<=108)
     # Passive symmetrical bias tee: 1 uH choke, 0.5 pF SRF model,
     # 1 nF series DC block with 0.5 nH ESL; supply is RF-grounded.
     w=2*np.pi*f*1e6
     zc=.05+1j*w*.5e-9+1/(1j*w*1e-9)
-    zl=1/(1/(.7+1j*w*1e-6)+1j*w*.5e-12)
+    zl=1/(1/(1.8+1j*w*1e-6)+1j*w*.5e-12)
     tee=2/(2+zc/50+50/zl+zc/zl)
     result={
         'status':'PASSIVE SIMULATION ONLY; prototype, not field-qualified',
         'ngspice_version':subprocess.run(['ngspice','--version'],capture_output=True,text=True).stdout.splitlines()[1:3],
-        'nominal_insertion_loss_30_70_dB_max':float(-db[band].min()),
+        'nominal_insertion_loss_30_55_dB_max':float(-db[band].min()),
         'nominal_FM_rejection_dB_min':float(-db[fm].max()),
         'monte_carlo_trials':300,
         'monte_carlo_passband_loss_dB_worst':float(-curves[:,band].min()),
         'monte_carlo_FM_rejection_dB_worst':float(-curves[:,fm].max()),
         'one_bias_tee_loss_dB_max':float(-20*np.log10(abs(tee[band])).min()),
-        'spot_filter_gain_dB':{str(x):float(np.interp(x,f,db)) for x in [30,32.55,36.2,49.92,53.5,70,88,98,108]},
+        'spot_filter_gain_dB':{str(x):float(np.interp(x,f,db)) for x in [30,32.55,36.2,49.92,53.5,55,70,88,98,108,150]},
         'limits':'No measured antenna impedance, vendor MMIC model, PCB EM coupling, humidity or thermal qualification. Monte Carlo is not exhaustive worst-case analysis.'}
     with h5py.File(SIM/'validation.h5','w') as h:
         h['frequency_MHz']=f; h['s21']=s; h['s11']=r; h['monte_carlo_s21_dB']=curves; h['bias_tee_s21']=tee
+        old=np.array(json.loads((SIM/'filter_30_70_reference.json').read_text())['preferred'])
+        h['previous_30_70_s21']=run_spice(old)[1]
+        qcurves=[]
+        for q in [20,40,70]:
+            qcurves.append(run_spice(v,inductor_q=q)[1])
+        h['inductor_Q_scenarios']=[20,40,70]
+        h['inductor_Q_scenario_s21']=np.array(qcurves)
         for key,value in result.items(): h.attrs[key]=json.dumps(value)
     (SIM/'results.json').write_text(json.dumps(result,indent=2)+'\n')
-    assert result['nominal_insertion_loss_30_70_dB_max']<1.5
-    assert result['monte_carlo_FM_rejection_dB_worst']>20
+    assert result['nominal_insertion_loss_30_55_dB_max']<1.5
+    assert result['monte_carlo_FM_rejection_dB_worst']>40
     print(json.dumps(result,indent=2))
 
 if __name__=='__main__': main()

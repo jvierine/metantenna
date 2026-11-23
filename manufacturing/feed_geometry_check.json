@@ -1,4 +1,5 @@
 {
+  "filter_BOM_matches_simulation": true,
   "arm_to_primary_conductor_length_mm": {
     "X_ANT_N": 46.50131419792933,
     "X_ANT_P": 46.50131419792933,

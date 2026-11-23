@@ -1,0 +1,10 @@
+{
+  "nec2c_source": "https://github.com/KJ7LNW/nec2c",
+  "revision": "55be1e0e3fe5ee9dad4ce6050711450d19c562fd",
+  "binary_sha256": "c206f8749f231c5df01d03c7d92fc45c5897d573c864e4de4f0c171429f9944e",
+  "ground": {
+    "epsilon_r": 13,
+    "sigma_S_per_m": 0.005
+  },
+  "wire_diameter_m": 0.002
+}

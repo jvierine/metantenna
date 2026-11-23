@@ -70,7 +70,7 @@
     },
     {
       "ref": "C101",
-      "value": "180p",
+      "value": "160p",
       "package": "0805",
       "nets": {
         "1": "X_RF_IN",
@@ -80,7 +80,7 @@
       "y": 16,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C181F5GACTU",
+      "mpn": "C0805C161F5GACTU",
       "note": ""
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "ref": "C102",
-      "value": "180p",
+      "value": "160p",
       "package": "0805",
       "nets": {
         "1": "X_HP",
@@ -110,12 +110,12 @@
       "y": 16,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C181F5GACTU",
+      "mpn": "C0805C161F5GACTU",
       "note": ""
     },
     {
       "ref": "C103",
-      "value": "18p",
+      "value": "36p",
       "package": "0805",
       "nets": {
         "1": "X_LP1",
@@ -125,12 +125,12 @@
       "y": 19,
       "rotation": 90,
       "side": "F",
-      "mpn": "C0805C180F5GACTU",
+      "mpn": "C0805C360F5GACTU",
       "note": ""
     },
     {
       "ref": "L102",
-      "value": "56n",
+      "value": "100n",
       "package": "0805",
       "nets": {
         "1": "X_LP1",
@@ -140,12 +140,12 @@
       "y": 15,
       "rotation": 0,
       "side": "F",
-      "mpn": "0805HP-56NXGRC",
+      "mpn": "0805HP-101XGRC",
       "note": ""
     },
     {
       "ref": "C104",
-      "value": "56p",
+      "value": "33p",
       "package": "0805",
       "nets": {
         "1": "X_LP1",
@@ -155,12 +155,12 @@
       "y": 18,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C560F5GACTU",
+      "mpn": "C0805C330F5GACTU",
       "note": ""
     },
     {
       "ref": "C105",
-      "value": "51p",
+      "value": "75p",
       "package": "0805",
       "nets": {
         "1": "X_LP2",
@@ -170,12 +170,12 @@
       "y": 19,
       "rotation": 90,
       "side": "F",
-      "mpn": "C0805C510F5GACTU",
+      "mpn": "C0805C750F5GACTU",
       "note": ""
     },
     {
       "ref": "L103",
-      "value": "68n",
+      "value": "120n",
       "package": "0805",
       "nets": {
         "1": "X_LP2",
@@ -185,12 +185,12 @@
       "y": 15,
       "rotation": 0,
       "side": "F",
-      "mpn": "0805HP-68NXGRC",
+      "mpn": "0805HP-121XGRC",
       "note": ""
     },
     {
       "ref": "C106",
-      "value": "36p",
+      "value": "20p",
       "package": "0805",
       "nets": {
         "1": "X_LP2",
@@ -200,12 +200,12 @@
       "y": 18,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C360F5GACTU",
+      "mpn": "C0805C200F5GACTU",
       "note": ""
     },
     {
       "ref": "C107",
-      "value": "15p",
+      "value": "43p",
       "package": "0805",
       "nets": {
         "1": "X_AMP_IN",
@@ -215,7 +215,7 @@
       "y": 19,
       "rotation": 90,
       "side": "F",
-      "mpn": "C0805C150F5GACTU",
+      "mpn": "C0805C430F5GACTU",
       "note": ""
     },
     {
@@ -622,7 +622,7 @@
     },
     {
       "ref": "C201",
-      "value": "180p",
+      "value": "160p",
       "package": "0805",
       "nets": {
         "1": "Y_RF_IN",
@@ -632,7 +632,7 @@
       "y": 66,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C181F5GACTU",
+      "mpn": "C0805C161F5GACTU",
       "note": ""
     },
     {
@@ -652,7 +652,7 @@
     },
     {
       "ref": "C202",
-      "value": "180p",
+      "value": "160p",
       "package": "0805",
       "nets": {
         "1": "Y_HP",
@@ -662,12 +662,12 @@
       "y": 66,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C181F5GACTU",
+      "mpn": "C0805C161F5GACTU",
       "note": ""
     },
     {
       "ref": "C203",
-      "value": "18p",
+      "value": "36p",
       "package": "0805",
       "nets": {
         "1": "Y_LP1",
@@ -677,12 +677,12 @@
       "y": 69,
       "rotation": 90,
       "side": "F",
-      "mpn": "C0805C180F5GACTU",
+      "mpn": "C0805C360F5GACTU",
       "note": ""
     },
     {
       "ref": "L202",
-      "value": "56n",
+      "value": "100n",
       "package": "0805",
       "nets": {
         "1": "Y_LP1",
@@ -692,12 +692,12 @@
       "y": 65,
       "rotation": 0,
       "side": "F",
-      "mpn": "0805HP-56NXGRC",
+      "mpn": "0805HP-101XGRC",
       "note": ""
     },
     {
       "ref": "C204",
-      "value": "56p",
+      "value": "33p",
       "package": "0805",
       "nets": {
         "1": "Y_LP1",
@@ -707,12 +707,12 @@
       "y": 68,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C560F5GACTU",
+      "mpn": "C0805C330F5GACTU",
       "note": ""
     },
     {
       "ref": "C205",
-      "value": "51p",
+      "value": "75p",
       "package": "0805",
       "nets": {
         "1": "Y_LP2",
@@ -722,12 +722,12 @@
       "y": 69,
       "rotation": 90,
       "side": "F",
-      "mpn": "C0805C510F5GACTU",
+      "mpn": "C0805C750F5GACTU",
       "note": ""
     },
     {
       "ref": "L203",
-      "value": "68n",
+      "value": "120n",
       "package": "0805",
       "nets": {
         "1": "Y_LP2",
@@ -737,12 +737,12 @@
       "y": 65,
       "rotation": 0,
       "side": "F",
-      "mpn": "0805HP-68NXGRC",
+      "mpn": "0805HP-121XGRC",
       "note": ""
     },
     {
       "ref": "C206",
-      "value": "36p",
+      "value": "20p",
       "package": "0805",
       "nets": {
         "1": "Y_LP2",
@@ -752,12 +752,12 @@
       "y": 68,
       "rotation": 0,
       "side": "F",
-      "mpn": "C0805C360F5GACTU",
+      "mpn": "C0805C200F5GACTU",
       "note": ""
     },
     {
       "ref": "C207",
-      "value": "15p",
+      "value": "43p",
       "package": "0805",
       "nets": {
         "1": "Y_AMP_IN",
@@ -767,7 +767,7 @@
       "y": 69,
       "rotation": 90,
       "side": "F",
-      "mpn": "C0805C150F5GACTU",
+      "mpn": "C0805C430F5GACTU",
       "note": ""
     },
     {

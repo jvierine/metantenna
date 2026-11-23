@@ -68,7 +68,13 @@ def main():
     assert 'L104' in parts and 'L204' not in parts
     assert (parts['J102']['x'], parts['J102']['y']) == (90, 26)
     assert (parts['J202']['x'], parts['J202']['y']) == (90, 66)
-    result = {'arm_to_primary_conductor_length_mm': lengths,
+    preferred=json.loads((ROOT/'simulation/filter_values.json').read_text())['preferred']
+    for base in [100,200]:
+        refs=[f'C{base+1}',f'L{base+1}',f'C{base+3}',f'L{base+2}',f'C{base+4}',f'C{base+5}',f'L{base+3}',f'C{base+6}',f'C{base+7}']
+        actual=[float(parts[ref]['value'][:-1]) for ref in refs]
+        assert actual==preferred,(actual,preferred)
+        assert parts[f'C{base+2}']['value']==parts[f'C{base+1}']['value']
+    result = {'filter_BOM_matches_simulation': True, 'arm_to_primary_conductor_length_mm': lengths,
               'within_pair_mismatch_limit_mm': .01,
               'measured_RF_isolation_dB': None}
     (ROOT/'manufacturing/feed_geometry_check.json').write_text(

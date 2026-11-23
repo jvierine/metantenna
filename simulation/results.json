@@ -4,22 +4,24 @@
     "** ngspice-47 : Circuit level simulation program",
     "** Compiled with KLU Direct Linear Solver"
   ],
-  "nominal_insertion_loss_30_70_dB_max": 0.35582899195155093,
-  "nominal_FM_rejection_dB_min": 27.69444846426746,
+  "nominal_insertion_loss_30_55_dB_max": 0.3780630166232776,
+  "nominal_FM_rejection_dB_min": 45.28976916847402,
   "monte_carlo_trials": 300,
-  "monte_carlo_passband_loss_dB_worst": 0.4131357196196437,
-  "monte_carlo_FM_rejection_dB_worst": 24.938885137749644,
-  "one_bias_tee_loss_dB_max": 0.035983585055754747,
+  "monte_carlo_passband_loss_dB_worst": 0.4073437963775425,
+  "monte_carlo_FM_rejection_dB_worst": 42.473400284181906,
+  "one_bias_tee_loss_dB_max": 0.04268979840081777,
   "spot_filter_gain_dB": {
-    "30": -0.35582899195155093,
-    "32.55": -0.2646584011485639,
-    "36.2": -0.20533918021862752,
-    "49.92": -0.17878907783346018,
-    "53.5": -0.18076585063840825,
-    "70": -0.33643233316593135,
-    "88": -30.85997477707859,
-    "98": -35.09472744145397,
-    "108": -27.69444846426746
+    "30": -0.33834516423919847,
+    "32.55": -0.2937102872316273,
+    "36.2": -0.27681655295199037,
+    "49.92": -0.3071940136519166,
+    "53.5": -0.35733792436750833,
+    "55": -0.3780630166232776,
+    "70": -6.652796714911908,
+    "88": -55.31194279942647,
+    "98": -49.28303982682138,
+    "108": -45.69913432121447,
+    "150": -31.417515991533303
   },
   "limits": "No measured antenna impedance, vendor MMIC model, PCB EM coupling, humidity or thermal qualification. Monte Carlo is not exhaustive worst-case analysis."
 }

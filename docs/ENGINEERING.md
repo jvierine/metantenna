@@ -1,0 +1,188 @@
+# Engineering model and reproduction
+
+## Status and reference planes
+
+This is a receiver prototype. NEC2 predicts thin-wire antenna impedance and
+patterns; ngspice predicts the passive preselector; amplifier and noise budgets
+use explicit assumptions. There is no measured complete-system gain, noise
+figure, IP3, compression, cross-polarization isolation, pulse recovery or
+weather qualification. Manufacturing archives remain prototypes.
+
+Antenna gain is per linear polarization, with the other port terminated in
+50 ohms. Realized gain includes mismatch to 50 ohms. It excludes amplifier gain.
+Signal power gain is antenna available power to antenna-head SMA output,
+including the approximate balun, filter, amplifier and 3 dB pad. It excludes
+coax attenuation. Noise temperature is referred to antenna available power and
+includes the assumed 50 m coax and receiver. A circularly polarized incident
+signal incurs 3 dB polarization loss in one linear channel; calibrated X/Y
+combining can recover the polarized signal.
+
+## Geometry, solver and checks
+
+The model uses four 2 mm diameter bare copper arms, an 86 mm central feed span,
+a plastic mast, and homogeneous Sommerfeld/Norton ground with relative
+permittivity 13 and conductivity 0.005 S/m. Angles are downward from horizontal.
+Feed height is measured from ground to the PCB terminal plane. Each arm length
+excludes the board feed span. Y's idealized central bridge is 10 mm above X to
+avoid electrically joining the orthogonal ports. Y is terminated in 50 ohms.
+The actual PCB, mast dielectric, enclosure, coax shield currents, ropes, nearby
+objects, array coupling and insulation are absent. A common-mode choke and the
+installed feed arrangement require separate evaluation.
+
+The requested baseline is 1 m arms, 45 degrees, 1 m feed height; tips are
+0.293 m above ground. At 32.55 MHz it gives about 7.4 - j792 ohms. The present
+50-ohm front end therefore loses about 26 dB through mismatch. The passive
+filter's good 50-ohm transmission cannot establish antenna-system sensitivity.
+
+The coarse sweep spans 1--2.5 m arm length, 25/35/45/55 degrees, and 1--3 m
+feed height, rejecting tips below 0.2 m. The compact candidate is selected
+within 1 dB of the sweep's best 32.55 MHz realized zenith gain, favouring a
+shorter mast; arm length is then refined in 25 mm increments at its chosen
+angle and height. This is a constrained grid search, not proof of a global
+optimum. The resulting 2.15 m / 25 degree / 2 m candidate has 1.091 m tip height
+and 3.983 m horizontal tip-to-tip span. Its match becomes poor toward 50--70 MHz.
+The separately stored wideband sweep candidate optimizes only four sampled
+frequencies and should not be described as a broadband optimum.
+
+Arm segmentation of 21, 41 and 61 segments is compared at 32.55 MHz. Between
+41 and 61 segments the selected candidate's zenith gain changes by less than
+0.03 dB. An isolated straight dipole sanity case gives 2.11 dBi. These are
+numerical checks, not physical validation. Dry/average/wet soil scenarios
+(5, 0.001), (13, 0.005), (20, 0.03) give approximately 3.9--5.7 dBi zenith gain
+for the selected geometry. Soil and installation can matter more than the
+remaining segmentation error. Full sweeps and patterns are in HDF5.
+
+## Noise budget
+
+Current plots use **PyGDSM GlobalSkyModel16 (GSM2016)** in Rayleigh-Jeans
+kelvin, with CMB included. The model is convolved with the NEC receive power
+pattern at each frequency, rather than using a single all-sky temperature.
+The reference latitude is 54.12 degrees north; X is east-west and the nominal
+Y beam is the X beam rotated by 90 degrees. Local sidereal time is sampled
+at half-hour intervals through a full day. Longitude only changes the UTC
+mapping of that sidereal day. This is a representative German deployment,
+not a specified receiver location or observation date.
+
+The GSM Galactic pixel directions are transformed to equatorial and then
+local east/north/up coordinates. Only above-horizon pixels contribute. The
+single-polarization sky contribution is sum(G * T_sky * dOmega)/(4 pi).
+The HEALPix integration uses NSIDE 32 after generating NSIDE 64 GSM maps;
+a comparison at NSIDE 64 differs by less than 0.01% at 32.55 MHz. The smooth
+5-degree NEC beam grid, ground model and sky-model uncertainties remain more
+important limitations. The tiny numerical beam normalization difference is
+rescaled to the independent NEC upper-hemisphere power-gain integral.
+
+The upper-hemisphere NEC gain integral divided by 4 pi gives alpha. Remaining
+coupling is treated as a 290 K ground, conductor or terminated-port contribution:
+T_ground/loss = (1-alpha) 290 K. The sky contribution is not divided by alpha,
+because the model includes real ground/structure losses. GSM maps are unpolarized;
+there is no extra factor of two for one linear receiver channel.
+
+Assumed hardware values: 0.5 dB balun loss, simulated filter loss, 25.1 dB
+amplifier gain, 2.7 dB amplifier NF, 3 dB output pad, 5 dB coax loss at 50 MHz
+scaling as sqrt(f), and 6 dB following-receiver NF. Components are at 290 K.
+The coax model is a scenario, not a specified cable product. The selected
+nearly matched antenna gives approximately 384 K receiver contribution at
+32.55 MHz, about 122 K ground/loss, and 7,660--12,620 K X-port sky contribution.
+The total X-port result is about 8,160--13,130 K over the sidereal day, with
+10,010 K median. The Y-port approximation is stored separately. Sun, man-made
+noise, RFI, ionospheric absorption/emission, terrain and nearby structures
+are excluded. These temperatures are model outputs, not installed measurements.
+
+Friis noise propagation is followed by the first-order mismatch model
+T_sys = T_sky_contribution + T_ground/loss + T_receiver_matched / tau,
+where tau = 4 * 50 * Re(Z_ant) / |Z_ant + 50|^2. This is an uncorrelated
+50-ohm noise approximation. GALI noise parameters F_min, R_n and Gamma_opt
+are unavailable; filter mismatch and amplifier noise correlations are not
+solved. The badly mismatched 1 m configuration's ~160,000 K is therefore
+an order-of-magnitude indicator, not a calibrated prediction. The original
+uniform power-law sky comparison remains in antenna_system.h5; current public
+noise plots and dynamic-range numbers use sky_noise.h5 instead.
+
+The signal-transfer curve uses complex preselector S11/S21, antenna source
+reflection, an ideal matched 0.5 dB balun attenuator, and assumed amplifier
+gain. This is more detailed than the noise mismatch approximation and does
+not establish complete-system noise figure under severe mismatch.
+
+## Dynamic range
+
+Mini-Circuits quotes typical GALI-74+ values at 100 MHz of 25.1 dB gain,
++38 dBm output IP3 and +19.2 dBm output 1 dB compression, with 2.7 dB typical
+NF. The budget extrapolates these to 32.55 MHz. They are not guaranteed
+30--70 MHz specifications and are not the result of nonlinear simulation.
+The 3 dB output pad yields estimated head-SMA OIP3 +35 dBm and OP1dB +16.2 dBm.
+With the selected geometry the estimated input-referred values are +13.7 dBm
+IIP3 and -5.1 dBm IP1dB, with ~21.2 dB head gain.
+
+For the illustrative 10,000 K background, kT is -158.6 dBm/Hz. Two-tone SFDR
+is (2/3)(IIP3 - noise density), about 115 dB Hz^(2/3), or 95 dB in 1 kHz,
+82 dB in 100 kHz and 75 dB in 1 MHz. These are equal-tone, unity-SNR budget
+values. They are not ADC dynamic-range specifications. Balun nonlinearity,
+filter voltage handling, strong out-of-band blockers, pulse recovery and the
+following receiver can set tighter limits. The passive wire antenna itself
+has no meaningful amplifier-style IP3 specification.
+
+## Passive filter limits
+
+The current design targets 30--55 MHz, with nominal FM attenuation above
+45 dB and 42.5 dB in the worst of 300 Q=70 tolerance trials. Maximum passband
+loss is 0.38 dB nominally and 0.41 dB in those trials. Fixed-Q scenarios of
+20, 40 and 70 give approximately 1.14, 0.61 and 0.38 dB maximum passband loss;
+nominal FM rejection stays above 45 dB in these scenarios. Q uncertainty was
+not combined with the component-tolerance trials. Standard 0805HP 100/120/220 nH
+parts are used; 240 nH, absent from the selected manufacturer series, is avoided.
+
+
+The plotted filter transmission covers 0--150 MHz. DC transmission is zero
+because of series capacitors (minus infinity dB, below the plotted floor).
+The AC sweep begins at 1 MHz. The original passband result assumes 50-ohm
+ports, finite inductor Q of 70 at 50 MHz, C0G capacitor ESR/ESL and simple pad
+parasitics. The 300-trial tolerance sweep uses independent uniform +/-2%
+inductors and +/-1% capacitors; it is not exhaustive worst-case analysis.
+PCB coupling and distributed parasitics have not been electromagnetically
+extracted. The two upper-stopband zeros suppress FM; rejection rises again
+above that stopband, as the 150 MHz plot makes visible.
+
+## Reproduce
+
+Use base conda Python with numpy, scipy, h5py, shapely, openpyxl, Pillow,
+manifold3d, trimesh, pygdsm and healpy. Use ngspice and a compiled nec2c binary. The exact
+solver source revision and binary hash are in the run metadata. The helper
+below builds the pinned external solver without vendoring its source.
+
+```sh
+sh tools/install_nec2c.sh /tmp/metantenna-nec2c
+export NEC2C=/tmp/metantenna-nec2c/nec2c
+conda run -n base python simulation/validate.py
+conda run -n base python simulation/antenna/analyze.py
+conda run -n base python simulation/antenna/sky_noise.py
+conda run -n base python simulation/antenna/dynamic_range.py
+conda run -n base python simulation/antenna/plot.py
+conda run -n base python simulation/prepare_plot.py
+cargo run --release --manifest-path tools/plot/Cargo.toml --bin antenna
+cargo run --release --manifest-path tools/plot/Cargo.toml --bin metantenna-plots
+conda run -n base python mechanical/deployment_drawing.py
+conda run -n base python hardware/build.py
+conda run -n base python hardware/schematic.py
+conda run -n base python hardware/check_layout.py
+conda run -n base python hardware/check_feeds.py
+conda run -n base python hardware/export_fab.py
+```
+
+Plotting uses the sibling Rustplotlib checkout. SVG deployment drawings can
+be exported to PNG/PDF with Inkscape. HDF5 stores scientific arrays; XLSX stores
+assembly tables. Native KiCad CI fills planes and exports CAD previews and
+fabrication files. A successful export is not certification that all reported
+DRC/library/parity warnings have been resolved. Read the actual reports.
+
+## Sources
+
+- [NEC2 user's guide](https://www.nec2.org/part_3/toc.html)
+- [nec2c source](https://github.com/KJ7LNW/nec2c)
+- [GALI-74+ manufacturer datasheet](https://www.minicircuits.com/pdfs/GALI-74.pdf)
+- [Manufacturer typical performance](https://www.minicircuits.com/pages/s-params/GALI-74%2B_VIEW.pdf)
+- [Example sky-temperature power law used in PAPER](https://openaccess.inaf.it/bitstream/20.500.12386/29067/1/Kolopanis19.pdf)
+- [SIMONe meteor-radar system](https://amt.copernicus.org/articles/14/7199/2021/)
+
+- [PyGDSM implementation and references](https://github.com/telegraphic/pygdsm)
+- [GSM2016 sky-model paper](https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.3486Z/abstract)

@@ -1,0 +1,53 @@
+{
+  "requested": {
+    "frequency_MHz": 32.55,
+    "sky_X_K_min_median_max": [
+      2395.103904275905,
+      2971.5237553947536,
+      3745.4053096026114
+    ],
+    "system_X_K_min_median_max": [
+      164008.35463894068,
+      164584.77449005953,
+      165358.65604426738
+    ],
+    "system_Y_K_min_median_max": [
+      164016.84173666223,
+      164614.4383373363,
+      165276.35338884182
+    ],
+    "receiver_equivalent_K": 161375.21685297118,
+    "ground_and_loss_K": 238.0338816935878
+  },
+  "SIMONe_candidate": {
+    "frequency_MHz": 32.55,
+    "sky_X_K_min_median_max": [
+      7658.250698945669,
+      9503.241925891985,
+      12620.337042003222
+    ],
+    "system_X_K_min_median_max": [
+      8164.410683355096,
+      10009.401910301412,
+      13126.49702641265
+    ],
+    "system_Y_K_min_median_max": [
+      8257.545106477706,
+      10255.46858690267,
+      12127.403329974719
+    ],
+    "receiver_equivalent_K": 384.22698981225926,
+    "ground_and_loss_K": 121.93299459716724,
+    "NSIDE32_vs64_max_relative_difference": 4.0992358774896466e-05
+  },
+  "model": {
+    "name": "PyGDSM GSM2016",
+    "version": "1.7.1",
+    "latitude_deg": 54.12,
+    "X_orientation": "east-west",
+    "LST_samples_hours": 0.5,
+    "include_CMB": true,
+    "data_unit": "TRJ",
+    "model_data_sha256": "746c45f905a888676df4036e78019db076e3eb3f861d66fdbe73b953e41a78c4"
+  }
+}

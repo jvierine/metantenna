@@ -1,0 +1,200 @@
+{
+  "requested": {
+    "geometry": {
+      "arm_length_m": 1.0,
+      "feed_height_m": 1.0,
+      "slope_down_deg": 45.0,
+      "tip_height_m": 0.29289321881345254
+    },
+    "spots": {
+      "30": {
+        "Z_ohm": [
+          6.523,
+          -888.47
+        ],
+        "zenith_gain_dBi": -0.82,
+        "realized_zenith_gain_dBi": -28.655623323932527,
+        "mismatch_loss_dB": 27.835623323932527,
+        "antenna_temperature_K": 2937.719104942821,
+        "system_temperature_K": 236811.54100145638,
+        "electronics_temperature_matched_K": 384.96325734042045,
+        "signal_transfer_dB": -6.852873443484583
+      },
+      "32.55": {
+        "Z_ohm": [
+          7.3978,
+          -791.78
+        ],
+        "zenith_gain_dBi": -0.17,
+        "realized_zenith_gain_dBi": -26.46352760802722,
+        "mismatch_loss_dB": 26.29352760802722,
+        "antenna_temperature_K": 2764.6231143601244,
+        "system_temperature_K": 164139.8399673313,
+        "electronics_temperature_matched_K": 378.86464370932504,
+        "signal_transfer_dB": -5.042800419119764
+      },
+      "50": {
+        "Z_ohm": [
+          17.618,
+          -342.26
+        ],
+        "zenith_gain_dBi": 2.73,
+        "realized_zenith_gain_dBi": -12.653542962197246,
+        "mismatch_loss_dB": 15.383542962197247,
+        "antenna_temperature_K": 1843.0536073702476,
+        "system_temperature_K": 15193.329363072731,
+        "electronics_temperature_matched_K": 386.48793413241077,
+        "signal_transfer_dB": 6.239691202981902
+      },
+      "70": {
+        "Z_ohm": [
+          49.252,
+          11.793
+        ],
+        "zenith_gain_dBi": 3.98,
+        "realized_zenith_gain_dBi": 3.9188688481498812,
+        "mismatch_loss_dB": 0.06113115185011875,
+        "antenna_temperature_K": 1147.118276348238,
+        "system_temperature_K": 3837.732215571656,
+        "electronics_temperature_matched_K": 2653.0062470673424,
+        "signal_transfer_dB": 14.436115003197724
+      }
+    }
+  },
+  "SIMONe_candidate": {
+    "geometry": {
+      "arm_length_m": 2.1499999999999995,
+      "feed_height_m": 2.0,
+      "slope_down_deg": 25.0,
+      "tip_height_m": 1.0913707372574963
+    },
+    "spots": {
+      "30": {
+        "Z_ohm": [
+          45.88,
+          -111.52
+        ],
+        "zenith_gain_dBi": 4.85,
+        "realized_zenith_gain_dBi": 1.1260321419282113,
+        "mismatch_loss_dB": 3.7239678580717883,
+        "antenna_temperature_K": 9575.90934637318,
+        "system_temperature_K": 10483.34547495367,
+        "electronics_temperature_matched_K": 384.96325734042045,
+        "signal_transfer_dB": 17.47015593660721
+      },
+      "32.55": {
+        "Z_ohm": [
+          60.974,
+          -7.2231
+        ],
+        "zenith_gain_dBi": 5.06,
+        "realized_zenith_gain_dBi": 4.998962096961528,
+        "mismatch_loss_dB": 0.061037903038471675,
+        "antenna_temperature_K": 8293.339673723884,
+        "system_temperature_K": 8677.566663536143,
+        "electronics_temperature_matched_K": 378.86464370932504,
+        "signal_transfer_dB": 21.234293205188354
+      },
+      "50": {
+        "Z_ohm": [
+          520.44,
+          879.81
+        ],
+        "zenith_gain_dBi": 5.13,
+        "realized_zenith_gain_dBi": -5.107817046149068,
+        "mismatch_loss_dB": 10.237817046149068,
+        "antenna_temperature_K": 3405.899379981738,
+        "system_temperature_K": 7488.319020580314,
+        "electronics_temperature_matched_K": 386.48793413241077,
+        "signal_transfer_dB": 11.210500389157843
+      },
+      "70": {
+        "Z_ohm": [
+          1211.3,
+          -1454.4
+        ],
+        "zenith_gain_dBi": 3.85,
+        "realized_zenith_gain_dBi": -7.996421059028082,
+        "mismatch_loss_dB": 11.846421059028081,
+        "antenna_temperature_K": 1488.8735355351541,
+        "system_temperature_K": 42075.259262698826,
+        "electronics_temperature_matched_K": 2653.0062470673424,
+        "signal_transfer_dB": 7.304981919266979
+      }
+    }
+  },
+  "wideband_candidate": {
+    "geometry": {
+      "arm_length_m": 2.5,
+      "feed_height_m": 2.0,
+      "slope_down_deg": 25.0,
+      "tip_height_m": 0.9434543456482514
+    },
+    "spots": {
+      "30": {
+        "Z_ohm": [
+          73.665,
+          87.816
+        ],
+        "zenith_gain_dBi": 4.75,
+        "realized_zenith_gain_dBi": 2.8147495305099195,
+        "mismatch_loss_dB": 1.9352504694900805,
+        "antenna_temperature_K": 9323.546249471206,
+        "system_temperature_K": 9924.642926860914,
+        "electronics_temperature_matched_K": 384.96325734042045,
+        "signal_transfer_dB": 19.108904370253455
+      },
+      "32.55": {
+        "Z_ohm": [
+          102.58,
+          217.61
+        ],
+        "zenith_gain_dBi": 4.99,
+        "realized_zenith_gain_dBi": -0.3792583574038799,
+        "mismatch_loss_dB": 5.36925835740388,
+        "antenna_temperature_K": 8088.475317065198,
+        "system_temperature_K": 9392.872685033766,
+        "electronics_temperature_matched_K": 378.86464370932504,
+        "signal_transfer_dB": 15.939255207805683
+      },
+      "50": {
+        "Z_ohm": [
+          2023.3,
+          1312.6
+        ],
+        "zenith_gain_dBi": 5.45,
+        "realized_zenith_gain_dBi": -6.276138112620187,
+        "mismatch_loss_dB": 11.726138112620188,
+        "antenna_temperature_K": 3333.871881793603,
+        "system_temperature_K": 9084.956417463207,
+        "electronics_temperature_matched_K": 386.48793413241077,
+        "signal_transfer_dB": 9.753695334379895
+      },
+      "70": {
+        "Z_ohm": [
+          251.33,
+          -772.2
+        ],
+        "zenith_gain_dBi": 5.87,
+        "realized_zenith_gain_dBi": -5.487409499298409,
+        "mismatch_loss_dB": 11.35740949929841,
+        "antenna_temperature_K": 1438.0214735850552,
+        "system_temperature_K": 37702.31510597073,
+        "electronics_temperature_matched_K": 2653.0062470673424,
+        "signal_transfer_dB": 8.5510184168556
+      }
+    }
+  },
+  "budget_assumptions": {
+    "GALI_gain_dB_100MHz": 25.1,
+    "GALI_NF_dB_typical": 2.7,
+    "GALI_OIP3_dBm_100MHz": 38,
+    "GALI_OP1dB_dBm_100MHz": 19.2,
+    "balun_loss_dB_assumed": 0.5,
+    "output_pad_dB": 3,
+    "coax_50m_loss_dB_at_50MHz_assumed": 5,
+    "receiver_NF_dB_assumed": 6,
+    "sky_model": "180 K * (f/180 MHz)^(-2.55); uniform upper hemisphere",
+    "noise_mismatch": "50 ohm first-order approximation; MMIC noise parameters absent"
+  }
+}

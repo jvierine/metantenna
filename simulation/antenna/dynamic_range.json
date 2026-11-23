@@ -1,0 +1,36 @@
+{
+  "status": "Budget extrapolated from 100 MHz manufacturer typical values; NOT measured 30-55 MHz specifications",
+  "reference": "antenna available-power input; selected geometry at 32.55 MHz",
+  "head_output_reference": "antenna-head SMA, before coax; 3 dB output pad",
+  "head_gain_dB": 21.234293205188354,
+  "input_IP3_dBm": 13.765706794811646,
+  "input_1dB_compression_dBm": -5.034293205188355,
+  "head_output_IP3_dBm": 35.0,
+  "head_output_1dB_compression_dBm": 16.2,
+  "noise_density_dBm_per_Hz": -158.59508589374508,
+  "SFDR_dB_Hz_2over3": 114.90719512570448,
+  "system_temperature_K": 10009.401910301412,
+  "bandwidth_Hz": {
+    "1": {
+      "noise_dBm": -158.59508589374508,
+      "compression_to_noise_dB": 153.56079268855672,
+      "two_tone_SFDR_dB": 114.90719512570448
+    },
+    "1000": {
+      "noise_dBm": -128.59508589374508,
+      "compression_to_noise_dB": 123.56079268855672,
+      "two_tone_SFDR_dB": 94.90719512570448
+    },
+    "100000": {
+      "noise_dBm": -108.59508589374508,
+      "compression_to_noise_dB": 103.56079268855672,
+      "two_tone_SFDR_dB": 81.57386179237115
+    },
+    "1000000": {
+      "noise_dBm": -98.59508589374508,
+      "compression_to_noise_dB": 93.56079268855672,
+      "two_tone_SFDR_dB": 74.90719512570448
+    }
+  },
+  "limits": "Single amplifier bottleneck assumed; balun/filter linearity, blocker desensitization, pulse recovery, receiver ADC headroom and actual MMIC noise mismatch are unverified."
+}

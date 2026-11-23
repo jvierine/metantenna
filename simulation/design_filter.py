@@ -28,12 +28,12 @@ def response(f, v, q=70):
     return s21,s11
 
 def main():
-    f=np.r_[np.linspace(30,70,81),np.linspace(88,108,41),[5,10,15]]
+    f=np.r_[np.linspace(30,55,81),np.linspace(88,108,41),np.linspace(115,150,15),[5,10,15]]
     def cost(log):
         v=np.exp(log); s,_=response(f,v)
         db=20*np.log10(abs(s))
-        return (np.maximum(-db[:81]-1.6,0)**2).mean()*100 + (np.maximum(db[81:122]+28,0)**2).mean()*3 + (np.maximum(db[122:]+[25,15,6],0)**2).mean() + (-db[:81]).mean()
-    bounds=[(80,400),(150,1500),(10,100),(50,300),(5,80),(30,150),(50,300),(5,80),(10,100)]
+        return (np.maximum(-db[:81]-.8,0)**2).mean()*300 + (np.maximum(db[81:122]+45,0)**2).mean()*5 + (np.maximum(db[122:137]+30,0)**2).mean()*2 + (np.maximum(db[137:]+[25,15,6],0)**2).mean() + (-db[:81]).mean()
+    bounds=[(80,400),(150,1500),(10,200),(50,400),(5,150),(30,250),(50,400),(5,150),(10,200)]
     result=differential_evolution(cost,np.log(bounds),seed=32,popsize=18,maxiter=600,tol=1e-8,polish=True)
     ideal=np.exp(result.x)
     # E24 capacitors and E24 inductors; refine local discrete combinations later.
@@ -43,12 +43,13 @@ def main():
     # Coordinate search on nearby preferred values, using exactly the same objective.
     for _ in range(8):
         for i in range(len(rounded)):
-            options=values[np.argsort(abs(np.log(values/rounded[i])))[:5]]
+            pool=np.array([47,50,56,62,75,82,100,120,150,180,200,220,250,270,290,310,330,390,470,560,680,820]) if i in [1,3,6] else values
+            options=pool[np.argsort(abs(np.log(pool/rounded[i])))[:5]]
             candidates=[]
             for x in options:
                 a=rounded.copy(); a[i]=x; candidates.append((cost(np.log(a)),a))
             rounded=min(candidates,key=lambda a:a[0])[1]
-    out={'names':['HP_C_pF','HP_L_nH','LP_C1_pF','LP_L2_nH','LP_C2_pF','LP_C3_pF','LP_L4_nH','LP_C4_pF','LP_C5_pF'],'optimized':ideal.tolist(),'preferred':rounded.tolist(),'objective':cost(np.log(rounded)),'inductor_Q_at_50MHz':70}
+    out={'names':['HP_C_pF','HP_L_nH','LP_C1_pF','LP_L2_nH','LP_C2_pF','LP_C3_pF','LP_L4_nH','LP_C4_pF','LP_C5_pF'],'optimized':ideal.tolist(),'preferred':rounded.tolist(),'objective':cost(np.log(rounded)),'inductor_Q_at_50MHz':70,'passband_MHz':[30,55],'FM_stopband_MHz':[88,108],'target_FM_rejection_dB':45}
     (ROOT/'simulation/filter_values.json').write_text(json.dumps(out,indent=2)+'\n')
     f=np.linspace(1,200,3981); s,r=response(f,rounded)
     with h5py.File(ROOT/'simulation/filter_design.h5','w') as h:

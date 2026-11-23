@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#52636d"/></marker></defs>
+<rect width="1400" height="950" fill="white"/>
+<style>text{font-family:serif;fill:#20313d;font-size:23px}.small{font-size:19px}.heading{font-size:28px;font-weight:bold}.dim{stroke:#52636d;stroke-width:1.2;fill:none;marker-start:url(#arrow);marker-end:url(#arrow)}.ext{stroke:#99a5ac;stroke-width:1;fill:none}.rope{stroke:#879097;stroke-width:2;stroke-dasharray:7 6;fill:none}</style>
+
+<text x="700" y="38" text-anchor="middle" class="heading" >Crossed inverted-V receive antenna — 32.55 MHz candidate</text>
+<text x="420" y="95" text-anchor="middle" class="heading" >Elevation: one dipole plane</text>
+<text x="1110" y="95" text-anchor="middle" class="heading" >Plan view</text>
+<line x1="35.00" y1="530.00" x2="825.00" y2="530.00" stroke="#637867" stroke-width="2" />
+<text x="75" y="559" text-anchor="middle" class="small" >Ground</text>
+<rect x="416" y="200.0" width="8" height="330.0" fill="#d3d9dc" stroke="#677983"/>
+<rect x="408" y="190.0" width="24" height="13" fill="#edf0f2" stroke="#20313d"/>
+<line x1="412.90" y1="200.00" x2="91.39" y2="349.92" stroke="#0072b2" stroke-width="4" />
+<line x1="91.39" y1="349.92" x2="31.99" y2="530.00" stroke="#20313d" stroke-width="2" class="rope"/>
+<line x1="26.99" y1="526.00" x2="36.99" y2="539.00" stroke="#637867" stroke-width="3" />
+<circle cx="91.39231254874852" cy="349.9238283525131" r="4" fill="white" stroke="#0072b2" stroke-width="2"/>
+<path class="dim" d="M402.3395434564825,177.34230532408375 L80.82685600523104,327.26613367659684"/>
+<line x1="427.10" y1="200.00" x2="748.61" y2="349.92" stroke="#0072b2" stroke-width="4" />
+<line x1="748.61" y1="349.92" x2="808.01" y2="530.00" stroke="#20313d" stroke-width="2" class="rope"/>
+<line x1="803.01" y1="526.00" x2="813.01" y2="539.00" stroke="#637867" stroke-width="3" />
+<circle cx="748.6076874512514" cy="349.9238283525131" r="4" fill="white" stroke="#0072b2" stroke-width="2"/>
+<path class="dim" d="M437.6604565435175,177.34230532408375 L759.1731439947689,327.26613367659684"/>
+<text x="598.4168002691432" y="240.30421950034028" text-anchor="middle" class="small" transform="rotate(25,598.4168002691432,240.30421950034028)">2.15 m copper arm</text>
+<text x="235" y="405" text-anchor="middle" class="small" >Nylon support rope</text>
+<line x1="240.00" y1="416.00" x2="105.00" y2="485.00" stroke="#879097" stroke-width="1" />
+<path class="dim" d="M65,200.0 L65,530"/>
+<line x1="65.00" y1="200.00" x2="405.00" y2="200.00" stroke="#99a5ac" stroke-width="1" />
+<path class="dim" d="M790,349.9238283525131 L790,530"/>
+<text x="750" y="439.9619141762565" text-anchor="middle" class="small" >1.09 m</text>
+<line x1="748.61" y1="349.92" x2="800.00" y2="349.92" stroke="#99a5ac" stroke-width="1" />
+<path class="dim" d="M91.39231254874852,580 L748.6076874512514,580"/>
+<text x="420" y="570" text-anchor="middle" class="small" >3.98 m tip-to-tip</text>
+<line x1="91.39" y1="349.92" x2="91.39" y2="587.00" stroke="#99a5ac" stroke-width="1" />
+<line x1="748.61" y1="349.92" x2="748.61" y2="587.00" stroke="#99a5ac" stroke-width="1" />
+<text x="45" y="365.0" text-anchor="middle" class="small" transform="rotate(-90,45,365.0)">2.00 m</text>
+<text x="510" y="222.0" text-anchor="middle" class="small" >25°</text>
+<line x1="420.00" y1="200.00" x2="570.00" y2="200.00" stroke="#99a5ac" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="490" y="450" text-anchor="start" class="small" >Ø50 mm plastic mast</text>
+<line x1="482.00" y1="440.00" x2="425.00" y2="437.00" stroke="#879097" stroke-width="1" />
+<line x1="411.00" y1="204.00" x2="411.00" y2="515.00" stroke="#0072b2" stroke-width="1.6" />
+<line x1="429.00" y1="204.00" x2="429.00" y2="515.00" stroke="#d55e00" stroke-width="1.6" />
+<line x1="1106.13" y1="325.00" x2="930.76" y2="325.00" stroke="#0072b2" stroke-width="4" />
+<text x="903.7594432084084" y="332.0" text-anchor="middle" class="" >X−</text>
+<line x1="1113.87" y1="325.00" x2="1289.24" y2="325.00" stroke="#0072b2" stroke-width="4" />
+<text x="1316.2405567915916" y="332.0" text-anchor="middle" class="" >X+</text>
+<line x1="1110.00" y1="321.13" x2="1110.00" y2="145.76" stroke="#d55e00" stroke-width="4" />
+<text x="1110.0" y="125.7594432084083" text-anchor="middle" class="" >Y−</text>
+<line x1="1110.00" y1="328.87" x2="1110.00" y2="504.24" stroke="#d55e00" stroke-width="4" />
+<text x="1110.0" y="538.2405567915916" text-anchor="middle" class="" >Y+</text>
+<rect x="1104" y="319" width="12" height="12" fill="#edf0f2" stroke="#20313d"/>
+<text x="1110" y="568" text-anchor="middle" class="small" >Four equal arms; 90° between dipole planes</text>
+<text x="700" y="650" text-anchor="middle" class="heading" >Connections</text>
+<rect x="80" y="705" width="250" height="125" rx="6" fill="#f3f6f5" stroke="#20313d"/>
+<text x="205" y="740" text-anchor="middle" class="" >Antenna head</text>
+<text x="205" y="775" text-anchor="middle" class="small" >X / Y preamps</text>
+<text x="205" y="805" text-anchor="middle" class="small" >Both powered from X</text>
+<rect x="720" y="685" width="240" height="100" rx="6" fill="#f3f6f5" stroke="#20313d"/>
+<text x="840" y="725" text-anchor="middle" class="" >X bias tee</text>
+<text x="840" y="757" text-anchor="middle" class="small" >12 V DC input</text>
+<rect x="1110" y="705" width="210" height="125" rx="6" fill="#f3f6f5" stroke="#20313d"/>
+<text x="1215" y="745" text-anchor="middle" class="" >Two-channel</text>
+<text x="1215" y="777" text-anchor="middle" class="" >50 Ω receiver</text>
+<line x1="330.00" y1="730.00" x2="720.00" y2="730.00" stroke="#0072b2" stroke-width="3" />
+<line x1="960.00" y1="730.00" x2="1110.00" y2="730.00" stroke="#0072b2" stroke-width="3" />
+<text x="525" y="714" text-anchor="middle" class="small" >X: RF + 12 V DC</text>
+<line x1="330.00" y1="805.00" x2="1110.00" y2="805.00" stroke="#d55e00" stroke-width="3" />
+<text x="680" y="834" text-anchor="middle" class="small" >Y: RF only, DC blocked at antenna head</text>
+<text x="700" y="884" text-anchor="middle" class="small" >Four copper wires solder to the PCB; two SMA outputs. Coax runs up to 50 m.</text>
+<text x="700" y="918" text-anchor="middle" class="small" >2 mm bare copper assumed. Tip heights exclude support-rope sag.</text>
+</svg>

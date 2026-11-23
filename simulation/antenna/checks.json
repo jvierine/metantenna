@@ -1,0 +1,109 @@
+{
+  "requested": [
+    {
+      "segments_per_arm": 21,
+      "R": 7.4024,
+      "X": -793.56,
+      "gain": -0.18,
+      "sky_fraction": 0.17885256116261922
+    },
+    {
+      "segments_per_arm": 41,
+      "R": 7.3978,
+      "X": -791.78,
+      "gain": -0.17,
+      "sky_fraction": 0.1791935114014214
+    },
+    {
+      "segments_per_arm": 61,
+      "R": 7.3919,
+      "X": -790.58,
+      "gain": -0.16,
+      "sky_fraction": 0.1794170260373083
+    }
+  ],
+  "SIMONe_candidate": [
+    {
+      "segments_per_arm": 21,
+      "R": 60.063,
+      "X": -7.4679,
+      "gain": 5.12,
+      "sky_fraction": 0.5878950796519062
+    },
+    {
+      "segments_per_arm": 41,
+      "R": 60.974,
+      "X": -7.2231,
+      "gain": 5.06,
+      "sky_fraction": 0.5795413979408026
+    },
+    {
+      "segments_per_arm": 61,
+      "R": 61.131,
+      "X": -7.0826,
+      "gain": 5.05,
+      "sky_fraction": 0.5782927873028126
+    }
+  ],
+  "wideband_candidate": [
+    {
+      "segments_per_arm": 21,
+      "R": 100.6,
+      "X": 213.21,
+      "gain": 5.07,
+      "sky_fraction": 0.5752130196676575
+    },
+    {
+      "segments_per_arm": 41,
+      "R": 102.58,
+      "X": 217.61,
+      "gain": 4.99,
+      "sky_fraction": 0.5647066688793813
+    },
+    {
+      "segments_per_arm": 61,
+      "R": 102.97,
+      "X": 218.55,
+      "gain": 4.98,
+      "sky_fraction": 0.562740595729347
+    }
+  ],
+  "free_space_dipole_reference": {
+    "z": "(68.054-24.37j)",
+    "zenith_dBi": "2.11",
+    "peak_dBi": "2.11",
+    "sky_fraction": "0.49767444834451685"
+  },
+  "soil_sensitivity": [
+    {
+      "epsilon_r": 5,
+      "conductivity_S_per_m": 0.001,
+      "z": [
+        61.952,
+        -14.778
+      ],
+      "zenith_gain_dBi": 3.94,
+      "sky_fraction": 0.4740481424421848
+    },
+    {
+      "epsilon_r": 13,
+      "conductivity_S_per_m": 0.005,
+      "z": [
+        60.974,
+        -7.2231
+      ],
+      "zenith_gain_dBi": 5.06,
+      "sky_fraction": 0.5795413979408026
+    },
+    {
+      "epsilon_r": 20,
+      "conductivity_S_per_m": 0.03,
+      "z": [
+        62.575,
+        -1.526
+      ],
+      "zenith_gain_dBi": 5.7,
+      "sky_fraction": 0.6693748584602157
+    }
+  ]
+}
