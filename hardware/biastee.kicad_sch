@@ -1,5 +1,5 @@
 (kicad_sch (version 20231120) (generator "eeschema") (uuid "a53f075e-b081-50f9-aa75-4f11209d886d") (paper "A2")
-(title_block (title "Metantenna \u2014 biastee \u2014 engineering prototype") (date "2026-11-22") (rev "A0") (company "Juha Vierinen"))
+(title_block (title "Metantenna \u2014 biastee \u2014 engineering prototype") (date "2026-11-23") (rev "B0") (company "Juha Vierinen"))
 (lib_symbols
 (symbol "metantenna:J1" (pin_names (offset 0.5)) (in_bom yes) (on_board yes)
 (property "Reference" "J" (at 0 10.16 0) (effects (font (size 1.0 1.0)) ))

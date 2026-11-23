@@ -68,6 +68,75 @@
       "sky_fraction": 0.562740595729347
     }
   ],
+  "arms_1p5m": [
+    {
+      "segments_per_arm": 21,
+      "R": 22.741,
+      "X": -403.97,
+      "gain": 5.19,
+      "sky_fraction": 0.6086287628464665
+    },
+    {
+      "segments_per_arm": 41,
+      "R": 22.909,
+      "X": -406.3,
+      "gain": 5.16,
+      "sky_fraction": 0.6047056319512444
+    },
+    {
+      "segments_per_arm": 61,
+      "R": 22.924,
+      "X": -406.28,
+      "gain": 5.16,
+      "sky_fraction": 0.6045319977409109
+    }
+  ],
+  "arms_1p0m": [
+    {
+      "segments_per_arm": 21,
+      "R": 9.2692,
+      "X": -806.86,
+      "gain": 5.22,
+      "sky_fraction": 0.6224085318861278
+    },
+    {
+      "segments_per_arm": 41,
+      "R": 9.2932,
+      "X": -807.83,
+      "gain": 5.22,
+      "sky_fraction": 0.6214274421289423
+    },
+    {
+      "segments_per_arm": 61,
+      "R": 9.292,
+      "X": -807.21,
+      "gain": 5.22,
+      "sky_fraction": 0.6218257660617383
+    }
+  ],
+  "arms_2p0m": [
+    {
+      "segments_per_arm": 21,
+      "R": 48.316,
+      "X": -96.722,
+      "gain": 5.14,
+      "sky_fraction": 0.5929460417240517
+    },
+    {
+      "segments_per_arm": 41,
+      "R": 48.959,
+      "X": -97.592,
+      "gain": 5.09,
+      "sky_fraction": 0.5856346220655284
+    },
+    {
+      "segments_per_arm": 61,
+      "R": 49.06,
+      "X": -97.61,
+      "gain": 5.08,
+      "sky_fraction": 0.584661854752995
+    }
+  ],
   "free_space_dipole_reference": {
     "z": "(68.054-24.37j)",
     "zenith_dBi": "2.11",

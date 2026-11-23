@@ -29,7 +29,7 @@ def main():
     broad=grid[np.argmax(grid[:,3:].min(axis=1))]
     fine=np.array([candidate((l,compact[1],compact[2])) for l in np.arange(compact[0]-.2,compact[0]+.201,.025)])
     compact=fine[np.argmax(fine[:,4])]
-    designs={'requested':(1.,45.,1.),'SIMONe_candidate':tuple(compact[:3]),'wideband_candidate':tuple(broad[:3])}
+    designs={'requested':(1.,45.,1.),'SIMONe_candidate':tuple(compact[:3]),'wideband_candidate':tuple(broad[:3]),'arms_1p5m':(1.5,25.,2.),'arms_1p0m':(1.,25.,2.),'arms_2p0m':(2.,25.,2.)}
     print('Selected geometries:',designs,flush=True)
     with h5py.File(ROOT/'simulation/validation.h5') as old:
         f0=old['frequency_MHz'][:];s21=old['s21'][:];s11=old['s11'][:]

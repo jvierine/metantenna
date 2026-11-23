@@ -76,8 +76,8 @@ def main():
         bounds=box(.5,.5,w-.5,h-.5)
         for layer,label in [(0,'F_Cu'),(1,'B_Cu')]:
             shapes=[g for n,g,ll,_ in items if layer in ll]
-            if layer==1:
-                cuts=[g.buffer(.25) for n,g,ll,_ in items if layer in ll and n!='GND']+[Point(x,y).buffer(d/2+.25) for x,y,d in mount]
+            if layer in [0,1]:
+                cuts=[g.buffer(.5) for n,g,ll,_ in items if layer in ll and n!='GND']+[Point(x,y).buffer(d/2+.25) for x,y,d in mount]
                 shapes.append(bounds-unary_union(cuts))
             gerber(out/f'{name}-{label}.gbr',shapes,label)
         for label in ['In1_Cu','In2_Cu']:
@@ -96,7 +96,7 @@ def main():
                 paste.extend(box(p['x']+dx-.34,p['y']+dy-.38,p['x']+dx+.34,p['y']+dy+.38) for dx in [-.42,.42] for dy in [-.47,.47])
             else:paste.append(box(p['x']-p['w']/2,p['y']-p['h']/2,p['x']+p['w']/2,p['y']+p['h']/2))
         gerber(out/f'{name}-F_Paste.gbr',paste,'F_Paste')
-        marking=silk('METANTENNA '+name.upper()+' A0',12,3)
+        marking=silk('METANTENNA '+name.upper()+' B0',12,3)
         for p in a['parts']:marking=marking.union(silk(p['ref'],p['x']-1.3,p['y']-4))
         marking-=unary_union(masks).buffer(.1)
         gerber(out/f'{name}-F_Silkscreen.gbr',[marking],'F_Silkscreen')

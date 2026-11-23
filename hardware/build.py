@@ -87,6 +87,7 @@ class Router:
                 if ll!=layer:
                     # A via needs a larger obstacle margin than a trace.
                     if any(n!=net and g.distance(Point(x*STEP,y*STEP))<.5 for n,g,_ in self.obstacles):continue
+                    if any(not p['drill'] and p['shape'].distance(Point(x*STEP,y*STEP))<.4 for p in self.pads):continue
                 nd=d+cost
                 if nd<dist.get(v,float('inf')):
                     dist[v]=nd;prev[v]=u;heapq.heappush(heap,(nd+heuristic(v),nd,v))
@@ -124,16 +125,83 @@ class Router:
             route(net,0,points)
             route(net,0,[pad,(pad[0],39)])
         for net,points,yy in [
-            ('Y_ANT_N',[(48,5),(27.2,25.8),(27.2,45.46)],45.46),
-            ('Y_ANT_P',[(48,91),(27.2,70.2),(27.2,50.54)],50.54)]:
+            ('Y_ANT_N',[(48,5),(15,5),(15,45.46),(27.7,45.46)],45.46),
+            ('Y_ANT_P',[(48,91),(15,91),(15,50.54),(27.7,50.54)],50.54)]:
             route(net,1,points)
-            self.vias.append((net,27.2,yy))
-            self.obstacles.append((net,Point(27.2,yy).buffer(.3),[0,1]))
+            self.vias.append((net,27.7,yy))
+            self.obstacles.append((net,Point(27.7,yy).buffer(.3),[0,1]))
             route(net,0,[(26.5,yy),(29.46,yy)])
         return {'X_ANT_N','X_ANT_P','Y_ANT_N','Y_ANT_P'}
 
+    def power_spine(self):
+        """Keep the shared 12 V trunk on B.Cu, away from the RF ladder.
+
+        Each F.Cu escape is local, with ordinary tented vias outside SMT pads.
+        There are no digital signals or separate digital supply rails.
+        """
+        if not any(p['net']=='V12' for p in self.pads):return set()
+        def track(layer,a,b,width=.4):
+            self.tracks.append(('V12',layer,a,b,width))
+            self.obstacles.append(('V12',LineString([a,b]).buffer(width/2),[layer]))
+        def escape(ref,pin,via):
+            pad=next(p for p in self.pads if p['ref']==ref and p['pin']==str(pin))
+            track(0,(pad['x'],pad['y']),via)
+            if ('V12',*via) not in self.vias:
+                self.vias.append(('V12',*via))
+                self.obstacles.append(('V12',Point(*via).buffer(.3),[0,1]))
+            track(1,via,(85,via[1]))
+        escape('D103',1,(79.5,38))
+        escape('D104',1,(88,44.8))
+        for base,dy in [(100,0),(200,40)]:
+            escape(f'C{base+10}',1,(77.8,45+dy))
+            escape(f'C{base+11}',1,(72,41.5+dy))
+            escape(f'U{base+2}',8,(72,41.5+dy))
+            escape(f'U{base+2}',5,(72,44.5+dy))
+        track(1,(85,38),(85,85),.5)
+        return {'V12'}
+
+    def ground_vias(self):
+        """Short, wide pad-to-plane connections without via-in-pad processing."""
+        for p in self.pads:
+            if p['net']!='GND' or p['drill']:continue
+            center=(p['x'],p['y']);dx=p['w']/2+.6;dy=p['h']/2+.6
+            offsets=[(sx*(dx+extra),sy*(dy+extra)) for extra in [0,.4,.8,1.2,1.8,2.4] for sx,sy in [(1,0),(-1,0),(0,1),(0,-1),(1,1),(-1,1),(1,-1),(-1,-1)]]
+            count=0;wanted=2 if p['ref'].startswith('U') and p['pin'] in ['2','9'] else 1
+            width=min(.8,p['w'],p['h'])
+            for ox,oy in offsets:
+                x,y=center[0]+ox,center[1]+oy;point=Point(x,y)
+                if any(not a['drill'] and a['shape'].distance(point)<.4 for a in self.pads):continue
+                if any(n!='GND' and g.distance(point)<.51 for n,g,_ in self.obstacles):continue
+                stub=LineString([center,(x,y)]).buffer(width/2)
+                if any(n!='GND' and 0 in ll and g.distance(stub)<.15 for n,g,ll in self.obstacles):continue
+                if any(math.dist((x,y),(xx,yy))<.7 for _,xx,yy in self.vias):continue
+                self.tracks.append(('GND',0,center,(x,y),width))
+                self.obstacles.append(('GND',stub,[0]))
+                self.vias.append(('GND',x,y));count+=1
+                self.obstacles.append(('GND',point.buffer(.3),[0,1]))
+                if count==wanted:break
+            if not count:raise RuntimeError(('ground via clearance',p['ref'],p['pin']))
+
+    def ground_fence(self):
+        """Low-cost through-via stitching: perimeter, RF regions and transitions."""
+        w,h=self.size
+        points=[(x,y) for x in np.arange(2,w-1,5) for y in [2,h-2]]
+        points += [(x,y) for y in np.arange(7,h-2,5) for x in [2,w-2]]
+        if w==96:
+            points += [(18,y) for y in np.arange(10,87,4)]
+            points += [(x,y) for x in np.arange(23,90,5) for y in [24,58,72]]
+            points += [(27.7,y) for y in [44,46.9,49.1,52]]
+        for x,y in points:
+            point=Point(x,y)
+            if any(not a['drill'] and a['shape'].distance(point)<.4 for a in self.pads):continue
+            if any(n!='GND' and g.distance(point)<.51 for n,g,_ in self.obstacles):continue
+            if any(math.dist((x,y),(xx,yy))<.7 for _,xx,yy in self.vias):continue
+            self.vias.append(('GND',float(x),float(y)))
+            self.obstacles.append(('GND',point.buffer(.3),[0,1]))
+
     def run(self):
-        completed=self.antenna_feeds()
+        completed=self.antenna_feeds()|self.power_spine()
+        self.ground_vias()
         groups=defaultdict(list)
         for p in self.pads:
             if p['net'] and p['net']!='GND' and p['net'] not in completed:groups[p['net']].append((p['x'],p['y']))
@@ -143,17 +211,7 @@ class Router:
             while points:
                 _,i,a,b=min((math.dist(a,b),i,a,b) for i,b in enumerate(points) for a in tree)
                 self.connect(n,a,b,rf(n));tree.append(points.pop(i))
-        # Local ground vias outside SMT pads; inner layers provide the return path.
-        for p in self.pads:
-            if p['net']!='GND' or p['drill']:continue
-            center=(p['x'],p['y'])
-            candidates=[center]+[(center[0]+dx,center[1]+dy) for dx,dy in [(0,1),(0,-1),(1,0),(-1,0),(0,1.5),(0,-1.5),(1.5,0),(-1.5,0)]]
-            for x,y in candidates:
-                if any(n!='GND' and g.distance(Point(x,y))<.51 for n,g,_ in self.obstacles):continue
-                if (x,y)!=center:
-                    self.tracks.append(('GND',0,center,(x,y),.2))
-                self.vias.append(('GND',x,y));break
-            else:raise RuntimeError(('ground via clearance',p['ref'],p['pin']))
+        self.ground_fence()
         return self
 
 def q(s):return json.dumps(str(s))
@@ -185,8 +243,9 @@ def pcb(name,parts,size,r):
     w,h=size
     for a,b in [((0,0),(w,0)),((w,0),(w,h)),((w,h),(0,h)),((0,h),(0,0))]:
         lines.append(f'(gr_line (start {a[0]} {a[1]}) (end {b[0]} {b[1]}) (stroke (width 0.05) (type default)) (layer "Edge.Cuts"))')
-    for layer in ['In1.Cu','In2.Cu','B.Cu']:
-        lines.append(f'(zone (net 1) (net_name "GND") (layer "{layer}") (hatch edge 0.5) (connect_pads (clearance 0.25)) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts (xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}))))')
+    for layer in ['F.Cu','In1.Cu','In2.Cu','B.Cu']:
+        clearance=.5 if layer in ['F.Cu','B.Cu'] else .25
+        lines.append(f'(zone (net 1) (net_name "GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts (xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}))))')
     lines.append(')')
     (ROOT/'hardware'/f'{name}.kicad_pcb').write_text('\n'.join(lines)+'\n')
     dump={'size_mm':size,'parts':[dict(ref=p.ref,value=p.value,package=p.package,nets=p.nets,x=p.x,y=p.y,rotation=p.rotation,side=p.side,mpn=p.mpn,note=p.note) for p in parts], 'pads':[{k:v for k,v in p.items() if k!='shape'} for p in r.pads],'tracks':r.tracks,'vias':r.vias}

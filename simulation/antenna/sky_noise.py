@@ -41,7 +41,7 @@ def main():
     gsm=GlobalSkyModel16(freq_unit='MHz',data_unit='TRJ',resolution='low',include_cmb=True)
     with h5py.File(ROOT/'simulation/antenna/antenna_system.h5') as source, h5py.File(ROOT/'simulation/antenna/sky_noise.h5','w') as out:
         f=source['frequency_MHz'][:];out['frequency_MHz']=f;out['local_sidereal_time_hours']=LST
-        groups={name:out.create_group(name) for name in ['requested','SIMONe_candidate']}
+        groups={name:out.create_group(name) for name in ['requested','SIMONe_candidate','arms_1p5m','arms_1p0m','arms_2p0m']}
         stats={}
         for name,d in groups.items():
             pattern=source[name]['pattern'][:];alpha=source[name]['sky_coupling_fraction'][:]
@@ -59,7 +59,7 @@ def main():
             totalx=skyx+ground[:,None]+rx[:,None];totaly=skyy+ground[:,None]+rx[:,None]
             for k,v in {'sky_X_K':skyx,'sky_Y_K':skyy,'ground_and_loss_K':ground,'receiver_equivalent_K':rx,'system_X_K':totalx,'system_Y_K':totaly}.items():
                 d.create_dataset(k,data=v,compression='gzip')
-            i=np.argmin(abs(f-32.55))
+            i=np.argmin(abs(f-(50. if name=='arms_1p5m' else 32.55)))
             stats[name]={'frequency_MHz':float(f[i]),'sky_X_K_min_median_max':np.percentile(skyx[i],[0,50,100]).tolist(),
                          'system_X_K_min_median_max':np.percentile(totalx[i],[0,50,100]).tolist(),
                          'system_Y_K_min_median_max':np.percentile(totaly[i],[0,50,100]).tolist(),

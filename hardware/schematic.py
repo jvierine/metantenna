@@ -20,7 +20,7 @@ def pins(p):
 
 def build(name,parts):
     rootid=uid(name);lines=[f'(kicad_sch (version 20231120) (generator "eeschema") (uuid "{rootid}") (paper "A2")',
-        f'(title_block (title {q("Metantenna — "+name+" — engineering prototype")}) (date "2026-11-22") (rev "A0") (company "Juha Vierinen"))','(lib_symbols']
+        f'(title_block (title {q("Metantenna — "+name+" — engineering prototype")}) (date "2026-11-23") (rev "B0") (company "Juha Vierinen"))','(lib_symbols']
     for p in parts:
         lib=p.ref
         lines.append(f'(symbol "metantenna:{lib}" (pin_names (offset 0.5)) (in_bom yes) (on_board yes)')

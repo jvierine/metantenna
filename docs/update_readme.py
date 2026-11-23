@@ -19,6 +19,10 @@ The modeled SIMONe 32.55 MHz deployment uses **{g['arm_length_m']:.2f} m arms,
 shown below. Complete-system RF, weather and installation tests are outstanding;
 the fabrication files are prototype files. No manufacturing order has been placed.
 
+**Rev B is not yet released for ordering:** native KiCad DRC, schematic-to-PCB
+comparison, connector footprint/assembly review and JLCPCB CAM review remain
+required. The Gerber archives are for prototype review, not an approved order.
+
 ## Deployment
 
 ![Dimensioned antenna deployment and wiring](docs/antenna_deployment.png)
@@ -97,7 +101,7 @@ gain ranges roughly 4–6 dBi across the soil scenarios tested.
 SMA connectors are only for X/Y coax. Red traces are top copper, blue traces
 bottom copper; ground planes are hidden in this view.
 
-![Antenna preamp PCB](docs/preamp_layout.png)
+![Rev B antenna preamp PCB with critical components](docs/preamp_rev_b_annotated.png)
 
 **Indoor board — 76 × 64 mm.** X injects bias power; Y is an RF-only pass-through.
 
@@ -107,9 +111,18 @@ bottom copper; ground planes are hidden in this view.
 
 ![Exploded printed enclosure and pipe mounting](docs/enclosure_exploded.png)
 
-The printable housing uses a rain hood, ventilated overlap, downward-facing
-connectors and a split Ø50 mm pipe clamp. The rendering uses a dummy unpopulated
-PCB. Wire exits, strain relief and weather performance still need physical checks.
+![Four side antenna exits and guy-line eyes](docs/wire_exit_plan.png)
+
+![Underside SMA connectors, simplified mechanical illustration](docs/sma_underside_detail.png)
+
+Rev B uses just **two printed housing parts**: a base with an integral Ø50 mm
+pipe socket and downward-open connector rain skirt, plus the rain hood.
+One M5 bolt passes through the socket and a drilled plastic pipe. Four side wire exits align with the antenna solder pads, beneath the hood overlap.
+Each side has a structural guy-line eye directly below its wire exit; internal
+nylon ties provide strain relief. Tie the guy rope to the eye, not the antenna wire.
+The PCB component positions in the rendering follow Rev B (bodies are simplified).
+Print the fit coupon first. Fit, drainage and weather performance need physical checks;
+this is a ventilated rain-shedding housing, not an IP-rated enclosure.
 
 - [Editable KiCad boards and schematics](hardware/)
 - [Prototype Gerbers, drills and assembly workbooks](manufacturing/)
