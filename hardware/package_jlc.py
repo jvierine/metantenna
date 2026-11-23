@@ -26,14 +26,16 @@ def main():
   report=(src/'drc.txt').read_text();erc=(src/'erc.txt').read_text()
   issues=re.findall(r'^\[([^]]+)\]',report,re.M)
   # Library metadata warnings are recorded, never silently suppressed.
-  dangerous=[x for x in issues if x not in ['lib_footprint_mismatch','lib_footprint_issues','courtyards_overlap','missing_courtyard']]
+  dangerous=issues
   if dangerous or not re.search(r'Found 0 unconnected pads',report):raise RuntimeError((name,'native DRC or parity not clean',dangerous))
   if 'Errors 0' not in erc:raise RuntimeError((name,'ERC not clean'))
   status[name]={'native_issues':issues,'dimensions_mm':size,'quantity':5,'electrical_DRC_ERC_and_parity':'pass','assembly_sides':'Top SMT; connectors hand soldered'}
+  assert any('NPTH' in p.name for p in (src/'gerbers').glob('*.drl')), 'Need separate native NPTH drill file'
+  assert any('PTH' in p.name and 'NPTH' not in p.name for p in (src/'gerbers').glob('*.drl')), 'Need separate native PTH drill file'
   with zipfile.ZipFile(dest/'Gerbers.zip','w',zipfile.ZIP_DEFLATED) as z:
    for p in sorted((src/'gerbers').iterdir()):
     if p.suffix.lower() in ['.gtl','.gbl','.g1','.g2','.gts','.gbs','.gtp','.gbp','.gto','.gbo','.gm1','.drl']:z.write(p,p.name)
-  for p in ['drc.txt','erc.txt','schematic.pdf']:shutil.copy2(src/p,dest/p)
+  for p in ['drc.txt','erc.txt','schematic.pdf','assembly.svg']:shutil.copy2(src/p,dest/p)
   groups=defaultdict(list);cpl=[];manual=[];dnp=[]
   for p in parts:
    if p.package=='ANT_M3':continue
@@ -51,6 +53,10 @@ def main():
   book(dest/'Do_not_populate.xlsx',['Designator','Comment','Manufacturer Part Number','Instructions'],dnp)
   status[name]['SMT_parts_per_board']=len(cpl);status[name]['hand_assembled_parts_per_board']=len(manual)
  # A release manifest binds the checked source, native reports and actual archives.
+ shutil.copy2(R/'manufacturing/JLC_ORDER.md',out/'ORDER_INSTRUCTIONS.md')
+ shutil.copy2(R/'simulation/END_TO_END.md',out/'SIMULATION_SUMMARY.md')
+ for p in ['end_to_end_comparison.pdf','preamp_rev_b_annotated.png','wire_exit_plan.png']:
+  shutil.copy2(R/'docs'/p,out/p)
  manifest={'source_commit':a.commit,'native_CAD':'KiCad 9.0.9 via GitHub Actions','boards':status,
  'order_status':'Prototype package prepared; JLC part matching, placement/rotation preview and CAM acceptance remain required before payment.',
  'model_limits':'Linear behavioral MMIC; no PCB EM or measured RF qualification.'}

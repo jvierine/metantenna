@@ -6,7 +6,8 @@ noise-wave or nonlinear vendor model. No PCB coupling/stability qualification
 is inferred from it. Sky/antenna results are NEC2/PyGDSM products.
 """
 from pathlib import Path
-import sys,json,tempfile,subprocess,itertools
+import sys,json,tempfile,subprocess,itertools,hashlib
+from dataclasses import asdict
 import numpy as np
 import h5py
 sys.path.insert(0,str(Path(__file__).resolve().parent))
@@ -35,6 +36,7 @@ def gain(m,z):
  return 4*np.real(z)*50/abs(m[:,0,0]*50+m[:,0,1]+z*(m[:,1,0]*50+m[:,1,1]))**2
 
 def main():
+ assert next(p for p in biastee()[0] if p.ref=='F10').value=='500mA PTC'
  vals=np.array(json.loads((R/'simulation/filter_values.json').read_text())['preferred'])
  f,s21,s11,_=run_spice(vals)
  # Reverse excitation gives S22 and independently verifies reciprocity.
@@ -105,6 +107,7 @@ def main():
      spots[str(ff)]={'antenna_to_rx_gain_dB':float(np.interp(ff,f,gh)), 'realized_zenith_gain_dBi':float(ant[name]['realized_zenith_gain_dBi'][i]),'system_X_noise_K_median':float(np.median(sky[name]['system_X_K'][j]))}
     summary['antenna_cases'][name]=spots
   h.attrs['summary']=json.dumps(summary)
+  h.attrs['electrical_definition_sha256']=hashlib.sha256(json.dumps([asdict(p) for p in preamp()[0]+biastee()[0]],sort_keys=True).encode()).hexdigest()
  (R/'simulation/end_to_end_results.json').write_text(json.dumps(summary,indent=2)+'\n')
  print(json.dumps(summary,indent=2))
 if __name__=='__main__':main()

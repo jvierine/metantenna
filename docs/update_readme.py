@@ -19,9 +19,11 @@ The modeled SIMONe 32.55 MHz deployment uses **{g['arm_length_m']:.2f} m arms,
 shown below. Complete-system RF, weather and installation tests are outstanding;
 the fabrication files are prototype files. No manufacturing order has been placed.
 
-**Rev B is not yet released for ordering:** native KiCad DRC, schematic-to-PCB
-comparison, connector footprint/assembly review and JLCPCB CAM review remain
-required. The Gerber archives are for prototype review, not an approved order.
+**Rev B prototype manufacturing:** native KiCad electrical/clearance and
+schematic-parity checks pass. The [JLCPCB package and order instructions](manufacturing/JLC_ORDER.md)
+include separate BOM/CPL files and hand-installed connector lists. Exact part
+matching, placement preview and manufacturer CAM acceptance remain required
+before payment; this is not measured RF qualification.
 
 ## Deployment
 
@@ -106,6 +108,17 @@ bottom copper; ground planes are hidden in this view.
 **Indoor board — 76 × 64 mm.** X injects bias power; Y is an RF-only pass-through.
 
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
+
+## Complete signal chain and arm lengths
+
+![Antenna-to-receiver gain and sky-inclusive system noise](docs/end_to_end_comparison.png)
+
+The 1, 1.5 and 2 m arm comparisons use the same **2 m mast and 25° downward
+slope**. Gain includes the preamp, bias tee and 50 m cable; noise includes PyGDSM
+sky. The amplifier is a linear behavioral model, not a transistor-level simulation.
+For a matched 50 Ω source, modelled cable-inclusive gain is **15.9–17.3 dB**.
+Use regulated **12 V (minimum 11.76 V)** and coax with **≤3 Ω DC loop resistance**.
+[Calculation details and limits](simulation/END_TO_END.md).
 
 ## Housing and files
 

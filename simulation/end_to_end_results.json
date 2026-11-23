@@ -1,0 +1,100 @@
+{
+  "model": "Linear end-to-end behavioral amplifier, passive SPICE, NEC2 antenna and PyGDSM sky; not measured or PCB EM qualified",
+  "frequency_MHz": [
+    1,
+    400
+  ],
+  "X_gain_50ohm_30_55_dB": [
+    15.924401513077989,
+    17.282924408938086
+  ],
+  "Y_gain_50ohm_30_55_dB": [
+    15.932641764682703,
+    17.302956519121967
+  ],
+  "X_Y_gain_difference_dB_max": 0.029224332961366173,
+  "dc_corners": 1440,
+  "head_input_current_mA_max": 190.78908612754762,
+  "regulator_headroom_after_0p4V_margin_V_min": 0.21002942485207254,
+  "bias_resistor_dissipation_W_max": 0.36729489188228337,
+  "LDO_dissipation_W_max": 0.32622328249927474,
+  "installation_requirement": "50m coax DC loop resistance <=3 ohm; regulated 12V -2%/+10%; ambient -20..60C. Cable RF loss assumed 5dB at50MHz, sqrt(f).",
+  "off_spec_supply_or_cable_dropout_corners": 244,
+  "active_model_limits": "25.1dB gain and2.7dB NF extrapolated from100MHz typicals. IP3/P1dB budget only, not nonlinear simulation. No transistor or mismatch noise parameters; no loop stability, oscillation or X/Y coupling certification.",
+  "antenna_cases": {
+    "arms_1p0m": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": -8.341442379829049,
+        "realized_zenith_gain_dBi": -20.257733976344895,
+        "system_X_noise_K_median": 143998.4386836043
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 3.2458450596292727,
+        "realized_zenith_gain_dBi": -9.067019411245472,
+        "system_X_noise_K_median": 12601.867752806345
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 6.980940617213984,
+        "realized_zenith_gain_dBi": -6.294397776056768,
+        "system_X_noise_K_median": 7143.670560391442
+      }
+    },
+    "arms_1p5m": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": 1.420597624081137,
+        "realized_zenith_gain_dBi": -10.544217697684239,
+        "system_X_noise_K_median": 24099.06305396328
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 14.494727557778276,
+        "realized_zenith_gain_dBi": 2.9104834030759825,
+        "system_X_noise_K_median": 4843.61393412244
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 11.564648385635794,
+        "realized_zenith_gain_dBi": -0.7823882894535954,
+        "system_X_noise_K_median": 4570.610957255207
+      }
+    },
+    "arms_2p0m": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": 14.163249650820108,
+        "realized_zenith_gain_dBi": 2.139210076841194,
+        "system_X_noise_K_median": 10466.338462478352
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 7.133703000720205,
+        "realized_zenith_gain_dBi": -4.238607087230125,
+        "system_X_noise_K_median": 7460.548071187102
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 6.356843303246865,
+        "realized_zenith_gain_dBi": -5.559334696167069,
+        "system_X_noise_K_median": 7534.943875449463
+      }
+    },
+    "SIMONe_candidate": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": 17.118059138264005,
+        "realized_zenith_gain_dBi": 4.998962096961528,
+        "system_X_noise_K_median": 10009.401910301412
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 6.155175760952791,
+        "realized_zenith_gain_dBi": -5.107817046149068,
+        "system_X_noise_K_median": 8276.276031315783
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 5.6492532689026085,
+        "realized_zenith_gain_dBi": -6.076942621471551,
+        "system_X_noise_K_median": 8288.73534090854
+      }
+    }
+  },
+  "checks": {
+    "reciprocity": true,
+    "DC_headroom": true,
+    "bias_resistor_derating": true,
+    "MMIC_current_below_120mA": true
+  }
+}
