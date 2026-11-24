@@ -14,9 +14,17 @@ Both designs use 50 Ω coax outputs, a 12 V bias tee and common-mode filtering. 
 ![VHF antenna deployment](vhf/docs/antenna_deployment.png)
 ![VHF antenna PCB with critical components](vhf/docs/preamp_rev_b_annotated.png)
 
+**VHF indoor bias tee — power injection and filtering at the receiver.**
+
+![VHF bias-tee PCB](vhf/docs/biastee_layout.png)
+
 ## HF example
 
 ![HF active antenna PCB](hf/docs/hf_preamp_layout.png)
+
+**HF indoor bias tee — separate low-frequency common-mode filtering.**
+
+![HF bias-tee PCB](hf/docs/hf_biastee_layout.png)
 
 The design folders contain the schematics, PCB layouts, simulation results and manufacturing guidance. Shared [mechanical designs](mechanical/), [modeling code](simulation/) and [CAD generators](hardware/) are kept at the repository root.
 
@@ -29,3 +37,7 @@ These are open engineering prototypes, not certified products. Simulation and CA
 Use **KiCad 10.0.x stable** for these designs. Nico uses 10.0.5; local validation used 10.0.8. KiCad documents point releases as file-compatible. Avoid saving shared files with a newer major version or a nightly build until the team agrees to migrate. Project-local symbols and footprints are included; retain `sym-lib-table`, `fp-lib-table` and the adjacent library directories when copying a design.
 
 `main` is the integrated working version: VHF and HF designs, retained common-mode filtering, and Nico's reviewed VHF hierarchy/coupling updates. `pfeffer-review` remains Nico's review branch.
+
+## Component choices
+
+**G/T and the ability to deploy more receivers are the priorities.** Spend where it improves useful antenna gain relative to system noise temperature, blocker tolerance and reliability; keep the assembled station affordable. Preferred manufacturers are a starting point, not a requirement to buy premium parts everywhere. Lower-cost filter options may trade up to 1 dB additional passband ripple and approximately 10% shift in the −3 dB edge, provided the radar frequency remains usable, FM rejection and linearity remain sufficient, and the complete noise budget passes. These are comparison allowances, not demonstrated performance or automatic acceptance limits. See the [component selection criteria](vhf/docs/ENGINEERING.md#component-selection-and-cost-tradeoffs).

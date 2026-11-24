@@ -4,7 +4,14 @@ Balanced high-impedance X/Y inputs use paired MMBFJ310 JFET followers and BC850C
 
 **This prototype is not RF-qualified or ready to order.** Native CAD checks pass, but the complete antenna/noise target, stability, blocker linearity and installed common-mode suppression still require validation. High input resistance alone does not establish sensitivity.
 
+## Antenna head
+
 ![HF antenna board](docs/hf_preamp_layout.png)
+
+## Indoor bias tee
+
+The bias tee sits beside the receiver; the amplifier sits at the antenna. Only X supplies DC, while both coax paths include common-mode filtering.
+
 ![HF bias board](docs/hf_biastee_layout.png)
 
 - [KiCad schematic and PCB sources](hardware/)
