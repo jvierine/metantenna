@@ -32,7 +32,7 @@ identifies factory-installed connectors. Do not proceed with a quotation that
 leaves connectors for the customer to solder. The assembler must confirm
 through-hole installation, including the bottom-side preamp SMA operation.
 The preamp SMA bodies go on the **underside**, pointing down; the
-indoor connectors are **Amphenol 132203 right-angle bulkhead jacks on top**.
+indoor connectors are **XUNPU SMA-KWE-323C-H13X23-LW right-angle bulkhead jacks on top**.
 J10/J20 point left toward the antenna cables; J11/J21 point right toward
 the receiver cables. They exit the printed case sidewalls, not its lid.
 Use the new biastee_base.stl and biastee_lid.stl; 2 mm panels accommodate
