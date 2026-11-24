@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: conda-incubator/setup-miniconda@v3
         with:
           python-version: '3.12'
@@ -14,23 +16,19 @@ jobs:
           auto-activate-base: true
       - name: Install KiCad
         run: |
-          sudo add-apt-repository --yes ppa:kicad/kicad-9.0-releases
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update -qq
           sudo apt-get install --no-install-recommends -y kicad
           kicad-cli version
-      - name: Fill reference planes with KiCad
-        shell: bash -el {0}
-        run: |
-          PYTHONPATH=/usr/lib/python3/dist-packages conda run -n base python -c "import pcbnew; from pathlib import Path; [(lambda b,p: (pcbnew.ZONE_FILLER(b).Fill(b.Zones()), pcbnew.SaveBoard(str(p),b)))(pcbnew.LoadBoard(str(p)),p) for p in Path('hardware').glob('*.kicad_pcb')]"
       - name: Check and render
         run: |
           mkdir -p validation/native
           for board in preamp biastee; do
             mkdir -p validation/native/$board
-            kicad-cli sch export netlist -o validation/native/$board/netlist.xml vhf/hardware/$board.kicad_sch
+            kicad-cli sch export netlist --format kicadxml -o validation/native/$board/netlist.xml vhf/hardware/$board.kicad_sch
             kicad-cli sch export pdf -o validation/native/$board/schematic.pdf vhf/hardware/$board.kicad_sch
             kicad-cli sch erc --severity-error -o validation/native/$board/erc.txt vhf/hardware/$board.kicad_sch
-            kicad-cli pcb drc --schematic-parity -o validation/native/$board/drc.txt vhf/hardware/$board.kicad_pcb
+            kicad-cli pcb drc --refill-zones --save-board --schematic-parity -o validation/native/$board/drc.txt vhf/hardware/$board.kicad_pcb
             kicad-cli pcb export svg -l F.Cu,F.SilkS,Edge.Cuts -o validation/native/$board/board.svg vhf/hardware/$board.kicad_pcb
             kicad-cli pcb export gerbers -l F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,F.SilkS,Edge.Cuts -o validation/native/$board/gerbers/ vhf/hardware/$board.kicad_pcb
             kicad-cli pcb export drill --excellon-separate-th -o validation/native/$board/gerbers/ vhf/hardware/$board.kicad_pcb
@@ -39,7 +37,9 @@ jobs:
           done
       - name: Require clean native reports
         shell: bash -el {0}
-        run: conda run -n base python hardware/check_native_report.py validation/native
+        run: |
+          conda run -n base python hardware/check_native_report.py validation/native
+          conda run -n base python hardware/check_review_netlist.py validation/native/preamp/netlist.xml
       - uses: actions/upload-artifact@v4
         if: always()
         with:

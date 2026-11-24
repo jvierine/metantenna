@@ -20,6 +20,9 @@ def pins(p):
     return [(str(i+1),-7.62,3.81-2.54*i,0) for i in range(4)]+[(str(i+5),7.62,-3.81+2.54*i,180) for i in range(4)]+[('9',0,-10.16,90)]
 
 def build(name,parts):
+    if name=="preamp" and ROOT==Path(__file__).resolve().parents[1]/"vhf":
+        from hierarchical_schematic import build as hierarchical_build
+        hierarchical_build();return
     rootid=uid(name);lines=[f'(kicad_sch (version 20231120) (generator "eeschema") (uuid "{rootid}") (paper "A2")',
         f'(title_block (title {q("Metantenna — "+name+" — engineering prototype")}) (date "2026-11-23") (rev "B0") (company "Juha Vierinen"))','(lib_symbols']
     for p in parts:

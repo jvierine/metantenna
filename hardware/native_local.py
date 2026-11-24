@@ -16,9 +16,12 @@ for name in ['preamp','biastee']:
  for ext in ['kicad_pcb','kicad_sch','kicad_pro']:shutil.copy2(R/'hardware'/f'{name}.{ext}',src/f'{name}.{ext}')
  shutil.copytree(R/'hardware/metantenna.pretty',src/'metantenna.pretty',dirs_exist_ok=True)
  shutil.copy2(R/'hardware/fp-lib-table',src/'fp-lib-table')
+ if name=='preamp':
+  for pattern in ['x_*.kicad_sch','y_*.kicad_sch','*.kicad_sym','sym-lib-table']:
+   for child in (R/'hardware').glob(pattern):shutil.copy2(child,src/child.name)
  b=src/f'{name}.kicad_pcb';s=src/f'{name}.kicad_sch'
  print(run('pcb','drc','--refill-zones','--save-board','--schematic-parity','-o',d/'drc.txt',b),flush=True)
- print(run('sch','erc','--severity-error','-o',d/'erc.txt',s),flush=True)
+ print(run('sch','erc','--severity-all' if name=='preamp' else '--severity-error','-o',d/'erc.txt',s),flush=True)
  run('sch','export','pdf','-o',d/'schematic.pdf',s)
  run('pcb','export','svg','-l','F.Cu,F.SilkS,Edge.Cuts','-o',d/'board.svg',b)
  run('pcb','export','gerbers','-l','F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,F.SilkS,Edge.Cuts','-o',str(d/'gerbers')+'/',b)

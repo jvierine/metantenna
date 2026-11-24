@@ -5,14 +5,14 @@
     100
   ],
   "X_gain_50ohm_30_55_dB": [
-    15.445656623691935,
-    17.09927402345962
+    15.4307855448277,
+    17.104613372149664
   ],
   "Y_gain_50ohm_30_55_dB": [
-    15.522332530453786,
-    17.156860286217444
+    15.512868300255548,
+    17.179269273315356
   ],
-  "X_Y_gain_difference_dB_max": 0.09750186426449048,
+  "X_Y_gain_difference_dB_max": 0.11718823880553231,
   "added_filter_DC_resistance_ohm_max": 0.29,
   "dc_corners": 1440,
   "head_input_current_mA_max": 190.78908612754762,
@@ -25,68 +25,68 @@
   "antenna_cases": {
     "arms_1p0m": {
       "32.55": {
-        "antenna_to_rx_gain_dB": -8.54731367683933,
+        "antenna_to_rx_gain_dB": -8.578750681875755,
         "realized_zenith_gain_dBi": -20.257733976344895,
         "system_X_noise_K_median": 143998.4386836043
       },
       "50": {
-        "antenna_to_rx_gain_dB": 2.843885535968144,
+        "antenna_to_rx_gain_dB": 2.8417083588164633,
         "realized_zenith_gain_dBi": -9.067019411245472,
         "system_X_noise_K_median": 12601.867752806345
       },
       "55": {
-        "antenna_to_rx_gain_dB": 6.50219572782793,
+        "antenna_to_rx_gain_dB": 6.5570216199718,
         "realized_zenith_gain_dBi": -6.294397776056768,
         "system_X_noise_K_median": 7143.670560391442
       }
     },
     "arms_1p5m": {
       "32.55": {
-        "antenna_to_rx_gain_dB": 1.2147263270708577,
+        "antenna_to_rx_gain_dB": 1.1681330361811737,
         "realized_zenith_gain_dBi": -10.544217697684239,
         "system_X_noise_K_median": 24099.06305396328
       },
       "50": {
-        "antenna_to_rx_gain_dB": 14.092768034117146,
+        "antenna_to_rx_gain_dB": 14.050557769754333,
         "realized_zenith_gain_dBi": 2.9104834030759825,
         "system_X_noise_K_median": 4843.61393412244
       },
       "55": {
-        "antenna_to_rx_gain_dB": 11.08590349624974,
+        "antenna_to_rx_gain_dB": 11.0947348344618,
         "realized_zenith_gain_dBi": -0.7823882894535954,
         "system_X_noise_K_median": 4570.610957255207
       }
     },
     "arms_2p0m": {
       "32.55": {
-        "antenna_to_rx_gain_dB": 13.957378353809826,
+        "antenna_to_rx_gain_dB": 13.881583685038878,
         "realized_zenith_gain_dBi": 2.139210076841194,
         "system_X_noise_K_median": 10466.338462478352
       },
       "50": {
-        "antenna_to_rx_gain_dB": 6.731743477059076,
+        "antenna_to_rx_gain_dB": 6.696160941903308,
         "realized_zenith_gain_dBi": -4.238607087230125,
         "system_X_noise_K_median": 7460.548071187102
       },
       "55": {
-        "antenna_to_rx_gain_dB": 5.87809841386081,
+        "antenna_to_rx_gain_dB": 5.909044884956035,
         "realized_zenith_gain_dBi": -5.559334696167069,
         "system_X_noise_K_median": 7534.943875449463
       }
     },
     "SIMONe_candidate": {
       "32.55": {
-        "antenna_to_rx_gain_dB": 16.912187841253726,
+        "antenna_to_rx_gain_dB": 16.90256662876256,
         "realized_zenith_gain_dBi": 4.998962096961528,
         "system_X_noise_K_median": 10009.401910301412
       },
       "50": {
-        "antenna_to_rx_gain_dB": 5.753216237291664,
+        "antenna_to_rx_gain_dB": 5.720298145140214,
         "realized_zenith_gain_dBi": -5.107817046149068,
         "system_X_noise_K_median": 8276.276031315783
       },
       "55": {
-        "antenna_to_rx_gain_dB": 5.170508379516554,
+        "antenna_to_rx_gain_dB": 5.203902077766837,
         "realized_zenith_gain_dBi": -6.076942621471551,
         "system_X_noise_K_median": 8288.73534090854
       }

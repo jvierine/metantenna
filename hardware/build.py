@@ -221,6 +221,7 @@ class Router:
 
 def q(s):return json.dumps(str(s))
 def pcb(name,parts,size,r):
+    hierarchical=name=='preamp' and ROOT==Path(__file__).resolve().parents[1]/'vhf'
     nets={'GND':1}
     for p in parts:
         for n in p.nets.values():
@@ -232,16 +233,27 @@ def pcb(name,parts,size,r):
     for p in parts:
         for pin,n in p.nets.items():
             if not n:
-                label={'3':'NC-','7':'DNC-'}.get(pin,'') if p.package=='MSOP8EP' else ''
+                label={'3':'NC-','7':'DNC-'}.get(pin,'') if p.package=='MSOP8EP' else ('~-' if hierarchical and p.package=='CD542' else '')
                 nn=f'unconnected-({p.ref}-{label}Pad{pin})'
                 nc[(p.ref,pin)]=nn;nets[nn]=len(nets)+1
-    native_name=lambda n:n if n.startswith('unconnected-') else '/'+n
+    native_name=lambda n:n if hierarchical or n.startswith('unconnected-') else '/'+n
     lines += [f'(net {i} {q(native_name(n))})' for n,i in nets.items()]
     for p in parts:
         lines.append(f'(footprint {q("metantenna:"+p.package)} (layer "{p.side}.Cu") (at {p.x} {p.y} {p.rotation}) (attr {"through_hole" if p.package in ["SMA","SMA_RA","ANT_M3","TERM2"] else "smd"}{" dnp" if p.value.startswith("DNP") else ""})')
         lines.append(f'(fp_text reference {q(p.ref)} (at 0 -3.5) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.12))))')
         lines.append(f'(fp_text value {q(p.value)} (at 0 0) (layer "F.Fab") (effects (font (size 0.7 0.7) (thickness 0.1))))')
         lines.append(f'(property "MPN" {q(p.mpn)} (at 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))')
+        if hierarchical:
+            # Retain Nico's published device links and component-rating fields.
+            import sexpdata as sx
+            for sf in (ROOT/'hardware').glob('*.kicad_sch'):
+                tree=sx.load(open(sf))
+                for item in tree:
+                    if not isinstance(item,list) or not item or str(item[0])!='symbol':continue
+                    props={str(z[1]):str(z[2]) for z in item if isinstance(z,list) and z and str(z[0])=='property'}
+                    if props.get('Reference')!=p.ref:continue
+                    for key in ['Datasheet','Description']:
+                        if props.get(key):lines.append(f'(property {q(key)} {q(props[key])} (at 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))')
         for pin,x,y,w,h,hole in pads(p.package):
             n=p.nets[pin] or nc[(p.ref,pin)];net=f'(net {nets[n]} {q(native_name(n))})'
             typ='thru_hole' if hole else 'smd';shape='circle' if hole else 'rect'
@@ -269,7 +281,7 @@ def pcb(name,parts,size,r):
         # No reference-plane copper under the dirty supply pair; the RF
         # ground is continuous everywhere below y=14, including both RF paths.
         pts=(f'(xy 0.5 0.5) (xy 34 0.5) (xy 34 14) (xy 50 14) (xy 50 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5}) (xy 0.5 58) (xy 15.5 58) (xy 15.5 42) (xy 0.5 42) (xy 0.5 35) (xy 15.5 35) (xy 15.5 19) (xy 0.5 19)' if name=='biastee' else f'(xy 0.5 0.5) (xy {w-.5} 0.5) (xy {w-.5} {h-.5}) (xy 0.5 {h-.5})')
-        lines.append(f'(zone (net 1) (net_name "/GND") (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts {pts})))')
+        lines.append(f'(zone (net 1) (net_name {q(native_name("GND"))}) (layer "{layer}") (hatch edge 0.5) (connect_pads yes (clearance {clearance})) (min_thickness 0.25) (fill yes (thermal_gap 0.25) (thermal_bridge_width 0.3)) (polygon (pts {pts})))')
     if name=='biastee':
         # Antenna-facing SMA shields have separate islands on all four layers.
         # The only intentional connection to indoor ground is the CMC winding.

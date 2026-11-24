@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "review") (type "KiCad") (uri "${KIPRJMOD}/review.kicad_sym") (options "") (descr "Reviewed functional symbols")) (lib (name "metantenna") (type "KiCad") (uri "${KIPRJMOD}/metantenna.kicad_sym") (options "") (descr "Board connectors")))

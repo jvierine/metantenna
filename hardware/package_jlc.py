@@ -66,7 +66,7 @@ def main():
   status[name]['SMT_parts_per_board']=len(cpl);status[name]['factory_connector_parts_per_board']=len(manual)
  # A release manifest binds the checked source, native reports and actual archives.
  shutil.copy2(R/'manufacturing/JLC_ORDER.md',out/'ORDER_INSTRUCTIONS.md')
- shutil.copy2(R/'simulation/END_TO_END.md',out/'SIMULATION_SUMMARY.md')
+ shutil.copy2(R.parent/'simulation/END_TO_END.md',out/'SIMULATION_SUMMARY.md')
  for p in ['end_to_end_comparison.pdf','preamp_rev_b_annotated.png','wire_exit_plan.png','biastee_case_exploded.png']:
   shutil.copy2(R/'docs'/p,out/p)
  manifest={'source_commit':a.commit,'native_CAD':('KiCad '+(a.native/'version.txt').read_text().strip()+' local CLI' if (a.native/'version.txt').exists() else 'KiCad 9.0.9 via GitHub Actions'),'boards':status,

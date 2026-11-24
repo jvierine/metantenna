@@ -28,6 +28,15 @@ before payment; this is not measured RF qualification.
 [Download the complete Rev B JLCPCB package](manufacturing/metantenna_rev_b_jlc_package.zip)
 — five preamp boards and five bias-tee boards.
 
+## Reviewed schematic update
+
+![Functional schematic hierarchy](docs/preamp_hierarchy.png)
+
+The maintained [15-sheet preamp schematic](docs/preamp_schematic.pdf) uses Nico's functional hierarchy and conventional symbols. Both channels now have a 2.4 nF input DC block and 2.4 nF amplifier-output DC block. Our three indoor common-mode chokes, supply ferrite/filter and Y-shield DC block are retained.
+
+The [before/after ngspice comparison](docs/nico_circuit_comparison.pdf) predicts only 0.009–0.020 dB less gain over 30–55 MHz and less than 0.008 dB noise-figure change. These are linear behavioral-amplifier results, not measured stability or blocker qualification. [Numeric results and reproducible circuits](../simulation/nico_review/) are available in HDF5.
+
+
 ## Deployment
 
 ![Dimensioned antenna deployment and wiring](docs/antenna_deployment.png)

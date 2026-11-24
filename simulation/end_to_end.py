@@ -16,6 +16,9 @@ R=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(R/'hardware'))
 from design import preamp,biastee
 P={p.ref:p for p in preamp()[0]}
+def coupling_cap(ref):
+ import re
+ a=re.match(r'([\d.]+)([pnu])',P[ref].value);return float(a[1])*{'p':1e-12,'n':1e-9,'u':1e-6}[a[2]]
 
 def series(z):
  m=np.zeros((len(z),2,2),complex);m[:,0,0]=m[:,1,1]=1;m[:,0,1]=z;return m
@@ -54,7 +57,7 @@ def main():
  # Actual pi pad and two output blocking capacitors from the electrical design.
  assert [P[x].value for x in ['R103','R104','R105']]==['294','18','294']
  pad=shunt(np.full(len(f),1/294))@series(np.full(len(f),18))@shunt(np.full(len(f),1/294))
- out=series(cap(1e-9))@pad@series(cap(1e-9))
+ out=series(cap(coupling_cap('C108')))@pad@series(cap(coupling_cap('C109')))
  # Matched unilateral amplifier in ABCD form (S12=0); no reverse stability claim.
  amp=abcd(np.zeros(len(f)),np.full(len(f),10**(25.1/20)),np.zeros(len(f)),np.zeros(len(f)))
  balun=matched(np.full(len(f),10**(-.5/20)))
@@ -67,7 +70,7 @@ def main():
   cmatrix=abcd(interp('s11'),interp('s21'),interp('s12'),interp('s22'))
  indoorX=cmatrix@shunt(1/choke)@series(cap(1e-9))
  indoorY=cmatrix@series(2*cap(1e-9)) # C20 centre and C21 shield DC blocks
- headX=balun@pre@amp@out@shunt(1/choke);headY=balun@pre@amp@out
+ headX=balun@pre@series(cap(coupling_cap('C115')))@amp@out@shunt(1/choke);headY=balun@pre@series(cap(coupling_cap('C115')))@amp@out
  chainX=headX@cable@indoorX;chainY=headY@cable@indoorY
  band=(f>=30)&(f<=55)
  gx=10*np.log10(gain(chainX,50));gy=10*np.log10(gain(chainY,50))

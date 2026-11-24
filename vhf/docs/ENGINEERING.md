@@ -277,3 +277,12 @@ actual current). The full HF power budget and DC-return isolation still need
 the final amplifier circuit. Vendor differential data or bench S-parameters
 are required to qualify wanted-signal transmission; common-mode magnitude
 alone cannot establish that the stage works across0.1–30MHz.
+
+
+## Hierarchical schematic and circuit update
+
+The VHF preamp uses the maintained functional hierarchy adapted from Nico's review (`pfeffer-review`, 478666c). Reproduce it with `conda run -n base python hardware/hierarchical_schematic.py`; the generic schematic command delegates to it for the VHF preamp. The HF prototype keeps its own input architecture. Native sources require KiCad 10.
+
+The canonical electrical definition includes C115/C215 (2.4 nF input DC isolation) and C108/C208 increased to 2.4 nF. Existing high-pass capacitors already isolated DC; this is additional local isolation, not evidence of a former input short. The integration reconciles references and pin orientation, maintains separate X/Y regulator outputs and preserves the Y output DC block. `hardware/check_review_netlist.py` checks every connected pin and the unchanged indoor common-mode network.
+
+The circuit comparison in `simulation/nico_review/` consumes exported before/after netlists, uses ngspice for the RLC network and matched linear GALI gain/noise, and writes HDF5. It includes coupling-capacitor tolerance corners. It does not establish amplifier bias voltages internally, nonlinear IP3, compression or loop stability. The broader end-to-end model uses the updated coupling values but retains its stated approximations.

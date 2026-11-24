@@ -1,0 +1,75 @@
+Metantenna 50-ohm preselector; source voltage 2 V gives unity matched S21
+Vsrc src 0 AC 2
+Rsrc src a 50
+
+Rchp1 a chp1r 0.03
+Lchp1 chp1r chp1l 0.5n
+Cchp1 chp1l b 160.0p
+Rlhp b lhpr 0.9873576911282208
+Llhp lhpr 0 220.0n
+Clhppar b 0 0.1p
+Rchp2 b chp2r 0.03
+Lchp2 chp2r chp2l 0.5n
+Cchp2 chp2l c 160.0p
+Rclp1 c clp1r 0.03
+Lclp1 clp1r clp1l 0.5n
+Cclp1 clp1l 0 36.0p
+Rllp2 c llp2r 0.4487989505128276
+Lllp2 llp2r d 100.0n
+Cllp2par c d 0.1p
+Rclp2 c clp2r 0.03
+Lclp2 clp2r clp2l 0.5n
+Cclp2 clp2l d 33.0p
+Rclp3 d clp3r 0.03
+Lclp3 clp3r clp3l 0.5n
+Cclp3 clp3l 0 75.0p
+Rllp4 d llp4r 0.5385587406153931
+Lllp4 llp4r out 120.0n
+Cllp4par d out 0.1p
+Rclp4 d clp4r 0.03
+Lclp4 clp4r clp4l 0.5n
+Cclp4 clp4l out 20.0p
+Rclp5 out clp5r 0.03
+Lclp5 clp5r clp5l 0.5n
+Cclp5 clp5l 0 43.0p
+Cpada a 0 0.3p
+Cpadb b 0 0.3p
+Cpadc c 0 0.3p
+Cpadd d 0 0.3p
+Cpadout out 0 0.3p
+
+.temp 16.85
+Rinput out inputr .03
+Linput inputr inputl .5n
+Cinput inputl galin 2.4e-09
+Rmatch galin 0 50 temp=-273.149
+Rnoise vn 0 10.776089208285844
+Eamp oa 0 value={ 35.977418302575764*(v(galin)+v(vn)) }
+Rout oa ampout 50 temp=-273.149
+Rbias ampout biasL 41.2
+Lbias biasL biasR 1u
+Rchoke biasR 0 1.8
+Cchoke ampout 0 .5p
+Routput ampout outputr .03
+Loutput outputr outputl .5n
+Coutput outputl padin 2.4e-09
+Rpad1 padin 0 294
+Rpad2 padin padout 18
+Rpad3 padout 0 294
+Rfinal padout finalr .03
+Lfinal finalr finall .5n
+Cfinal finall rx 1e-09
+Rload rx 0 50 temp=-273.149
+.control
+set wr_singlescale
+set wr_vecnames
+ac lin 2999 100k 150Meg
+let response=v(rx)
+let reflection=v(a)-1
+wrdata ac.txt real(response) imag(response) real(reflection) imag(reflection)
+noise v(rx) Vsrc lin 2999 100k 150Meg
+setplot noise1
+wrdata noise.txt onoise_spectrum inoise_spectrum
+quit
+.endc
+.end

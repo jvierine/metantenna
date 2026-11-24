@@ -1,0 +1,86 @@
+{
+  "model": "ngspice linear unilateral matched GALI74+:25.1dB gain,2.7dB NF extrapolated from100MHz; not IP3/compression/stability qualification",
+  "scope": "head balun-secondary to SMA; 50ohm source/load; unchanged antenna,balun,cable,indoor CM network excluded",
+  "spots": {
+    "30": {
+      "before": {
+        "gain_dB": 21.4620512097626,
+        "noise_figure_dB": 3.0420320753506647
+      },
+      "after": {
+        "gain_dB": 21.45313185733288,
+        "noise_figure_dB": 3.0418396395066183
+      }
+    },
+    "32.55": {
+      "before": {
+        "gain_dB": 21.545655045607255,
+        "noise_figure_dB": 3.0014142963844783
+      },
+      "after": {
+        "gain_dB": 21.528452199444793,
+        "noise_figure_dB": 3.0056617649628814
+      }
+    },
+    "50": {
+      "before": {
+        "gain_dB": 21.66218305600175,
+        "noise_figure_dB": 2.999704062110038
+      },
+      "after": {
+        "gain_dB": 21.645675686928353,
+        "noise_figure_dB": 3.0061427944444326
+      }
+    },
+    "55": {
+      "before": {
+        "gain_dB": 21.60951240521499,
+        "noise_figure_dB": 3.0549464383959926
+      },
+      "after": {
+        "gain_dB": 21.591804791725053,
+        "noise_figure_dB": 3.0624142536308847
+      }
+    },
+    "88": {
+      "before": {
+        "gain_dB": -33.273749450752014,
+        "noise_figure_dB": 54.769267972785514
+      },
+      "after": {
+        "gain_dB": -33.31917651655712,
+        "noise_figure_dB": 54.817786309159004
+      }
+    },
+    "108": {
+      "before": {
+        "gain_dB": -23.649922477368914,
+        "noise_figure_dB": 45.10243998983587
+      },
+      "after": {
+        "gain_dB": -23.676402960957766,
+        "noise_figure_dB": 45.13598433337194
+      }
+    }
+  },
+  "DC_input_to_ground_path": {
+    "before": {
+      "X": false,
+      "Y": false
+    },
+    "after": {
+      "X": false,
+      "Y": false
+    }
+  },
+  "cap_tolerance_gain_excursion_dB_max": 0.0009499195602842292,
+  "XY_RF_agreement": true,
+  "gain_change_30_55_dB_minmax": [
+    -0.02005523891309835,
+    -0.008919352429717975
+  ],
+  "noise_figure_change_30_55_dB_minmax": [
+    -0.00019243584404637915,
+    0.00746884862183439
+  ]
+}

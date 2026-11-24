@@ -39,8 +39,9 @@ def preamp():
         # with/without populated diodes before selecting the production option.
         two('D',1,'DNP BAT15-03W','SOD323','AMP_IN','GND',55,y-4,90,'BAT15-03W','DNP; optional input clamp, not lightning protection')
         two('D',2,'DNP BAT15-03W','SOD323','GND','AMP_IN',58,y-4,90,'BAT15-03W','DNP; optional input clamp')
-        add(f'U{n+1}','GALI-74+','SOT89',{1:net('AMP_IN'),2:'GND',3:net('AMP_OUT')},61,y-1.65,mpn='GALI-74+')
-        two('C',8,'1n','0805','AMP_OUT','PAD_IN',66,y,mpn='C0805C102J5GACTU')
+        two('C',15,'2.4n','0805','AMP_IN','GALI_IN',56.5,y,mpn='C0805C242J5GACTU',note='Nico review: DC isolation at the biased GALI input')
+        add(f'U{n+1}','GALI-74+','SOT89',{1:net('GALI_IN'),2:'GND',3:net('AMP_OUT')},61,y-1.65,mpn='GALI-74+')
+        two('C',8,'2.4n','0805','AMP_OUT','PAD_IN',66,y,mpn='C0805C242J5GACTU',note='Nico review: output DC block increased from 1 nF')
         two('R',3,'294','0805','PAD_IN','GND',70,y+3,90,'RC0805FR-07294RL')
         two('R',4,'18','0805','PAD_IN','PAD_OUT',74,y,mpn='RC0805FR-0718RL')
         two('R',5,'294','0805','PAD_OUT','GND',78,y+3,90,'RC0805FR-07294RL')

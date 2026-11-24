@@ -1,0 +1,14 @@
+{
+  "native_KiCad": "10.0.8",
+  "ERC_preamp_all_severities": "zero findings",
+  "DRC_and_schematic_parity": "zero findings, both boards",
+  "common_mode_network": "Entire indoor bias-board component definition checked unchanged from f8b7d8e",
+  "RF_model": "linear ngspice, not hardware or nonlinear validation",
+  "sha256": {
+    "vhf/hardware/preamp.kicad_sch": "bda73ddf28de4e79c9e7acfe18fbcb171871d6f061d2d297f570ed40f63d58e8",
+    "vhf/hardware/preamp.kicad_pcb": "a4bb6a3c433eb55410ff8d83a1b9fa7cb4444ab2cb134d1c904ad6aeb851a733",
+    "simulation/nico_review/after_netlist.xml": "20156f3ace5a7a3b597e8f181f84fb90f82741af84d44dae8ccc15f0455d9e1e"
+  },
+  "ERC_report_sha256": "440b64d8077d1ffad7afd81db5e69a367b44d4ea7114b6a72df618350b049aa4",
+  "manufacturing_status": "Prototype only; sourcing, assembly preview, actual RF and mechanical qualification remain required"
+}
