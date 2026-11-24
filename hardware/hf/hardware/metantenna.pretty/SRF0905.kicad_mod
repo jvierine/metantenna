@@ -1,0 +1,6 @@
+(footprint "SRF0905" (version 20221018) (generator pcbnew) (layer "F.Cu")
+(attr smd)
+(pad "1" smd rect (at -3.75 -1.27) (size 2 1.2)  (layers "F.Cu" "F.Paste" "F.Mask"))
+(pad "2" smd rect (at -3.75 1.27) (size 2 1.2)  (layers "F.Cu" "F.Paste" "F.Mask"))
+(pad "3" smd rect (at 3.75 1.27) (size 2 1.2)  (layers "F.Cu" "F.Paste" "F.Mask"))
+(pad "4" smd rect (at 3.75 -1.27) (size 2 1.2)  (layers "F.Cu" "F.Paste" "F.Mask")))

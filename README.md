@@ -147,20 +147,44 @@ a batch; the connector illustration is a dimensional envelope.
 
 ## HF variant — 0.1–30 MHz development
 
-The HF definition now selects **Linekey CLF9060-202Y (JLC C2941480)**,
-one per polarization, with a **100 kHz high-pass and 30 MHz low-pass target**.
-The full HF amplifier schematic and PCB are still under development.
+The separate HF prototype uses **paired MMBFJ310LT1G JFET voltage buffers**,
+**BC850C emitter followers**, an **ADT1-6T+** balun, a nominal **100 kHz
+high-pass / 30 MHz low-pass**, and the reused GALI-74+ output chain.
+The antenna input is high impedance; the transformer sees buffered outputs.
+The existing VHF board remains an approximately 50 Ω input design.
 
-![HF choke SPICE screening and approximate datasheet common-mode curve](docs/hf_choke_screening.png)
+The HF bias board uses **Bourns SRF0905-202Y (JLC C2651160) on both coax
+paths**, followed by the existing upper-band TDK chokes. Only X carries DC;
+the Y shield DC block prevents a parallel supply-return path. Signal blocks
+are increased to 220 nF and DC injection/extraction uses staggered inductors.
+Connector positions, board outlines and the plastic enclosures are retained.
 
-The SPICE common-mode model follows approximate points from the manufacturer's
-202Y graph to within 9%. The graph does not determine wanted-signal loss:
-**k is an assumed magnetic coupling coefficient**, not a published device value.
-For the fitted common-mode model, the examples give about **0.07, 0.8 and
-14 dB loss at 30 MHz** for k = 0.99999, 0.9999 and 0.999, respectively.
-These are sensitivity cases, not device-performance predictions or yield
-estimates. Differential vendor data or measured S-parameters are needed before
-releasing this RF stage. [SPICE circuits and HDF5 results](simulation/hf_choke/).
+**Development prototype, not ready to order.** Native KiCad ERC, clearance,
+connectivity and schematic-parity checks pass for both HF boards. These checks
+do not establish RF stability, noise performance or manufacturing readiness. Generic transistor SPICE models
+predict about **3.3–3.7 nV/√Hz differential input-referred voltage noise** at
+selected frequencies. This does **not** establish the 1.3-times-sky target;
+source impedance, input capacitance, device mismatch, blockers, stability,
+transformer/choke S-parameters and the full HF noise budget remain qualification
+items. No measured IP3 or system sensitivity is claimed. Both channels use
+quiet linear regulation; there is no switching converter.
+
+![HF JFET preamp prototype](docs/hf_preamp_layout.png)
+
+![HF bias board with both coax barriers](docs/hf_biastee_layout.png)
+
+![HF transistor SPICE screening](docs/hf_frontend_screening.png)
+
+[HF circuit overview](hardware/hf/frontend.pdf) ·
+[HF electrical source](hardware/hf_design.py) ·
+[HF KiCad prototype](hardware/hf/hardware/) ·
+[SPICE circuits and HDF5 results](simulation/hf/)
+
+The earlier [Linekey sensitivity sweep](simulation/hf_choke/) remains archived
+as an illustration of leakage uncertainty; it is **not a Bourns device model**.
+The older Bourns supplier sheet lists 250 nH maximum leakage, but the current
+manufacturer sheet omits that bound. Confirmation or measured differential
+S-parameters is still needed.
 
 ## Complete signal chain and arm lengths
 

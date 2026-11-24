@@ -1,0 +1,38 @@
+{
+  "status": "screening only; HF board NOT manufacturing released",
+  "model": "GenericNJFBETA.003,VTO-3.65;genericBC850;idealtransformer;matchedbehavioralGALI",
+  "spots": {
+    "100000.0": {
+      "voltage_gain_dB": 8.226910223127735,
+      "shorted_input_referred_noise_nV_per_sqrtHz": 3.66381232,
+      "input_impedance_ohm": [
+        996336.258,
+        -993744.328
+      ]
+    },
+    "1000000.0": {
+      "voltage_gain_dB": 12.008060877110369,
+      "shorted_input_referred_noise_nV_per_sqrtHz": 3.30710529,
+      "input_impedance_ohm": [
+        19724.8565,
+        -199328.932
+      ]
+    },
+    "10000000.0": {
+      "voltage_gain_dB": 11.942822084175027,
+      "shorted_input_referred_noise_nV_per_sqrtHz": 3.3254841,
+      "input_impedance_ohm": [
+        -703.852645,
+        -19925.0907
+      ]
+    },
+    "30000000.0": {
+      "voltage_gain_dB": 9.598438445098894,
+      "shorted_input_referred_noise_nV_per_sqrtHz": 3.59995179,
+      "input_impedance_ohm": [
+        -668.308716,
+        -6866.68284
+      ]
+    }
+  }
+}

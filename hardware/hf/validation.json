@@ -1,0 +1,20 @@
+{
+  "kicad": "10.0.8",
+  "status": "CAD checks pass; RF/noise/manufacturing qualification NOT complete",
+  "source_sha256": {
+    "hardware/biastee.kicad_pcb": "6568ca347b02d1e68f2591eb5735bb1545f54c7d543ae19eb3984a54c030f22f",
+    "hardware/preamp.kicad_pcb": "204b86b3f3148749b568147e4cc686fd61be47e438ead4cccbb1e408b0fdcc8d",
+    "hardware/biastee.kicad_sch": "5c61a455487568e4413443c4211b29786260ae2d007da5ee63f46d76b76c7f28",
+    "hardware/preamp.kicad_sch": "cb734e636e8002c00d386765df2c05bc08e2393a1756a0d91bf004b85bca5943",
+    "hardware/biastee.kicad_pro": "3ec4054b01b0ba361ae74d89b1a6049862d2f57f1aa3ba9fd8713a191df1fc9d",
+    "hardware/preamp.kicad_pro": "662d4d04c9b87eea494df71eb291e0870aa29213e26186cfa7dc972ebc5661db"
+  },
+  "HF_chain": "MMBFJ310LT1G + BC850C buffers, ADT1-6T+,100kHzHP/30MHzLP,GALI-74+",
+  "noise_target_met": false,
+  "limits": [
+    "No courtyard/body-fit qualification from nativeDRC",
+    "No measured full-band transistor noise or IP3",
+    "Bourns differential characterization outstanding",
+    "1.3timesSky not established"
+  ]
+}

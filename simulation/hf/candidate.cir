@@ -1,0 +1,62 @@
+HF JFET/emitter follower screen
+VDD vdd 0 6.0
+VANT gp gn DC 0 AC 1
+.model J310 NJF (BETA=0.003 VTO=-3.65 LAMBDA=.02 CGS=4.1p CGD=2p IS=1p)
+.model BC850 NPN (IS=6f BF=400 VAF=80 RB=50 RC=1 RE=.2 CJE=12p CJC=4p TF=.4n)
+RGp gp 0 1Meg
+RDp vdd dp 10
+CDp dp 0 100n
+Jp dp gp sp J310
+RSp sp 0 180
+Qp vdd sp ep BC850
+REp ep 0 220
+CCp ep cp 220n
+ROp cp tp 2.2
+RGn gn 0 1Meg
+RDn vdd dn 10
+CDn dn 0 100n
+Jn dn gn sn J310
+RSn sn 0 180
+Qn vdd sn en BC850
+REn en 0 220
+CCn en cn 220n
+ROn cn tn 2.2
+LP tp tn 1m
+LS sec 0 1m
+KX LP LS 1
+RREF tn 0 1T TEMP=-273.149
+RTERM sec hp0 39
+CH1 hp0 hp1 33n
+LH hp1 0 39u
+CH2 hp1 lp0 33n
+L1 lp0 lp1 120n
+C1 lp1 0 130p
+L2 lp1 lp2 470n
+C2 lp2 0 220p
+L3 lp2 lp3 470n
+C3 lp3 0 130p
+L4 lp3 amp_in 120n
+RIN amp_in 0 50 TEMP=-273.149
+RNOISE nv 0 10.8
+EAMP ao 0 VALUE={35.98*(v(amp_in)+v(nv))}
+ROUT ao ab 50
+CB ab pi1 220n
+RP1 pi1 0 294
+RP2 pi1 pi2 18
+RP3 pi2 0 294
+CO pi2 load 220n
+RLOAD load 0 50
+.control
+set wr_singlescale
+set wr_vecnames
+op
+print v(sp) v(sn) v(ep) v(en) i(VDD)
+ac dec 100 10k 150Meg
+let zin=-1/i(VANT)
+wrdata ac.txt real(v(load)) imag(v(load)) real(zin) imag(zin)
+noise v(load) VANT dec 100 10k 150Meg
+setplot noise1
+wrdata noise.txt inoise_spectrum onoise_spectrum
+quit
+.endc
+.end

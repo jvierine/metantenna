@@ -1,0 +1,6 @@
+{
+  "corners": 9,
+  "two_polarization_buffers_current_A_max": 0.1104238,
+  "emitter_bias_V_min": 0.3748813,
+  "status": "Genericmodel screening; asymmetric device mismatch,temperature,nonlinearblocking,andGALIcurrentmustalsoqualify"
+}

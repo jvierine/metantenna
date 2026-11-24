@@ -1,0 +1,31 @@
+\documentclass[border=4mm]{standalone}
+\usepackage{circuitikz}\usetikzlibrary{positioning}
+% One polarization of hardware/hf_design.py; second polarization is identical.
+\begin{document}
+\begin{circuitikz}[american,scale=1]
+\node[njfet] (JP) at (2,2) {};
+\node[njfet] (JN) at (2,-5.5) {};
+\node[npn] (QP) at (5,1) {};
+\node[npn] (QN) at (5,-6.5) {};
+\draw (JP.G) -- ++(-1,0) node[left]{Arm $+$};
+\draw (JN.G) -- ++(-1,0) node[left]{Arm $-$};
+\draw (JP.D) to[R,l=10\,$\Omega$] ++(0,1.5) node[vcc]{6 V};
+\draw (JN.D) to[R,l=10\,$\Omega$] ++(0,1.5) node[vcc]{6 V};
+\draw (JP.S) -- ++(0,-.3) coordinate (SP) to[R,l_=180\,$\Omega$] ++(0,-1.3) node[ground]{};
+\draw (JN.S) -- ++(0,-.3) coordinate (SN) to[R,l_=180\,$\Omega$] ++(0,-1.3) node[ground]{};
+\draw (SP) -| (QP.B);\draw (SN) -| (QN.B);
+\draw (QP.C) -- ++(0,.8) node[vcc]{6 V};\draw (QN.C) -- ++(0,.8) node[vcc]{6 V};
+\draw (QP.E) to[R,l_=220\,$\Omega$] ++(0,-1.4) node[ground]{};
+\draw (QN.E) to[R,l_=220\,$\Omega$] ++(0,-1.4) node[ground]{};
+\draw (QP.E) to[C,l=220 nF] ++(2,0) to[R,l=2.2\,$\Omega$] ++(1.8,0) coordinate (OP);
+\draw (QN.E) to[C,l=220 nF] ++(2,0) to[R,l=2.2\,$\Omega$] ++(1.8,0) coordinate (ON);
+\node[draw,align=center,minimum height=2cm,text width=2.6cm] (T) at (10,-3) {ADT1-6T+\\balanced to\\single-ended};
+\draw (OP) -| ([yshift=5mm]T.west);\draw (ON) -| ([yshift=-5mm]T.west);
+\node[draw,align=center,text width=3cm,right=9mm of T] (F) {100 kHz high-pass\\30 MHz low-pass\\GALI-74+ and pad};
+\draw[->] (T)--(F);\draw[->] (F.east)--++(1,0) node[right]{50\,$\Omega$ coax};
+\node[anchor=east] at (1.7,2.9) {MMBFJ310LT1G};
+\node[anchor=east] at (1.7,-4.6) {MMBFJ310LT1G};
+\node[right] at (QP.C) {BC850C};\node[right] at (QN.C) {BC850C};
+\node[align=left,anchor=north west] at (0,-10) {Each gate has 1 M$\Omega$ to ground. Drain supplies have local 100 nF bypass.\\Both polarizations share protected 12 V input; each has its own quiet 6 V regulator.\\Development prototype: noise, blocker linearity and stability require qualification.};
+\end{circuitikz}
+\end{document}

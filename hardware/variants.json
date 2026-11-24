@@ -14,16 +14,18 @@
       0.1,
       30
     ],
-    "status": "architecture only; no HF schematic or PCB release",
-    "input": "balanced high-impedance voltage buffer",
+    "status": "JFET prototype under development; not a manufacturing release",
+    "input": "paired MMBFJ310LT1G source followers plus BC850C emitter followers before ADT1-6T+ transformer",
     "high_pass_MHz": 0.1,
     "low_pass_MHz": 30,
     "coax_common_mode_choke": {
-      "LF_stage": "CLF9060-202Y",
-      "JLC": "C2941480",
+      "LF_stage": "SRF0905-202Y",
+      "JLC": "C2651160",
       "quantity_per_polarization": 1,
       "upper_band_stage": "ACM4520-901-2P-T000",
-      "status": "Selected for 0.1-30MHz development; differential data still needed. See simulation/hf_choke/results.json."
-    }
+      "status": "Bourns selected; older250nH maximum leakage needsconfirmation; no guarantee of full-band differential response"
+    },
+    "prototype_source": "hardware/hf_design.py",
+    "supply_rail_V": 6.0
   }
 }
