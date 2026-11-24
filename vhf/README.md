@@ -191,8 +191,3 @@ this is a ventilated rain-shedding housing, not an IP-rated enclosure.
 The electronics budget target remains **$70–100 per complete set** for the
 five-set prototype batch, including the bias tee and excluding coax, mast,
 enclosure, tax and shipping. This is a budget estimate, not a supplier quote.
-
-
-## Low-cost SMA connectors
-
-Both boards use standard-polarity **50 Ω female SMA**, factory assembled: XUNPU **SMA-KE-347A-H13.5-P (C5723187)** underneath the antenna head, and **SMA-KWE-323C-H13X23-LW (C5723201)** for horizontal bias-tee entry. Amphenol parts are no longer selected. Both have JLC wave-solder assembly listings; order-specific inventory, price and placement still need acceptance. The bias case has been updated for the XUNPU dimensions and checked for insertion of the populated board.

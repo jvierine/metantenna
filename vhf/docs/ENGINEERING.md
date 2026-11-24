@@ -302,3 +302,10 @@ Nico's preferred manufacturer starting points are Panasonic / Bourns for resisto
 A candidate saving roughly 50% of complete assembled-set cost merits comparison even with up to 1 dB extra passband ripple and about 10% shift in the −3 dB edge. Do not confuse ripple with absolute insertion loss. Check tolerance corners at the actual radar frequency, antenna loading, sky-inclusive Tsys/Tsky, FM/blocker rejection, linearity and power margins before accepting it. The existing Tsys/Tsky ≤ 1.3 objective remains the sensitivity criterion; if a cost option fails, report the tradeoff explicitly rather than silently relaxing it. HF needs its own frequency-dependent assessment.
 
 Include connectors, PCB assembly and sourcing overhead in the comparison: halving one passive's price does not halve a station's cost. No new cost reduction, tolerance result or meteor-yield increase is claimed here. Circuit substitutions require a revised BOM, simulations and native CAD checks, followed by assembled-board verification.
+
+
+## Connector sourcing details
+
+Both HF and VHF boards select standard-polarity 50 Ω female SMA connectors: XUNPU SMA-KE-347A-H13.5-P (C5723187) underneath the antenna head, and SMA-KWE-323C-H13X23-LW (C5723201) for horizontal bias-tee entry. Both have JLC wave-solder assembly listings; order-specific inventory, pricing and placement require acceptance. The updated bias case passed its modeled populated-board insertion check.
+
+The checked distributor quantity-10 prices imply $5.8854 for six connectors per set (2 × $0.3881 + 4 × $1.2773), excluding assembly. This is not a complete-board quote. Exact drawing references, dimensions, pricing source and limitations are recorded in [connector selection data](../../hardware/connector_selection.json).

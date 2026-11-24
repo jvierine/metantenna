@@ -37,14 +37,3 @@ These are open engineering prototypes, not certified products. Simulation and CA
 Use **KiCad 10.0.x stable** for these designs. Nico uses 10.0.5; local validation used 10.0.8. KiCad documents point releases as file-compatible. Avoid saving shared files with a newer major version or a nightly build until the team agrees to migrate. Project-local symbols and footprints are included; retain `sym-lib-table`, `fp-lib-table` and the adjacent library directories when copying a design.
 
 `main` is the integrated working version: VHF and HF designs, retained common-mode filtering, and Nico's reviewed VHF hierarchy/coupling updates. `pfeffer-review` remains Nico's review branch.
-
-## Component choices
-
-**G/T and the ability to deploy more receivers are the priorities.** Spend where it improves useful antenna gain relative to system noise temperature, blocker tolerance and reliability; keep the assembled station affordable. Preferred manufacturers are a starting point, not a requirement to buy premium parts everywhere. Lower-cost filter options may trade up to 1 dB additional passband ripple and approximately 10% shift in the −3 dB edge, provided the radar frequency remains usable, FM rejection and linearity remain sufficient, and the complete noise budget passes. These are comparison allowances, not demonstrated performance or automatic acceptance limits. See the [component selection criteria](vhf/docs/ENGINEERING.md#component-selection-and-cost-tradeoffs).
-
-
-## Low-cost SMA connectors
-
-Both boards use standard-polarity **50 Ω female SMA**, factory assembled: XUNPU **SMA-KE-347A-H13.5-P (C5723187)** underneath the antenna head, and **SMA-KWE-323C-H13X23-LW (C5723201)** for horizontal bias-tee entry. Amphenol parts are no longer selected. Both have JLC wave-solder assembly listings; order-specific inventory, price and placement still need acceptance. The bias case has been updated for the XUNPU dimensions and checked for insertion of the populated board.
-
-At the checked distributor quantity-10 prices, the six SMA connectors total approximately **$5.89 per set** (2 × $0.3881 + 4 × $1.2773). This excludes assembly and is not a complete-board quote. [Selection, drawings and pricing scope](hardware/connector_selection.json).

@@ -22,8 +22,3 @@ The bias tee sits beside the receiver; the amplifier sits at the antenna. Only X
 - [Shared enclosure sources](../mechanical/)
 
 Shared generators remain in [`../hardware/`](../hardware/): `build_hf.py`, `finalize_hf.py` and `check_hf_native.py`. Use base conda Python. The mechanical interfaces reuse the VHF connector positions; confirm the exact assembled parts against the case before manufacture.
-
-
-## Low-cost SMA connectors
-
-Both boards use standard-polarity **50 Ω female SMA**, factory assembled: XUNPU **SMA-KE-347A-H13.5-P (C5723187)** underneath the antenna head, and **SMA-KWE-323C-H13X23-LW (C5723201)** for horizontal bias-tee entry. Amphenol parts are no longer selected. Both have JLC wave-solder assembly listings; order-specific inventory, price and placement still need acceptance. The bias case has been updated for the XUNPU dimensions and checked for insertion of the populated board.
