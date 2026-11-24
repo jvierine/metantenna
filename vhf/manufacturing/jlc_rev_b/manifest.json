@@ -1,5 +1,5 @@
 {
-  "source_commit": "bc7f715d4b84bbbcd9b8f7b344472db39117f4c1",
+  "source_commit": "9b6636c",
   "native_CAD": "KiCad 10.0.8 local CLI",
   "boards": {
     "preamp": {
@@ -11,7 +11,7 @@
       "quantity": 5,
       "electrical_DRC_ERC_and_parity": "pass",
       "assembly_sides": "Full factory assembly, including through-hole connectors and bottom-side preamp SMA",
-      "SMT_parts_per_board": 61,
+      "SMT_parts_per_board": 63,
       "factory_connector_parts_per_board": 2
     },
     "biastee": {
