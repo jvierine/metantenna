@@ -70,4 +70,4 @@ text(700,918,'2 mm bare copper assumed. Tip heights exclude support-rope sag.','
 s.append('</svg>')
 # Empty dimension labels are omitted rather than rendered.
 s=[v for v in s if not ('<text x="0"' in v)]
-(R/'docs/antenna_deployment.svg').write_text('\n'.join(s))
+(R/'vhf/docs/antenna_deployment.svg').write_text('\n'.join(s))

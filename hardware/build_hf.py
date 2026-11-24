@@ -6,7 +6,7 @@ import json
 import build as b
 import schematic as sch
 from hf_design import hf_preamp,hf_biastee
-R=Path(__file__).resolve().parents[1];out=R/'hardware/hf';out.mkdir(exist_ok=True);(out/'hardware').mkdir(exist_ok=True);(out/'manufacturing').mkdir(exist_ok=True)
+R=Path(__file__).resolve().parents[1];out=R/'hf';out.mkdir(exist_ok=True);(out/'hardware').mkdir(exist_ok=True);(out/'manufacturing').mkdir(exist_ok=True)
 old=b.pads
 def pads(pkg):
  if pkg=='SOT23':return [('1',-.95,-.95,1,.6,0),('2',-.95,.95,1,.6,0),('3',.95,0,1,.6,0)]

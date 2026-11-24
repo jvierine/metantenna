@@ -41,7 +41,7 @@ with h5py.File(ROOT/'simulation/antenna/antenna_system.h5') as h:
         long_t=np.median(sk['SIMONe_candidate/system_X_K'][:],axis=1)
         sky_t=np.median(sk['SIMONe_candidate/sky_X_K'][:],axis=1)
         panel(3,[30,55],[300,300000],'System temperature (K)',[(labels[0],f,short_t),(labels[1],f,long_t),('Sky (PyGDSM)',f,sky_t)],True)
-s+='eprintln!("Response figure"); for ext in ["png","pdf","svg"] {f.save(format!("docs/antenna_system_response.{ext}"))?;}\n'
+s+='eprintln!("Response figure"); for ext in ["png","pdf","svg"] {f.save(format!("vhf/docs/antenna_system_response.{ext}"))?;}\n'
 s+='''let mut g=ArticleLayout::new(177.,10.)?.figure(1.,88.)?;
 let qq=g.grid(1,2)?;g.width_mm=177.;g.height_mm=88.;
 '''
@@ -54,7 +54,7 @@ with h5py.File(ROOT/'simulation/antenna/antenna_system.h5') as h:
             pts=','.join(f'[{90-v[0]:.8f},{max(-100,v[4]+loss):.8f}]' for v in p[k])
             s+=f'g.panels[qq[{j}]].plot(vec![{pts}],"{label}");\n'
         s+=f'g.panels[qq[{j}]].legend.as_mut().unwrap().position=LegendPosition::LowerRight;\n'
-s+='eprintln!("Pattern figure"); for ext in ["png","pdf","svg"] {g.save(format!("docs/antenna_patterns.{ext}"))?;}\n'
+s+='eprintln!("Pattern figure"); for ext in ["png","pdf","svg"] {g.save(format!("vhf/docs/antenna_patterns.{ext}"))?;}\n'
 s+="""let mut n=ArticleLayout::new(177.,9.)?.figure(1.,92.)?;
 let nn=n.grid(1,2)?;n.width_mm=177.;n.height_mm=92.;
 """
@@ -77,5 +77,5 @@ with h5py.File(ROOT/'simulation/antenna/sky_noise.h5') as sk:
             pts=','.join(f'[{xx:.8f},{yy:.8f}]' for xx,yy in zip(x,np.asarray(y)/1000))
             s+=f'n.panels[nn[{j}]].plot(vec![{pts}],{json.dumps(label)});\n'
         s+=f'n.panels[nn[{j}]].legend.as_mut().unwrap().position=LegendPosition::LowerLeft;\n'
-s+='eprintln!("Noise figure"); for ext in ["png","pdf","svg"] {n.save(format!("docs/sky_noise_budget.{ext}"))?;} Ok(())}\n'
+s+='eprintln!("Noise figure"); for ext in ["png","pdf","svg"] {n.save(format!("vhf/docs/sky_noise_budget.{ext}"))?;} Ok(())}\n'
 p=ROOT/'tools/plot/src/bin';p.mkdir(exist_ok=True);(p/'antenna.rs').write_text(s)

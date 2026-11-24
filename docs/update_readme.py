@@ -7,7 +7,7 @@ a=json.loads((R/'simulation/antenna/summary.json').read_text())
 sk=json.loads((R/'simulation/antenna/sky_summary.json').read_text())
 d=json.loads((R/'simulation/antenna/dynamic_range.json').read_text())
 g=a['SIMONe_candidate']['geometry'];p=a['SIMONe_candidate']['spots']['32.55'];n=sk['SIMONe_candidate'];nr=n['system_X_K_min_median_max']
-text=f'''# Metantenna — X/Y meteor-radar receive antenna
+text=f'''# VHF meteor-radar antenna
 
 **TL;DR:** two independent linear-polarization channels, four soldered copper
 antenna arms, and two 50 Ω SMA outputs. **Only X carries 12 V DC**, powering both
@@ -134,7 +134,7 @@ measured insertion loss, interference rejection or linearity qualification.
 The same choke gives negligible suppression at 100 kHz: the **HF variant
 needs a separately qualified low-frequency solution** and is not yet a
 released board. Its target is now 0.1–30 MHz, high-impedance balanced input,
-100 kHz high-pass and 30 MHz low-pass. [Variant definitions](hardware/variants.json).
+100 kHz high-pass and 30 MHz low-pass. [Variant definitions](../hardware/variants.json).
 
 
 ![X bias tee and Y pass-through PCB](docs/biastee_layout.png)
@@ -147,53 +147,13 @@ The indoor case has four open-top U-slots, closed by tongues on the lid,
 retaining nuts, a rear 12 V cable entry, and a screw-on lid. Remove the SMA
 nuts and washers, lower the fully soldered board into the slots, secure the
 PCB, fit the lid, then install the external washers and nuts. Print
-[biastee_base.stl](mechanical/stl/biastee_base.stl) and
-[biastee_lid.stl](mechanical/stl/biastee_lid.stl). Fit-test a print before ordering
+[biastee_base.stl](../mechanical/stl/biastee_base.stl) and
+[biastee_lid.stl](../mechanical/stl/biastee_lid.stl). Fit-test a print before ordering
 a batch; the connector illustration is a dimensional envelope.
 
 ![Indoor bias tee with horizontal connectors](docs/biastee_case_exploded.png)
 
 
-## HF variant — 0.1–30 MHz development
-
-The separate HF prototype uses **paired MMBFJ310LT1G JFET voltage buffers**,
-**BC850C emitter followers**, an **ADT1-6T+** balun, a nominal **100 kHz
-high-pass / 30 MHz low-pass**, and the reused GALI-74+ output chain.
-The antenna input is high impedance; the transformer sees buffered outputs.
-The existing VHF board remains an approximately 50 Ω input design.
-
-The HF bias board uses **Bourns SRF0905-202Y (JLC C2651160) on both coax
-paths**, followed by the existing upper-band TDK chokes. Only X carries DC;
-the Y shield DC block prevents a parallel supply-return path. Signal blocks
-are increased to 220 nF and DC injection/extraction uses staggered inductors.
-Connector positions, board outlines and the plastic enclosures are retained.
-
-**Development prototype, not ready to order.** Native KiCad ERC, clearance,
-connectivity and schematic-parity checks pass for both HF boards. These checks
-do not establish RF stability, noise performance or manufacturing readiness. Generic transistor SPICE models
-predict about **3.3–3.7 nV/√Hz differential input-referred voltage noise** at
-selected frequencies. This does **not** establish the 1.3-times-sky target;
-source impedance, input capacitance, device mismatch, blockers, stability,
-transformer/choke S-parameters and the full HF noise budget remain qualification
-items. No measured IP3 or system sensitivity is claimed. Both channels use
-quiet linear regulation; there is no switching converter.
-
-![HF JFET preamp prototype](docs/hf_preamp_layout.png)
-
-![HF bias board with both coax barriers](docs/hf_biastee_layout.png)
-
-![HF transistor SPICE screening](docs/hf_frontend_screening.png)
-
-[HF circuit overview](hardware/hf/frontend.pdf) ·
-[HF electrical source](hardware/hf_design.py) ·
-[HF KiCad prototype](hardware/hf/hardware/) ·
-[SPICE circuits and HDF5 results](simulation/hf/)
-
-The earlier [Linekey sensitivity sweep](simulation/hf_choke/) remains archived
-as an illustration of leakage uncertainty; it is **not a Bourns device model**.
-The older Bourns supplier sheet lists 250 nH maximum leakage, but the current
-manufacturer sheet omits that bound. Confirmation or measured differential
-S-parameters is still needed.
 
 ## Complete signal chain and arm lengths
 
@@ -204,7 +164,7 @@ slope**. Gain includes the preamp, bias tee and 50 m cable; noise includes PyGDS
 sky. The amplifier is a linear behavioral model, not a transistor-level simulation.
 For a matched 50 Ω source, modelled cable-inclusive gain is **15.4–17.1 dB**.
 Use regulated **12 V (minimum 11.76 V)** and coax with **≤3 Ω DC loop resistance**.
-[Calculation details and limits](simulation/END_TO_END.md).
+[Calculation details and limits](../simulation/END_TO_END.md).
 
 ## Housing and files
 
@@ -225,12 +185,12 @@ this is a ventilated rain-shedding housing, not an IP-rated enclosure.
 
 - [Editable KiCad boards and schematics](hardware/)
 - [Prototype Gerbers, drills and assembly workbooks](manufacturing/)
-- [Printable STL files and parametric housing](mechanical/)
+- [Printable STL files and parametric housing](../mechanical/)
 - [Engineering assumptions, checks, references and reproduction](docs/ENGINEERING.md)
-- [Antenna model and HDF5 results](simulation/antenna/)
+- [Antenna model and HDF5 results](../simulation/antenna/)
 
 The electronics budget target remains **$70–100 per complete set** for the
 five-set prototype batch, including the bias tee and excluding coax, mast,
 enclosure, tax and shipping. This is a budget estimate, not a supplier quote.
 '''
-(R/'README.md').write_text(text)
+(R/'vhf/README.md').write_text(text)

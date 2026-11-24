@@ -93,6 +93,6 @@ def main():
     pts=[[float(x/1e6),float(y/1000)] for x,y in zip(g['frequency_Hz'][:],g['approximate_graph_Z_ohm'][:]) if x<=30e6]
    s+=f'f.panels[p[1]].plot(vec!{str(pts).replace(" ","")},"Datasheet (approx.)");\n'
   s+=f'f.panels[p[{j}]].legend.as_mut().unwrap().position=LegendPosition::{"UpperLeft" if j==0 else "LowerLeft"};\n'
- s+='for ext in ["png","svg","pdf"] {f.save(format!("docs/hf_choke_screening.{ext}"))?;} Ok(())}\n'
+ s+='for ext in ["png","svg","pdf"] {f.save(format!("hf/docs/hf_choke_screening.{ext}"))?;} Ok(())}\n'
  (R/'tools/plot/src/bin/hf_choke.rs').write_text(s)
 if __name__=='__main__':main()

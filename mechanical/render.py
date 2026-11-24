@@ -33,7 +33,7 @@ def render(exploded):
         solids['ptfe'+str(i)]=cyl(2.05,2,x,y,bottom+.5)-cyl(.48,2.2,x,y,bottom+.4)
 
     # Populate this drawing from the actual Rev B component placement.
-    board=json.loads((R/'hardware/preamp_layout.json').read_text())
+    board=json.loads((R/'vhf/hardware/preamp_layout.json').read_text())
     for p in board['parts']:
         if p['package'] in ['ANT_M3','SMA']:continue
         name='part_'+p['ref']
@@ -51,7 +51,7 @@ def render(exploded):
     plotter.camera_position=[(280,-420,260),(0,0,15 if exploded else -25),(0,0,1)]
     plotter.enable_parallel_projection()
     plotter.reset_camera()
-    plotter.screenshot(str(R/'docs'/('enclosure_exploded.png' if exploded else 'enclosure_assembled.png')))
+    plotter.screenshot(str(R/'vhf/docs'/('enclosure_exploded.png' if exploded else 'enclosure_assembled.png')))
     plotter.close()
     if not exploded:
         plotter=pv.Plotter(off_screen=True,window_size=(1200,850));plotter.set_background('white')
@@ -61,6 +61,6 @@ def render(exploded):
             plotter.add_mesh(pv.PolyData(t.vertices,faces),color=np.array(colors.get(name,(240,238,220)))/255,ambient=.35)
         plotter.camera_position=[(100,-90,-70),(42,-2,12),(0,0,1)]
         plotter.enable_parallel_projection();plotter.camera.parallel_scale=30
-        plotter.screenshot(str(R/'docs/sma_underside_detail.png'));plotter.close()
+        plotter.screenshot(str(R/'vhf/docs/sma_underside_detail.png'));plotter.close()
 
 if __name__=='__main__':render(False);render(True)

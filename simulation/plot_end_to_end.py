@@ -15,5 +15,5 @@ with h5py.File(R/'simulation/end_to_end.h5') as h,h5py.File(R/'simulation/antenn
    pts=','.join(f'[{a:.7f},{b:.7f}]' for a,b in zip(x,y))
    s+=f'f.panels[pp[{j}]].plot(vec![{pts}],{json.dumps(label)});\n'
   s+=f'f.panels[pp[{j}]].legend.as_mut().unwrap().position=LegendPosition::{"LowerRight" if j==0 else "LowerLeft"};\n'
-s+='for ext in ["png","svg","pdf"] {f.save(format!("docs/end_to_end_comparison.{ext}"))?;} Ok(())}'
+s+='for ext in ["png","svg","pdf"] {f.save(format!("vhf/docs/end_to_end_comparison.{ext}"))?;} Ok(())}'
 (R/'tools/plot/src/bin/end_to_end.rs').write_text(s)

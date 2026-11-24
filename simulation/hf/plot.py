@@ -14,5 +14,5 @@ with h5py.File(R/'simulation/hf/screening.h5') as h:
  for p in &pp {f.panels[*p].axes.as_mut().unwrap().set_xscale(AxisScale::Log10)?;}
  '''
  for i,v in enumerate([g,n]):code+=f'f.panels[pp[{i}]].push(Layer::Line(Line::series({vec(v)},0)));\n'
- code+='for ext in ["png","pdf","svg"] {f.save(format!("docs/hf_frontend_screening.{}",ext))?;}Ok(())}'
+ code+='for ext in ["png","pdf","svg"] {f.save(format!("hf/docs/hf_frontend_screening.{}",ext))?;}Ok(())}'
  (R/'tools/plot/src/bin/hf_frontend.rs').write_text(code)

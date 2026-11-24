@@ -50,7 +50,7 @@ def path_length(board, net, start, end):
 
 
 def main():
-    board = json.loads((ROOT/'hardware/preamp_layout.json').read_text())
+    board = json.loads((ROOT/'vhf/hardware/preamp_layout.json').read_text())
     endpoints = {
         'X_ANT_N': ((0, 5., 48.), (0, 45.46, 34.54)),
         'X_ANT_P': ((0, 91., 48.), (0, 50.54, 34.54)),
@@ -77,7 +77,7 @@ def main():
     result = {'filter_BOM_matches_simulation': True, 'arm_to_primary_conductor_length_mm': lengths,
               'within_pair_mismatch_limit_mm': .01,
               'measured_RF_isolation_dB': None}
-    (ROOT/'manufacturing/feed_geometry_check.json').write_text(
+    (ROOT/'vhf/manufacturing/feed_geometry_check.json').write_text(
         json.dumps(result, indent=2)+'\n')
     print(json.dumps(result, indent=2))
 

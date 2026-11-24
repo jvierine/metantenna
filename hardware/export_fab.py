@@ -12,7 +12,7 @@ from shapely.ops import unary_union
 from shapely import constrained_delaunay_triangles
 from check_layout import check,geometry
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1]/"vhf")
 def regions(g):
     if g.is_empty:return []
     if isinstance(g,Polygon):

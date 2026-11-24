@@ -16,7 +16,7 @@ assert [(x.ref,k) for x in p.values() for k,n in x.nets.items() if n=='SUPPLY_RE
 assert p['FB1'].nets=={'1':'PROTECTED','2':'FILTERED'}
 assert p['F10'].nets['1']=='FILTERED'
 # Verify input return stays inside the copper-free island on either routing layer.
-a=json.loads((R/'hardware/biastee_layout.json').read_text())
+a=json.loads((R/'vhf/hardware/biastee_layout.json').read_text())
 for n,layer,start,end,width in a['tracks']:
  if n=='SUPPLY_RETURN':
   assert all(34+width/2<x<50-width/2 and .5+width/2<y<14-width/2 for x,y in [start,end])

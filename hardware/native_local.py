@@ -1,7 +1,7 @@
 """Run local KiCad checks and CAM export without rewriting editable sources."""
 from pathlib import Path
 import subprocess,shutil,argparse
-R=Path(__file__).resolve().parents[1]
+R=(Path(__file__).resolve().parents[1]/"vhf")
 a=argparse.ArgumentParser();a.add_argument('--output',type=Path,required=True);opt=a.parse_args();out=opt.output.resolve();out.mkdir(parents=True,exist_ok=True)
 candidates=[Path('/Volumes/KiCad/KiCad/KiCad.app/Contents/MacOS/kicad-cli'),Path('/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli')]
 k=shutil.which('kicad-cli') or next((str(p) for p in candidates if p.exists()),None)
@@ -24,5 +24,5 @@ for name in ['preamp','biastee']:
  run('pcb','export','gerbers','-l','F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,F.SilkS,Edge.Cuts','-o',str(d/'gerbers')+'/',b)
  run('pcb','export','drill','--excellon-separate-th','-o',str(d/'gerbers')+'/',b)
  shutil.copy2(b,d/f'{name}.kicad_pcb')
-subprocess.run(['conda','run','-n','base','python',str(R/'hardware/check_native_report.py'),str(out)],check=True)
+subprocess.run(['conda','run','-n','base','python',str(Path(__file__).with_name('check_native_report.py')),str(out)],check=True)
 print('KiCad',version,'native checks complete')

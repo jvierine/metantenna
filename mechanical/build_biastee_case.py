@@ -24,7 +24,7 @@ def horizontal_hole(radius,length,x,y,z):
 
 def parts():
     base=box(X1-X0,Y1-Y0,24,38,32)-box(78,66,26,38,32,3)
-    board=json.loads((R/'hardware/biastee_layout.json').read_text())
+    board=json.loads((R/'vhf/hardware/biastee_layout.json').read_text())
     for p in board['parts']:
         if p['package']=='SMA_RA':
             assert p['mpn']=='132203'
@@ -67,7 +67,7 @@ def main():
     # Check the complete insertion sweep, not just the final resting position.
     # Nuts/washers are fitted externally AFTER insertion; no cable is attached.
     sweep=box(76,64,41.6,38,32,PCB_Z)
-    board=json.loads((R/'hardware/biastee_layout.json').read_text())
+    board=json.loads((R/'vhf/hardware/biastee_layout.json').read_text())
     for p in board['parts']:
         if p['package']=='SMA_RA':
             direction=-1 if p['rotation']==0 else 1
@@ -102,7 +102,7 @@ def render():
         if exploded:solids['biastee_lid']=solids['biastee_lid'].translate((0,0,27))
         else:solids.pop('biastee_lid') # Open top makes the side-entry geometry visible.
         solids['pcb']=box(76,64,1.6,38,32,PCB_Z)
-        a=json.loads((R/'hardware/biastee_layout.json').read_text())
+        a=json.loads((R/'vhf/hardware/biastee_layout.json').read_text())
         for p in a['parts']:
             if p['package']=='SMA_RA':
                 direction=-1 if p['rotation']==0 else 1
@@ -123,7 +123,7 @@ def render():
             plot.add_mesh(pv.PolyData(t.vertices,faces),color=color,ambient=.4,diffuse=.6)
         plot.camera_position=[(-125,155,160),(38,32,13),(0,0,1)]
         plot.enable_parallel_projection();plot.reset_camera();plot.camera.zoom(1.12)
-        path=R/'docs'/('biastee_case_exploded.png' if exploded else 'biastee_case_open.png')
+        path=R/'vhf/docs'/('biastee_case_exploded.png' if exploded else 'biastee_case_open.png')
         plot.screenshot(str(path));plot.close()
         im=Image.open(path);dr=ImageDraw.Draw(im)
         dr.text((25,20),'Bias tee: horizontal side-entry SMA connectors',fill='black',font_size=28)

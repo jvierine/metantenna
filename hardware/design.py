@@ -96,7 +96,7 @@ def biastee():
     return p,(76,64)
 
 if __name__=='__main__':
-    root=Path(__file__).resolve().parent
+    root=Path(__file__).resolve().parents[1]/"vhf/hardware"
     for name,fn in [('preamp',preamp),('biastee',biastee)]:
         p,size=fn()
         (root/(name+'.json')).write_text(json.dumps({'board_mm':size,'parts':[asdict(a) for a in p]},indent=2)+'\n')

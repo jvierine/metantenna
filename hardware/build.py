@@ -13,7 +13,7 @@ from shapely.ops import unary_union
 from openpyxl import Workbook
 from design import preamp,biastee
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1]/"vhf")
 STEP=.2
 CLEAR=.2
 WIDTH=.32

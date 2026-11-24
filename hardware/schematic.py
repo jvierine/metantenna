@@ -6,7 +6,7 @@ from pathlib import Path
 import json,uuid
 from design import preamp,biastee
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1]/"vhf")
 def uid(s):return str(uuid.uuid5(uuid.NAMESPACE_URL,'metantenna/'+s))
 def q(s):return json.dumps(str(s))
 def effects(size=1.0,extra=''):return f'(effects (font (size {size} {size})) {extra})'

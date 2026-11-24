@@ -1,7 +1,7 @@
 """Run native KiCad checks on HF copies, retaining raw editable sources."""
 from pathlib import Path
 import subprocess,shutil
-R=Path(__file__).resolve().parents[1];src=R/'hardware/hf/hardware';out=Path('/tmp/metantenna-hf-native');out.mkdir(exist_ok=True)
+R=Path(__file__).resolve().parents[1];src=R/'hf/hardware';out=Path('/tmp/metantenna-hf-native');out.mkdir(exist_ok=True)
 k=shutil.which('kicad-cli') or '/Volumes/KiCad/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
 for name in ['preamp','biastee']:
  d=out/name;d.mkdir(exist_ok=True)

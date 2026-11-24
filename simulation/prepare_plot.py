@@ -22,5 +22,5 @@ for j,(xrange,yrange) in enumerate([([30,55],[-1.3,0.1]),([0,150],[-80,2])]):
         pts=','.join(f'[{f[i]:.8f},{y[i]:.8f}]' for i in idx)
         source+=f'f.panels[pp[{j}]].plot(vec![{pts}],"{label}");\n'
     source+=f'f.panels[pp[{j}]].legend.as_mut().unwrap().position=LegendPosition::LowerLeft;\n' if j==0 else f'f.panels[pp[{j}]].legend=None;\n'
-source+='for ext in ["svg","png","pdf"] { f.save(format!("docs/filter_response.{ext}"))?; } Ok(()) }\n'
+source+='for ext in ["svg","png","pdf"] { f.save(format!("vhf/docs/filter_response.{ext}"))?; } Ok(()) }\n'
 p=R/'tools/plot/src';p.mkdir(parents=True,exist_ok=True);(p/'main.rs').write_text(source)
