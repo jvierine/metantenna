@@ -23,3 +23,9 @@ The design folders contain the schematics, PCB layouts, simulation results and m
 [NEC impedance models](models/nec/) cover 1 m, 1.5 m and 2 m arms from 0.1 to 150 MHz in 0.05 MHz steps, with complex X/Y feedpoint impedance in HDF5.
 
 These are open engineering prototypes, not certified products. Simulation and CAD checks do not replace RF measurements of assembled boards. No manufacturing order has been placed. The five-set VHF electronics budget is $70–100 per set including the bias tee, excluding coax, mast, enclosure, tax and shipping; this is an estimate, not a supplier quote.
+
+## KiCad version for collaboration
+
+Use **KiCad 10.0.x stable** for these designs. Nico uses 10.0.5; local validation used 10.0.8. KiCad documents point releases as file-compatible. Avoid saving shared files with a newer major version or a nightly build until the team agrees to migrate. Project-local symbols and footprints are included; retain `sym-lib-table`, `fp-lib-table` and the adjacent library directories when copying a design.
+
+`main` is the integrated working version: VHF and HF designs, retained common-mode filtering, and Nico's reviewed VHF hierarchy/coupling updates. `pfeffer-review` remains Nico's review branch.
