@@ -46,7 +46,7 @@ def preamp():
         two('R',4,'18','0805','PAD_IN','PAD_OUT',74,y,mpn='RC0805FR-0718RL')
         two('R',5,'294','0805','PAD_OUT','GND',78,y+3,90,'RC0805FR-07294RL')
         two('C',9,'1n','0805','PAD_OUT','COAX',83,y,mpn='C0805C102J5GACTU')
-        add(f'J{n+2}',s+(' RF +12V' if j==0 else ' RF, DC blocked'),'SMA',{1:net('COAX'),2:'GND'},90,26 if j==0 else y,mpn='132134',side='B',note='SMA female, standard polarity; assemble on underside')
+        add(f'J{n+2}',s+(' RF +12V' if j==0 else ' RF, DC blocked'),'SMA',{1:net('COAX'),2:'GND'},90,26 if j==0 else y,mpn='SMA-KE-347A-H13.5-P',side='B',note='SMA female, standard polarity; assemble on underside')
         if j==0:
             two('L',4,'1u','1008','COAX','RAW',90,34,90,'1008CS-102XJRC')
             # Cathode pin 1 towards protected supply; anode pin 2 towards coax.
@@ -84,9 +84,9 @@ def biastee():
     add('C1','10u 25V','1206',{1:'PROTECTED',2:'GND'},18,12,90,'GRM31CR61E106KA12L')
     for j,y in enumerate([27,50]):
         n=10*(j+1);s='XY'[j]
-        add(f'J{n}',s+(' ANT +DC' if j==0 else ' ANT RF only'),'SMA_RA',{1:s+'_ANT_CENTER',2:s+'_ANT_RETURN'},5,y,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit')
+        add(f'J{n}',s+(' ANT +DC' if j==0 else ' ANT RF only'),'SMA_RA',{1:s+'_ANT_CENTER',2:s+'_ANT_RETURN'},5,y,mpn='SMA-KWE-323C-H13X23-LW',note='Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit')
         add(f'CM{n}','900R CM @100MHz','ACM4520',{1:s+'_ANT_CENTER',2:s+'_ANT_RETURN',3:('GND' if j==0 else 'Y_RETURN_BLOCKED'),4:s+'_COAX'},14,y,mpn='ACM4520-901-2P-T000',note='TDK LCSC C41519; signal and shield return through paired windings; do not bridge antenna ground island')
-        add(f'J{n+1}',s+' RX DC BLOCK','SMA_RA',{1:s+'_RX',2:'GND'},71,y,180,mpn='132203',note='Right-angle bulkhead SMA; barrel points toward right board edge; horizontal sidewall exit')
+        add(f'J{n+1}',s+' RX DC BLOCK','SMA_RA',{1:s+'_RX',2:'GND'},71,y,180,mpn='SMA-KWE-323C-H13X23-LW',note='Right-angle bulkhead SMA; barrel points toward right board edge; horizontal sidewall exit')
         add(f'C{n}','1n','0805',{1:s+'_COAX',2:s+'_RX'},40,y,mpn='C0805C102J5GACTU')
         if j==1:
             add('C21','1n','0805',{1:'Y_RETURN_BLOCKED',2:'GND'},19,55,90,mpn='C0805C102J5GACTU',note='VHF shield DC block: prevents Y cable carrying DC supply return and unbalancing CM10/CM20; do not bypass')

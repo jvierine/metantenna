@@ -22,13 +22,13 @@ def render(exploded):
     # Dimensional illustration of straight underside PCB SMA jacks.
     # Thread ridges are schematic, not a manufacturing connector model.
     for i,y in enumerate([-22,18]):
-        x=42;bottom=z-9.53
-        body=box(7,7,1.5,x,y,z-1.5)+cyl(2.9,8.03,x,y,bottom)
+        x=42;bottom=z-9.5
+        body=box(6.5,6.5,1.5,x,y,z-1.5)+cyl(2.9,8.0,x,y,bottom)
         for zz in np.arange(bottom+.3,z-1.5,.706):body+=cyl(3.175,.22,x,y,float(zz))
         body-=cyl(2.1,3.1,x,y,bottom-.1)
-        for dx in [-2.54,2.54]:
-            for dy in [-2.54,2.54]:body+=box(1.02,1.02,3,x+dx,y+dy,z-.1)
-        body+=cyl(.63,3,x,y,z-.1)
+        for dx in [-2.55,2.55]:
+            for dy in [-2.55,2.55]:body+=box(.9,.9,4,x+dx,y+dy,z-.1)
+        body+=cyl(.475,4,x,y,z-.1)
         solids['sma'+str(i)]=body
         solids['ptfe'+str(i)]=cyl(2.05,2,x,y,bottom+.5)-cyl(.48,2.2,x,y,bottom+.4)
 

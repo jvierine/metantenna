@@ -1,0 +1,34 @@
+{
+  "checked_date": "2026-11-24",
+  "connector": "standard-polarity SMA female, 50 ohm",
+  "factory_assembly_required": true,
+  "head": {
+    "manufacturer": "XUNPU",
+    "mpn": "SMA-KE-347A-H13.5-P",
+    "lcsc": "C5723187",
+    "quantity_per_set": 2,
+    "indicative_usd_each_at_10": 0.3881,
+    "drawing": "https://atta.szlcsc.com/upload/public/pdf/source/20230428/ABB1FE9C952ADAB3D60934C276D18CE8.pdf",
+    "body_width_mm": 6.5,
+    "height_below_board_mm": 9.5
+  },
+  "bias": {
+    "manufacturer": "XUNPU",
+    "mpn": "SMA-KWE-323C-H13X23-LW",
+    "lcsc": "C5723201",
+    "quantity_per_set": 4,
+    "indicative_usd_each_at_10": 1.2773,
+    "drawing": "https://datasheet.lcsc.com/datasheet/pdf/5e68bdb65aa309f7e85e855982cbeead.pdf",
+    "body_width_mm": 6,
+    "axis_above_pcb_mm": 6.5,
+    "pin_center_to_tip_mm": 20
+  },
+  "land_pattern": {
+    "pitch_mm": 5.1,
+    "center_drill_mm": 1.2,
+    "ground_drill_mm": 1.5
+  },
+  "indicative_connectors_usd_per_set": 5.8854,
+  "price_source": "https://www.lcsc.com/brand/739-11687.html",
+  "limits": "Distributor indicative pricing, not JLC checkout quote. Both exact MPNs have JLC wave-solder assembly listings; order-specific stock, matching, cost, and orientation require acceptance. Printed case uses dimensional envelopes, not vendor STEP qualification."
+}

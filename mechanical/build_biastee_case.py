@@ -1,7 +1,7 @@
-"""Indoor bias-tee case, dimensions in mm; side-entry Amphenol 132203 jacks.
+"""Indoor bias-tee case, dimensions in mm; side-entry XUNPU SMA-KWE-323C-H13X23-LW jacks.
 
-Connector envelope follows 132203 drawing: axis 6.35 above PCB top,
-16.50 from pin centre to mating tip, 8 mm body width, <=2.4 mm panel.
+Connector envelope follows SMA-KWE-323C-H13X23-LW drawing: axis 6.50 above PCB top,
+20.00 from pin centre to mating tip, 6 mm body width; 17 mm threaded barrel.
 Print a fit sample before committing to a batch. No IP rating is claimed.
 """
 from pathlib import Path
@@ -13,7 +13,7 @@ from build_enclosure import box,cyl
 R=Path(__file__).resolve().parents[1]
 M=m.Manifold
 PCB_Z=7.0
-AXIS_Z=PCB_Z+1.6+6.35
+AXIS_Z=PCB_Z+1.6+6.50
 # 2 mm sidewalls. Open-top U-slots admit the soldered connector barrels.
 # Lid tongues close the slots after the populated PCB has been lowered in.
 X0,X1=-3.0,79.0
@@ -27,7 +27,7 @@ def parts():
     board=json.loads((R/'vhf/hardware/biastee_layout.json').read_text())
     for p in board['parts']:
         if p['package']=='SMA_RA':
-            assert p['mpn']=='132203'
+            assert p['mpn']=='SMA-KWE-323C-H13X23-LW'
             base-=horizontal_hole(3.4,100,-10,p['y'],AXIS_Z)
             base-=box(100,7.2,30,38,p['y'],AXIS_Z)
     # M3 PCB screws; 4 mm underside clearance for the 3.94 mm pins.
@@ -72,10 +72,10 @@ def main():
         if p['package']=='SMA_RA':
             direction=-1 if p['rotation']==0 else 1
             x,y=p['x'],p['y']
-            sweep+=box(8,8,50.44,x,y,PCB_Z+1.6)
-            start=x-16.5 if direction<0 else x+4
-            sweep+=horizontal_hole(3.175,12.5,start,y,AXIS_Z)
-            sweep+=box(12.5,6.35,40,start+6.25,y,AXIS_Z)
+            sweep+=box(6,6,49.5,x,y,PCB_Z+1.6)
+            start=x-20 if direction<0 else x+3
+            sweep+=horizontal_hole(3.175,17,start,y,AXIS_Z)
+            sweep+=box(17,6.35,40,start+8.5,y,AXIS_Z)
         else:
             w,d,h=(10,8,10) if p['package']=='TERM2' else (7,6,3.5) if p['package']=='ACM7060' else (4.7,4.5,2) if p['package']=='ACM4520' else (3,2,1.5)
             sweep+=box(w,d,h+40,p['x'],p['y'],PCB_Z+1.6)
@@ -107,9 +107,9 @@ def render():
             if p['package']=='SMA_RA':
                 direction=-1 if p['rotation']==0 else 1
                 x,y=p['x'],p['y']
-                body=box(8,8,10.44,x,y,PCB_Z+1.6)
-                barrel=horizontal_hole(3.175,12.5,x+direction*4 if direction>0 else x-16.5,y,AXIS_Z)
-                barrel-=horizontal_hole(2.05,18,x-18 if direction<0 else x+3,y,AXIS_Z)
+                body=box(6,6,9.5,x,y,PCB_Z+1.6)
+                barrel=horizontal_hole(3.175,17,x+direction*3 if direction>0 else x-20,y,AXIS_Z)
+                barrel-=horizontal_hole(2.05,19,x-21 if direction<0 else x+3,y,AXIS_Z)
                 solids[p['ref']]=body+barrel
                 nut=horizontal_hole(4.6,1.6,-4.6 if direction<0 else 79,y,AXIS_Z)-horizontal_hole(3.2,3,-5 if direction<0 else 78.5,y,AXIS_Z)
                 solids[p['ref']+'_nut']=nut

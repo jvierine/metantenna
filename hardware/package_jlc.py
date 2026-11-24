@@ -9,7 +9,7 @@ from collections import defaultdict
 from openpyxl import Workbook
 from design import preamp,biastee
 R=(Path(__file__).resolve().parents[1]/"vhf")
-LCSC={'ACM4520-901-2P-T000':'C41519','ACM7060-701-2PL-TL01':'C78246','BLM21PG601SN1D':'C41556732','132203':'C6784103'}
+LCSC={'ACM4520-901-2P-T000':'C41519','ACM7060-701-2PL-TL01':'C78246','BLM21PG601SN1D':'C41556732','SMA-KWE-323C-H13X23-LW':'C5723201','SMA-KE-347A-H13.5-P':'C5723187'}
 
 def book(path,headers,rows):
  w=Workbook();s=w.active;s.title='Data';s.append(headers)

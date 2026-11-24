@@ -183,7 +183,7 @@
       "y": 27,
       "rotation": 0,
       "side": "F",
-      "mpn": "132203",
+      "mpn": "SMA-KWE-323C-H13X23-LW",
       "note": "Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit"
     },
     {
@@ -215,7 +215,7 @@
       "y": 27,
       "rotation": 180,
       "side": "F",
-      "mpn": "132203",
+      "mpn": "SMA-KWE-323C-H13X23-LW",
       "note": "Right-angle bulkhead SMA; barrel points toward right board edge; horizontal sidewall exit"
     },
     {
@@ -290,7 +290,7 @@
       "y": 50,
       "rotation": 0,
       "side": "F",
-      "mpn": "132203",
+      "mpn": "SMA-KWE-323C-H13X23-LW",
       "note": "Right-angle bulkhead SMA; barrel points toward left board edge; horizontal sidewall exit"
     },
     {
@@ -322,7 +322,7 @@
       "y": 50,
       "rotation": 180,
       "side": "F",
-      "mpn": "132203",
+      "mpn": "SMA-KWE-323C-H13X23-LW",
       "note": "Right-angle bulkhead SMA; barrel points toward right board edge; horizontal sidewall exit"
     },
     {
@@ -668,47 +668,47 @@
       "y": 27.0,
       "w": 2.05,
       "h": 2.05,
-      "drill": 1.5,
+      "drill": 1.2,
       "net": "X_ANT_CENTER"
     },
     {
       "ref": "J10",
       "pin": "2",
-      "x": 7.54,
-      "y": 29.54,
+      "x": 2.45,
+      "y": 29.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "X_ANT_RETURN"
     },
     {
       "ref": "J10",
       "pin": "2",
-      "x": 7.54,
-      "y": 24.46,
+      "x": 2.45,
+      "y": 29.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "X_ANT_RETURN"
     },
     {
       "ref": "J10",
       "pin": "2",
-      "x": 2.46,
-      "y": 24.46,
+      "x": 2.45,
+      "y": 29.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "X_ANT_RETURN"
     },
     {
       "ref": "J10",
       "pin": "2",
-      "x": 2.46,
-      "y": 29.54,
+      "x": 2.45,
+      "y": 29.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "X_ANT_RETURN"
     },
     {
@@ -758,47 +758,47 @@
       "y": 27.0,
       "w": 2.05,
       "h": 2.05,
-      "drill": 1.5,
+      "drill": 1.2,
       "net": "X_RX"
     },
     {
       "ref": "J11",
       "pin": "2",
-      "x": 68.46,
-      "y": 24.46,
+      "x": 73.55,
+      "y": 24.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
       "ref": "J11",
       "pin": "2",
-      "x": 68.46,
-      "y": 29.54,
+      "x": 73.55,
+      "y": 24.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
       "ref": "J11",
       "pin": "2",
-      "x": 73.54,
-      "y": 29.54,
+      "x": 73.55,
+      "y": 24.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
       "ref": "J11",
       "pin": "2",
-      "x": 73.54,
-      "y": 24.46,
+      "x": 73.55,
+      "y": 24.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
@@ -888,47 +888,47 @@
       "y": 50.0,
       "w": 2.05,
       "h": 2.05,
-      "drill": 1.5,
+      "drill": 1.2,
       "net": "Y_ANT_CENTER"
     },
     {
       "ref": "J20",
       "pin": "2",
-      "x": 7.54,
-      "y": 52.54,
+      "x": 2.45,
+      "y": 52.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "Y_ANT_RETURN"
     },
     {
       "ref": "J20",
       "pin": "2",
-      "x": 7.54,
-      "y": 47.46,
+      "x": 2.45,
+      "y": 52.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "Y_ANT_RETURN"
     },
     {
       "ref": "J20",
       "pin": "2",
-      "x": 2.46,
-      "y": 47.46,
+      "x": 2.45,
+      "y": 52.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "Y_ANT_RETURN"
     },
     {
       "ref": "J20",
       "pin": "2",
-      "x": 2.46,
-      "y": 52.54,
+      "x": 2.45,
+      "y": 52.55,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "Y_ANT_RETURN"
     },
     {
@@ -978,47 +978,47 @@
       "y": 50.0,
       "w": 2.05,
       "h": 2.05,
-      "drill": 1.5,
+      "drill": 1.2,
       "net": "Y_RX"
     },
     {
       "ref": "J21",
       "pin": "2",
-      "x": 68.46,
-      "y": 47.46,
+      "x": 73.55,
+      "y": 47.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
       "ref": "J21",
       "pin": "2",
-      "x": 68.46,
-      "y": 52.54,
+      "x": 73.55,
+      "y": 47.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
       "ref": "J21",
       "pin": "2",
-      "x": 73.54,
-      "y": 52.54,
+      "x": 73.55,
+      "y": 47.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {
       "ref": "J21",
       "pin": "2",
-      "x": 73.54,
-      "y": 47.46,
+      "x": 73.55,
+      "y": 47.45,
       "w": 2.25,
       "h": 2.25,
-      "drill": 1.7,
+      "drill": 1.5,
       "net": "GND"
     },
     {

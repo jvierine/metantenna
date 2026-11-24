@@ -123,7 +123,7 @@ and shield return through paired windings. Separate shield islands prevent a
 PCB-ground bypass. C21 blocks the Y shield's parallel DC return, keeping the
 X supply current balanced through its choke. These are factory-mounted SMD
 parts; no wound coax harness, extra box or customer soldering is required.
-The retained right-angle SMA jacks are also catalogued by JLC (C6784103).
+The retained right-angle SMA jacks are also catalogued by JLC (C5723201).
 
 ![Bias-tee common-mode and differential supply filtering](docs/biastee_filter_review.png)
 
@@ -140,7 +140,7 @@ released board. Its target is now 0.1–30 MHz, high-impedance balanced input,
 
 **Indoor bias tee: horizontal side-entry SMA jacks.** J10/J20 face left
 (antenna); J11/J21 face right (receiver). These are right-angle bulkhead
-Amphenol 132203 jacks, not the outdoor head’s downward-facing 132134 jacks.
+XUNPU SMA-KWE-323C-H13X23-LW jacks, not the outdoor head’s downward-facing SMA-KE-347A-H13.5-P jacks.
 The indoor case has four open-top U-slots, closed by tongues on the lid,
 2 mm walls at the jacks, space for
 retaining nuts, a rear 12 V cable entry, and a screw-on lid. Remove the SMA
@@ -191,3 +191,8 @@ this is a ventilated rain-shedding housing, not an IP-rated enclosure.
 The electronics budget target remains **$70–100 per complete set** for the
 five-set prototype batch, including the bias tee and excluding coax, mast,
 enclosure, tax and shipping. This is a budget estimate, not a supplier quote.
+
+
+## Low-cost SMA connectors
+
+Both boards use standard-polarity **50 Ω female SMA**, factory assembled: XUNPU **SMA-KE-347A-H13.5-P (C5723187)** underneath the antenna head, and **SMA-KWE-323C-H13X23-LW (C5723201)** for horizontal bias-tee entry. Amphenol parts are no longer selected. Both have JLC wave-solder assembly listings; order-specific inventory, price and placement still need acceptance. The bias case has been updated for the XUNPU dimensions and checked for insertion of the populated board.

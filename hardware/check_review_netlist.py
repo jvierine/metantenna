@@ -17,7 +17,10 @@ assert actual=={a.ref:a.value for a in preamp()[0]}
 old=json.loads(subprocess.check_output(['git','show','f8b7d8e:vhf/hardware/biastee_layout.json'],cwd=r,text=True))
 now={a.ref:asdict(a) for a in biastee()[0]};before={a['ref']:a for a in old['parts']}
 for ref in before:
- for key in ['value','nets','mpn','x','y','rotation','side']:assert now[ref][key]==before[ref][key],(ref,key)
+ for key in ['value','nets','mpn','x','y','rotation','side']:
+  if key=='mpn' and before[ref]['package']=='SMA_RA':
+   assert now[ref][key]=='SMA-KWE-323C-H13X23-LW';continue
+  assert now[ref][key]==before[ref][key],(ref,key)
 assert set(now)==set(before)
 for ref in ['CM1','CM10','CM20','FB1','C21']:assert ref in now
-print('All',len(expected),'connected schematic pins and',len(actual),'components agree; entire bias-board definition retained')
+print('All',len(expected),'connected schematic pins and',len(actual),'components agree; bias-board topology and filters retained; authorized low-cost SMA substitution')

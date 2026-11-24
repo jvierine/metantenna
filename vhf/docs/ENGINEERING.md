@@ -217,7 +217,7 @@ A supply-to-coax injection measurement and stability check are required.
 
 CM10 and CM20 are TDK ACM4520-901-2P-T000, JLC C41519. The catalogue
 lists about $1.07 each at unit quantity; this is a component indication,
-not an assembled quote. SMA 132203 is JLC C6784103. All are included in
+not an assembled quote. SMA-KWE-323C-H13X23-LW is JLC C5723201. All are included in
 the full-assembly BOM/CPL. No wound harness or added bulkhead is used.
 
 On each port, pins 1–4 carry the centre conductor and pins 2–3 the shield
