@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="920" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">SURT</title>
+  <desc id="desc">An inverted-V dipole under a meteor streak beside the SURT wordmark.</desc>
+  <rect width="920" height="280" rx="12" fill="#111e2c"/>
+  <g fill="#e7eee9">
+    <path d="M151 198 223 109l7 9-64 80zm92-80 7-9 72 89h-15z"/>
+    <text x="382" y="179" font-family="Helvetica, Arial, sans-serif" font-size="102" font-weight="700" letter-spacing="11">SURT</text>
+  </g>
+  <path fill="#e7a875" d="m259 85 63-29-57 39a6 6 0 0 1-6-10z"/>
+</svg>
