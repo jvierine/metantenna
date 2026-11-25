@@ -32,3 +32,14 @@ This supersedes the earlier incremental-noise approximation for these comparison
 The unchanged amplifier is assumed matched and unilateral, with 25.1 dB gain and 2.7 dB noise figure extrapolated from 100 MHz; vendor noise parameters, reverse noise correlations, PCB coupling and measured component losses are unavailable. Antenna patterns and the orthogonal-port load are held fixed. This is not a full electromagnetic/noise-parameter qualification. A poor baseline antenna match can make added receiver noise important: a small penalty for tuned arms does not validate short arms everywhere.
 
 [HDF5 numerical results](../simulation/spice_tolerance/results.h5), [summary and assumptions](../simulation/spice_tolerance/summary.json), and nominal circuit decks are available for review. No current production CAD or BOM was changed by this simulation.
+
+
+## Temperature target: −50 to +30 °C
+
+The requested outdoor operating target is −50 to +30 °C, including cold start. Neither assembly is currently qualified for that complete interval. The selected APV AHW-C inductors specify −40 to +85 °C, the original Coilcraft 0805HP specifies −40 to +125 °C, and the common TPS7A4901 regulator specifies −40 to +125 °C. Storage limits are not operating guarantees. Self-heating does not establish successful cold start.
+
+Both tuned-capacitor choices use C0G/NP0, whose class temperature coefficient is 0 ±30 ppm/°C. That corresponds to at most approximately 0.24% change across an 80 °C span for a constant limiting coefficient. Coilcraft publishes +100 to +250 ppm/°C inductance coefficient for 0805HP; the reviewed APV AHW-C sheet does not give an equivalent coefficient. Therefore a quantitative cheap-versus-expensive temperature-stability comparison cannot be established from these data.
+
+An ngspice LC-drift-only screen applies the Coilcraft coefficient endpoints and capacitor coefficient endpoints at −50 and +30 °C relative to 25 °C. Loss/Q, resistor values, capacitor ESR/ESL, amplifier bias/noise and common-mode filter parameters are held fixed. The −50 °C curves are an explicit extrapolation outside component operating specifications, not evidence of operation there. The approximate full-span frequency shift from f ∝ 1/sqrt(LC) is 0.28–1.12%, about 0.19–0.75 MHz for an upper edge near 67 MHz. These figures cannot be assigned to the APV inductors without their TCL or measurement.
+
+[Numeric drift screen](../simulation/temperature/summary.json) and HDF5 are retained. Source specifications: [Coilcraft 0805HP](https://www.coilcraft.com/getmedia/c30565bc-9cf5-4393-9380-6f782e4b4cd8/0805hp.pdf), [APV AHW-C](https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf), and [TI TPS7A49](https://www.ti.com/lit/ds/symlink/tps7a49.pdf). The low-cost prototype remains reasonable for evaluation; cold-start, gain/noise and filter measurements at the required extremes are needed before claiming that operating range.
