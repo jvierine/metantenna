@@ -10,7 +10,7 @@ import tempfile
 import cairosvg
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 VARIANT = HERE.parent
@@ -49,20 +49,13 @@ def layer_image(name, layers, temporary, *, appearance=None):
 
 
 def draw_layers(name, temporary):
-    silk = layer_image(name, "F.SilkS", temporary, appearance="silk").convert("RGBA")
-    mask = silk.getchannel("A")
-    halo = Image.new("RGBA", silk.size, "white")
-    halo.putalpha(mask.filter(ImageFilter.MaxFilter(5)))
-    ink = Image.new("RGBA", silk.size, "#172c27")
-    ink.putalpha(mask)
-    labels = Image.alpha_composite(halo, ink)
     fig,axs=plt.subplots(2,2,figsize=(16,16),layout='constrained')
     for ax,(layer,title) in zip(axs.flat,LAYER_VIEWS.items()):
         copper = layer_image(name, layer + ',Edge.Cuts', temporary).convert('RGBA')
-        ax.imshow(Image.alpha_composite(copper, labels))
+        ax.imshow(copper)
         ax.set_title(title,loc='left',fontsize=12)
         ax.axis('off')
-    fig.supxlabel('Component-side view of all layers · Front silkscreen overlaid for reference', fontsize=12)
+    fig.supxlabel('Component-side view of all layers', fontsize=12)
     fig.savefig(HERE/f'{name}_copper_layers.png',dpi=155)
     plt.close(fig)
     front = layer_image(name,'F.Cu,Edge.Cuts',temporary,appearance='copper').convert('RGBA')

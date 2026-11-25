@@ -5,14 +5,14 @@
     150
   ],
   "X_gain_50ohm_30_55_dB": [
-    15.336945855335326,
-    17.067101845174435
+    15.329742040333485,
+    17.06500212909752
   ],
   "Y_gain_50ohm_30_55_dB": [
-    15.409507243771525,
-    17.136564879007373
+    15.409623518948747,
+    17.136817832533215
   ],
-  "X_Y_gain_difference_dB_max": 0.10694423134109243,
+  "X_Y_gain_difference_dB_max": 0.11433958396793642,
   "added_filter_DC_resistance_ohm_max": 0.29,
   "dc_corners": 1440,
   "head_input_current_mA_max": 178.97470362857783,
@@ -25,68 +25,68 @@
   "antenna_cases": {
     "arms_1p0m": {
       "32.55": {
-        "antenna_to_rx_gain_dB": -8.641772893907824,
+        "antenna_to_rx_gain_dB": -8.641932740932116,
         "realized_zenith_gain_dBi": -20.257733976344895,
         "system_X_noise_K_median": 143998.4386836043
       },
       "50": {
-        "antenna_to_rx_gain_dB": 2.8542494774624587,
+        "antenna_to_rx_gain_dB": 2.8543256838209126,
         "realized_zenith_gain_dBi": -9.067019411245472,
         "system_X_noise_K_median": 12601.867752806345
       },
       "55": {
-        "antenna_to_rx_gain_dB": 6.585566345646178,
+        "antenna_to_rx_gain_dB": 6.57836253064434,
         "realized_zenith_gain_dBi": -6.294397776056768,
         "system_X_noise_K_median": 7143.670560391442
       }
     },
     "arms_1p5m": {
       "32.55": {
-        "antenna_to_rx_gain_dB": 1.1112230203558937,
+        "antenna_to_rx_gain_dB": 1.1110631733315992,
         "realized_zenith_gain_dBi": -10.544217697684239,
         "system_X_noise_K_median": 24099.06305396328
       },
       "50": {
-        "antenna_to_rx_gain_dB": 13.993383493752683,
+        "antenna_to_rx_gain_dB": 13.993459700111135,
         "realized_zenith_gain_dBi": 2.9104834030759825,
         "system_X_noise_K_median": 4843.61393412244
       },
       "55": {
-        "antenna_to_rx_gain_dB": 11.076504734028493,
+        "antenna_to_rx_gain_dB": 11.069300919026652,
         "realized_zenith_gain_dBi": -0.7823882894535954,
         "system_X_noise_K_median": 4570.610957255207
       }
     },
     "arms_2p0m": {
       "32.55": {
-        "antenna_to_rx_gain_dB": 13.84872743239846,
+        "antenna_to_rx_gain_dB": 13.848567585374166,
         "realized_zenith_gain_dBi": 2.139210076841194,
         "system_X_noise_K_median": 10466.338462478352
       },
       "50": {
-        "antenna_to_rx_gain_dB": 6.682276140790993,
+        "antenna_to_rx_gain_dB": 6.682352347149444,
         "realized_zenith_gain_dBi": -4.238607087230125,
         "system_X_noise_K_median": 7460.548071187102
       },
       "55": {
-        "antenna_to_rx_gain_dB": 5.9238465362502,
+        "antenna_to_rx_gain_dB": 5.916642721248358,
         "realized_zenith_gain_dBi": -5.559334696167069,
         "system_X_noise_K_median": 7534.943875449463
       }
     },
     "SIMONe_candidate": {
       "32.55": {
-        "antenna_to_rx_gain_dB": 16.860471668398556,
+        "antenna_to_rx_gain_dB": 16.860311821374264,
         "realized_zenith_gain_dBi": 4.998962096961528,
         "system_X_noise_K_median": 10009.401910301412
       },
       "50": {
-        "antenna_to_rx_gain_dB": 5.7099701306809685,
+        "antenna_to_rx_gain_dB": 5.7100463370394205,
         "realized_zenith_gain_dBi": -5.107817046149068,
         "system_X_noise_K_median": 8276.276031315783
       },
       "55": {
-        "antenna_to_rx_gain_dB": 5.2216049269274025,
+        "antenna_to_rx_gain_dB": 5.214401111925563,
         "realized_zenith_gain_dBi": -6.076942621471551,
         "system_X_noise_K_median": 8288.73534090854
       }
@@ -99,9 +99,12 @@
     "MMIC_current_below_120mA": true
   },
   "pcb_output_lengths_mm": {
-    "X": 58.95533905932738,
-    "Y": 34.798989873223334,
-    "X_bias_stub": 21.74028137423857
+    "X_before_tap": 4.0,
+    "X": 58.8533002683939,
+    "Y": 52.069244519656856,
+    "X_bias_stub": 7.200662862729902
   },
-  "pcb_line_model": "Lossless 50 \u03a9 lines, effective relative permittivity 3.2. No coupling or launch field model."
+  "pcb_line_model": "Lossless 50 \u03a9 lines, effective relative permittivity 3.2. No coupling or launch field model.",
+  "head_X_Y_phase_difference_30_55_deg_max": 6.861995523977385,
+  "system_X_Y_phase_difference_30_55_deg_max": 11.730249863233814
 }

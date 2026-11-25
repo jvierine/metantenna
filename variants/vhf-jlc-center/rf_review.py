@@ -11,12 +11,12 @@ HERE = Path(__file__).resolve().parent
 
 
 def capacitance(width, height, dk, gap, step=.008):
-    # 2D quasi-static solve with an adjacent ground plane, 40 um copper
-    # and 20 um conformal solder mask. Units in the mesh are millimetres.
+    # 2D quasi-static solve with an adjacent ground plane, 35 um copper
+    # and 15.24 um conformal solder mask. Units in the mesh are millimetres.
     x = np.arange(-2, 2+step/2, step)
     y = np.arange(-height, .9+step/2, step)
     xx, yy = np.meshgrid(x, y, indexing='ij')
-    copper = (yy >= -1e-8) & (yy <= .04+1e-8)
+    copper = (yy >= -1e-8) & (yy <= .035+1e-8)
     driven = copper & (abs(xx) <= width/2)
     fixed = driven.copy()
     fixed[:,0] = fixed[:,-1] = fixed[0,:] = fixed[-1,:] = True
@@ -25,8 +25,8 @@ def capacitance(width, height, dk, gap, step=.008):
     er = np.ones_like(xx)
     er[yy < -1e-8] = dk
     if dk > 1:
-        er[(yy >= -1e-8) & (yy < .02)] = 3.3
-        er[(abs(xx) < width/2+.02) & (yy >= 0) & (yy < .06)] = 3.3
+        er[(yy >= -1e-8) & (yy < .01524)] = 3.8
+        er[(abs(xx) < width/2+.02) & (yy >= 0) & (yy < .05024)] = 3.8
     index = np.full(xx.shape, -1)
     index[~fixed] = np.arange((~fixed).sum())
     u,v = np.where(~fixed)
@@ -88,13 +88,13 @@ if __name__=='__main__':
     results={
         'geometry':geometry(),
         'impedance_ohm':{
-            'outer_dielectric_0p2104mm_ground_fill_0p5mm':impedance(.34,.2104,4.2,.5),
-            'outer_dielectric_0p2104mm_without_side_fill':impedance(.34,.2104,4.2,None),
-            'outer_dielectric_0p1164mm_ground_fill_0p5mm':impedance(.34,.1164,4.2,.5),
+            'outer_dielectric_0p2104mm_ground_fill_0p5mm':impedance(.34,.2104,4.4,.5),
+            'outer_dielectric_0p2104mm_without_side_fill':impedance(.34,.2104,4.4,None),
+            'outer_dielectric_0p1164mm_ground_fill_0p5mm':impedance(.34,.1164,4.16,.5),
         },
         'trace_model_width_mm':.34,
-        'biastee_uniform_0p32mm_ohm':impedance(.32,.2104,4.2,.5),
-        'scope':'2D uniform line only. Dk assumed 4.2; excludes via and SMA 3D launches, component pads, and coupling.',
+        'biastee_uniform_0p32mm_ohm':impedance(.32,.2104,4.4,.5),
+        'scope':'2D uniform line only. JLC published laminate and solder mask Dk; excludes via and SMA 3D launches, component pads, and coupling.',
     }
     (HERE/'simulation/rf_review.json').write_text(json.dumps(results,indent=2)+'\n')
     print(json.dumps(results,indent=2))

@@ -4,8 +4,8 @@
       "trace_width_mm": [
         0.34
       ],
-      "minimum_same_layer_gap_to_input_trace_mm": 10.135,
-      "nearest_input_net": "X_ANT_P",
+      "minimum_same_layer_gap_to_input_trace_mm": 12.978,
+      "nearest_input_net": "Y_ANT_N",
       "nearest_ground_via_mm": [
         1.2
       ]
@@ -14,17 +14,17 @@
       "trace_width_mm": [
         0.34
       ],
-      "minimum_same_layer_gap_to_input_trace_mm": 8.47,
-      "nearest_input_net": "Y_AMP_IN",
+      "minimum_same_layer_gap_to_input_trace_mm": 4.67,
+      "nearest_input_net": "X_ANT_P",
       "nearest_ground_via_mm": []
     }
   },
   "impedance_ohm": {
-    "outer_dielectric_0p2104mm_ground_fill_0p5mm": 49.61940245343712,
-    "outer_dielectric_0p2104mm_without_side_fill": 49.89874180224361,
-    "outer_dielectric_0p1164mm_ground_fill_0p5mm": 34.82411318467019
+    "outer_dielectric_0p2104mm_ground_fill_0p5mm": 49.860348374986636,
+    "outer_dielectric_0p2104mm_without_side_fill": 50.118077976561764,
+    "outer_dielectric_0p1164mm_ground_fill_0p5mm": 36.36865727277509
   },
   "trace_model_width_mm": 0.34,
-  "biastee_uniform_0p32mm_ohm": 51.5440521341701,
-  "scope": "2D uniform line only. Dk assumed 4.2; excludes via and SMA 3D launches, component pads, and coupling."
+  "biastee_uniform_0p32mm_ohm": 51.79789114162096,
+  "scope": "2D uniform line only. JLC published laminate and solder mask Dk; excludes via and SMA 3D launches, component pads, and coupling."
 }

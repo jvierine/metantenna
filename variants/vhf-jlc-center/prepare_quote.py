@@ -51,6 +51,11 @@ for name in ['preamp','biastee']:
  shutil.copy2(O/'validation'/name/'schematic.pdf',dest/'Schematic.pdf')
  records.append({'board':name,'quantity_fabricated_and_fully_assembled':5,'populated_parts_per_board':len(rows),'unresolved_LCSC_identifiers':sum(not p['lcsc'] for p in rows),'all_connectors_factory_assembled':True,'placement_preview':'Supplier must confirm rotation, component-side antenna SMA orientation, and horizontal bias SMA orientation before release'})
 report={'source_tree_sha256':{str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest() for p in (O/'hardware').rglob('*') if p.is_file() and p.suffix != '.kicad_prl'},'source_base_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip(),'boards':records,'status':'QUOTATION / ENGINEERING REVIEW ONLY. Not approved for payment.','scope':'Original VHF with sourcing substitutions head and indoor bias tee; five of each; four layers. Housings and HF boards excluded.','checks':'Connected pins match baseline. R108/R208 are intentionally 43 ohm. Native electrical DRC and parity clean. ','remaining':['Supplier exact-MPN sourcing, prices and lead time','Supplier BOM/CPL orientation preview and CAM acceptance','Courtyard/component-envelope and return-path review not established by ignored-check DRC','Physical gain/noise/linearity/oscillation and -50 C cold-start testing not performed'],'electrical_model':'Behavioral matched MMIC; Q assumptions and lumped choke/cable models. No nonlinear or board-EM validation.'}
+report["fabrication_stackup"] = {
+    "head": "JLC04161H-7628, nominal 1.6 mm, 1 oz outer and 0.5 oz inner copper",
+    "head_rf": "50 ohm single-ended, L1 over L2 and L4 over L3; 0.34 mm nominal width, 0.50 mm side clearance; supplier to confirm finished geometry",
+    "source": "https://jlcpcb.com/impedance",
+}
 (D/'order_scope.json').write_text(json.dumps(report,indent=2)+'\n')
 
 shutil.copy2(O/'manufacturing/bom.html',D/'BOM.html')
