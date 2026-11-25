@@ -9,6 +9,8 @@
 
 Both designs use 50 Ω coax outputs, a 12 V bias tee and common-mode filtering. The HF input architecture differs from the approximately 50 Ω VHF input.
 
+[VHF single-sided manufacturing variant](variants/vhf-jlc/)
+
 ## VHF example
 
 ![VHF antenna deployment](vhf/docs/antenna_deployment.png)

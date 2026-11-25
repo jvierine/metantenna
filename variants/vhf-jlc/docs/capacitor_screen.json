@@ -1,0 +1,14 @@
+{
+  "0.95": {
+    "maximum_inband_change_dB": 0.01308830713243736,
+    "minimum_FM_rejection_dB": 46.50654244283042
+  },
+  "1": {
+    "maximum_inband_change_dB": 0.0,
+    "minimum_FM_rejection_dB": 45.08904752164067
+  },
+  "1.05": {
+    "maximum_inband_change_dB": 0.018845962029664376,
+    "minimum_FM_rejection_dB": 42.10683643430585
+  }
+}

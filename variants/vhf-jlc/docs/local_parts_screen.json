@@ -1,0 +1,12 @@
+{
+  "scope": "Linear 50-ohm filter, assumed Q 70/35/70 at 50 MHz. Bias bounds extrapolated to -50 C; not hardware qualification.",
+  "filter_corners": 2048,
+  "worst_30_55_transmission_dB": -1.2951096925454886,
+  "max_30_55_ripple_dB": 0.41397096527332133,
+  "min_FM_rejection_relative_to_passband_dB": 36.09372762142878,
+  "bias_current_mA_range": [
+    50.639216187433426,
+    92.57605627198122
+  ],
+  "max_bias_resistor_W": 0.3500978250605635
+}
