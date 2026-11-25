@@ -1,0 +1,6 @@
+{
+  "baseline_files_unchanged": true,
+  "component_values_and_all_connected_pins_unchanged": true,
+  "native_ERC_DRC_and_parity": "clean for both boards",
+  "scope": "CAD checks only; RF part models and manufacture remain unqualified"
+}

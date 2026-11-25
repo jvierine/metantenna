@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/jvi019/src/metantenna/variants/vhf-low-cost/hardware/biastee.kicad_sch</source>
+    <date>2026-11-25T00:54:17</date>
+    <tool>Eeschema 10.0.8</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Metantenna \u2014 biastee \u2014 engineering prototype</title>
+        <company>Juha Vierinen</company>
+        <rev>B0</rev>
+        <date>2026-11-23</date>
+        <source>biastee.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10u 25V</value>
+      <footprint>metantenna:1206</footprint>
+      <fields>
+        <field name="MPN">GRM31CR61E106KA12L</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="C1" description=""/>
+      <property name="MPN" value="GRM31CR61E106KA12L"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4784a25c-0a19-550d-bf52-c06d0264f8ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>1n</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN102</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="metantenna" part="C2" description=""/>
+      <property name="MPN" value="CC0805JRNPO9BN102"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97967abc-ed4a-5956-9564-ef9f40a799e7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="C3" description=""/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>599485b0-4717-5eea-8d54-fc8c9d592cc7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>10u 25V</value>
+      <footprint>metantenna:1206</footprint>
+      <fields>
+        <field name="MPN">GRM31CR61E106KA12L</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="C4" description=""/>
+      <property name="MPN" value="GRM31CR61E106KA12L"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c7b5527-b9e3-5b58-8fb9-f2ff44610a08</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>1n</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN102</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="metantenna" part="C10" description=""/>
+      <property name="MPN" value="CC0805JRNPO9BN102"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a56c4134-8a74-5dc0-baa6-15af5178fc40</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="C11" description=""/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdecc996-9e54-523b-9e8d-9280473501d3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>1n</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN102</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="metantenna" part="C20" description=""/>
+      <property name="MPN" value="CC0805JRNPO9BN102"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>acd0e202-756e-5635-addc-065d9bd59c16</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>1n</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN102</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="metantenna" part="C21" description=""/>
+      <property name="MPN" value="CC0805JRNPO9BN102"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7da82a5c-39bb-5dba-9a3e-1a5118ccb44c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CM1">
+      <value>700R CM @100MHz</value>
+      <footprint>metantenna:ACM7060</footprint>
+      <fields>
+        <field name="MPN">ACM7060-701-2PL-TL01</field>
+        <field name="Footprint">metantenna:ACM7060</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="CM1" description=""/>
+      <property name="MPN" value="ACM7060-701-2PL-TL01"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d71f933-4361-58b6-8a5f-654d89a005e8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CM10">
+      <value>900R CM @100MHz</value>
+      <footprint>metantenna:ACM4520</footprint>
+      <fields>
+        <field name="MPN">ACM4520-901-2P-T000</field>
+        <field name="Footprint">metantenna:ACM4520</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="CM10" description=""/>
+      <property name="MPN" value="ACM4520-901-2P-T000"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e02b92e4-b576-5187-80c6-9ed8b8af0353</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CM20">
+      <value>900R CM @100MHz</value>
+      <footprint>metantenna:ACM4520</footprint>
+      <fields>
+        <field name="MPN">ACM4520-901-2P-T000</field>
+        <field name="Footprint">metantenna:ACM4520</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="CM20" description=""/>
+      <property name="MPN" value="ACM4520-901-2P-T000"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23b19941-6b35-56ca-9b76-43c8ef005315</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>SS14</value>
+      <footprint>metantenna:SMA_DIODE</footprint>
+      <fields>
+        <field name="MPN">SS14</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="D1" description=""/>
+      <property name="MPN" value="SS14"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e9a3397-d7d1-535a-852c-ebd16a53912a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>SMAJ15A</value>
+      <footprint>metantenna:SMA_DIODE</footprint>
+      <fields>
+        <field name="MPN">SMAJ15A</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="D2" description=""/>
+      <property name="MPN" value="SMAJ15A"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a88e8652-b1c5-5c17-ac29-ebe7e6a14c9e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>500mA PTC</value>
+      <footprint>metantenna:1206</footprint>
+      <fields>
+        <field name="MPN">1206L050/24YR</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="F1" description=""/>
+      <property name="MPN" value="1206L050/24YR"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc5e5f25-9a44-5d7d-b185-97722738c606</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F10">
+      <value>500mA PTC</value>
+      <footprint>metantenna:1206</footprint>
+      <fields>
+        <field name="MPN">1206L050/24YR</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="F10" description=""/>
+      <property name="MPN" value="1206L050/24YR"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>655de119-6a17-51e0-97e7-7e31cee48dd0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="FB1">
+      <value>600R @100MHz</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">BLM21PG601SN1D</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="FB1" description=""/>
+      <property name="MPN" value="BLM21PG601SN1D"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c1e36055-90bf-56a3-9760-b6a81c382afa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>12 V input</value>
+      <footprint>metantenna:TERM2</footprint>
+      <fields>
+        <field name="MPN">1729128</field>
+        <field name="Footprint">metantenna:TERM2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J1" description=""/>
+      <property name="MPN" value="1729128"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>447de8bd-a3f8-5eeb-858e-846fd2691b69</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J10">
+      <value>X ANT +DC</value>
+      <footprint>metantenna:SMA_RA</footprint>
+      <fields>
+        <field name="MPN">SMA-KWE-323C-H13X23-LW</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J10" description=""/>
+      <property name="MPN" value="SMA-KWE-323C-H13X23-LW"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3cce0e79-666d-5ef0-9423-71fee9b5618d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J11">
+      <value>X RX DC BLOCK</value>
+      <footprint>metantenna:SMA_RA</footprint>
+      <fields>
+        <field name="MPN">SMA-KWE-323C-H13X23-LW</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J11" description=""/>
+      <property name="MPN" value="SMA-KWE-323C-H13X23-LW"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fdf084e-4923-5eeb-ba67-7e4808a1bed8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J20">
+      <value>Y ANT RF only</value>
+      <footprint>metantenna:SMA_RA</footprint>
+      <fields>
+        <field name="MPN">SMA-KWE-323C-H13X23-LW</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J20" description=""/>
+      <property name="MPN" value="SMA-KWE-323C-H13X23-LW"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6c13e14-c306-5181-b621-42ecbbe5f273</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J21">
+      <value>Y RX DC BLOCK</value>
+      <footprint>metantenna:SMA_RA</footprint>
+      <fields>
+        <field name="MPN">SMA-KWE-323C-H13X23-LW</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J21" description=""/>
+      <property name="MPN" value="SMA-KWE-323C-H13X23-LW"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d5d1626-c1b7-5f8a-aabb-039f92a0441d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L10">
+      <value>1u</value>
+      <footprint>metantenna:APV2520</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2520C-1R0JTF</field>
+        <field name="Footprint">metantenna:APV2520</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="metantenna" part="L10" description=""/>
+      <property name="MPN" value="AHW2520C-1R0JTF"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b65ea99-6c81-5df6-93b7-61d64c030ae5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>1R</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-071RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="R1" description=""/>
+      <property name="MPN" value="RC0805FR-071RL"/>
+      <property name="Sheetname" value="biastee"/>
+      <property name="Sheetfile" value="biastee.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f7b63d4f-9ee3-5c7c-a0b4-19f0ca627c76</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="metantenna" part="C1">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10u 25V</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C10">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1n</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C11">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100n 50V</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C2">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1n</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C20">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1n</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C21">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1n</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C3">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100n 50V</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="C4">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10u 25V</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="CM1">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">700R CM @100MHz</field>
+        <field name="Footprint">metantenna:ACM7060</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="CM10">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">900R CM @100MHz</field>
+        <field name="Footprint">metantenna:ACM4520</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="CM20">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">900R CM @100MHz</field>
+        <field name="Footprint">metantenna:ACM4520</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="D1">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS14</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="D2">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SMAJ15A</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="F1">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">500mA PTC</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="F10">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">500mA PTC</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="FB1">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">600R @100MHz</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J1">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">12 V input</field>
+        <field name="Footprint">metantenna:TERM2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J10">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">X ANT +DC</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J11">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">X RX DC BLOCK</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J20">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Y ANT RF only</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J21">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Y RX DC BLOCK</field>
+        <field name="Footprint">metantenna:SMA_RA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="L10">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">1u</field>
+        <field name="Footprint">metantenna:1008</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="R1">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">1R</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="metantenna">
+      <uri>${KIPRJMOD}/metantenna.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/CM_POS" class="Default">
+      <node ref="CM1" pin="4" pintype="passive"/>
+      <node ref="D1" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="/DAMP" class="Default">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="3" name="/FILTERED" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="F10" pin="1" pintype="passive"/>
+      <node ref="FB1" pin="2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="CM1" pin="3" pintype="passive"/>
+      <node ref="CM10" pin="3" pintype="passive"/>
+      <node ref="D2" pin="2" pintype="passive"/>
+      <node ref="J11" pin="2" pintype="passive"/>
+      <node ref="J21" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="/PROTECTED" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pintype="passive"/>
+      <node ref="D2" pin="1" pintype="passive"/>
+      <node ref="FB1" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="/SUPPLY_RETURN" class="Default">
+      <node ref="CM1" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/VIN" class="Default">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pintype="passive"/>
+    </net>
+    <net code="8" name="/VIN_FUSED" class="Default">
+      <node ref="CM1" pin="1" pintype="passive"/>
+      <node ref="F1" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/X_ANT_CENTER" class="Default">
+      <node ref="CM10" pin="1" pintype="passive"/>
+      <node ref="J10" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/X_ANT_RETURN" class="Default">
+      <node ref="CM10" pin="2" pintype="passive"/>
+      <node ref="J10" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/X_COAX" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="CM10" pin="4" pintype="passive"/>
+      <node ref="L10" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/X_DC" class="Default">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="F10" pin="2" pintype="passive"/>
+      <node ref="L10" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="/X_RX" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="J11" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/Y_ANT_CENTER" class="Default">
+      <node ref="CM20" pin="1" pintype="passive"/>
+      <node ref="J20" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="/Y_ANT_RETURN" class="Default">
+      <node ref="CM20" pin="2" pintype="passive"/>
+      <node ref="J20" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="/Y_COAX" class="Default">
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="CM20" pin="4" pintype="passive"/>
+    </net>
+    <net code="17" name="/Y_RETURN_BLOCKED" class="Default">
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="CM20" pin="3" pintype="passive"/>
+    </net>
+    <net code="18" name="/Y_RX" class="Default">
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="J21" pin="1" pintype="passive"/>
+    </net>
+  </nets>
+</export>

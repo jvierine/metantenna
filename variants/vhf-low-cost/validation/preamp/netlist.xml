@@ -1,0 +1,3678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/jvi019/src/metantenna/variants/vhf-low-cost/hardware/preamp.kicad_sch</source>
+    <date>2026-11-25T00:54:17</date>
+    <tool>Eeschema 10.0.8</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>preamp.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/X balun matching/" tstamps="/fc48eb8a-c0a9-5a96-8c2a-48733db79b23/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_balun_matching.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/X chebyshev high pass/" tstamps="/320e01dc-42f8-51a0-b4f9-a1ce78fc7926/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_chebyshev_high_pass.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_elliptic_low_pass.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_lna.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/X attenuator/" tstamps="/4345f6dd-4c9b-58e0-b2d8-6c1540beac71/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_attenuator.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/X raw bias tee/" tstamps="/a6a38237-55d6-5706-8107-8b8e2392213e/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_raw_bias_tee.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="8" name="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>x_dc_supply.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="9" name="/Y balun matching/" tstamps="/6658eb3d-739f-5a78-b26a-1f4b99ef8815/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_balun_matching.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="10" name="/Y chebyshev high pass/" tstamps="/bfbe098a-6761-51d6-84ca-fc695282963d/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_chebyshev_high_pass.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="11" name="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_elliptic_low_pass.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="12" name="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_lna.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="13" name="/Y attenuator/" tstamps="/a055415c-ddc3-55ee-866d-12ecc76054ae/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_attenuator.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="14" name="/Y output DC block/" tstamps="/0e16eeee-93e7-5227-a892-ba1a64582c3e/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_raw_bias_tee.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="15" name="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>y_dc_supply.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J101">
+      <value>X dipole</value>
+      <footprint>metantenna:ANT_M3</footprint>
+      <fields>
+        <field name="MPN"/>
+        <field name="Footprint">metantenna:ANT_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J101" description=""/>
+      <property name="MPN" value=""/>
+      <property name="Sheetname" value="preamp"/>
+      <property name="Sheetfile" value="preamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0226668e-8eb6-557e-80ce-fb1cc42d6390</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>X RF +12V</value>
+      <footprint>metantenna:SMA</footprint>
+      <fields>
+        <field name="MPN">SMA-KE-347A-H13.5-P</field>
+        <field name="Footprint">metantenna:SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J102" description=""/>
+      <property name="MPN" value="SMA-KE-347A-H13.5-P"/>
+      <property name="Sheetname" value="preamp"/>
+      <property name="Sheetfile" value="preamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1f64679-7e70-52b3-9d66-bb48dbee99b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J201">
+      <value>Y dipole</value>
+      <footprint>metantenna:ANT_M3</footprint>
+      <fields>
+        <field name="MPN"/>
+        <field name="Footprint">metantenna:ANT_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J201" description=""/>
+      <property name="MPN" value=""/>
+      <property name="Sheetname" value="preamp"/>
+      <property name="Sheetfile" value="preamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70ab6b73-5c8c-5524-9cff-1378dbfb8d6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J202">
+      <value>Y RF, DC blocked</value>
+      <footprint>metantenna:SMA</footprint>
+      <fields>
+        <field name="MPN">SMA-KE-347A-H13.5-P</field>
+        <field name="Footprint">metantenna:SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="metantenna" part="J202" description=""/>
+      <property name="MPN" value="SMA-KE-347A-H13.5-P"/>
+      <property name="Sheetname" value="preamp"/>
+      <property name="Sheetfile" value="preamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>201d7d8b-69a2-5794-a57a-815d1ffc4367</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>1M</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-071ML</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R101" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-071ML"/>
+      <property name="Sheetname" value="X balun matching"/>
+      <property name="Sheetfile" value="x_balun_matching.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X balun matching/" tstamps="/fc48eb8a-c0a9-5a96-8c2a-48733db79b23/"/>
+      <tstamps>8273c17f-570a-5e08-86e3-c35496f8c91d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>1M</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-071ML</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R102" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-071ML"/>
+      <property name="Sheetname" value="X balun matching"/>
+      <property name="Sheetfile" value="x_balun_matching.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X balun matching/" tstamps="/fc48eb8a-c0a9-5a96-8c2a-48733db79b23/"/>
+      <tstamps>6a038e6c-9b59-54d5-8189-48ec2a25c284</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="T101">
+      <value>ADT1-1+</value>
+      <footprint>metantenna:CD542</footprint>
+      <datasheet>https://www.minicircuits.com/pdfs/ADT1-1+.pdf</datasheet>
+      <description>0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</description>
+      <fields>
+        <field name="MPN">ADT1-1+</field>
+        <field name="Footprint">metantenna:CD542</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/ADT1-1+.pdf</field>
+        <field name="Description">0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</field>
+      </fields>
+      <libsource lib="review" part="T101" description="0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542"/>
+      <property name="MPN" value="ADT1-1+"/>
+      <property name="Sheetname" value="X balun matching"/>
+      <property name="Sheetfile" value="x_balun_matching.kicad_sch"/>
+      <property name="ki_keywords" value="Mini-Circuits RF Transformer"/>
+      <property name="ki_fp_filters" value="Mini?Circuits*CD542*"/>
+      <sheetpath names="/X balun matching/" tstamps="/fc48eb8a-c0a9-5a96-8c2a-48733db79b23/"/>
+      <tstamps>38e27287-9c7e-5995-9ee3-31b87fb0e91e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C101">
+      <value>160p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN161</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C101" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN161"/>
+      <property name="Sheetname" value="X chebyshev high pass"/>
+      <property name="Sheetfile" value="x_chebyshev_high_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X chebyshev high pass/" tstamps="/320e01dc-42f8-51a0-b4f9-a1ce78fc7926/"/>
+      <tstamps>1867b721-deb8-5b37-b450-b3d7c9984c5a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>160p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN161</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C102" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN161"/>
+      <property name="Sheetname" value="X chebyshev high pass"/>
+      <property name="Sheetfile" value="x_chebyshev_high_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X chebyshev high pass/" tstamps="/320e01dc-42f8-51a0-b4f9-a1ce78fc7926/"/>
+      <tstamps>209eee60-2991-5d1e-bb1d-e4c353ba4b6b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L101">
+      <value>220n</value>
+      <footprint>metantenna:APV2012</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2012C-R22JTF</field>
+        <field name="Footprint">metantenna:APV2012</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L101" description="Inductor"/>
+      <property name="MPN" value="AHW2012C-R22JTF"/>
+      <property name="Sheetname" value="X chebyshev high pass"/>
+      <property name="Sheetfile" value="x_chebyshev_high_pass.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/X chebyshev high pass/" tstamps="/320e01dc-42f8-51a0-b4f9-a1ce78fc7926/"/>
+      <tstamps>d94779cc-d756-5c29-9808-537244a4ff2f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>36p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN360</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN360; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN360</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN360</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN360; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C103" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN360"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>94e5769c-e94b-5a87-9983-07e949a9bb35</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>33p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN330</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN330; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN330</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN330</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN330; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C104" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN330"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>9707117b-58b9-5303-acbe-79535250de60</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>75p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN750</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN750; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN750</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN750</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN750; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C105" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN750"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>df229951-f3c6-5896-ba24-ef05ac0d7c48</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C106">
+      <value>20p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN200</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN200; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN200</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN200</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN200; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C106" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN200"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>16bae924-4b73-5d3e-9bb4-9884eb5a890c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C107">
+      <value>43p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN430</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN430; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN430</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN430</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN430; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C107" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN430"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>0b51801c-7ec5-55ce-adf4-4c6e37a5320f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L102">
+      <value>100n</value>
+      <footprint>metantenna:APV2012</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2012C-R10JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2012C-R10JTF</field>
+        <field name="Footprint">metantenna:APV2012</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2012C-R10JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L102" description="Inductor"/>
+      <property name="MPN" value="AHW2012C-R10JTF"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>408f6808-3944-5d33-87cf-c57b89332a1f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L103">
+      <value>120n</value>
+      <footprint>metantenna:APV2012</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2012C-R12JTF</field>
+        <field name="Footprint">metantenna:APV2012</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L103" description="Inductor"/>
+      <property name="MPN" value="AHW2012C-R12JTF"/>
+      <property name="Sheetname" value="X elliptic low pass"/>
+      <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/X elliptic low pass/" tstamps="/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf/"/>
+      <tstamps>2ee5fc72-ad6f-52bf-8f00-6ab4789f0656</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C108">
+      <value>2.4n</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">C0805C242J5GACTU</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="C108" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0805C242J5GACTU"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>67da3ec2-80eb-5ab1-a4eb-2aec60c72ad6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C114">
+      <value>100n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <description>50V</description>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V</field>
+      </fields>
+      <libsource lib="review" part="C114" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>eba6e207-876e-50a0-a42b-c8abe8c96604</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C115">
+      <value>2.4n</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">C0805C242J5GACTU</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="C115" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0805C242J5GACTU"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>6dc468ec-f2a1-5484-b771-67a64e7431d0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D101">
+      <value>DNP BAT15-03W</value>
+      <footprint>metantenna:SOD323</footprint>
+      <fields>
+        <field name="MPN">BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="D101" description=""/>
+      <property name="MPN" value="BAT15-03W"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>e612c293-420b-570c-9e4c-e3f40a8f3d97</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D102">
+      <value>DNP BAT15-03W</value>
+      <footprint>metantenna:SOD323</footprint>
+      <fields>
+        <field name="MPN">BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="D102" description=""/>
+      <property name="MPN" value="BAT15-03W"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>ea439d60-6e00-5a37-a572-f6a352fc4002</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L105">
+      <value>1u</value>
+      <footprint>metantenna:APV2520</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2520C-1R0JTF</field>
+        <field name="Footprint">metantenna:APV2520</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L105" description="Inductor"/>
+      <property name="MPN" value="AHW2520C-1R0JTF"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>a4d58fb0-9ae9-5929-8384-93b491cb13d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R108">
+      <value>41.2 1W</value>
+      <footprint>metantenna:2512</footprint>
+      <description>1W</description>
+      <fields>
+        <field name="MPN">CRCW251241R2FKEG</field>
+        <field name="Footprint">metantenna:2512</field>
+        <field name="Datasheet"/>
+        <field name="Description">1W</field>
+      </fields>
+      <libsource lib="review" part="R108" description="Resistor"/>
+      <property name="MPN" value="CRCW251241R2FKEG"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>53aec494-2415-5916-86a5-48e5458f79e2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U101">
+      <value>GALI-74+</value>
+      <footprint>metantenna:SOT89</footprint>
+      <datasheet>https://www.minicircuits.com/pdfs/GALI-74+.pdf</datasheet>
+      <description>DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</description>
+      <fields>
+        <field name="MPN">GALI-74+</field>
+        <field name="Footprint">metantenna:SOT89</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/GALI-74+.pdf</field>
+        <field name="Description">DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</field>
+      </fields>
+      <libsource lib="review" part="U101" description="DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89"/>
+      <property name="MPN" value="GALI-74+"/>
+      <property name="Sheetname" value="X lna"/>
+      <property name="Sheetfile" value="x_lna.kicad_sch"/>
+      <property name="ki_keywords" value="RF amplifier"/>
+      <property name="ki_fp_filters" value="SOT?89*"/>
+      <sheetpath names="/X lna/" tstamps="/200d198d-c9d5-5ef8-af31-8bed81787f9b/"/>
+      <tstamps>e390e96b-a6c1-5860-9691-a684dbaa6a3a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>294</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-07294RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R103" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-07294RL"/>
+      <property name="Sheetname" value="X attenuator"/>
+      <property name="Sheetfile" value="x_attenuator.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X attenuator/" tstamps="/4345f6dd-4c9b-58e0-b2d8-6c1540beac71/"/>
+      <tstamps>520f2870-f842-5f47-81e5-73371ec0178b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>18</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-0718RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R104" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0718RL"/>
+      <property name="Sheetname" value="X attenuator"/>
+      <property name="Sheetfile" value="x_attenuator.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X attenuator/" tstamps="/4345f6dd-4c9b-58e0-b2d8-6c1540beac71/"/>
+      <tstamps>93962bef-03ee-5873-8fd0-b2c0ace81bfa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R105">
+      <value>294</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-07294RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R105" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-07294RL"/>
+      <property name="Sheetname" value="X attenuator"/>
+      <property name="Sheetfile" value="x_attenuator.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X attenuator/" tstamps="/4345f6dd-4c9b-58e0-b2d8-6c1540beac71/"/>
+      <tstamps>0352b895-a7b9-533a-828e-e0d149614cd8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C109">
+      <value>1n</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN102</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C109" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN102"/>
+      <property name="Sheetname" value="X raw bias tee"/>
+      <property name="Sheetfile" value="x_raw_bias_tee.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X raw bias tee/" tstamps="/a6a38237-55d6-5706-8107-8b8e2392213e/"/>
+      <tstamps>2ad22de5-aa44-56a0-89b2-d06204464299</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D103">
+      <value>SS14</value>
+      <footprint>metantenna:SMA_DIODE</footprint>
+      <fields>
+        <field name="MPN">SS14</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="D103" description=""/>
+      <property name="MPN" value="SS14"/>
+      <property name="Sheetname" value="X raw bias tee"/>
+      <property name="Sheetfile" value="x_raw_bias_tee.kicad_sch"/>
+      <sheetpath names="/X raw bias tee/" tstamps="/a6a38237-55d6-5706-8107-8b8e2392213e/"/>
+      <tstamps>09c8a211-00f1-50f7-b0ab-4d785be3cd1d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D104">
+      <value>SMAJ15A</value>
+      <footprint>metantenna:SMA_DIODE</footprint>
+      <fields>
+        <field name="MPN">SMAJ15A</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="D104" description=""/>
+      <property name="MPN" value="SMAJ15A"/>
+      <property name="Sheetname" value="X raw bias tee"/>
+      <property name="Sheetfile" value="x_raw_bias_tee.kicad_sch"/>
+      <sheetpath names="/X raw bias tee/" tstamps="/a6a38237-55d6-5706-8107-8b8e2392213e/"/>
+      <tstamps>33e75b2b-4dca-5f27-bb95-58e63202b3d1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L104">
+      <value>1u</value>
+      <footprint>metantenna:APV2520</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2520C-1R0JTF</field>
+        <field name="Footprint">metantenna:APV2520</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L104" description="Inductor"/>
+      <property name="MPN" value="AHW2520C-1R0JTF"/>
+      <property name="Sheetname" value="X raw bias tee"/>
+      <property name="Sheetfile" value="x_raw_bias_tee.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/X raw bias tee/" tstamps="/a6a38237-55d6-5706-8107-8b8e2392213e/"/>
+      <tstamps>441316e7-c576-5252-8c81-bdc606ace632</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C110">
+      <value>10u 25V</value>
+      <footprint>metantenna:1206</footprint>
+      <description>25V</description>
+      <fields>
+        <field name="MPN">GRM31CR61E106KA12L</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V</field>
+      </fields>
+      <libsource lib="review" part="C110" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM31CR61E106KA12L"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>d5366b96-fe45-50b7-9c64-571bccc3b621</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C111">
+      <value>100n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <description>50V</description>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V</field>
+      </fields>
+      <libsource lib="review" part="C111" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>82b53e6f-5587-53ae-a419-45626a61b27d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C112">
+      <value>10u 25V</value>
+      <footprint>metantenna:1206</footprint>
+      <description>25V</description>
+      <fields>
+        <field name="MPN">GRM31CR61E106KA12L</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V</field>
+      </fields>
+      <libsource lib="review" part="C112" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM31CR61E106KA12L"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>2679661f-0254-5b51-b54c-55d664f4f025</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C113">
+      <value>10n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <description>50V C0G</description>
+      <fields>
+        <field name="MPN">GRM21BR71H103KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V C0G</field>
+      </fields>
+      <libsource lib="review" part="C113" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR71H103KA01L"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>f2d81af2-3cc8-523e-bb34-7955d4b2c5b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>57.6k</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-0757K6L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R106" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0757K6L"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>0635c630-b113-5d0c-ab64-075478577098</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R107" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>7eefc822-8af5-5bc2-9686-e3719780095b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U102">
+      <value>TPS7A4901DGNR</value>
+      <footprint>metantenna:MSOP8EP</footprint>
+      <fields>
+        <field name="MPN">TPS7A4901DGNR</field>
+        <field name="Footprint">metantenna:MSOP8EP</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="U102" description=""/>
+      <property name="MPN" value="TPS7A4901DGNR"/>
+      <property name="Sheetname" value="X dc supply"/>
+      <property name="Sheetfile" value="x_dc_supply.kicad_sch"/>
+      <sheetpath names="/X dc supply/" tstamps="/5e57e9db-aee3-5cec-ae36-b92c3af0eacd/"/>
+      <tstamps>23a98d56-a813-5d5f-97f2-513ae32a64d3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R201">
+      <value>1M</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-071ML</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R201" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-071ML"/>
+      <property name="Sheetname" value="Y balun matching"/>
+      <property name="Sheetfile" value="y_balun_matching.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y balun matching/" tstamps="/6658eb3d-739f-5a78-b26a-1f4b99ef8815/"/>
+      <tstamps>3b6e9399-068a-5bf3-ba80-0e499344f65f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R202">
+      <value>1M</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-071ML</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R202" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-071ML"/>
+      <property name="Sheetname" value="Y balun matching"/>
+      <property name="Sheetfile" value="y_balun_matching.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y balun matching/" tstamps="/6658eb3d-739f-5a78-b26a-1f4b99ef8815/"/>
+      <tstamps>a1af5190-3212-543e-847d-e977c461f0c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="T201">
+      <value>ADT1-1+</value>
+      <footprint>metantenna:CD542</footprint>
+      <datasheet>https://www.minicircuits.com/pdfs/ADT1-1+.pdf</datasheet>
+      <description>0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</description>
+      <fields>
+        <field name="MPN">ADT1-1+</field>
+        <field name="Footprint">metantenna:CD542</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/ADT1-1+.pdf</field>
+        <field name="Description">0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</field>
+      </fields>
+      <libsource lib="review" part="T201" description="0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542"/>
+      <property name="MPN" value="ADT1-1+"/>
+      <property name="Sheetname" value="Y balun matching"/>
+      <property name="Sheetfile" value="y_balun_matching.kicad_sch"/>
+      <property name="ki_keywords" value="Mini-Circuits RF Transformer"/>
+      <property name="ki_fp_filters" value="Mini?Circuits*CD542*"/>
+      <sheetpath names="/Y balun matching/" tstamps="/6658eb3d-739f-5a78-b26a-1f4b99ef8815/"/>
+      <tstamps>760bf402-c6f3-59ac-a6ec-45231a66774c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C201">
+      <value>160p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN161</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C201" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN161"/>
+      <property name="Sheetname" value="Y chebyshev high pass"/>
+      <property name="Sheetfile" value="y_chebyshev_high_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y chebyshev high pass/" tstamps="/bfbe098a-6761-51d6-84ca-fc695282963d/"/>
+      <tstamps>013af9da-a161-5d8e-8722-7c4535c5924c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C202">
+      <value>160p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN161</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN161</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN161; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C202" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN161"/>
+      <property name="Sheetname" value="Y chebyshev high pass"/>
+      <property name="Sheetfile" value="y_chebyshev_high_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y chebyshev high pass/" tstamps="/bfbe098a-6761-51d6-84ca-fc695282963d/"/>
+      <tstamps>dd5b5b21-8d04-5fb8-ad1b-ae6ae27b64e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L201">
+      <value>220n</value>
+      <footprint>metantenna:APV2012</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2012C-R22JTF</field>
+        <field name="Footprint">metantenna:APV2012</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L201" description="Inductor"/>
+      <property name="MPN" value="AHW2012C-R22JTF"/>
+      <property name="Sheetname" value="Y chebyshev high pass"/>
+      <property name="Sheetfile" value="y_chebyshev_high_pass.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/Y chebyshev high pass/" tstamps="/bfbe098a-6761-51d6-84ca-fc695282963d/"/>
+      <tstamps>46df7c63-0231-5248-857d-fa74d71d4fa0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C203">
+      <value>36p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN360</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN360; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN360</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN360</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN360; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C203" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN360"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>41d5a507-f48e-5bc2-868b-4e50340b1971</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C204">
+      <value>33p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN330</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN330; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN330</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN330</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN330; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C204" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN330"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>635824c4-9d06-5441-bb50-ccddfc0c20db</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C205">
+      <value>75p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN750</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN750; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN750</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN750</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN750; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C205" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN750"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>814be3ba-76d5-579d-9235-034adbd99e0b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C206">
+      <value>20p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN200</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN200; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN200</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN200</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN200; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C206" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN200"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>4aa999fc-33ac-539d-821a-b9e5ed964af8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C207">
+      <value>43p</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN430</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN430; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN430</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN430</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN430; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C207" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN430"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>b6f7401b-a6f5-5988-98d5-2d6848bdfa97</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L202">
+      <value>100n</value>
+      <footprint>metantenna:APV2012</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2012C-R10JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2012C-R10JTF</field>
+        <field name="Footprint">metantenna:APV2012</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2012C-R10JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L202" description="Inductor"/>
+      <property name="MPN" value="AHW2012C-R10JTF"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>b9955160-0509-539b-bf3a-7d9a1909d5ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L203">
+      <value>120n</value>
+      <footprint>metantenna:APV2012</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2012C-R12JTF</field>
+        <field name="Footprint">metantenna:APV2012</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L203" description="Inductor"/>
+      <property name="MPN" value="AHW2012C-R12JTF"/>
+      <property name="Sheetname" value="Y elliptic low pass"/>
+      <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/Y elliptic low pass/" tstamps="/ac657c8a-c716-5655-956d-556e9fd87150/"/>
+      <tstamps>45fdce40-ac70-565d-ab97-00dcf637130f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C208">
+      <value>2.4n</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">C0805C242J5GACTU</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="C208" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0805C242J5GACTU"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>06156176-62f9-546b-a78b-1492052d7db7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C214">
+      <value>100n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <description>50V</description>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V</field>
+      </fields>
+      <libsource lib="review" part="C214" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>c6d97dcf-d1b7-5cee-9b04-e8f5dda13fe1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C215">
+      <value>2.4n</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">C0805C242J5GACTU</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="C215" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0805C242J5GACTU"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>b1028280-2bc2-54a1-bc5c-a08a69d88f46</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D201">
+      <value>DNP BAT15-03W</value>
+      <footprint>metantenna:SOD323</footprint>
+      <fields>
+        <field name="MPN">BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="D201" description=""/>
+      <property name="MPN" value="BAT15-03W"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>26c874a0-a166-5ca0-86ad-cb698e788e61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D202">
+      <value>DNP BAT15-03W</value>
+      <footprint>metantenna:SOD323</footprint>
+      <fields>
+        <field name="MPN">BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="D202" description=""/>
+      <property name="MPN" value="BAT15-03W"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="dnp"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>5784b9bf-85c9-53d3-90a7-1f0d8d7aecf4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L205">
+      <value>1u</value>
+      <footprint>metantenna:APV2520</footprint>
+      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
+      <description>Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">AHW2520C-1R0JTF</field>
+        <field name="Footprint">metantenna:APV2520</field>
+        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
+        <field name="Description">Cost-down candidate; AHW2520C-1R0JTF; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="L205" description="Inductor"/>
+      <property name="MPN" value="AHW2520C-1R0JTF"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>73e613e2-1dc2-5978-afc6-108093adcfb2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R208">
+      <value>41.2 1W</value>
+      <footprint>metantenna:2512</footprint>
+      <description>1W</description>
+      <fields>
+        <field name="MPN">CRCW251241R2FKEG</field>
+        <field name="Footprint">metantenna:2512</field>
+        <field name="Datasheet"/>
+        <field name="Description">1W</field>
+      </fields>
+      <libsource lib="review" part="R208" description="Resistor"/>
+      <property name="MPN" value="CRCW251241R2FKEG"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>fe7488cd-07f6-56f1-a20a-4b4d2b906256</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U201">
+      <value>GALI-74+</value>
+      <footprint>metantenna:SOT89</footprint>
+      <datasheet>https://www.minicircuits.com/pdfs/GALI-74+.pdf</datasheet>
+      <description>DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</description>
+      <fields>
+        <field name="MPN">GALI-74+</field>
+        <field name="Footprint">metantenna:SOT89</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/GALI-74+.pdf</field>
+        <field name="Description">DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</field>
+      </fields>
+      <libsource lib="review" part="U201" description="DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89"/>
+      <property name="MPN" value="GALI-74+"/>
+      <property name="Sheetname" value="Y lna"/>
+      <property name="Sheetfile" value="y_lna.kicad_sch"/>
+      <property name="ki_keywords" value="RF amplifier"/>
+      <property name="ki_fp_filters" value="SOT?89*"/>
+      <sheetpath names="/Y lna/" tstamps="/191e5f44-40ea-5f3d-afe8-38468cd49753/"/>
+      <tstamps>d8584ba6-a847-50ef-9efb-e96c48c4076c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R203">
+      <value>294</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-07294RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R203" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-07294RL"/>
+      <property name="Sheetname" value="Y attenuator"/>
+      <property name="Sheetfile" value="y_attenuator.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y attenuator/" tstamps="/a055415c-ddc3-55ee-866d-12ecc76054ae/"/>
+      <tstamps>027ed82d-54bc-5656-9502-2404e4799c03</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R204">
+      <value>18</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-0718RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R204" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0718RL"/>
+      <property name="Sheetname" value="Y attenuator"/>
+      <property name="Sheetfile" value="y_attenuator.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y attenuator/" tstamps="/a055415c-ddc3-55ee-866d-12ecc76054ae/"/>
+      <tstamps>50d7bce6-4669-56dc-969b-71f4c9d88c2b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R205">
+      <value>294</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-07294RL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R205" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-07294RL"/>
+      <property name="Sheetname" value="Y attenuator"/>
+      <property name="Sheetfile" value="y_attenuator.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y attenuator/" tstamps="/a055415c-ddc3-55ee-866d-12ecc76054ae/"/>
+      <tstamps>2c06e28c-c626-5687-a945-6e9c3e1cc2fb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C209">
+      <value>1n</value>
+      <footprint>metantenna:0805</footprint>
+      <datasheet>https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</datasheet>
+      <description>Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</description>
+      <fields>
+        <field name="MPN">CC0805JRNPO9BN102</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet">https://yageogroup.com/download/specsheet/CC0805JRNPO9BN102</field>
+        <field name="Description">Cost-down candidate; CC0805JRNPO9BN102; +/-5%; RF characterization required</field>
+      </fields>
+      <libsource lib="review" part="C209" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0805JRNPO9BN102"/>
+      <property name="Sheetname" value="Y output DC block"/>
+      <property name="Sheetfile" value="y_raw_bias_tee.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y output DC block/" tstamps="/0e16eeee-93e7-5227-a892-ba1a64582c3e/"/>
+      <tstamps>e42e88fe-e758-5be8-9d69-b1aac34e5573</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C210">
+      <value>10u 25V</value>
+      <footprint>metantenna:1206</footprint>
+      <description>25V</description>
+      <fields>
+        <field name="MPN">GRM31CR61E106KA12L</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V</field>
+      </fields>
+      <libsource lib="review" part="C210" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM31CR61E106KA12L"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>dde5acd9-bdbb-574e-a76e-2a5484937dab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C211">
+      <value>100n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <description>50V</description>
+      <fields>
+        <field name="MPN">GRM21BR71H104KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V</field>
+      </fields>
+      <libsource lib="review" part="C211" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR71H104KA01L"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>5fd3efae-b355-5623-aa9b-389f966bd8a5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C212">
+      <value>10u 25V</value>
+      <footprint>metantenna:1206</footprint>
+      <description>25V</description>
+      <fields>
+        <field name="MPN">GRM31CR61E106KA12L</field>
+        <field name="Footprint">metantenna:1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V</field>
+      </fields>
+      <libsource lib="review" part="C212" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM31CR61E106KA12L"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>e91021cf-fc90-5ee2-b2f2-9f97f4f481f0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C213">
+      <value>10n 50V</value>
+      <footprint>metantenna:0805</footprint>
+      <description>50V C0G</description>
+      <fields>
+        <field name="MPN">GRM21BR71H103KA01L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V C0G</field>
+      </fields>
+      <libsource lib="review" part="C213" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR71H103KA01L"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>d2d8e4d0-e01c-5288-8af6-e1e4c468dbab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R206">
+      <value>57.6k</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-0757K6L</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R206" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0757K6L"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>e0745be7-c4ab-525f-8789-6163924543d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R207">
+      <value>10k</value>
+      <footprint>metantenna:0805</footprint>
+      <fields>
+        <field name="MPN">RC0805FR-0710KL</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="R207" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0710KL"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>7a161788-284c-5e51-81f7-cbcf9528be39</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U202">
+      <value>TPS7A4901DGNR</value>
+      <footprint>metantenna:MSOP8EP</footprint>
+      <fields>
+        <field name="MPN">TPS7A4901DGNR</field>
+        <field name="Footprint">metantenna:MSOP8EP</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="review" part="U202" description=""/>
+      <property name="MPN" value="TPS7A4901DGNR"/>
+      <property name="Sheetname" value="Y dc supply"/>
+      <property name="Sheetfile" value="y_dc_supply.kicad_sch"/>
+      <sheetpath names="/Y dc supply/" tstamps="/4bc85859-9db8-575c-9e00-e27fa3fb61a6/"/>
+      <tstamps>b42b15db-7ebd-576e-8a90-756ee7ead5a0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="metantenna" part="J101">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">X dipole</field>
+        <field name="Footprint">metantenna:ANT_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J102">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">X RF +12V</field>
+        <field name="Footprint">metantenna:SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J201">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Y dipole</field>
+        <field name="Footprint">metantenna:ANT_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="metantenna" part="J202">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Y RF, DC blocked</field>
+        <field name="Footprint">metantenna:SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C101">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C102">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C103">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C104">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C105">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C106">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C107">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C108">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C109">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C110">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C111">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C112">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C113">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C114">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C115">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C201">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C202">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C203">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C204">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C205">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C206">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C207">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C208">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C209">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C210">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C211">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C212">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C213">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C214">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="C215">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="D101">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DNP BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="D102">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DNP BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="D103">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS14</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="D104">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SMAJ15A</field>
+        <field name="Footprint">metantenna:SMA_DIODE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="D201">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DNP BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="D202">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DNP BAT15-03W</field>
+        <field name="Footprint">metantenna:SOD323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L101">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L102">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L103">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L104">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L105">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L201">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L202">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L203">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="2" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="L205">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R101">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R102">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R103">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R104">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R105">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R106">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R107">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R108">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R201">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R202">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R203">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R204">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R205">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R206">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R207">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="R208">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="T101">
+      <description>0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</description>
+      <docs>https://www.minicircuits.com/pdfs/ADT1-1+.pdf</docs>
+      <footprints>
+        <fp>Mini?Circuits*CD542*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TR</field>
+        <field name="Value">ADT1-1</field>
+        <field name="Footprint">RF_Mini-Circuits:Mini-Circuits_CD542_H2.84mm</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/ADT1-1+.pdf</field>
+        <field name="Description">0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="T201">
+      <description>0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</description>
+      <docs>https://www.minicircuits.com/pdfs/ADT1-1+.pdf</docs>
+      <footprints>
+        <fp>Mini?Circuits*CD542*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TR</field>
+        <field name="Value">ADT1-1</field>
+        <field name="Footprint">RF_Mini-Circuits:Mini-Circuits_CD542_H2.84mm</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/ADT1-1+.pdf</field>
+        <field name="Description">0.15-400MHz 1:1 RF Transformer, Balanced to Balanced, CD542</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="U101">
+      <description>DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</description>
+      <docs>https://www.minicircuits.com/pdfs/GALI-74+.pdf</docs>
+      <footprints>
+        <fp>SOT?89*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">GALI-74</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/GALI-74+.pdf</field>
+        <field name="Description">DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="U102">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS7A4901DGNR</field>
+        <field name="Footprint">metantenna:MSOP8EP</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="passive"/>
+        <pin num="2" name="FB" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="EN" type="passive"/>
+        <pin num="6" name="NR/SS" type="passive"/>
+        <pin num="7" name="DNC" type="passive"/>
+        <pin num="8" name="IN" type="passive"/>
+        <pin num="9" name="EP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="U201">
+      <description>DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</description>
+      <docs>https://www.minicircuits.com/pdfs/GALI-74+.pdf</docs>
+      <footprints>
+        <fp>SOT?89*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">GALI-74</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+        <field name="Datasheet">https://www.minicircuits.com/pdfs/GALI-74+.pdf</field>
+        <field name="Description">DC-1000MHz +21.8dB Low Noise Amplifier, SOT-89</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="review" part="U202">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS7A4901DGNR</field>
+        <field name="Footprint">metantenna:MSOP8EP</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="passive"/>
+        <pin num="2" name="FB" type="passive"/>
+        <pin num="3" name="NC" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="EN" type="passive"/>
+        <pin num="6" name="NR/SS" type="passive"/>
+        <pin num="7" name="DNC" type="passive"/>
+        <pin num="8" name="IN" type="passive"/>
+        <pin num="9" name="EP" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="metantenna">
+      <uri>${KIPRJMOD}/metantenna.kicad_sym</uri>
+    </library>
+    <library logical="review">
+      <uri>${KIPRJMOD}/review.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND" class="Default">
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C110" pin="2" pintype="passive"/>
+      <node ref="C111" pin="2" pintype="passive"/>
+      <node ref="C112" pin="2" pintype="passive"/>
+      <node ref="C113" pin="2" pintype="passive"/>
+      <node ref="C114" pin="2" pintype="passive"/>
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="C205" pin="2" pintype="passive"/>
+      <node ref="C207" pin="2" pintype="passive"/>
+      <node ref="C210" pin="2" pintype="passive"/>
+      <node ref="C211" pin="2" pintype="passive"/>
+      <node ref="C212" pin="2" pintype="passive"/>
+      <node ref="C213" pin="2" pintype="passive"/>
+      <node ref="C214" pin="2" pintype="passive"/>
+      <node ref="D101" pin="2" pintype="passive"/>
+      <node ref="D102" pin="1" pintype="passive"/>
+      <node ref="D104" pin="2" pintype="passive"/>
+      <node ref="D201" pin="2" pintype="passive"/>
+      <node ref="D202" pin="1" pintype="passive"/>
+      <node ref="J102" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="J202" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="L101" pin="2" pinfunction="1_2" pintype="passive"/>
+      <node ref="L201" pin="2" pinfunction="1_2" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+      <node ref="R205" pin="2" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+      <node ref="T101" pin="6" pintype="passive"/>
+      <node ref="T201" pin="6" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U102" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="U102" pin="9" pinfunction="EP_9" pintype="passive"/>
+      <node ref="U201" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U202" pin="4" pinfunction="GND_4" pintype="passive"/>
+      <node ref="U202" pin="9" pinfunction="EP_9" pintype="passive"/>
+    </net>
+    <net code="2" name="V12" class="Default">
+      <node ref="C110" pin="1" pintype="passive"/>
+      <node ref="C111" pin="1" pintype="passive"/>
+      <node ref="C210" pin="1" pintype="passive"/>
+      <node ref="C211" pin="1" pintype="passive"/>
+      <node ref="D103" pin="1" pintype="passive"/>
+      <node ref="D104" pin="1" pintype="passive"/>
+      <node ref="U102" pin="5" pinfunction="EN_5" pintype="passive"/>
+      <node ref="U102" pin="8" pinfunction="IN_8" pintype="passive"/>
+      <node ref="U202" pin="5" pinfunction="EN_5" pintype="passive"/>
+      <node ref="U202" pin="8" pinfunction="IN_8" pintype="passive"/>
+    </net>
+    <net code="3" name="X_AMP_IN" class="Default">
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C115" pin="1" pintype="passive"/>
+      <node ref="D101" pin="1" pintype="passive"/>
+      <node ref="D102" pin="2" pintype="passive"/>
+      <node ref="L103" pin="2" pinfunction="1_2" pintype="passive"/>
+    </net>
+    <net code="4" name="X_AMP_OUT" class="Default">
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="L105" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U101" pin="3" pintype="output"/>
+    </net>
+    <net code="5" name="X_ANT_N" class="Default">
+      <node ref="J101" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="T101" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="X_ANT_P" class="Default">
+      <node ref="J101" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="T101" pin="3" pintype="passive"/>
+    </net>
+    <net code="7" name="X_BIAS" class="Default">
+      <node ref="L105" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="X_COAX" class="Default">
+      <node ref="C109" pin="2" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="L104" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="9" name="X_FB" class="Default">
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U102" pin="2" pinfunction="FB_2" pintype="passive"/>
+    </net>
+    <net code="10" name="X_GALI_IN" class="Default">
+      <node ref="C115" pin="2" pintype="passive"/>
+      <node ref="U101" pin="1" pintype="input"/>
+    </net>
+    <net code="11" name="X_HP" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="L101" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="12" name="X_LP1" class="Default">
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="L102" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="13" name="X_LP2" class="Default">
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="L102" pin="2" pinfunction="1_2" pintype="passive"/>
+      <node ref="L103" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="14" name="X_NR" class="Default">
+      <node ref="C113" pin="1" pintype="passive"/>
+      <node ref="U102" pin="6" pinfunction="NR/SS_6" pintype="passive"/>
+    </net>
+    <net code="15" name="X_PAD_IN" class="Default">
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="X_PAD_OUT" class="Default">
+      <node ref="C109" pin="1" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="X_RAW" class="Default">
+      <node ref="D103" pin="2" pintype="passive"/>
+      <node ref="L104" pin="2" pinfunction="1_2" pintype="passive"/>
+    </net>
+    <net code="18" name="X_RF_IN" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="T101" pin="4" pintype="passive"/>
+    </net>
+    <net code="19" name="X_V8" class="Default">
+      <node ref="C112" pin="1" pintype="passive"/>
+      <node ref="C114" pin="1" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="U102" pin="1" pinfunction="OUT_1" pintype="passive"/>
+    </net>
+    <net code="20" name="Y_AMP_IN" class="Default">
+      <node ref="C206" pin="2" pintype="passive"/>
+      <node ref="C207" pin="1" pintype="passive"/>
+      <node ref="C215" pin="1" pintype="passive"/>
+      <node ref="D201" pin="1" pintype="passive"/>
+      <node ref="D202" pin="2" pintype="passive"/>
+      <node ref="L203" pin="2" pinfunction="1_2" pintype="passive"/>
+    </net>
+    <net code="21" name="Y_AMP_OUT" class="Default">
+      <node ref="C208" pin="1" pintype="passive"/>
+      <node ref="L205" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U201" pin="3" pintype="output"/>
+    </net>
+    <net code="22" name="Y_ANT_N" class="Default">
+      <node ref="J201" pin="1" pinfunction="~_1" pintype="passive"/>
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="T201" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Y_ANT_P" class="Default">
+      <node ref="J201" pin="2" pinfunction="~_2" pintype="passive"/>
+      <node ref="R201" pin="1" pintype="passive"/>
+      <node ref="T201" pin="3" pintype="passive"/>
+    </net>
+    <net code="24" name="Y_BIAS" class="Default">
+      <node ref="L205" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R208" pin="2" pintype="passive"/>
+    </net>
+    <net code="25" name="Y_COAX" class="Default">
+      <node ref="C209" pin="2" pintype="passive"/>
+      <node ref="J202" pin="1" pinfunction="~_1" pintype="passive"/>
+    </net>
+    <net code="26" name="Y_FB" class="Default">
+      <node ref="R206" pin="2" pintype="passive"/>
+      <node ref="R207" pin="1" pintype="passive"/>
+      <node ref="U202" pin="2" pinfunction="FB_2" pintype="passive"/>
+    </net>
+    <net code="27" name="Y_GALI_IN" class="Default">
+      <node ref="C215" pin="2" pintype="passive"/>
+      <node ref="U201" pin="1" pintype="input"/>
+    </net>
+    <net code="28" name="Y_HP" class="Default">
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="L201" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="29" name="Y_LP1" class="Default">
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
+      <node ref="C204" pin="1" pintype="passive"/>
+      <node ref="L202" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="30" name="Y_LP2" class="Default">
+      <node ref="C204" pin="2" pintype="passive"/>
+      <node ref="C205" pin="1" pintype="passive"/>
+      <node ref="C206" pin="1" pintype="passive"/>
+      <node ref="L202" pin="2" pinfunction="1_2" pintype="passive"/>
+      <node ref="L203" pin="1" pinfunction="2_1" pintype="passive"/>
+    </net>
+    <net code="31" name="Y_NR" class="Default">
+      <node ref="C213" pin="1" pintype="passive"/>
+      <node ref="U202" pin="6" pinfunction="NR/SS_6" pintype="passive"/>
+    </net>
+    <net code="32" name="Y_PAD_IN" class="Default">
+      <node ref="C208" pin="2" pintype="passive"/>
+      <node ref="R203" pin="1" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+    </net>
+    <net code="33" name="Y_PAD_OUT" class="Default">
+      <node ref="C209" pin="1" pintype="passive"/>
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="R205" pin="1" pintype="passive"/>
+    </net>
+    <net code="34" name="Y_RF_IN" class="Default">
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="T201" pin="4" pintype="passive"/>
+    </net>
+    <net code="35" name="Y_V8" class="Default">
+      <node ref="C212" pin="1" pintype="passive"/>
+      <node ref="C214" pin="1" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+      <node ref="R208" pin="1" pintype="passive"/>
+      <node ref="U202" pin="1" pinfunction="OUT_1" pintype="passive"/>
+    </net>
+    <net code="36" name="unconnected-(T101-~-Pad2)" class="Default">
+      <node ref="T101" pin="2" pinfunction="~_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(T101-~-Pad5)" class="Default">
+      <node ref="T101" pin="5" pinfunction="~_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(T201-~-Pad2)" class="Default">
+      <node ref="T201" pin="2" pinfunction="~_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(T201-~-Pad5)" class="Default">
+      <node ref="T201" pin="5" pinfunction="~_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U102-DNC-Pad7)" class="Default">
+      <node ref="U102" pin="7" pinfunction="DNC_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U102-NC-Pad3)" class="Default">
+      <node ref="U102" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(U202-DNC-Pad7)" class="Default">
+      <node ref="U202" pin="7" pinfunction="DNC_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U202-NC-Pad3)" class="Default">
+      <node ref="U202" pin="3" pinfunction="NC_3" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
