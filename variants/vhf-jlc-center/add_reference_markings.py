@@ -3,7 +3,8 @@ from pathlib import Path
 import math
 
 import sexpdata as sx
-from shapely.geometry import Point, box
+from shapely.geometry import LineString, Point, box
+from shapely.ops import unary_union
 
 HERE = Path(__file__).resolve().parent
 
@@ -74,6 +75,14 @@ def add_labels(path):
             extent=box(x-5.5,y-5.1,x+5.5,y+5.1)
         pads_by_ref[ref]=extent
         obstacles.append(extent.buffer(.20))
+    ground = {n[1] for n in children(tree, 'net') if n[2].lstrip('/')=='GND'}
+    trace_outlines = unary_union([
+        LineString([field(t,'start')[1:],field(t,'end')[1:]])
+        .buffer(.5+field(t,'width')[1]/2).boundary.buffer(.16)
+        for t in children(tree,'segment')
+        if field(t,'layer')[1]=='F.Cu' and field(t,'net')[1] not in ground
+    ])
+    preferred = {'J102': (41., 52.), 'J202': (62., 57.)} if path.stem=='preamp' else {}
     placed=[]
     for ref,fp in sorted(footprints,key=lambda row: pads_by_ref[row[0]].area,reverse=True):
         x,y=field(fp,'at')[1:3]
@@ -87,12 +96,20 @@ def add_labels(path):
                 if not printable.contains(b) or any(b.intersects(o) for o in obstacles):
                     continue
                 distance=b.distance(pads_by_ref[ref])
-                candidates.append((distance+.07*r,xx,yy,b))
+                close_to_other = min((b.distance(v) for k,v in pads_by_ref.items() if k!=ref),default=0)
+                cost = distance+.07*r+5*b.intersection(trace_outlines).area
+                cost += max(0.,distance-close_to_other)*.55
+                candidates.append((cost,xx,yy,b))
             if candidates and ring>25:
                 break
         if not candidates:
             raise ValueError((path,ref,'no clear silkscreen placement'))
         _,xx,yy,b=min(candidates,key=lambda v:v[0])
+        if ref in preferred:
+            u,v=preferred[ref]
+            proposed=text_box(ref,u,v,.85)
+            if printable.contains(proposed) and not any(proposed.intersects(o) for o in obstacles):
+                xx,yy,b=u,v,proposed
         obstacles.append(b)
         tree.append(sx.loads(f'(gr_text "{ref}" (at {xx:.3f} {yy:.3f}) (layer "F.SilkS") '
                              '(effects (font (size 0.85 0.85) (thickness 0.13))))'))

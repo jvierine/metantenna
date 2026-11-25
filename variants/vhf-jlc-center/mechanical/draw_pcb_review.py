@@ -31,19 +31,21 @@ BODIES = {
 }
 
 
-def layer_image(name, layers, temporary):
+def layer_image(name, layers, temporary, *, appearance=None):
     source = VARIANT / 'validation' / name / 'source' / f'{name}.kicad_pcb'
     dest = temporary / (name + layers.replace(',', '-') + '.svg')
-    subprocess.run([KICAD, 'pcb', 'export', 'svg', '-l', layers, '-o', str(dest), str(source)],
+    subprocess.run([KICAD, 'pcb', 'export', 'svg', '--exclude-drawing-sheet', '-l', layers, '-o', str(dest), str(source)],
                    check=True, capture_output=True)
     w,h = (96,96) if name=='preamp' else (76,64)
     svg = re.sub(r'width="[^"]+" height="[^"]+" viewBox="[^"]+"',
                  f'width="{w+2}mm" height="{h+2}mm" viewBox="-1 -1 {w+2} {h+2}"',
                  dest.read_text(), count=1)
-    if 'F.SilkS' in layers:
-        svg = svg.replace('#C83434','#31584d').replace('#F2EDA1','#ffffff').replace('#C872AB','#ffffff')
+    if appearance == 'copper':
+        svg = svg.replace('#C83434','#31584d').replace('#FFFFFF','#a1b6ab')
+    elif appearance == 'silk':
+        svg = svg.replace('#F2EDA1','#ffffff').replace('#C872AB','#ffffff')
     return Image.open(io.BytesIO(cairosvg.svg2png(bytestring=svg.encode(),
-                                                  background_color='white', output_width=1300)))
+                                                  background_color=None if appearance=='silk' else 'white', output_width=1300)))
 
 
 def draw_layers(name, temporary):
@@ -54,7 +56,9 @@ def draw_layers(name, temporary):
         ax.axis('off')
     fig.savefig(HERE/f'{name}_copper_layers.png',dpi=155)
     plt.close(fig)
-    front = layer_image(name,'F.Cu,F.SilkS,Edge.Cuts',temporary)
+    front = layer_image(name,'F.Cu,Edge.Cuts',temporary,appearance='copper').convert('RGBA')
+    silk = layer_image(name,'F.SilkS',temporary,appearance='silk').convert('RGBA')
+    front = Image.alpha_composite(front,silk)
     front.save(HERE/f'{name}_front_silkscreen.png')
     if name == 'preamp':
         front.save(HERE/'center_sma_pcb.png')
