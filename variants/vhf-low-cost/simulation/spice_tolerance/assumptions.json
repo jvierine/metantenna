@@ -1,0 +1,27 @@
+{
+  "original": {
+    "filter_cap_tolerance_fraction": 0.01,
+    "filter_L_tolerance_fraction": 0.02,
+    "Q_assumed_50MHz": 70
+  },
+  "low_cost": {
+    "filter_cap_tolerance_fraction": 0.05,
+    "filter_L_tolerance_fraction": 0.05,
+    "Q_assumed_50MHz": 35
+  },
+  "common": {
+    "input_block_cap_tolerance_fraction": 0.05,
+    "cap_ESR_ohm": 0.03,
+    "cap_ESL_nH": 0.5,
+    "pad_capacitance_pF": 0.3,
+    "physical_temperature_K": 290,
+    "balun_matched_loss_dB": 0.5,
+    "amplifier_gain_dB": 25.1,
+    "amplifier_noise_figure_dB": 2.7,
+    "amplifier_specification_frequency_MHz": 100,
+    "output_pad_loss_dB": 3,
+    "coax_loss_dB_at_50MHz": 5,
+    "receiver_noise_figure_dB": 6
+  },
+  "statistical_scope": "Independent uniform component deviations within tolerance; fixed Q per case. Central 95% of assumed model draws, not a measured manufacturing distribution or guaranteed production range. Antenna pattern, sky and post-filter stages held fixed."
+}

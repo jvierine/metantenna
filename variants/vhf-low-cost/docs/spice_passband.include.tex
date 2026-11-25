@@ -1,0 +1,18 @@
+% rustplotlib: final width 171.841352 mm; body/label font 10.000000 TeX pt.
+% Include directly, without resizebox/scalebox or outer width scaling.
+\begingroup
+\normalsize
+\dimen0=\linewidth
+\advance\dimen0 by -177.000000mm
+\ifdim\dimen0<0pt \dimen0=-\dimen0\fi
+\ifdim\dimen0>0.1mm
+  \PackageError{rustplotlib}{Article linewidth changed}{Regenerate this figure using the new ArticleLayout.}
+\fi
+\dimen0=\csname f@size\endcsname pt
+\advance\dimen0 by -10.000000pt
+\ifdim\dimen0<0pt \dimen0=-\dimen0\fi
+\ifdim\dimen0>0.01pt
+  \PackageError{rustplotlib}{Article body font changed}{Regenerate this figure using the new ArticleLayout.}
+\fi
+\includegraphics[width=171.841352mm]{\detokenize{variants/vhf-low-cost/docs/spice_passband.pdf}}
+\endgroup

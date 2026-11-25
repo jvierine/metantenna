@@ -1,0 +1,97 @@
+Two reciprocal passive preselectors; 50 ohm port reference
+Va asrc 0 AC 2
+Rasrc asrc ain 50
+Raload aout 0 50
+Rah1 ain ah1r .03
+Lah1 ah1r ah1l .5n
+Cah1 ah1l ab 160p
+Ralh ab alhr 0.987357691128
+Lalh alhr 0 220n
+Calh ab 0 0.1p
+Rah2 ab ah2r .03
+Lah2 ah2r ah2l .5n
+Cah2 ah2l ac 160p
+Rac1 ac ac1r .03
+Lac1 ac1r ac1l .5n
+Cac1 ac1l 0 36p
+Ral2 ac al2r 0.448798950513
+Lal2 al2r ad 100n
+Cal2 ac ad 0.1p
+Rac2 ac ac2r .03
+Lac2 ac2r ac2l .5n
+Cac2 ac2l ad 33p
+Rac3 ad ac3r .03
+Lac3 ac3r ac3l .5n
+Cac3 ac3l 0 75p
+Ral4 ad al4r 0.538558740615
+Lal4 al4r ae 120n
+Cal4 ad ae 0.1p
+Rac4 ad ac4r .03
+Lac4 ac4r ac4l .5n
+Cac4 ac4l ae 20p
+Rac5 ae ac5r .03
+Lac5 ac5r ac5l .5n
+Cac5 ac5l 0 43p
+Rablock ae ablockr .03
+Lablock ablockr ablockl .5n
+Cablock ablockl aout 2400p
+Capadin ain 0 .3p
+Capadb ab 0 .3p
+Capadc ac 0 .3p
+Capadd ad 0 .3p
+Capade ae 0 .3p
+Capadout aout 0 .3p
+Vb bsrc 0 AC 2
+Rbsrc bsrc bout 50
+Rbload bin 0 50
+Rbh1 bin bh1r .03
+Lbh1 bh1r bh1l .5n
+Cbh1 bh1l bb 160p
+Rblh bb blhr 0.987357691128
+Lblh blhr 0 220n
+Cblh bb 0 0.1p
+Rbh2 bb bh2r .03
+Lbh2 bh2r bh2l .5n
+Cbh2 bh2l bc 160p
+Rbc1 bc bc1r .03
+Lbc1 bc1r bc1l .5n
+Cbc1 bc1l 0 36p
+Rbl2 bc bl2r 0.448798950513
+Lbl2 bl2r bd 100n
+Cbl2 bc bd 0.1p
+Rbc2 bc bc2r .03
+Lbc2 bc2r bc2l .5n
+Cbc2 bc2l bd 33p
+Rbc3 bd bc3r .03
+Lbc3 bc3r bc3l .5n
+Cbc3 bc3l 0 75p
+Rbl4 bd bl4r 0.538558740615
+Lbl4 bl4r be 120n
+Cbl4 bd be 0.1p
+Rbc4 bd bc4r .03
+Lbc4 bc4r bc4l .5n
+Cbc4 bc4l be 20p
+Rbc5 be bc5r .03
+Lbc5 bc5r bc5l .5n
+Cbc5 bc5l 0 43p
+Rbblock be bblockr .03
+Lbblock bblockr bblockl .5n
+Cbblock bblockl bout 2400p
+Cbpadin bin 0 .3p
+Cbpadb bb 0 .3p
+Cbpadc bc 0 .3p
+Cbpadd bd 0 .3p
+Cbpade be 0 .3p
+Cbpadout bout 0 .3p
+.control
+set wr_singlescale
+set wr_vecnames
+ac lin 2901 5Meg 150Meg
+let s11=v(ain)-1
+let s21=v(aout)
+let s12=v(bin)
+let s22=v(bout)-1
+wrdata s.txt real(s11) imag(s11) real(s21) imag(s21) real(s12) imag(s12) real(s22) imag(s22)
+quit
+.endc
+.end

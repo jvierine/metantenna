@@ -1,0 +1,247 @@
+{
+  "edge_definition": "3 dB below each response maximum",
+  "runs_per_variant": 500,
+  "seed": 25503255,
+  "scope": "ngspice front end plus passive noise-wave calculation with fixed NEC/PyGDSM pattern and sky; unchanged matched unilateral amplifier noise assumptions. Not full vendor transistor, measured Q, PCB EM, or production-yield validation.",
+  "models": {
+    "original": {
+      "edge_MHz_percentiles_2p5_50_97p5": [
+        [
+          19.035893937142028,
+          66.96927056014817
+        ],
+        [
+          19.250942116200143,
+          67.55459872015756
+        ],
+        [
+          19.478194519184147,
+          68.2143024023473
+        ]
+      ],
+      "spot_transmission_dB": {
+        "30": [
+          -0.8463197309460371,
+          -0.8345223726794683,
+          -0.8274898506083513
+        ],
+        "32.55": [
+          -0.8041832156010594,
+          -0.8005440532928335,
+          -0.7977825841059012
+        ],
+        "50": [
+          -0.8371939566321436,
+          -0.8216703004679154,
+          -0.8072170506198525
+        ],
+        "55": [
+          -0.9139160916795258,
+          -0.8951627278380976,
+          -0.8791945260948449
+        ]
+      },
+      "max_95percent_width_in_30_55_dB": 0.03472310006398438
+    },
+    "low_cost": {
+      "edge_MHz_percentiles_2p5_50_97p5": [
+        [
+          18.984403878868576,
+          65.42862919793603
+        ],
+        [
+          19.582882546566125,
+          67.10869807188797
+        ],
+        [
+          20.221886293990924,
+          68.98443603105504
+        ]
+      ],
+      "spot_transmission_dB": {
+        "30": [
+          -1.2053067900754955,
+          -1.1561586868621863,
+          -1.1263341446413255
+        ],
+        "32.55": [
+          -1.1108694162047847,
+          -1.089208263580368,
+          -1.0692480612173023
+        ],
+        "50": [
+          -1.1660043724009275,
+          -1.1033655602216186,
+          -1.0490163056752333
+        ],
+        "55": [
+          -1.3083751833103356,
+          -1.2207797970381562,
+          -1.1416679577345454
+        ]
+      },
+      "max_95percent_width_in_30_55_dB": 0.1667072255757902
+    }
+  },
+  "G_over_T_change_low_minus_original_dB": {
+    "SIMONe_candidate": {
+      "32.55": {
+        "actual_frequency_MHz": 32.55,
+        "nominal_daily_median": -0.020455841874588467,
+        "tolerance_daily_median_percentiles": [
+          -0.023510410334514568,
+          -0.020618963521223554,
+          -0.01836139824038455
+        ]
+      },
+      "50": {
+        "actual_frequency_MHz": 50.0,
+        "nominal_daily_median": -0.24673273771114654,
+        "tolerance_daily_median_percentiles": [
+          -0.4748837662027647,
+          -0.25126369473169324,
+          -0.044707383746634084
+        ]
+      }
+    },
+    "arms_1p0m": {
+      "32.55": {
+        "actual_frequency_MHz": 32.55,
+        "nominal_daily_median": -0.6010834742368845,
+        "tolerance_daily_median_percentiles": [
+          -0.92753409526609,
+          -0.5999160141329896,
+          -0.3338291373821133
+        ]
+      },
+      "50": {
+        "actual_frequency_MHz": 50.0,
+        "nominal_daily_median": -0.3691994659548026,
+        "tolerance_daily_median_percentiles": [
+          -0.6052247138929606,
+          -0.3844680511768603,
+          -0.14940795432211104
+        ]
+      }
+    },
+    "arms_1p5m": {
+      "32.55": {
+        "actual_frequency_MHz": 32.55,
+        "nominal_daily_median": -0.4062007349273726,
+        "tolerance_daily_median_percentiles": [
+          -0.623126358847504,
+          -0.4078455543655708,
+          -0.2331286181117126
+        ]
+      },
+      "50": {
+        "actual_frequency_MHz": 50.0,
+        "nominal_daily_median": -0.05137853424083566,
+        "tolerance_daily_median_percentiles": [
+          -0.09443615309714366,
+          -0.053033647641801296,
+          -0.013185731658052504
+        ]
+      }
+    },
+    "arms_2p0m": {
+      "32.55": {
+        "actual_frequency_MHz": 32.55,
+        "nominal_daily_median": -0.04825791299299033,
+        "tolerance_daily_median_percentiles": [
+          -0.06593257360614706,
+          -0.048829564544497175,
+          -0.03398412940159456
+        ]
+      },
+      "50": {
+        "actual_frequency_MHz": 50.0,
+        "nominal_daily_median": -0.21541313344258034,
+        "tolerance_daily_median_percentiles": [
+          -0.4187192576719919,
+          -0.22067149816975262,
+          -0.033043859057807164
+        ]
+      }
+    }
+  },
+  "Q_sensitivity_G_over_T_change_dB": {
+    "SIMONe_candidate": {
+      "20": {
+        "32.55": -0.05325330157683347,
+        "50": -0.6096898987687229
+      },
+      "50": {
+        "32.55": -0.008047446757528363,
+        "50": -0.09771556878436188
+      }
+    },
+    "arms_1p0m": {
+      "20": {
+        "32.55": -1.3937862412776791,
+        "50": -0.8926084805824115
+      },
+      "50": {
+        "32.55": -0.24794381523833053,
+        "50": -0.148183537915161
+      }
+    },
+    "arms_1p5m": {
+      "20": {
+        "32.55": -0.9702076971884519,
+        "50": -0.13269261017208533
+      },
+      "50": {
+        "32.55": -0.16530309723884432,
+        "50": -0.02007950104591591
+      }
+    },
+    "arms_2p0m": {
+      "20": {
+        "32.55": -0.12373720636538155,
+        "50": -0.535325852285362
+      },
+      "50": {
+        "32.55": -0.019097172621487336,
+        "50": -0.08509069858315087
+      }
+    }
+  },
+  "storage": "Full sampled L/C values, matched transmission for every trial; nominal full S, trial S on 0.5MHz grid; nominal sidereal-time G/T and daily median per trial. Numeric products compressed; rerun samples to recover full dense S.",
+  "assumptions": {
+    "original": {
+      "filter_cap_tolerance_fraction": 0.01,
+      "filter_L_tolerance_fraction": 0.02,
+      "Q_assumed_50MHz": 70
+    },
+    "low_cost": {
+      "filter_cap_tolerance_fraction": 0.05,
+      "filter_L_tolerance_fraction": 0.05,
+      "Q_assumed_50MHz": 35
+    },
+    "common": {
+      "input_block_cap_tolerance_fraction": 0.05,
+      "cap_ESR_ohm": 0.03,
+      "cap_ESL_nH": 0.5,
+      "pad_capacitance_pF": 0.3,
+      "physical_temperature_K": 290,
+      "balun_matched_loss_dB": 0.5,
+      "amplifier_gain_dB": 25.1,
+      "amplifier_noise_figure_dB": 2.7,
+      "amplifier_specification_frequency_MHz": 100,
+      "output_pad_loss_dB": 3,
+      "coax_loss_dB_at_50MHz": 5,
+      "receiver_noise_figure_dB": 6
+    },
+    "statistical_scope": "Independent uniform component deviations within tolerance; fixed Q per case. Central 95% of assumed model draws, not a measured manufacturing distribution or guaranteed production range. Antenna pattern, sky and post-filter stages held fixed."
+  },
+  "ngspice_version": [
+    "** ngspice-47 : Circuit level simulation program",
+    "** Compiled with KLU Direct Linear Solver",
+    "** The U. C. Berkeley CAD Group"
+  ],
+  "CAD_sha256": {
+    "vhf/hardware/preamp_layout.json": "055ac66250fdb7b04cd907be4ddd864166a890dd38483488a9403ad6ca8c6841",
+    "variants/vhf-low-cost/hardware/preamp_layout.json": "e2109d2917b9038456f7018a3a4e600912951ae5dc764b83c3c641d516112af3"
+  }
+}
