@@ -10,7 +10,7 @@
     "variants/vhf-jlc-center/hardware/y_lna.kicad_sch": "6e610f3d88b01bb5b20552bd6af41474097ba8bbfefdb5807dab997ab822206f",
     "variants/vhf-jlc-center/hardware/biastee.kicad_pcb": "169254029d2634e971a4eaf68518bf8bec9bfc63136433ba49e7d529c2c772e7",
     "variants/vhf-jlc-center/hardware/y_raw_bias_tee.kicad_sch": "37a77367c51886799dcc0249dc01d607bcb4cd24e63399761fe960712630c176",
-    "variants/vhf-jlc-center/hardware/preamp.kicad_pcb": "1954b5352b55851179dc48d25420ea2ac1861a5506cd198a7aafda195175ed46",
+    "variants/vhf-jlc-center/hardware/preamp.kicad_pcb": "620a2da5d4a263b2ddaaa7bd6fd1d0d55e37b49483657b0e0e9a48224e8717ac",
     "variants/vhf-jlc-center/hardware/y_chebyshev_high_pass.kicad_sch": "0b98d0bd0200f36eff52ede9788c4d8ce7fa4f78c53471a75ba10e6d1eb63aee",
     "variants/vhf-jlc-center/hardware/x_attenuator.kicad_sch": "733b2263b25cae301ab759fad0a3e648fc1d9fabcd7e63a540666f1ac17d8dbd",
     "variants/vhf-jlc-center/hardware/biastee.kicad_sch": "6a1f946eefd35423edfee56607d74a5ab0b5f1c35f5e317a057f8af0e2eb74da",
@@ -45,7 +45,7 @@
     "variants/vhf-jlc-center/hardware/metantenna.pretty/ACM4520.kicad_mod": "611a20d6d40cafd984524b00db484f20a91789e22d5a8eb8d6c67c18d9330463",
     "variants/vhf-jlc-center/hardware/metantenna.pretty/SMA_RA.kicad_mod": "767da619ce8300d9cccb655f754b6777331985e0ca380b0e983b3739b244049d"
   },
-  "source_base_commit": "605b10c775edb0cefaa8b42f15679612455d634f",
+  "source_base_commit": "4453b3871aac3e343d0e50a914f621d466f88cfc",
   "boards": [
     {
       "board": "preamp",
