@@ -1,0 +1,41 @@
+Metantenna 50-ohm preselector; source voltage 2 V gives unity matched S21
+Vsrc src 0 AC 2
+Rsrc src a 50
+Rload out 0 50
+Rchp1 a chp1r 0.03
+Lchp1 chp1r chp1l 0.0001n
+Cchp1 chp1l b 160p
+Rlhp b lhpr 1.9747153822564416
+Llhp lhpr 0 220n
+Rchp2 b chp2r 0.03
+Lchp2 chp2r chp2l 0.0001n
+Cchp2 chp2l c 160p
+Rclp1 c clp1r 0.03
+Lclp1 clp1r clp1l 0.0001n
+Cclp1 clp1l 0 36p
+Rllp2 c llp2r 0.8975979010256552
+Lllp2 llp2r d 100n
+Rclp2 c clp2r 0.03
+Lclp2 clp2r clp2l 0.0001n
+Cclp2 clp2l d 33p
+Rclp3 d clp3r 0.03
+Lclp3 clp3r clp3l 0.0001n
+Cclp3 clp3l 0 75p
+Rllp4 d llp4r 1.0771174812307862
+Lllp4 llp4r out 120n
+Rclp4 d clp4r 0.03
+Lclp4 clp4r clp4l 0.0001n
+Cclp4 clp4l out 20p
+Rclp5 out clp5r 0.03
+Lclp5 clp5r clp5l 0.0001n
+Cclp5 clp5l 0 43p
+.control
+set wr_singlescale
+set wr_vecnames
+ac lin 3991 1Meg 400Meg
+let transfer = v(out)
+let reflection = v(a)-1
+wrdata response.txt real(transfer) imag(transfer) real(reflection) imag(reflection)
+quit
+.endc
+.end

@@ -1,0 +1,44 @@
+{
+  "scope": "50-ohm lumped preselector only. Q at 50 MHz is an assumed sensitivity parameter, not guaranteed by catalogue Q at 250/500 MHz. No SPICE transistor, EM, choke, IP3 or transient validation.",
+  "trials": 500,
+  "spots": {},
+  "20": {
+    "max_nominal_loss_30_55_dB": 1.1315916994091968,
+    "extra_loss_dB_at_32p55": 0.70590327660853,
+    "extra_loss_dB_at_50": 0.6658039690229051,
+    "worst_FM_rejection_in_500_trials_dB": 37.77440111128441,
+    "worst_loss_30_55_in_500_trials_dB": 1.3098897480748752,
+    "G_over_T_penalty_at_nearest_32p55_dB": {
+      "SIMONe_candidate": 0.06322233998872173,
+      "arms_1p0m": 1.1170266345798767,
+      "arms_1p5m": 0.7836435351197274,
+      "arms_2p0m": 0.11594907717827435
+    }
+  },
+  "35": {
+    "max_nominal_loss_30_55_dB": 0.6786419597351095,
+    "extra_loss_dB_at_32p55": 0.28359038404334996,
+    "extra_loss_dB_at_50": 0.2670934964482262,
+    "worst_FM_rejection_in_500_trials_dB": 37.265919893882725,
+    "worst_loss_30_55_in_500_trials_dB": 0.8092516930261029,
+    "G_over_T_penalty_at_nearest_32p55_dB": {
+      "SIMONe_candidate": 0.024280117970475888,
+      "arms_1p0m": 0.4615908680479622,
+      "arms_1p5m": 0.31651741223882324,
+      "arms_2p0m": 0.04469621706979134
+    }
+  },
+  "50": {
+    "max_nominal_loss_30_55_dB": 0.4972576225936099,
+    "extra_loss_dB_at_32p55": 0.11358164401567253,
+    "extra_loss_dB_at_50": 0.10695858985834204,
+    "worst_FM_rejection_in_500_trials_dB": 36.88510862115606,
+    "worst_loss_30_55_in_500_trials_dB": 0.6704289771355452,
+    "G_over_T_penalty_at_nearest_32p55_dB": {
+      "SIMONe_candidate": 0.009550787241083727,
+      "arms_1p0m": 0.18715491348493818,
+      "arms_1p5m": 0.12705817870698163,
+      "arms_2p0m": 0.017606713420258477
+    }
+  }
+}
