@@ -11,13 +11,13 @@ Both designs use 50 Ω coax outputs, a 12 V bias tee and common-mode filtering. 
 
 [VHF single-sided manufacturing variant](variants/vhf-jlc/)
 
-## SURT · VHF meteor radar
+## SURTR · VHF meteor radar
 
-![SURT, an inverted-V antenna under a meteor streak](docs/surt-banner.svg)
+![SURTR, an inverted-V antenna under a meteor streak](docs/surtr-banner.png)
 
-**Specular-scatter Unit for Receiving Trail echoes**
+**Specular-scatter Unit for Receiving Trail Returns**
 
-[SURT antenna head with centered SMA connectors](variants/vhf-jlc-center/)
+[SURTR antenna head with centered SMA connectors](variants/vhf-jlc-center/)
 
 ![VHF antenna deployment](vhf/docs/antenna_deployment.png)
 ![VHF antenna PCB with critical components](vhf/docs/preamp_rev_b_annotated.png)
