@@ -76,9 +76,9 @@ def add_labels(path):
         pads_by_ref[ref]=extent
         obstacles.append(extent.buffer(.20))
     ground = {n[1] for n in children(tree, 'net') if n[2].lstrip('/')=='GND'}
-    trace_outlines = unary_union([
+    visible_copper = unary_union([
         LineString([field(t,'start')[1:],field(t,'end')[1:]])
-        .buffer(.5+field(t,'width')[1]/2).boundary.buffer(.16)
+        .buffer(.65+field(t,'width')[1]/2)
         for t in children(tree,'segment')
         if field(t,'layer')[1]=='F.Cu' and field(t,'net')[1] not in ground
     ])
@@ -97,7 +97,7 @@ def add_labels(path):
                     continue
                 distance=b.distance(pads_by_ref[ref])
                 close_to_other = min((b.distance(v) for k,v in pads_by_ref.items() if k!=ref),default=0)
-                cost = distance+.07*r+5*b.intersection(trace_outlines).area
+                cost = distance+.07*r+35*b.intersection(visible_copper).area
                 cost += max(0.,distance-close_to_other)*.55
                 candidates.append((cost,xx,yy,b))
             if candidates and ring>25:

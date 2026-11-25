@@ -22,6 +22,11 @@ for name in ['preamp','biastee']:
  d=json.loads((O/'hardware'/f'{name}_layout.json').read_text());parts={p['ref']:p for p in d['parts']};rows=[p for p in bom['rows'] if p['board']==name];assert {p['ref'] for p in rows}=={p['ref'] for p in parts.values() if p['package']!='ANT_M3' and not p['value'].startswith('DNP')}
  # Verify centroid source against the actual native board, not merely cached JSON.
  tree=sx.loads((O/'hardware'/f'{name}.kicad_pcb').read_text())
+ silk_labels = collections.Counter(item[1] for item in tree
+     if isinstance(item, list) and item and str(item[0]) == "gr_text"
+     and ["layer", "F.SilkS"] in [[str(v[0]), v[1]] for v in item if isinstance(v, list) and len(v) == 2])
+ missing_or_duplicate = sorted(row["ref"] for row in rows if silk_labels[row["ref"]] != 1)
+ assert not missing_or_duplicate, (name, "expected one front silkscreen label per assembled part", missing_or_duplicate)
  for fp in tree:
   if not isinstance(fp,list) or not fp or str(fp[0])!='footprint':continue
   props={str(v[1]):str(v[2]) for v in fp if isinstance(v,list) and v and str(v[0])=='property'}
