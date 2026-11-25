@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "metantenna") (type "KiCad") (uri "${KIPRJMOD}/metantenna.pretty") (options "") (descr "Metantenna custom lands")))

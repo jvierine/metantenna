@@ -6,4 +6,10 @@ Fresh native connectivity, ERC, DRC and parity checks are run by check.py. scree
 
 The antenna head uses single-sided assembly. Both SMA jacks mount on the component side, and the revised enclosure holds that side down so the coax exits underneath. The bias tee uses four side-entry SMA jacks and three common-mode chokes.
 
+The symmetric rain hood uses 2 mm nominal sidewalls. Both coax cables pass through one socket beneath the SMA pair for a 50 mm OD pipe. The cable-path drawing assumes a pipe bore of at least 36 mm, 6 mm coax, and SMA mating plugs up to 12 mm in diameter. The paths shown have nominal bend radii of about 36 mm.
+
+![Coax paths through the antenna enclosure](mechanical/centered_cable_entry.png)
+
+Fit the empty base to the pipe using the offset M5 bolt. With the hood off, feed the two SMA plugs up through the pipe and pull enough slack to connect them with the PCB above the box. Lower the PCB component-side down while taking up slack from below, then fasten the board and hood.
+
 [Quotation package](manufacturing/vhf_jlc_sourcing_QUOTATION.zip) · [Enclosure base](mechanical/stl/base.stl)
