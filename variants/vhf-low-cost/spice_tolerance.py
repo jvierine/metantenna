@@ -1,4 +1,6 @@
 """Matched two-port ngspice tolerance runs and passive noise-wave G/T model.
+Historical all-APV comparison, not the selective-upgrade assembly.
+Use upgrade_screen.py for the current mixed-inductor nominal comparison.
 All data/provenance in HDF5/JSON; no script credits in rendered figures.
 """
 from pathlib import Path

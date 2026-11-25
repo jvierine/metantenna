@@ -62,13 +62,13 @@
       "board": "preamp",
       "ref": "L101",
       "value": "220n",
-      "package": "APV2012",
-      "mpn": "AHW2012C-R22JTF",
-      "lcsc": "C6808051",
+      "package": "0805",
+      "mpn": "0805HP-221XGRC",
+      "lcsc": "C40877572",
       "qty_per_board": 1,
       "qty_five_sets": 5,
-      "unit_budget_low_usd": 0.0436,
-      "unit_budget_high_usd": 0.0458,
+      "unit_budget_low_usd": 1.1696,
+      "unit_budget_high_usd": 1.25,
       "price_status": "Planning allowance, not verified checkout quote",
       "assembly": "Factory assembly including all connectors"
     },
@@ -146,13 +146,13 @@
       "board": "preamp",
       "ref": "L103",
       "value": "120n",
-      "package": "APV2012",
-      "mpn": "AHW2012C-R12JTF",
-      "lcsc": "C6364714",
+      "package": "0805",
+      "mpn": "0805HP-121XGRC",
+      "lcsc": "C43831062",
       "qty_per_board": 1,
       "qty_five_sets": 5,
-      "unit_budget_low_usd": 0.04,
-      "unit_budget_high_usd": 0.08,
+      "unit_budget_low_usd": 1.1381,
+      "unit_budget_high_usd": 1.25,
       "price_status": "Planning allowance, not verified checkout quote",
       "assembly": "Factory assembly including all connectors"
     },
@@ -538,13 +538,13 @@
       "board": "preamp",
       "ref": "L201",
       "value": "220n",
-      "package": "APV2012",
-      "mpn": "AHW2012C-R22JTF",
-      "lcsc": "C6808051",
+      "package": "0805",
+      "mpn": "0805HP-221XGRC",
+      "lcsc": "C40877572",
       "qty_per_board": 1,
       "qty_five_sets": 5,
-      "unit_budget_low_usd": 0.0436,
-      "unit_budget_high_usd": 0.0458,
+      "unit_budget_low_usd": 1.1696,
+      "unit_budget_high_usd": 1.25,
       "price_status": "Planning allowance, not verified checkout quote",
       "assembly": "Factory assembly including all connectors"
     },
@@ -622,13 +622,13 @@
       "board": "preamp",
       "ref": "L203",
       "value": "120n",
-      "package": "APV2012",
-      "mpn": "AHW2012C-R12JTF",
-      "lcsc": "C6364714",
+      "package": "0805",
+      "mpn": "0805HP-121XGRC",
+      "lcsc": "C43831062",
       "qty_per_board": 1,
       "qty_five_sets": 5,
-      "unit_budget_low_usd": 0.04,
-      "unit_budget_high_usd": 0.08,
+      "unit_budget_low_usd": 1.1381,
+      "unit_budget_high_usd": 1.25,
       "price_status": "Planning allowance, not verified checkout quote",
       "assembly": "Factory assembly including all connectors"
     },
@@ -1237,8 +1237,8 @@
   ],
   "parts_per_set": {
     "preamp": {
-      "low": 21.6639,
-      "high": 36.5094
+      "low": 26.1121,
+      "high": 41.2578
     },
     "biastee": {
       "low": 8.989700000000001,
@@ -1251,12 +1251,6 @@
       "ref": "C101",
       "old_mpn": "C0805C161F5GACTU",
       "new_mpn": "CC0805JRNPO9BN161"
-    },
-    {
-      "board": "preamp",
-      "ref": "L101",
-      "old_mpn": "0805HP-221XGRC",
-      "new_mpn": "AHW2012C-R22JTF"
     },
     {
       "board": "preamp",
@@ -1287,12 +1281,6 @@
       "ref": "C105",
       "old_mpn": "C0805C750F5GACTU",
       "new_mpn": "CC0805JRNPO9BN750"
-    },
-    {
-      "board": "preamp",
-      "ref": "L103",
-      "old_mpn": "0805HP-121XGRC",
-      "new_mpn": "AHW2012C-R12JTF"
     },
     {
       "board": "preamp",
@@ -1332,12 +1320,6 @@
     },
     {
       "board": "preamp",
-      "ref": "L201",
-      "old_mpn": "0805HP-221XGRC",
-      "new_mpn": "AHW2012C-R22JTF"
-    },
-    {
-      "board": "preamp",
       "ref": "C202",
       "old_mpn": "C0805C161F5GACTU",
       "new_mpn": "CC0805JRNPO9BN161"
@@ -1365,12 +1347,6 @@
       "ref": "C205",
       "old_mpn": "C0805C750F5GACTU",
       "new_mpn": "CC0805JRNPO9BN750"
-    },
-    {
-      "board": "preamp",
-      "ref": "L203",
-      "old_mpn": "0805HP-121XGRC",
-      "new_mpn": "AHW2012C-R12JTF"
     },
     {
       "board": "preamp",

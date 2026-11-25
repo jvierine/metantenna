@@ -9,15 +9,13 @@ R=Path(__file__).resolve().parents[2];O=Path(__file__).resolve().parent
 APV='https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf'
 SUB={
  '0805HP-101XGRC':('AHW2012C-R10JTF','C6808047',.04,.08),
- '0805HP-121XGRC':('AHW2012C-R12JTF','C6364714',.04,.08),
- '0805HP-221XGRC':('AHW2012C-R22JTF','C6808051',.0436,.0458),
  '1008CS-102XJRC':('AHW2520C-1R0JTF','C6364738',.0655,.10),
 }
 for code in ['161','360','330','750','200','430','102']:
  old='C0805C'+code+('J' if code=='102' else 'F')+'5GACTU'
  cc={'330':'C107115','750':'C113832','430':'C519921'}.get(code,'')
  SUB[old]=('CC0805JRNPO9BN'+code,cc,.01,.13)
-CODES={'GALI-74+':'C879860','ADT1-1+':'C2683432','TPS7A4901DGNR':'C16430','SMA-KE-347A-H13.5-P':'C5723187','SMA-KWE-323C-H13X23-LW':'C5723201','ACM4520-901-2P-T000':'C41519','ACM7060-701-2PL-TL01':'C78246','BLM21PG601SN1D':'C41556732'}
+CODES={'0805HP-121XGRC':'C43831062','0805HP-221XGRC':'C40877572','GALI-74+':'C879860','ADT1-1+':'C2683432','TPS7A4901DGNR':'C16430','SMA-KE-347A-H13.5-P':'C5723187','SMA-KWE-323C-H13X23-LW':'C5723201','ACM4520-901-2P-T000':'C41519','ACM7060-701-2PL-TL01':'C78246','BLM21PG601SN1D':'C41556732'}
 for d in ['hardware','manufacturing','simulation','docs']:(O/d).mkdir(exist_ok=True)
 for p in (R/'vhf/hardware').iterdir():
  if p.is_file() and (p.suffix in ['.kicad_pcb','.kicad_sch','.kicad_pro','.kicad_sym'] or p.name.endswith('lib-table')):shutil.copy2(p,O/'hardware'/p.name)
@@ -58,6 +56,8 @@ for pkg,pitch,height in [('APV2012',.89,1.78),('APV2520',1.145,2.54)]:
 def budget(p):
  m=p['mpn']
  if m in SUB:return SUB[m][2:]
+ if m=='0805HP-121XGRC':return 1.1381,1.25
+ if m=='0805HP-221XGRC':return 1.1696,1.25
  if m=='GALI-74+':return 3.35,4.0
  if m=='ADT1-1+':return 5.,8.
  if m=='TPS7A4901DGNR':return 1.357,1.5389

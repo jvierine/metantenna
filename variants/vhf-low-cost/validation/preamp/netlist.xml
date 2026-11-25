@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/jvi019/src/metantenna/variants/vhf-low-cost/hardware/preamp.kicad_sch</source>
-    <date>2026-11-25T00:54:17</date>
+    <date>2026-11-25T11:05:42</date>
     <tool>Eeschema 10.0.8</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -514,17 +514,15 @@
     </comp>
     <comp ref="L101">
       <value>220n</value>
-      <footprint>metantenna:APV2012</footprint>
-      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
-      <description>Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</description>
+      <footprint>metantenna:0805</footprint>
       <fields>
-        <field name="MPN">AHW2012C-R22JTF</field>
-        <field name="Footprint">metantenna:APV2012</field>
-        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
-        <field name="Description">Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</field>
+        <field name="MPN">0805HP-221XGRC</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="review" part="L101" description="Inductor"/>
-      <property name="MPN" value="AHW2012C-R22JTF"/>
+      <property name="MPN" value="0805HP-221XGRC"/>
       <property name="Sheetname" value="X chebyshev high pass"/>
       <property name="Sheetfile" value="x_chebyshev_high_pass.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
@@ -710,17 +708,15 @@
     </comp>
     <comp ref="L103">
       <value>120n</value>
-      <footprint>metantenna:APV2012</footprint>
-      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
-      <description>Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</description>
+      <footprint>metantenna:0805</footprint>
       <fields>
-        <field name="MPN">AHW2012C-R12JTF</field>
-        <field name="Footprint">metantenna:APV2012</field>
-        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
-        <field name="Description">Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</field>
+        <field name="MPN">0805HP-121XGRC</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="review" part="L103" description="Inductor"/>
-      <property name="MPN" value="AHW2012C-R12JTF"/>
+      <property name="MPN" value="0805HP-121XGRC"/>
       <property name="Sheetname" value="X elliptic low pass"/>
       <property name="Sheetfile" value="x_elliptic_low_pass.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
@@ -1464,17 +1460,15 @@
     </comp>
     <comp ref="L201">
       <value>220n</value>
-      <footprint>metantenna:APV2012</footprint>
-      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
-      <description>Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</description>
+      <footprint>metantenna:0805</footprint>
       <fields>
-        <field name="MPN">AHW2012C-R22JTF</field>
-        <field name="Footprint">metantenna:APV2012</field>
-        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
-        <field name="Description">Cost-down candidate; AHW2012C-R22JTF; +/-5%; RF characterization required</field>
+        <field name="MPN">0805HP-221XGRC</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="review" part="L201" description="Inductor"/>
-      <property name="MPN" value="AHW2012C-R22JTF"/>
+      <property name="MPN" value="0805HP-221XGRC"/>
       <property name="Sheetname" value="Y chebyshev high pass"/>
       <property name="Sheetfile" value="y_chebyshev_high_pass.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
@@ -1660,17 +1654,15 @@
     </comp>
     <comp ref="L203">
       <value>120n</value>
-      <footprint>metantenna:APV2012</footprint>
-      <datasheet>https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</datasheet>
-      <description>Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</description>
+      <footprint>metantenna:0805</footprint>
       <fields>
-        <field name="MPN">AHW2012C-R12JTF</field>
-        <field name="Footprint">metantenna:APV2012</field>
-        <field name="Datasheet">https://www.apvind.com/public/upload/20250320/4fc1cd2e99a682c5cde5d3172fbe53ae.pdf</field>
-        <field name="Description">Cost-down candidate; AHW2012C-R12JTF; +/-5%; RF characterization required</field>
+        <field name="MPN">0805HP-121XGRC</field>
+        <field name="Footprint">metantenna:0805</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
       </fields>
       <libsource lib="review" part="L203" description="Inductor"/>
-      <property name="MPN" value="AHW2012C-R12JTF"/>
+      <property name="MPN" value="0805HP-121XGRC"/>
       <property name="Sheetname" value="Y elliptic low pass"/>
       <property name="Sheetfile" value="y_elliptic_low_pass.kicad_sch"/>
       <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
