@@ -1,0 +1,30 @@
+{
+  "geometry": {
+    "X_COAX": {
+      "trace_width_mm": [
+        0.34
+      ],
+      "minimum_same_layer_gap_to_input_trace_mm": 10.135,
+      "nearest_input_net": "X_ANT_P",
+      "nearest_ground_via_mm": [
+        1.2
+      ]
+    },
+    "Y_COAX": {
+      "trace_width_mm": [
+        0.34
+      ],
+      "minimum_same_layer_gap_to_input_trace_mm": 8.47,
+      "nearest_input_net": "Y_AMP_IN",
+      "nearest_ground_via_mm": []
+    }
+  },
+  "impedance_ohm": {
+    "outer_dielectric_0p2104mm_ground_fill_0p5mm": 49.61940245343712,
+    "outer_dielectric_0p2104mm_without_side_fill": 49.89874180224361,
+    "outer_dielectric_0p1164mm_ground_fill_0p5mm": 34.82411318467019
+  },
+  "trace_model_width_mm": 0.34,
+  "biastee_uniform_0p32mm_ohm": 51.5440521341701,
+  "scope": "2D uniform line only. Dk assumed 4.2; excludes via and SMA 3D launches, component pads, and coupling."
+}
