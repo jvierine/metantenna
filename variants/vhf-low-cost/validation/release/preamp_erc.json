@@ -1,0 +1,107 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-25T11:18:55",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.8",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5",
+            "violations": []
+        },
+        {
+            "path": "/X balun matching/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/fc48eb8a-c0a9-5a96-8c2a-48733db79b23",
+            "violations": []
+        },
+        {
+            "path": "/X chebyshev high pass/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/320e01dc-42f8-51a0-b4f9-a1ce78fc7926",
+            "violations": []
+        },
+        {
+            "path": "/X elliptic low pass/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/dcf01fb6-d47f-53a3-8029-3a2a416e5ecf",
+            "violations": []
+        },
+        {
+            "path": "/X lna/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/200d198d-c9d5-5ef8-af31-8bed81787f9b",
+            "violations": []
+        },
+        {
+            "path": "/X attenuator/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4345f6dd-4c9b-58e0-b2d8-6c1540beac71",
+            "violations": []
+        },
+        {
+            "path": "/X raw bias tee/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/a6a38237-55d6-5706-8107-8b8e2392213e",
+            "violations": []
+        },
+        {
+            "path": "/X dc supply/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/5e57e9db-aee3-5cec-ae36-b92c3af0eacd",
+            "violations": []
+        },
+        {
+            "path": "/Y balun matching/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/6658eb3d-739f-5a78-b26a-1f4b99ef8815",
+            "violations": []
+        },
+        {
+            "path": "/Y chebyshev high pass/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/bfbe098a-6761-51d6-84ca-fc695282963d",
+            "violations": []
+        },
+        {
+            "path": "/Y elliptic low pass/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/ac657c8a-c716-5655-956d-556e9fd87150",
+            "violations": []
+        },
+        {
+            "path": "/Y lna/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/191e5f44-40ea-5f3d-afe8-38468cd49753",
+            "violations": []
+        },
+        {
+            "path": "/Y attenuator/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/a055415c-ddc3-55ee-866d-12ecc76054ae",
+            "violations": []
+        },
+        {
+            "path": "/Y output DC block/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/0e16eeee-93e7-5227-a892-ba1a64582c3e",
+            "violations": []
+        },
+        {
+            "path": "/Y dc supply/",
+            "uuid_path": "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6",
+            "violations": []
+        }
+    ],
+    "source": "preamp.kicad_sch"
+}

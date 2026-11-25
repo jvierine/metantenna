@@ -1,0 +1,109 @@
+{
+  "model": "Linear end-to-end behavioral amplifier, passive SPICE, NEC2 antenna and PyGDSM sky; not measured or PCB EM qualified",
+  "frequency_MHz": [
+    5.0,
+    150.0
+  ],
+  "X_gain_50ohm_30_55_dB": [
+    15.297542606754309,
+    17.031888568544737
+  ],
+  "Y_gain_50ohm_30_55_dB": [
+    15.37962536218216,
+    17.106627328367146
+  ],
+  "X_Y_gain_difference_dB_max": 0.11731533777965808,
+  "added_filter_DC_resistance_ohm_max": 0.29,
+  "dc_corners": 1440,
+  "head_input_current_mA_max": 186.4216586831971,
+  "regulator_headroom_after_0p4V_margin_V_min": 0.19527399083310149,
+  "bias_resistor_dissipation_W_max": 0.35058500981551954,
+  "LDO_dissipation_W_max": 0.3160672231929995,
+  "installation_requirement": "50m coax DC loop resistance <=3 ohm; regulated 12V -2%/+10%; ambient -50..30C extrapolation; components not qualified below -40C. Cable RF loss assumed 5dB at50MHz, sqrt(f).",
+  "off_spec_supply_or_cable_dropout_corners": 248,
+  "active_model_limits": "25.1dB gain and2.7dB NF extrapolated from100MHz typicals. IP3/P1dB budget only, not nonlinear simulation. No transistor or mismatch noise parameters; no loop stability, oscillation or X/Y coupling certification.",
+  "antenna_cases": {
+    "arms_1p0m": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": -8.671453963708032,
+        "realized_zenith_gain_dBi": -20.257733976344895,
+        "system_X_noise_K_median": 143998.4386836043
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 2.821512309911421,
+        "realized_zenith_gain_dBi": -9.067019411245472,
+        "system_X_noise_K_median": 12601.867752806345
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 6.5461630970651665,
+        "realized_zenith_gain_dBi": -6.294397776056768,
+        "system_X_noise_K_median": 7143.670560391442
+      }
+    },
+    "arms_1p5m": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": 1.081541950555685,
+        "realized_zenith_gain_dBi": -10.544217697684239,
+        "system_X_noise_K_median": 24099.06305396328
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 13.960646326201644,
+        "realized_zenith_gain_dBi": 2.9104834030759825,
+        "system_X_noise_K_median": 4843.61393412244
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 11.037101485447476,
+        "realized_zenith_gain_dBi": -0.7823882894535954,
+        "system_X_noise_K_median": 4570.610957255207
+      }
+    },
+    "arms_2p0m": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": 13.81904636259825,
+        "realized_zenith_gain_dBi": 2.139210076841194,
+        "system_X_noise_K_median": 10466.338462478352
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 6.6495389732399515,
+        "realized_zenith_gain_dBi": -4.238607087230125,
+        "system_X_noise_K_median": 7460.548071187102
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 5.884443287669185,
+        "realized_zenith_gain_dBi": -5.559334696167069,
+        "system_X_noise_K_median": 7534.943875449463
+      }
+    },
+    "SIMONe_candidate": {
+      "32.55": {
+        "antenna_to_rx_gain_dB": 16.830790598598348,
+        "realized_zenith_gain_dBi": 4.998962096961528,
+        "system_X_noise_K_median": 10009.401910301412
+      },
+      "50": {
+        "antenna_to_rx_gain_dB": 5.677232963129928,
+        "realized_zenith_gain_dBi": -5.107817046149068,
+        "system_X_noise_K_median": 8276.276031315783
+      },
+      "55": {
+        "antenna_to_rx_gain_dB": 5.182201678346386,
+        "realized_zenith_gain_dBi": -6.076942621471551,
+        "system_X_noise_K_median": 8288.73534090854
+      }
+    }
+  },
+  "checks": {
+    "reciprocity": true,
+    "DC_headroom": true,
+    "bias_resistor_derating": true,
+    "MMIC_current_below_120mA": true
+  },
+  "temperature_scope": "DC algebra extrapolated to -50..30 C; no device operating qualification below -40 C or thermal/noise temperature validation",
+  "passive_Q_assumptions": {
+    "Coilcraft": 70,
+    "APV": 35,
+    "frequency_MHz": 50
+  },
+  "noise_comparison": "Use simulation/upgrade/comparison.h5 for this mixed-inductor front end; no historical system-noise arrays relabeled as current.",
+  "FM_filter_rejection_relative_to_best_30_55_dB_min": 44.85241062806491
+}

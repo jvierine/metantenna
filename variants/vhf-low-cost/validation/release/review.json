@@ -1,0 +1,127 @@
+{
+  "preamp": {
+    "all_reported_findings": 0,
+    "ignored_ERC_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ],
+    "ignored_DRC_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ],
+    "qualification": "No reported findings; ignored checks are not validated by this result. Courtyard/footprint envelope and RF return-path review remain separate."
+  },
+  "biastee": {
+    "all_reported_findings": 0,
+    "ignored_ERC_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ],
+    "ignored_DRC_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ],
+    "qualification": "No reported findings; ignored checks are not validated by this result. Courtyard/footprint envelope and RF return-path review remain separate."
+  },
+  "mechanical": {
+    "biastee_insertion_sweep_mm": 40,
+    "interference_mm3": 1.6436504934880247e-15,
+    "watertight_and_single_solid": true,
+    "scope": "Existing case geometry with identical PCB/connector locations; component envelopes approximate; print a fit sample."
+  },
+  "source_sha256": {
+    "variants/vhf-low-cost/hardware/metantenna.kicad_sym": "f9221ce1a3627e9d50cad9a5c1c59c7c00659dc3234e363dab59383648c4e421",
+    "variants/vhf-low-cost/hardware/x_raw_bias_tee.kicad_sch": "a16882d876682157d75259c8ca045d376381184558aa346f088f88892d6429a4",
+    "variants/vhf-low-cost/hardware/x_elliptic_low_pass.kicad_sch": "eebc654a49dc8d589d67ca4c8beaac5823551f1df860213b6eb38cbfe684e4ae",
+    "variants/vhf-low-cost/hardware/biastee.kicad_prl": "3ad27a1121b8d84d8088b6e1c2d309df6fa4c93c67ff8feada5916d9433a3213",
+    "variants/vhf-low-cost/hardware/y_elliptic_low_pass.kicad_sch": "4a32cdb2491d70fe82841b3bfc8e7e8c2bddcf3b8465ce65eed47a3c08f97188",
+    "variants/vhf-low-cost/hardware/biastee_layout.json": "d11f0373f5ec49b450682a2a9f798d1092d46e8393ba3d987834b6207ff1348b",
+    "variants/vhf-low-cost/hardware/preamp_layout.json": "daf7e4403e60182dbbb4965e5e66ac810e3f55ec74e750cfc7a1b1408d234fc6",
+    "variants/vhf-low-cost/hardware/fp-lib-table": "9f37dd734090c94110223259dd0c52982c509116ebf39c04f7b2cec51a22abfe",
+    "variants/vhf-low-cost/hardware/preamp.kicad_prl": "158b1e281f19471ef766386e2e7eac215ee6870e675e8729bf00c1f6d9657163",
+    "variants/vhf-low-cost/hardware/y_lna.kicad_sch": "e0e6d4d6229917dbb25a1ad1f681ff0f1ae92e3c10794bb0836a6c4c1478f9d2",
+    "variants/vhf-low-cost/hardware/biastee.kicad_pcb": "f2a27f8109977f06cebac55b97c8b8055b65446aece6ec00d29792525af9a170",
+    "variants/vhf-low-cost/hardware/y_raw_bias_tee.kicad_sch": "4868fb07e75fe653bf7ea94a0806e30a8945c8e8cac6c19654486b86cbb096b6",
+    "variants/vhf-low-cost/hardware/preamp.kicad_pcb": "a4b36fdd49dec65b88992875b3ea2564033afc00948330c7e72eaff2d6c47138",
+    "variants/vhf-low-cost/hardware/y_chebyshev_high_pass.kicad_sch": "3c608969a4fa2e6904e0b755fc02b456f7b28f0a79dcbe9a7690b379b9f102a4",
+    "variants/vhf-low-cost/hardware/x_attenuator.kicad_sch": "3d7d014c0d7257768d4ac0e8ba276418c83376c23194fe0008153fdc5ff94cb8",
+    "variants/vhf-low-cost/hardware/biastee.kicad_sch": "e2cf6bdc61d2f13d4674eb7703a2a2c1061d053fb93a20a04f56918a7583b122",
+    "variants/vhf-low-cost/hardware/x_dc_supply.kicad_sch": "02f4af61ebd6257ab5217557171818a515183db8a2b8676e0d2c60acdeec7a20",
+    "variants/vhf-low-cost/hardware/x_lna.kicad_sch": "32dbf8497a1421339098df4947a2fa6c9b93606fb25c63440847720cf435c8cf",
+    "variants/vhf-low-cost/hardware/y_dc_supply.kicad_sch": "70b46bd155a10bb5a16636dcbbfba57920b798ac7a01de014c016b413a51e97a",
+    "variants/vhf-low-cost/hardware/x_balun_matching.kicad_sch": "d7c7251639dbb94f677ed5e37e22d04fe13a45eba1f8b485a12f6654585fd828",
+    "variants/vhf-low-cost/hardware/preamp.kicad_sch": "6646308080ca9b296f1f8fb4173033a4d726c74e9628eabf69c09b94be3d5b31",
+    "variants/vhf-low-cost/hardware/x_chebyshev_high_pass.kicad_sch": "741f62f274ab566f4cfe62db0ec7456977d4ef7ebb2122f339b063b80fe3e919",
+    "variants/vhf-low-cost/hardware/biastee.kicad_pro": "3ec4054b01b0ba361ae74d89b1a6049862d2f57f1aa3ba9fd8713a191df1fc9d",
+    "variants/vhf-low-cost/hardware/sym-lib-table": "5fb38be5a4e41aa881eee85faa6a4ce41d7c7d2c951ff26dd14b53b31dc508c2",
+    "variants/vhf-low-cost/hardware/y_balun_matching.kicad_sch": "72093115d8ac91c322daac59bda7751e1b692213b5f6ab64fd7b92b4fea03c88",
+    "variants/vhf-low-cost/hardware/preamp.kicad_pro": "662d4d04c9b87eea494df71eb291e0870aa29213e26186cfa7dc972ebc5661db",
+    "variants/vhf-low-cost/hardware/review.kicad_sym": "86e010471d099deabe1eca8a3a78046f80526f0c373f301b91cc87a9be636771",
+    "variants/vhf-low-cost/hardware/y_attenuator.kicad_sch": "ba8d1936d815b4646d9971b85defad044d7f685a43b81fcee06eeec93a1725a8"
+  },
+  "order_release": "Not granted: vendor sourcing/orientation/CAM and physical qualification remain open."
+}

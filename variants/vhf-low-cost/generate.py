@@ -110,3 +110,5 @@ manifest={'baseline_commit':'5e540a6','source_hashes':{str(p.relative_to(R)):has
 # Repair only the routes affected by manufacturer-recommended solder lands.
 import subprocess
 subprocess.run([sys.executable,str(O/"route.py")],check=True)
+
+subprocess.run([sys.executable,str(O/"clean_bias_schematic.py")],check=True)
