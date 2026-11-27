@@ -1,0 +1,307 @@
+{
+  "baseline_commit": "5e540a6",
+  "source_hashes": {
+    "vhf/hardware/metantenna.kicad_sym": "d6966378d2379226f381cfdd0a97a77a9c4eefbbaf8469f7a5b27f1a1078ecb4",
+    "vhf/hardware/x_raw_bias_tee.kicad_sch": "e50d0b3d2382f194fea71e16924137557e4c9f2860c107720305cd7bc2049ab3",
+    "vhf/hardware/x_elliptic_low_pass.kicad_sch": "76628dea6465e3f204afcd80cf0a8bd7aa1458184ab0a67053cf2ee54355a6a3",
+    "vhf/hardware/biastee.kicad_prl": "3ad27a1121b8d84d8088b6e1c2d309df6fa4c93c67ff8feada5916d9433a3213",
+    "vhf/hardware/y_elliptic_low_pass.kicad_sch": "5d04cdd6b68c9a4d79cedfc3c34c48b33978c134fcd562b7cf7ac1ed0293b968",
+    "vhf/hardware/biastee_layout.json": "950d237e5420f15f92a6db1c945cb0772aa500f26108e4c4c0289a0de5fb75cc",
+    "vhf/hardware/preamp_layout.json": "055ac66250fdb7b04cd907be4ddd864166a890dd38483488a9403ad6ca8c6841",
+    "vhf/hardware/fp-lib-table": "9f37dd734090c94110223259dd0c52982c509116ebf39c04f7b2cec51a22abfe",
+    "vhf/hardware/preamp.kicad_prl": "158b1e281f19471ef766386e2e7eac215ee6870e675e8729bf00c1f6d9657163",
+    "vhf/hardware/y_lna.kicad_sch": "64c16132f66bf2aa1d1a52a7db41c6b363cce87e9904fd6c91f70fa3a5b2abbd",
+    "vhf/hardware/biastee.kicad_pcb": "1767e887bd2532195201cb988305d48bebf3cb73f3e3b169a60000c4511a0cbe",
+    "vhf/hardware/y_raw_bias_tee.kicad_sch": "d6ecc6942a08ecdc17fb8e9541011e1ec4fafaa6daf4d665b1feb4684e4d6860",
+    "vhf/hardware/preamp.kicad_pcb": "04c3a49778c27fccee2d7997aa5ade5c5913ef9501a438348704c3b8966b43ef",
+    "vhf/hardware/y_chebyshev_high_pass.kicad_sch": "0e1e93e1fbc5fde3772097b2538a33450a46e46c49ba17b2746b1c79de366d44",
+    "vhf/hardware/x_attenuator.kicad_sch": "3d7d014c0d7257768d4ac0e8ba276418c83376c23194fe0008153fdc5ff94cb8",
+    "vhf/hardware/biastee.kicad_sch": "936fafab2942f415539777577353ce11f1b63357aa3ff0555d43b2a1fbf052d5",
+    "vhf/hardware/x_dc_supply.kicad_sch": "02f4af61ebd6257ab5217557171818a515183db8a2b8676e0d2c60acdeec7a20",
+    "vhf/hardware/x_lna.kicad_sch": "6c9477a8976f1b9c7a28259591f85b6c4f7a5578c19ec50a5ac19ed0e1e1ca28",
+    "vhf/hardware/y_dc_supply.kicad_sch": "70b46bd155a10bb5a16636dcbbfba57920b798ac7a01de014c016b413a51e97a",
+    "vhf/hardware/x_balun_matching.kicad_sch": "d7c7251639dbb94f677ed5e37e22d04fe13a45eba1f8b485a12f6654585fd828",
+    "vhf/hardware/preamp.kicad_sch": "6646308080ca9b296f1f8fb4173033a4d726c74e9628eabf69c09b94be3d5b31",
+    "vhf/hardware/x_chebyshev_high_pass.kicad_sch": "5359aeaa3794172dc2c360d688a054a6139ffca66e4a97b1b0e12e78f79443e6",
+    "vhf/hardware/biastee.kicad_pro": "3ec4054b01b0ba361ae74d89b1a6049862d2f57f1aa3ba9fd8713a191df1fc9d",
+    "vhf/hardware/sym-lib-table": "5fb38be5a4e41aa881eee85faa6a4ce41d7c7d2c951ff26dd14b53b31dc508c2",
+    "vhf/hardware/y_balun_matching.kicad_sch": "72093115d8ac91c322daac59bda7751e1b692213b5f6ab64fd7b92b4fea03c88",
+    "vhf/hardware/preamp.kicad_pro": "662d4d04c9b87eea494df71eb291e0870aa29213e26186cfa7dc972ebc5661db",
+    "vhf/hardware/review.kicad_sym": "86e010471d099deabe1eca8a3a78046f80526f0c373f301b91cc87a9be636771",
+    "vhf/hardware/y_attenuator.kicad_sch": "ba8d1936d815b4646d9971b85defad044d7f685a43b81fcee06eeec93a1725a8"
+  },
+  "replaced": [
+    {
+      "board": "preamp",
+      "ref": "R101",
+      "old_mpn": "RC0805FR-071ML",
+      "new_mpn": "0805W8F1004T5E"
+    },
+    {
+      "board": "preamp",
+      "ref": "R102",
+      "old_mpn": "RC0805FR-071ML",
+      "new_mpn": "0805W8F1004T5E"
+    },
+    {
+      "board": "preamp",
+      "ref": "C101",
+      "old_mpn": "C0805C161F5GACTU",
+      "new_mpn": "0805N161J500CT"
+    },
+    {
+      "board": "preamp",
+      "ref": "C102",
+      "old_mpn": "C0805C161F5GACTU",
+      "new_mpn": "0805N161J500CT"
+    },
+    {
+      "board": "preamp",
+      "ref": "C103",
+      "old_mpn": "C0805C360F5GACTU",
+      "new_mpn": "TCC0805COG360J500BT"
+    },
+    {
+      "board": "preamp",
+      "ref": "L102",
+      "old_mpn": "0805HP-101XGRC",
+      "new_mpn": "AHW2012C-R10JTF"
+    },
+    {
+      "board": "preamp",
+      "ref": "C104",
+      "old_mpn": "C0805C330F5GACTU",
+      "new_mpn": "CC0805JRNPO9BN330"
+    },
+    {
+      "board": "preamp",
+      "ref": "C105",
+      "old_mpn": "C0805C750F5GACTU",
+      "new_mpn": "GQM2195C2E750JB12D"
+    },
+    {
+      "board": "preamp",
+      "ref": "C106",
+      "old_mpn": "C0805C200F5GACTU",
+      "new_mpn": "CL21C200JBANNNC"
+    },
+    {
+      "board": "preamp",
+      "ref": "C107",
+      "old_mpn": "C0805C430F5GACTU",
+      "new_mpn": "CC0805JRNPO9BN430"
+    },
+    {
+      "board": "preamp",
+      "ref": "C115",
+      "old_mpn": "C0805C242J5GACTU",
+      "new_mpn": "GRM2165C1H242JA01D"
+    },
+    {
+      "board": "preamp",
+      "ref": "C108",
+      "old_mpn": "C0805C242J5GACTU",
+      "new_mpn": "GRM2165C1H242JA01D"
+    },
+    {
+      "board": "preamp",
+      "ref": "R103",
+      "old_mpn": "RC0805FR-07294RL",
+      "new_mpn": "RC0805FR-07300RL"
+    },
+    {
+      "board": "preamp",
+      "ref": "R105",
+      "old_mpn": "RC0805FR-07294RL",
+      "new_mpn": "RC0805FR-07300RL"
+    },
+    {
+      "board": "preamp",
+      "ref": "C109",
+      "old_mpn": "C0805C102J5GACTU",
+      "new_mpn": "CGA4F3C0G2E102JT0Y0N"
+    },
+    {
+      "board": "preamp",
+      "ref": "L104",
+      "old_mpn": "1008CS-102XJRC",
+      "new_mpn": "AHW2520C-1R0JTF"
+    },
+    {
+      "board": "preamp",
+      "ref": "R106",
+      "old_mpn": "RC0805FR-0757K6L",
+      "new_mpn": "FRC0805F5762TS"
+    },
+    {
+      "board": "preamp",
+      "ref": "R107",
+      "old_mpn": "RC0805FR-0710KL",
+      "new_mpn": "0805W8F1002T5E"
+    },
+    {
+      "board": "preamp",
+      "ref": "R108",
+      "old_mpn": "CRCW251241R2FKEG",
+      "new_mpn": "25121WF430JT4E"
+    },
+    {
+      "board": "preamp",
+      "ref": "L105",
+      "old_mpn": "1008CS-102XJRC",
+      "new_mpn": "AHW2520C-1R0JTF"
+    },
+    {
+      "board": "preamp",
+      "ref": "R201",
+      "old_mpn": "RC0805FR-071ML",
+      "new_mpn": "0805W8F1004T5E"
+    },
+    {
+      "board": "preamp",
+      "ref": "R202",
+      "old_mpn": "RC0805FR-071ML",
+      "new_mpn": "0805W8F1004T5E"
+    },
+    {
+      "board": "preamp",
+      "ref": "C201",
+      "old_mpn": "C0805C161F5GACTU",
+      "new_mpn": "0805N161J500CT"
+    },
+    {
+      "board": "preamp",
+      "ref": "C202",
+      "old_mpn": "C0805C161F5GACTU",
+      "new_mpn": "0805N161J500CT"
+    },
+    {
+      "board": "preamp",
+      "ref": "C203",
+      "old_mpn": "C0805C360F5GACTU",
+      "new_mpn": "TCC0805COG360J500BT"
+    },
+    {
+      "board": "preamp",
+      "ref": "L202",
+      "old_mpn": "0805HP-101XGRC",
+      "new_mpn": "AHW2012C-R10JTF"
+    },
+    {
+      "board": "preamp",
+      "ref": "C204",
+      "old_mpn": "C0805C330F5GACTU",
+      "new_mpn": "CC0805JRNPO9BN330"
+    },
+    {
+      "board": "preamp",
+      "ref": "C205",
+      "old_mpn": "C0805C750F5GACTU",
+      "new_mpn": "GQM2195C2E750JB12D"
+    },
+    {
+      "board": "preamp",
+      "ref": "C206",
+      "old_mpn": "C0805C200F5GACTU",
+      "new_mpn": "CL21C200JBANNNC"
+    },
+    {
+      "board": "preamp",
+      "ref": "C207",
+      "old_mpn": "C0805C430F5GACTU",
+      "new_mpn": "CC0805JRNPO9BN430"
+    },
+    {
+      "board": "preamp",
+      "ref": "C215",
+      "old_mpn": "C0805C242J5GACTU",
+      "new_mpn": "GRM2165C1H242JA01D"
+    },
+    {
+      "board": "preamp",
+      "ref": "C208",
+      "old_mpn": "C0805C242J5GACTU",
+      "new_mpn": "GRM2165C1H242JA01D"
+    },
+    {
+      "board": "preamp",
+      "ref": "R203",
+      "old_mpn": "RC0805FR-07294RL",
+      "new_mpn": "RC0805FR-07300RL"
+    },
+    {
+      "board": "preamp",
+      "ref": "R205",
+      "old_mpn": "RC0805FR-07294RL",
+      "new_mpn": "RC0805FR-07300RL"
+    },
+    {
+      "board": "preamp",
+      "ref": "C209",
+      "old_mpn": "C0805C102J5GACTU",
+      "new_mpn": "CGA4F3C0G2E102JT0Y0N"
+    },
+    {
+      "board": "preamp",
+      "ref": "R206",
+      "old_mpn": "RC0805FR-0757K6L",
+      "new_mpn": "FRC0805F5762TS"
+    },
+    {
+      "board": "preamp",
+      "ref": "R207",
+      "old_mpn": "RC0805FR-0710KL",
+      "new_mpn": "0805W8F1002T5E"
+    },
+    {
+      "board": "preamp",
+      "ref": "R208",
+      "old_mpn": "CRCW251241R2FKEG",
+      "new_mpn": "25121WF430JT4E"
+    },
+    {
+      "board": "preamp",
+      "ref": "L205",
+      "old_mpn": "1008CS-102XJRC",
+      "new_mpn": "AHW2520C-1R0JTF"
+    },
+    {
+      "board": "biastee",
+      "ref": "C2",
+      "old_mpn": "C0805C102J5GACTU",
+      "new_mpn": "CGA4F3C0G2E102JT0Y0N"
+    },
+    {
+      "board": "biastee",
+      "ref": "R1",
+      "old_mpn": "RC0805FR-071RL",
+      "new_mpn": "0805W8F100KT5E"
+    },
+    {
+      "board": "biastee",
+      "ref": "C10",
+      "old_mpn": "C0805C102J5GACTU",
+      "new_mpn": "CGA4F3C0G2E102JT0Y0N"
+    },
+    {
+      "board": "biastee",
+      "ref": "L10",
+      "old_mpn": "1008CS-102XJRC",
+      "new_mpn": "AHW2520C-1R0JTF"
+    },
+    {
+      "board": "biastee",
+      "ref": "C20",
+      "old_mpn": "C0805C102J5GACTU",
+      "new_mpn": "CGA4F3C0G2E102JT0Y0N"
+    },
+    {
+      "board": "biastee",
+      "ref": "C21",
+      "old_mpn": "C0805C102J5GACTU",
+      "new_mpn": "CGA4F3C0G2E102JT0Y0N"
+    }
+  ],
+  "layout": "Four-layer stackup and connector positions retained; manufacturer APV lands and local routing repairs; baseline design untouched",
+  "sensitivity": "No measured Q in 30\u201355 MHz or new full-system RF qualification"
+}

@@ -1,0 +1,1 @@
+(footprint "APV2520" (version 20221018) (generator pcbnew) (layer "F.Cu") (attr smd)(pad "1" smd rect (at -1.145 0) (size 1.02 2.54) (layers "F.Cu" "F.Paste" "F.Mask"))(pad "2" smd rect (at 1.145 0) (size 1.02 2.54) (layers "F.Cu" "F.Paste" "F.Mask")))

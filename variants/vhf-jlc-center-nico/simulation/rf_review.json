@@ -1,0 +1,30 @@
+{
+  "geometry": {
+    "X_COAX": {
+      "trace_width_mm": [
+        0.34
+      ],
+      "minimum_same_layer_gap_to_input_trace_mm": 12.978,
+      "nearest_input_net": "Y_ANT_N",
+      "nearest_ground_via_mm": [
+        1.2
+      ]
+    },
+    "Y_COAX": {
+      "trace_width_mm": [
+        0.34
+      ],
+      "minimum_same_layer_gap_to_input_trace_mm": 4.67,
+      "nearest_input_net": "X_ANT_P",
+      "nearest_ground_via_mm": []
+    }
+  },
+  "impedance_ohm": {
+    "outer_dielectric_0p2104mm_ground_fill_0p5mm": 49.860348374986636,
+    "outer_dielectric_0p2104mm_without_side_fill": 50.118077976561764,
+    "outer_dielectric_0p1164mm_ground_fill_0p5mm": 36.36865727277509
+  },
+  "trace_model_width_mm": 0.34,
+  "biastee_uniform_0p32mm_ohm": 51.79789114162096,
+  "scope": "2D uniform line only. JLC published laminate and solder mask Dk; excludes via and SMA 3D launches, component pads, and coupling."
+}

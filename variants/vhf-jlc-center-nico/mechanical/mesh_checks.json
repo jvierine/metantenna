@@ -1,0 +1,56 @@
+{
+  "base": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_cm3": 139.24,
+    "bounds_mm": [
+      [
+        -83.0,
+        -80.0,
+        -35.0
+      ],
+      [
+        83.0,
+        80.0,
+        35.0
+      ]
+    ],
+    "triangles": 11474
+  },
+  "rain_hood": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_cm3": 91.38,
+    "bounds_mm": [
+      [
+        -68.0,
+        -65.0,
+        20.0
+      ],
+      [
+        68.0,
+        65.0,
+        60.0
+      ]
+    ],
+    "triangles": 4136
+  },
+  "pipe_fit_coupon": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_cm3": 5.49,
+    "bounds_mm": [
+      [
+        -29.299999237060547,
+        -29.299999237060547,
+        0.0
+      ],
+      [
+        29.299999237060547,
+        29.299999237060547,
+        8.0
+      ]
+    ],
+    "triangles": 768
+  }
+}

@@ -1,65 +1,2423 @@
 (kicad_sch
-(version 20260306)
-(generator "eeschema")
-(uuid "be570399-64be-5785-83cb-a18be2aca5f3")
-(paper "A4")
-(lib_symbols (symbol "review:C210" (pin_numbers (hide yes)) (pin_names (offset 0.254)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "C" (at 0.635 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "C" (at 0.635 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 0.9652 -3.81 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Unpolarized capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "cap capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "C_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "C210_0_1" (polyline (pts (xy -2.032 0.762) (xy 2.032 0.762)) (stroke (width 0.508) (type default)) (fill (type none))) (polyline (pts (xy -2.032 -0.762) (xy 2.032 -0.762)) (stroke (width 0.508) (type default)) (fill (type none)))) (symbol "C210_1_1" (pin passive line (at 0 3.81 270) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "review:C212" (pin_numbers (hide yes)) (pin_names (offset 0.254)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "C" (at 0.635 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "C" (at 0.635 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 0.9652 -3.81 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Unpolarized capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "cap capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "C_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "C212_0_1" (polyline (pts (xy -2.032 0.762) (xy 2.032 0.762)) (stroke (width 0.508) (type default)) (fill (type none))) (polyline (pts (xy -2.032 -0.762) (xy 2.032 -0.762)) (stroke (width 0.508) (type default)) (fill (type none)))) (symbol "C212_1_1" (pin passive line (at 0 3.81 270) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "review:C213" (pin_numbers (hide yes)) (pin_names (offset 0.254)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "C" (at 0.635 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "C" (at 0.635 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 0.9652 -3.81 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Unpolarized capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "cap capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "C_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "C213_0_1" (polyline (pts (xy -2.032 0.762) (xy 2.032 0.762)) (stroke (width 0.508) (type default)) (fill (type none))) (polyline (pts (xy -2.032 -0.762) (xy 2.032 -0.762)) (stroke (width 0.508) (type default)) (fill (type none)))) (symbol "C213_1_1" (pin passive line (at 0 3.81 270) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "review:U202" (pin_names (offset 0.5)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "U" (at 0 10.16 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (property "Value" "TPS7A4901DGNR" (at 0 7.62 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (property "Footprint" "metantenna:MSOP8EP" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1 1)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "U202_0_1" (rectangle (start -5.08 -5.08) (end 5.08 5.08) (stroke (width 0.2) (type default)) (fill (type background)))) (symbol "U202_1_1" (pin passive line (at -7.62 3.81 0) (length 2.54) (name "OUT" (effects (font (size 0.8 0.8)))) (number "1" (effects (font (size 0.8 0.8))))) (pin passive line (at -7.62 1.27 0) (length 2.54) (name "FB" (effects (font (size 0.8 0.8)))) (number "2" (effects (font (size 0.8 0.8))))) (pin passive line (at -7.62 -1.27 0) (length 2.54) (name "NC" (effects (font (size 0.8 0.8)))) (number "3" (effects (font (size 0.8 0.8))))) (pin passive line (at -7.62 -3.81 0) (length 2.54) (name "GND" (effects (font (size 0.8 0.8)))) (number "4" (effects (font (size 0.8 0.8))))) (pin passive line (at 7.62 -3.81 180) (length 2.54) (name "EN" (effects (font (size 0.8 0.8)))) (number "5" (effects (font (size 0.8 0.8))))) (pin passive line (at 7.62 -1.27 180) (length 2.54) (name "NR/SS" (effects (font (size 0.8 0.8)))) (number "6" (effects (font (size 0.8 0.8))))) (pin passive line (at 7.62 1.27 180) (length 2.54) (name "DNC" (effects (font (size 0.8 0.8)))) (number "7" (effects (font (size 0.8 0.8))))) (pin passive line (at 7.62 3.81 180) (length 2.54) (name "IN" (effects (font (size 0.8 0.8)))) (number "8" (effects (font (size 0.8 0.8))))) (pin passive line (at 0 -10.16 90) (length 2.54) (name "EP" (effects (font (size 0.8 0.8)))) (number "9" (effects (font (size 0.8 0.8)))))) (embedded_fonts no)) (symbol "review:R206" (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "R" (at 2.032 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Value" "R" (at 0 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at -1.778 0 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "R res resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "R_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "R206_0_1" (rectangle (start -1.016 -2.54) (end 1.016 2.54) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "R206_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "review:C211" (pin_numbers (hide yes)) (pin_names (offset 0.254)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "C" (at 0.635 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "C" (at 0.635 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "" (at 0.9652 -3.81 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Unpolarized capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "cap capacitor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "C_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "C211_0_1" (polyline (pts (xy -2.032 0.762) (xy 2.032 0.762)) (stroke (width 0.508) (type default)) (fill (type none))) (polyline (pts (xy -2.032 -0.762) (xy 2.032 -0.762)) (stroke (width 0.508) (type default)) (fill (type none)))) (symbol "C211_1_1" (pin passive line (at 0 3.81 270) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.794) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) (symbol "review:R207" (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) (property "Reference" "R" (at 2.032 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Value" "R" (at 0 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at -1.778 0 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "Description" "Resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_keywords" "R res resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (property "ki_fp_filters" "R_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (symbol "R207_0_1" (rectangle (start -1.016 -2.54) (end 1.016 2.54) (stroke (width 0.254) (type default)) (fill (type none)))) (symbol "R207_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)))
-(symbol (lib_id "review:C210") (at 88.9 114.3 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "dde5acd9-bdbb-574e-a76e-2a5484937dab") (property "Reference" "C210" (at 85.09 116.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10u 25V" (at 85.09 114.3 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "metantenna:1206" (at 87.9348 110.49 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 88.9 114.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "25V" (at 85.09 111.7599 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "C210") (unit 1)))) (property "MPN" "GRM31CR61E106KA12L" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(symbol (lib_id "review:C212") (at 190.5 114.3 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "e91021cf-fc90-5ee2-b2f2-9f97f4f481f0") (property "Reference" "C212" (at 186.69 116.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10u 25V" (at 186.69 114.3 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "metantenna:1206" (at 189.5348 110.49 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 190.5 114.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "25V" (at 186.69 111.7599 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "C212") (unit 1)))) (property "MPN" "GRM31CR61E106KA12L" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(symbol (lib_id "review:C213") (at 127 114.3 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "d2d8e4d0-e01c-5288-8af6-e1e4c468dbab") (property "Reference" "C213" (at 123.19 116.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10n 50V" (at 123.19 114.3 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "metantenna:0805" (at 126.0348 110.49 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 127 114.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "50V C0G" (at 123.19 111.7599 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "C213") (unit 1)))) (property "MPN" "GRM21BR71H103KA01L" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(symbol (lib_id "review:U202") (at 139.7 105.41 0) (mirror y) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "b42b15db-7ebd-576e-8a90-756ee7ead5a0") (property "Reference" "U202" (at 139.7 90.41 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.2 1.2)))) (property "Value" "TPS7A4901DGNR" (at 139.7 92.91 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.1 1.1)))) (property "Footprint" "metantenna:MSOP8EP" (at 139.7 105.41 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (property "Datasheet" "" (at 139.7 105.41 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 139.7 105.41 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "U202") (unit 1)))) (property "MPN" "TPS7A4901DGNR" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(no_connect (at 147.32 106.68) (uuid "af63fbb3-5ead-51fb-9d32-fbeb5ba946a8"))
-(no_connect (at 132.08 104.14) (uuid "5b3db798-5363-5d4a-9ade-fb4a8909467d"))
-(symbol (lib_id "review:R206") (at 177.8 107.95 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "e0745be7-c4ab-525f-8789-6163924543d6") (property "Reference" "R206" (at 176.53 110.49 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "57.6k" (at 176.53 107.95 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "metantenna:0805" (at 179.578 107.95 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "https://jlcpcb.com/partdetail/C5153977" (at 177.8 107.95 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "JLC sourcing candidate; FRC0805F5762TS" (at 176.53 105.4099 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "R206") (unit 1)))) (property "MPN" "FRC0805F5762TS" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(symbol (lib_id "review:C211") (at 101.6 114.3 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "5fd3efae-b355-5623-aa9b-389f966bd8a5") (property "Reference" "C211" (at 97.79 116.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "100n 50V" (at 97.79 114.3 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "metantenna:0805" (at 100.6348 110.49 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 101.6 114.3 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "50V" (at 97.79 111.7599 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "C211") (unit 1)))) (property "MPN" "GRM21BR71H104KA01L" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(symbol (lib_id "review:R207") (at 177.8 120.65 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "7a161788-284c-5e51-81f7-cbcf9528be39") (property "Reference" "R207" (at 176.53 123.19 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10k" (at 176.53 120.65 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "metantenna:0805" (at 179.578 120.65 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "https://jlcpcb.com/partdetail/C17414" (at 177.8 120.65 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "JLC sourcing candidate; 0805W8F1002T5E" (at 176.53 118.1099 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left) (hide yes))) (instances (project "preamp" (path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6" (reference "R207") (unit 1)))) (property "MPN" "0805W8F1002T5E" (at 0 0 0) (effects (font (size 1 1)) (hide yes))))
-(wire (pts (xy 190.5 101.6) (xy 203.2 101.6)) (stroke (width 0) (type default)) (uuid "0a0b482c-c013-50c2-a847-59310df20a08"))
-(wire (pts (xy 88.9 118.11) (xy 88.9 127)) (stroke (width 0) (type default)) (uuid "99ca670f-96ff-53c7-9574-5ba155f9819f"))
-(wire (pts (xy 190.5 110.49) (xy 190.5 101.6)) (stroke (width 0) (type default)) (uuid "9a0a37d3-fd63-51cf-91ff-f9a62d47376b"))
-(wire (pts (xy 177.8 101.6) (xy 177.8 104.14)) (stroke (width 0) (type default)) (uuid "f5f64dee-2d02-5b44-a89b-aaeedc2e91e9"))
-(wire (pts (xy 147.32 104.14) (xy 165.1 104.14)) (stroke (width 0) (type default)) (uuid "8ae1bc0f-c07c-5ce5-ba75-b76b195e1ffb"))
-(wire (pts (xy 127 106.68) (xy 132.08 106.68)) (stroke (width 0) (type default)) (uuid "1d8901bc-205b-5e38-9444-4dd3f12e934f"))
-(wire (pts (xy 177.8 124.46) (xy 177.8 127)) (stroke (width 0) (type default)) (uuid "3d7140aa-fe39-5bbb-9f4d-709bea41f9b4"))
-(wire (pts (xy 114.3 109.22) (xy 114.3 101.6)) (stroke (width 0) (type default)) (uuid "82c7ff2a-a445-5c82-a264-80bc7f85a0c5"))
-(wire (pts (xy 127 118.11) (xy 127 127)) (stroke (width 0) (type default)) (uuid "8e04a220-6334-5b32-83e5-95c45f01c25d"))
-(wire (pts (xy 177.8 111.76) (xy 177.8 114.3)) (stroke (width 0) (type default)) (uuid "54bbe57d-f77c-5887-8ea8-0fa6c123afc6"))
-(wire (pts (xy 165.1 114.3) (xy 177.8 114.3)) (stroke (width 0) (type default)) (uuid "29920973-af7e-58b9-9ee1-c5deaa302e82"))
-(wire (pts (xy 190.5 118.11) (xy 190.5 127)) (stroke (width 0) (type default)) (uuid "ece8ee0c-b186-5dc2-b02f-f758268e5548"))
-(wire (pts (xy 101.6 118.11) (xy 101.6 127)) (stroke (width 0) (type default)) (uuid "da16090f-1d2b-5d53-b461-ffb447254aae"))
-(wire (pts (xy 177.8 101.6) (xy 190.5 101.6)) (stroke (width 0) (type default)) (uuid "e0f8e621-e5e0-5928-b5fc-ee18d1710381"))
-(wire (pts (xy 114.3 109.22) (xy 132.08 109.22)) (stroke (width 0) (type default)) (uuid "abb2bc97-df99-52b6-8608-d8760c7c2051"))
-(wire (pts (xy 152.4 109.22) (xy 152.4 127)) (stroke (width 0) (type default)) (uuid "aec3cb91-fd1a-5b15-8708-e52b95c99c18"))
-(wire (pts (xy 114.3 101.6) (xy 101.6 101.6)) (stroke (width 0) (type default)) (uuid "76519f8d-d6d6-5f46-beaf-00dcf1be4f2d"))
-(wire (pts (xy 177.8 114.3) (xy 177.8 116.84)) (stroke (width 0) (type default)) (uuid "d396bbb5-2c0e-5892-bbad-e13995c8c5e9"))
-(wire (pts (xy 114.3 101.6) (xy 132.08 101.6)) (stroke (width 0) (type default)) (uuid "e2f402ca-f163-5d6f-b4c4-fedd57bca7b6"))
-(wire (pts (xy 76.2 101.6) (xy 88.9 101.6)) (stroke (width 0) (type default)) (uuid "d698ff64-9796-5a4a-9e27-9f2bda07786e"))
-(wire (pts (xy 147.32 101.6) (xy 177.8 101.6)) (stroke (width 0) (type default)) (uuid "d969b28f-756e-5fdd-8a41-b2b29fdff223"))
-(wire (pts (xy 139.7 115.57) (xy 139.7 127)) (stroke (width 0) (type default)) (uuid "b7bc0247-3c48-5cf6-82ea-ba6149577ea7"))
-(wire (pts (xy 165.1 104.14) (xy 165.1 114.3)) (stroke (width 0) (type default)) (uuid "30ba7c8d-aec8-5c7c-865d-40bafb6958c3"))
-(wire (pts (xy 147.32 109.22) (xy 152.4 109.22)) (stroke (width 0) (type default)) (uuid "147310f3-b74a-5afa-bbbf-a8d4e4356045"))
-(wire (pts (xy 101.6 101.6) (xy 101.6 110.49)) (stroke (width 0) (type default)) (uuid "8cce5c03-a60b-55b0-bb88-bb7b588e740b"))
-(wire (pts (xy 88.9 101.6) (xy 88.9 110.49)) (stroke (width 0) (type default)) (uuid "91972bc7-a96b-5fe9-bb13-74ffd1a4697e"))
-(wire (pts (xy 101.6 101.6) (xy 88.9 101.6)) (stroke (width 0) (type default)) (uuid "d05e708c-4f64-59ea-a84b-70c9919184ed"))
-(junction (at 101.6 101.6) (diameter 0) (color 0 0 0 0) (uuid "9357936f-a643-5a91-8a27-87955d4901b2"))
-(junction (at 114.3 101.6) (diameter 0) (color 0 0 0 0) (uuid "90663220-dbc8-5ac2-baab-45db3ad966a8"))
-(junction (at 177.8 114.3) (diameter 0) (color 0 0 0 0) (uuid "4300b8f6-b019-527b-969f-a91710b810b6"))
-(junction (at 177.8 101.6) (diameter 0) (color 0 0 0 0) (uuid "93e1f7bb-4917-5154-aae8-9b44e9aef976"))
-(junction (at 190.5 101.6) (diameter 0) (color 0 0 0 0) (uuid "555cfd61-41a0-5ffe-a8cf-47990785c802"))
-(junction (at 88.9 101.6) (diameter 0) (color 0 0 0 0) (uuid "35bc2b08-be65-560b-8268-cd08244fef3f"))
-(global_label "GND" (shape bidirectional) (at 88.9 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "55e28a19-3245-5cbe-8f69-caa5516aa79c"))
-(global_label "V12" (shape bidirectional) (at 76.2 101.6 0) (effects (font (size 1 1)) (justify left)) (uuid "a1515454-d68e-5024-963f-8ffc72f5d0c8"))
-(global_label "GND" (shape bidirectional) (at 190.5 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "d3d85e75-7e7e-5de8-84cb-dc36528ed4ab"))
-(global_label "Y_V8" (shape bidirectional) (at 203.2 101.6 0) (effects (font (size 1 1)) (justify left)) (uuid "b729d1d5-18ee-57cf-a816-334dc2f7068e"))
-(global_label "GND" (shape bidirectional) (at 127.0 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "6d88a652-3b1e-500b-af1f-3246c84b7f6f"))
-(wire (pts (xy 127.0 110.49) (xy 127.0 105.41)) (stroke (width 0) (type default)) (uuid "41045603-cf10-57b8-a858-7f5e33a7d518"))
-(global_label "Y_NR" (shape bidirectional) (at 127.0 105.41 0) (effects (font (size 1 1)) (justify left)) (uuid "45e99d7e-b5c3-549c-b42e-f6f696d31fdb"))
-(wire (pts (xy 147.32 104.14) (xy 152.4 99.06)) (stroke (width 0) (type default)) (uuid "4d42b776-2c78-593b-82f6-33b08c905e9c"))
-(global_label "Y_FB" (shape bidirectional) (at 152.4 99.06 0) (effects (font (size 1 1)) (justify left)) (uuid "8b827b9c-cb26-5a25-b851-494885cb8287"))
-(global_label "GND" (shape bidirectional) (at 152.4 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "128eb55a-978f-5471-aa79-202f8307b35a"))
-(global_label "GND" (shape bidirectional) (at 139.7 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "6c3dd3ad-a46b-5a10-94f7-5890c764d491"))
-(global_label "GND" (shape bidirectional) (at 101.6 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "983fb837-1f8a-58c3-9423-b0db10a0e226"))
-(global_label "GND" (shape bidirectional) (at 177.8 127.0 0) (effects (font (size 1 1)) (justify left)) (uuid "8d3bc4a8-ff00-5b23-a618-3091dcb1fc18"))
-(hierarchical_label "V12" (shape bidirectional) (at 76.2 101.6 0) (effects (font (size 1 1)) (justify left)) (uuid "e29b4063-bbad-5f25-9819-34b60e1d45e9"))
-(hierarchical_label "Y_V8" (shape bidirectional) (at 203.2 101.6 0) (effects (font (size 1 1)) (justify left)) (uuid "c9ebbac9-9ebe-5f7e-a4d8-9da58f04f38b"))
-(junction (at 127.0 106.68) (diameter 0) (color 0 0 0 0) (uuid "4d18cb14-d9ae-5905-bd4b-da2c30b016d6"))
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "be570399-64be-5785-83cb-a18be2aca5f3")
+	(paper "A4")
+	(lib_symbols
+		(symbol "review:C210"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C210_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C210_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "review:C211"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C211_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C211_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "review:C212"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C212_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C212_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "review:C213"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C213_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C213_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "review:R206"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R206_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R206_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "review:R207"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R207_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R207_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "review:U202"
+			(pin_names
+				(offset 0.5)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Value" "TPS7A4901DGNR"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Footprint" "metantenna:MSOP8EP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1 1)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "U202_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 5.08 5.08)
+					(stroke
+						(width 0.2)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "U202_1_1"
+				(pin passive line
+					(at -7.62 3.81 0)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -3.81 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -3.81 180)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -1.27 180)
+					(length 2.54)
+					(name "NR/SS"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 1.27 180)
+					(length 2.54)
+					(name "DNC"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 3.81 180)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "EP"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 0.8 0.8)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 88.9 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35bc2b08-be65-560b-8268-cd08244fef3f")
+	)
+	(junction
+		(at 177.8 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4300b8f6-b019-527b-969f-a91710b810b6")
+	)
+	(junction
+		(at 127 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4d18cb14-d9ae-5905-bd4b-da2c30b016d6")
+	)
+	(junction
+		(at 190.5 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "555cfd61-41a0-5ffe-a8cf-47990785c802")
+	)
+	(junction
+		(at 114.3 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90663220-dbc8-5ac2-baab-45db3ad966a8")
+	)
+	(junction
+		(at 101.6 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9357936f-a643-5a91-8a27-87955d4901b2")
+	)
+	(junction
+		(at 177.8 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "93e1f7bb-4917-5154-aae8-9b44e9aef976")
+	)
+	(no_connect
+		(at 132.08 104.14)
+		(uuid "5b3db798-5363-5d4a-9ade-fb4a8909467d")
+	)
+	(no_connect
+		(at 147.32 106.68)
+		(uuid "af63fbb3-5ead-51fb-9d32-fbeb5ba946a8")
+	)
+	(wire
+		(pts
+			(xy 190.5 101.6) (xy 203.2 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a0b482c-c013-50c2-a847-59310df20a08")
+	)
+	(wire
+		(pts
+			(xy 147.32 109.22) (xy 152.4 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "147310f3-b74a-5afa-bbbf-a8d4e4356045")
+	)
+	(wire
+		(pts
+			(xy 127 106.68) (xy 132.08 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d8901bc-205b-5e38-9444-4dd3f12e934f")
+	)
+	(wire
+		(pts
+			(xy 165.1 114.3) (xy 177.8 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29920973-af7e-58b9-9ee1-c5deaa302e82")
+	)
+	(wire
+		(pts
+			(xy 165.1 104.14) (xy 165.1 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30ba7c8d-aec8-5c7c-865d-40bafb6958c3")
+	)
+	(wire
+		(pts
+			(xy 177.8 124.46) (xy 177.8 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d7140aa-fe39-5bbb-9f4d-709bea41f9b4")
+	)
+	(wire
+		(pts
+			(xy 127 110.49) (xy 127 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41045603-cf10-57b8-a858-7f5e33a7d518")
+	)
+	(wire
+		(pts
+			(xy 147.32 104.14) (xy 152.4 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d42b776-2c78-593b-82f6-33b08c905e9c")
+	)
+	(wire
+		(pts
+			(xy 177.8 111.76) (xy 177.8 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54bbe57d-f77c-5887-8ea8-0fa6c123afc6")
+	)
+	(wire
+		(pts
+			(xy 114.3 101.6) (xy 101.6 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76519f8d-d6d6-5f46-beaf-00dcf1be4f2d")
+	)
+	(wire
+		(pts
+			(xy 114.3 109.22) (xy 114.3 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82c7ff2a-a445-5c82-a264-80bc7f85a0c5")
+	)
+	(wire
+		(pts
+			(xy 147.32 104.14) (xy 165.1 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ae1bc0f-c07c-5ce5-ba75-b76b195e1ffb")
+	)
+	(wire
+		(pts
+			(xy 101.6 101.6) (xy 101.6 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cce5c03-a60b-55b0-bb88-bb7b588e740b")
+	)
+	(wire
+		(pts
+			(xy 127 118.11) (xy 127 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e04a220-6334-5b32-83e5-95c45f01c25d")
+	)
+	(wire
+		(pts
+			(xy 88.9 101.6) (xy 88.9 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91972bc7-a96b-5fe9-bb13-74ffd1a4697e")
+	)
+	(wire
+		(pts
+			(xy 88.9 118.11) (xy 88.9 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99ca670f-96ff-53c7-9574-5ba155f9819f")
+	)
+	(wire
+		(pts
+			(xy 190.5 110.49) (xy 190.5 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a0a37d3-fd63-51cf-91ff-f9a62d47376b")
+	)
+	(wire
+		(pts
+			(xy 114.3 109.22) (xy 132.08 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abb2bc97-df99-52b6-8608-d8760c7c2051")
+	)
+	(wire
+		(pts
+			(xy 152.4 109.22) (xy 152.4 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aec3cb91-fd1a-5b15-8708-e52b95c99c18")
+	)
+	(wire
+		(pts
+			(xy 139.7 115.57) (xy 139.7 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7bc0247-3c48-5cf6-82ea-ba6149577ea7")
+	)
+	(wire
+		(pts
+			(xy 101.6 101.6) (xy 88.9 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d05e708c-4f64-59ea-a84b-70c9919184ed")
+	)
+	(wire
+		(pts
+			(xy 177.8 114.3) (xy 177.8 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d396bbb5-2c0e-5892-bbad-e13995c8c5e9")
+	)
+	(wire
+		(pts
+			(xy 76.2 101.6) (xy 88.9 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d698ff64-9796-5a4a-9e27-9f2bda07786e")
+	)
+	(wire
+		(pts
+			(xy 147.32 101.6) (xy 177.8 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d969b28f-756e-5fdd-8a41-b2b29fdff223")
+	)
+	(wire
+		(pts
+			(xy 101.6 118.11) (xy 101.6 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da16090f-1d2b-5d53-b461-ffb447254aae")
+	)
+	(wire
+		(pts
+			(xy 177.8 101.6) (xy 190.5 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0f8e621-e5e0-5928-b5fc-ee18d1710381")
+	)
+	(wire
+		(pts
+			(xy 114.3 101.6) (xy 132.08 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2f402ca-f163-5d6f-b4c4-fedd57bca7b6")
+	)
+	(wire
+		(pts
+			(xy 190.5 118.11) (xy 190.5 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ece8ee0c-b186-5dc2-b02f-f758268e5548")
+	)
+	(wire
+		(pts
+			(xy 177.8 101.6) (xy 177.8 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5f64dee-2d02-5b44-a89b-aaeedc2e91e9")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 152.4 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "128eb55a-978f-5471-aa79-202f8307b35a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.4 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "Y_NR"
+		(shape bidirectional)
+		(at 127 105.41 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "45e99d7e-b5c3-549c-b42e-f6f696d31fdb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 88.9 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "55e28a19-3245-5cbe-8f69-caa5516aa79c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 88.9 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 139.7 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "6c3dd3ad-a46b-5a10-94f7-5890c764d491")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 139.7 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "6d88a652-3b1e-500b-af1f-3246c84b7f6f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "Y_FB"
+		(shape bidirectional)
+		(at 152.4 99.06 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "8b827b9c-cb26-5a25-b851-494885cb8287")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 152.4 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 177.8 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "8d3bc4a8-ff00-5b23-a618-3091dcb1fc18")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 177.8 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 101.6 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "983fb837-1f8a-58c3-9423-b0db10a0e226")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "V12"
+		(shape bidirectional)
+		(at 76.2 101.6 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "a1515454-d68e-5024-963f-8ffc72f5d0c8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 76.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "Y_V8"
+		(shape bidirectional)
+		(at 203.2 101.6 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "b729d1d5-18ee-57cf-a816-334dc2f7068e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 190.5 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "d3d85e75-7e7e-5de8-84cb-dc36528ed4ab")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.5 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(hierarchical_label "Y_V8"
+		(shape bidirectional)
+		(at 203.2 101.6 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "c9ebbac9-9ebe-5f7e-a4d8-9da58f04f38b")
+	)
+	(hierarchical_label "V12"
+		(shape bidirectional)
+		(at 76.2 101.6 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "e29b4063-bbad-5f25-9819-34b60e1d45e9")
+	)
+	(symbol
+		(lib_id "review:C211")
+		(at 101.6 114.3 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5fd3efae-b355-5623-aa9b-389f966bd8a5")
+		(property "Reference" "C211"
+			(at 97.79 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n 50V"
+			(at 97.79 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "metantenna:0805"
+			(at 100.6348 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "50V"
+			(at 97.79 111.7599 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "GRM21BR71H104KA01L"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18b736e5-448d-4a23-9649-9c280b1b0f87")
+		)
+		(pin "2"
+			(uuid "1570c577-8fe2-4d3c-aafc-8415ab35c0c8")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "C211")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "review:R207")
+		(at 177.8 120.65 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7a161788-284c-5e51-81f7-cbcf9528be39")
+		(property "Reference" "R207"
+			(at 176.53 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 176.53 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "metantenna:0805"
+			(at 179.578 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/C17414"
+			(at 177.8 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "JLC sourcing candidate; 0805W8F1002T5E"
+			(at 176.53 118.1099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "0805W8F1002T5E"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6844310d-96fe-4572-99f4-ff94c5a1a073")
+		)
+		(pin "1"
+			(uuid "32af0135-460d-4fb3-bd32-6b94b0be9c47")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "R207")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "review:U202")
+		(at 139.7 105.41 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b42b15db-7ebd-576e-8a90-756ee7ead5a0")
+		(property "Reference" "U202"
+			(at 139.7 90.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.2 1.2)
+				)
+			)
+		)
+		(property "Value" "TPS7A4901DGNR"
+			(at 139.7 92.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.1 1.1)
+				)
+			)
+		)
+		(property "Footprint" "metantenna:MSOP8EP"
+			(at 139.7 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TPS7A4901DGNR"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "7"
+			(uuid "e33466cd-f2ec-4be9-91d6-b30a8fe71412")
+		)
+		(pin "8"
+			(uuid "6e422b41-2ec8-43d9-9fbf-408365a281e7")
+		)
+		(pin "5"
+			(uuid "a43dc0e6-0d62-4df3-a686-2e012ddb303c")
+		)
+		(pin "1"
+			(uuid "1dc177b5-ab56-4e2d-92bb-a11136de4d39")
+		)
+		(pin "9"
+			(uuid "b590426b-cd03-4738-91e0-7097e05b5e30")
+		)
+		(pin "2"
+			(uuid "c6c0a336-34c3-40c9-bcdf-3961c16f97fd")
+		)
+		(pin "3"
+			(uuid "bd8f78aa-f1ef-4d1e-945f-e5b7fc231532")
+		)
+		(pin "4"
+			(uuid "f40463bc-7caf-42fe-be86-dabe0ae7cf58")
+		)
+		(pin "6"
+			(uuid "7e0a4475-0103-4c12-a5fc-a3393fe9dbe9")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "U202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "review:C213")
+		(at 127 114.3 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d2d8e4d0-e01c-5288-8af6-e1e4c468dbab")
+		(property "Reference" "C213"
+			(at 123.19 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10n 50V"
+			(at 123.19 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "metantenna:0805"
+			(at 126.0348 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "50V C0G"
+			(at 123.19 111.7599 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "GRM21BR71H103KA01L"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7390a785-d8a0-404f-9874-687fb75a713d")
+		)
+		(pin "2"
+			(uuid "e0daee7e-3a84-4d84-b333-a29aeb214fa2")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "C213")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "review:C210")
+		(at 88.9 114.3 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dde5acd9-bdbb-574e-a76e-2a5484937dab")
+		(property "Reference" "C210"
+			(at 85.09 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u 25V"
+			(at 85.09 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "metantenna:1206"
+			(at 87.9348 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "25V"
+			(at 85.09 111.7599 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "GRM31CR61E106KA12L"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1b0b5e8b-3fdd-460c-9b39-f0b8d8e0f4b0")
+		)
+		(pin "1"
+			(uuid "112d395d-4658-4a47-9e95-1649ff348b6b")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "C210")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "review:R206")
+		(at 177.8 107.95 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e0745be7-c4ab-525f-8789-6163924543d6")
+		(property "Reference" "R206"
+			(at 176.53 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "57.6k"
+			(at 176.53 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "metantenna:0805"
+			(at 179.578 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/C5153977"
+			(at 177.8 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "JLC sourcing candidate; FRC0805F5762TS"
+			(at 176.53 105.4099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "FRC0805F5762TS"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3a65e69b-652c-42de-8cee-e493eaf6b32c")
+		)
+		(pin "1"
+			(uuid "1e4b3ee4-8425-4257-b158-1618b53d916b")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "R206")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "review:C212")
+		(at 190.5 114.3 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e91021cf-fc90-5ee2-b2f2-9f97f4f481f0")
+		(property "Reference" "C212"
+			(at 186.69 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u 25V"
+			(at 186.69 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "metantenna:1206"
+			(at 189.5348 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "25V"
+			(at 186.69 111.7599 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "GRM31CR61E106KA12L"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6353c0f9-e77a-4094-a812-a7ba804360c4")
+		)
+		(pin "2"
+			(uuid "f0c64a18-0954-493f-a414-5141205fdd5a")
+		)
+		(instances
+			(project "preamp"
+				(path "/8e097e4f-25a0-5681-9e2a-0cbbe61efaf5/4bc85859-9db8-575c-9e00-e27fa3fb61a6"
+					(reference "C212")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
